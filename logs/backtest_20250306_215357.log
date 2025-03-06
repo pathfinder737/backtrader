@@ -1,0 +1,699 @@
+2025-03-06 21:53:57,038 - INFO - =============== Configurations ===============
+2025-03-06 21:53:57,038 - INFO - DATA_MODE: offline
+2025-03-06 21:53:57,038 - INFO - START_DATE: 2000-01-01
+2025-03-06 21:53:57,039 - INFO - END_DATE: 2024-12-31
+2025-03-06 21:53:57,039 - INFO - TICKERS: ['SPY', 'QQQ', 'IAU', 'QLD']
+2025-03-06 21:53:57,039 - INFO - ASSET_ALLOCATION: {'QQQ': 0.5, 'IAU': 0.3, 'QLD': 0.2}
+2025-03-06 21:53:57,039 - INFO - AGGRESSIVE_ALLOCATION: {'QQQ': 0.9, 'IAU': 0.1, 'QLD': 0}
+2025-03-06 21:53:57,039 - INFO - MODERATE_ALLOCATION: {'QQQ': 0.8, 'IAU': 0.1, 'QLD': 0.1}
+2025-03-06 21:53:57,043 - INFO - DEFENSIVE_ALLOCATION: {'QQQ': 0, 'IAU': 0.5, 'QLD': 0.5}
+2025-03-06 21:53:57,043 - INFO - MID_DEFENSIVE_ALLOCATION: {'QQQ': 0.4, 'IAU': 0.4, 'QLD': 0.2}
+2025-03-06 21:53:57,043 - INFO - TOUCHSTONE: SPY
+2025-03-06 21:53:57,043 - INFO - MA_PERIODS: [21, 50, 150, 200]
+2025-03-06 21:53:57,043 - INFO - WMA_PERIODS: [10, 30]
+2025-03-06 21:53:57,043 - INFO - MA_TYPE: daily
+2025-03-06 21:53:57,043 - INFO - INITIAL_CASH: 100000.0
+2025-03-06 21:53:57,044 - INFO - COMMISSION: 0.001
+2025-03-06 21:53:57,044 - INFO - CASH_BUFFER_PERCENT: 1.0
+2025-03-06 21:53:57,044 - INFO - PROCESS_SELL_FIRST: True
+2025-03-06 21:53:57,044 - INFO - RISK_FREE_RATE: 0.01
+2025-03-06 21:53:57,044 - INFO - FRACTIONAL_SHARES: False
+2025-03-06 21:53:57,044 - INFO - USE_MARKET_REGIME: True
+2025-03-06 21:53:57,045 - INFO - LOG_LEVEL: INFO
+2025-03-06 21:53:57,045 - INFO - ===============================================
+2025-03-06 21:53:57,045 - INFO - Starting backtest...
+2025-03-06 21:53:57,045 - INFO - Loading data feeds...
+2025-03-06 21:53:57,045 - INFO - Loading data for SPY...
+2025-03-06 21:53:57,046 - INFO - Downloading data for SPY from 2000-01-01 to 2024-12-31.
+2025-03-06 21:53:57,773 - INFO - Saved RAW data for SPY to C:\Users\james\Projects\backtrader\data\SPY_raw.csv (6289 rows).
+2025-03-06 21:53:57,774 - INFO - Loading data for QQQ...
+2025-03-06 21:53:57,775 - INFO - Downloading data for QQQ from 2000-01-01 to 2024-12-31.
+2025-03-06 21:53:58,460 - INFO - Saved RAW data for QQQ to C:\Users\james\Projects\backtrader\data\QQQ_raw.csv (6289 rows).
+2025-03-06 21:53:58,460 - INFO - Loading data for IAU...
+2025-03-06 21:53:58,460 - INFO - Downloading data for IAU from 2000-01-01 to 2024-12-31.
+2025-03-06 21:53:59,046 - INFO - Saved RAW data for IAU to C:\Users\james\Projects\backtrader\data\IAU_raw.csv (5014 rows).
+2025-03-06 21:53:59,047 - INFO - Loading data for QLD...
+2025-03-06 21:53:59,047 - INFO - Downloading data for QLD from 2000-01-01 to 2024-12-31.
+2025-03-06 21:53:59,690 - INFO - Saved RAW data for QLD to C:\Users\james\Projects\backtrader\data\QLD_raw.csv (4663 rows).
+2025-03-06 21:53:59,690 - INFO - Max start date among non-touchstone: 2006-06-21 00:00:00
+2025-03-06 21:53:59,733 - INFO - Saved ALIGNED data for SPY to C:\Users\james\Projects\backtrader\data\SPY.csv (4915 rows).
+2025-03-06 21:53:59,734 - INFO - Created data feed for SPY with 4915 rows after slicing.
+2025-03-06 21:53:59,756 - INFO - Saved ALIGNED data for QQQ to C:\Users\james\Projects\backtrader\data\QQQ.csv (4663 rows).
+2025-03-06 21:53:59,756 - INFO - Created data feed for QQQ with 4663 rows after slicing.
+2025-03-06 21:53:59,777 - INFO - Saved ALIGNED data for IAU to C:\Users\james\Projects\backtrader\data\IAU.csv (4663 rows).
+2025-03-06 21:53:59,778 - INFO - Created data feed for IAU with 4663 rows after slicing.
+2025-03-06 21:53:59,800 - INFO - Saved ALIGNED data for QLD to C:\Users\james\Projects\backtrader\data\QLD.csv (4663 rows).
+2025-03-06 21:53:59,801 - INFO - Created data feed for QLD with 4663 rows after slicing.
+2025-03-06 21:53:59,802 - INFO - Loaded and aligned data for 4 tickers.
+2025-03-06 21:53:59,802 - INFO - Added data for SPY.
+2025-03-06 21:53:59,803 - INFO - Added data for QQQ.
+2025-03-06 21:53:59,803 - INFO - Added data for IAU.
+2025-03-06 21:53:59,804 - INFO - Added data for QLD.
+2025-03-06 21:53:59,804 - INFO - All data feeds loaded.
+2025-03-06 21:53:59,804 - INFO - Initial portfolio value: 100,000.00
+2025-03-06 21:54:01,557 - INFO - Asset data loaded for: QQQ
+2025-03-06 21:54:01,557 - INFO - Asset data loaded for: IAU
+2025-03-06 21:54:01,558 - INFO - Asset data loaded for: QLD
+2025-03-06 21:54:01,558 - INFO - Market regime usage: Enabled
+2025-03-06 21:54:01,558 - INFO - Moving average type: daily
+2025-03-06 21:54:01,558 - INFO - Fractional shares: Not allowed
+2025-03-06 21:54:01,629 - INFO - Start date: 2006-06-21, initial portfolio=100000.00
+2025-03-06 21:54:02,036 - INFO - Month-end close for QQQ: 38.77
+2025-03-06 21:54:02,037 - INFO - Month-end close for IAU: 12.25
+2025-03-06 21:54:02,037 - INFO - Month-end close for QLD: 2.26
+2025-03-06 21:54:02,108 - INFO - [2006-07-03] Price=127.80, MA(short=125.21, mid=127.63, mid2=127.97, long=126.34) => Moderate
+2025-03-06 21:54:02,108 - INFO - === 2006-07-03 Rebalancing Start ===
+2025-03-06 21:54:02,108 - INFO - Portfolio value=100000.00, cash buffer=1000.00, available=99000.00
+2025-03-06 21:54:02,109 - INFO - QQQ: prev_close=38.77, current_size=0, alloc_ratio=0.80, adjust=2042
+2025-03-06 21:54:02,109 - INFO - IAU: prev_close=12.25, current_size=0, alloc_ratio=0.10, adjust=808
+2025-03-06 21:54:02,109 - INFO - QLD: prev_close=2.26, current_size=0, alloc_ratio=0.10, adjust=4384
+2025-03-06 21:54:02,109 - INFO - Cash after SELL: 100000.00
+2025-03-06 21:54:02,109 - INFO - 2006-07-03: BUY QQQ, shares=2042
+2025-03-06 21:54:02,109 - INFO - 2006-07-03: BUY QLD, shares=4384
+2025-03-06 21:54:02,110 - INFO - 2006-07-03: BUY IAU, shares=808
+2025-03-06 21:54:02,110 - INFO - === 2006-07-03 Rebalancing End ===
+2025-03-06 21:54:02,110 - INFO - 2006-07-05 00:00:00 OrderCompleted: BUY 2042 QQQ @ 38.64, Comm=78.90
+2025-03-06 21:54:02,111 - INFO - 2006-07-05 00:00:00 OrderCompleted: BUY 4384 QLD @ 2.24, Comm=9.83
+2025-03-06 21:54:02,111 - INFO - 2006-07-05 00:00:00 OrderCompleted: BUY 808 IAU @ 12.51, Comm=10.11
+2025-03-06 21:54:02,961 - INFO - Month-end close for QQQ: 37.10
+2025-03-06 21:54:02,962 - INFO - Month-end close for IAU: 12.65
+2025-03-06 21:54:02,962 - INFO - Month-end close for QLD: 2.05
+2025-03-06 21:54:03,035 - INFO - [2006-08-01] Price=127.22, MA(short=126.09, mid=125.89, mid2=127.90, long=126.85) => MidDefensive
+2025-03-06 21:54:03,035 - INFO - === 2006-08-01 Rebalancing Start ===
+2025-03-06 21:54:03,035 - INFO - Portfolio value=94662.38, cash buffer=946.62, available=93715.75
+2025-03-06 21:54:03,036 - INFO - QQQ: prev_close=37.10, current_size=2042, alloc_ratio=0.40, adjust=-1032
+2025-03-06 21:54:03,036 - INFO - IAU: prev_close=12.65, current_size=808, alloc_ratio=0.40, adjust=2154
+2025-03-06 21:54:03,036 - INFO - QLD: prev_close=2.05, current_size=4384, alloc_ratio=0.20, adjust=4738
+2025-03-06 21:54:03,036 - INFO - 2006-08-01: SELL QQQ, shares=1032
+2025-03-06 21:54:03,036 - INFO - Cash after SELL: 1057.21
+2025-03-06 21:54:03,037 - WARNING - IAU: adjusting shares 2154 -> 83 due to insufficient cash
+2025-03-06 21:54:03,037 - INFO - 2006-08-01: BUY IAU, shares=83
+2025-03-06 21:54:03,037 - WARNING - QLD: adjusting shares 4738 -> 514 due to insufficient cash
+2025-03-06 21:54:03,037 - INFO - 2006-08-01: BUY QLD, shares=514
+2025-03-06 21:54:03,038 - INFO - === 2006-08-01 Rebalancing End ===
+2025-03-06 21:54:03,038 - INFO - 2006-08-02 00:00:00 OrderCompleted: SELL -1032 QQQ @ 36.61, Comm=37.78
+2025-03-06 21:54:03,038 - INFO - 2006-08-02 00:00:00 OrderCompleted: BUY 83 IAU @ 13.05, Comm=1.08
+2025-03-06 21:54:03,039 - INFO - 2006-08-02 00:00:00 OrderCompleted: BUY 514 QLD @ 2.01, Comm=1.03
+2025-03-06 21:54:03,972 - INFO - Month-end close for QQQ: 38.87
+2025-03-06 21:54:03,973 - INFO - Month-end close for IAU: 12.46
+2025-03-06 21:54:03,973 - INFO - Month-end close for QLD: 2.24
+2025-03-06 21:54:04,039 - INFO - [2006-09-01] Price=131.42, MA(short=129.25, mid=127.43, mid2=128.18, long=127.83) => Neutral
+2025-03-06 21:54:04,039 - INFO - === 2006-09-01 Rebalancing Start ===
+2025-03-06 21:54:04,040 - INFO - Portfolio value=98326.84, cash buffer=983.27, available=97343.58
+2025-03-06 21:54:04,040 - INFO - QQQ: prev_close=38.87, current_size=1010, alloc_ratio=0.50, adjust=242
+2025-03-06 21:54:04,040 - INFO - IAU: prev_close=12.46, current_size=891, alloc_ratio=0.30, adjust=1451
+2025-03-06 21:54:04,041 - INFO - QLD: prev_close=2.24, current_size=4898, alloc_ratio=0.20, adjust=3790
+2025-03-06 21:54:04,041 - INFO - Cash after SELL: 36683.67
+2025-03-06 21:54:04,041 - INFO - 2006-09-01: BUY IAU, shares=1451
+2025-03-06 21:54:04,042 - INFO - 2006-09-01: BUY QQQ, shares=242
+2025-03-06 21:54:04,042 - INFO - 2006-09-01: BUY QLD, shares=3790
+2025-03-06 21:54:04,042 - INFO - === 2006-09-01 Rebalancing End ===
+2025-03-06 21:54:04,043 - INFO - 2006-09-05 00:00:00 OrderCompleted: BUY 1451 IAU @ 12.65, Comm=18.36
+2025-03-06 21:54:04,043 - INFO - 2006-09-05 00:00:00 OrderCompleted: BUY 242 QQQ @ 39.10, Comm=9.46
+2025-03-06 21:54:04,043 - INFO - 2006-09-05 00:00:00 OrderCompleted: BUY 3790 QLD @ 2.26, Comm=8.58
+2025-03-06 21:54:04,819 - INFO - Month-end close for QQQ: 40.65
+2025-03-06 21:54:04,819 - INFO - Month-end close for IAU: 11.90
+2025-03-06 21:54:04,820 - INFO - Month-end close for QLD: 2.43
+2025-03-06 21:54:04,887 - INFO - [2006-10-02] Price=133.08, MA(short=132.01, mid=130.02, mid2=128.75, long=128.41) => Aggressive
+2025-03-06 21:54:04,888 - INFO - === 2006-10-02 Rebalancing Start ===
+2025-03-06 21:54:04,888 - INFO - Portfolio value=98822.03, cash buffer=988.22, available=97833.81
+2025-03-06 21:54:04,889 - INFO - QQQ: prev_close=40.65, current_size=1252, alloc_ratio=0.90, adjust=914
+2025-03-06 21:54:04,889 - INFO - IAU: prev_close=11.90, current_size=2342, alloc_ratio=0.10, adjust=-1521
+2025-03-06 21:54:04,889 - INFO - QLD: prev_close=2.43, current_size=8688, alloc_ratio=0.00, adjust=-8688
+2025-03-06 21:54:04,890 - INFO - 2006-10-02: SELL IAU, shares=1521
+2025-03-06 21:54:04,890 - INFO - 2006-10-02: SELL QLD, shares=8688
+2025-03-06 21:54:04,890 - INFO - Cash after SELL: 250.31
+2025-03-06 21:54:04,890 - WARNING - QQQ: adjusting shares 914 -> 6 due to insufficient cash
+2025-03-06 21:54:04,890 - INFO - 2006-10-02: BUY QQQ, shares=6
+2025-03-06 21:54:04,891 - INFO - === 2006-10-02 Rebalancing End ===
+2025-03-06 21:54:04,891 - INFO - 2006-10-03 00:00:00 OrderCompleted: SELL -1521 IAU @ 11.60, Comm=17.64
+2025-03-06 21:54:04,891 - INFO - 2006-10-03 00:00:00 OrderCompleted: SELL -8688 QLD @ 2.35, Comm=20.44
+2025-03-06 21:54:04,892 - INFO - 2006-10-03 00:00:00 OrderCompleted: BUY 6 QQQ @ 40.02, Comm=0.24
+2025-03-06 21:54:04,892 - INFO - 2006-10-03 00:00:00 TradeClosed: QLD, PnL=1002.57, NetPnL=962.68
+2025-03-06 21:54:05,761 - INFO - Month-end close for QQQ: 42.58
+2025-03-06 21:54:05,761 - INFO - Month-end close for IAU: 12.03
+2025-03-06 21:54:05,761 - INFO - Month-end close for QLD: 2.65
+2025-03-06 21:54:05,834 - INFO - [2006-11-01] Price=136.86, MA(short=136.66, mid=133.74, mid2=129.78, long=129.45) => Aggressive
+2025-03-06 21:54:05,835 - INFO - === 2006-11-01 Rebalancing Start ===
+2025-03-06 21:54:05,835 - INFO - Portfolio value=100992.07, cash buffer=1009.92, available=99982.15
+2025-03-06 21:54:05,835 - INFO - QQQ: prev_close=42.58, current_size=1258, alloc_ratio=0.90, adjust=855
+2025-03-06 21:54:05,835 - INFO - IAU: prev_close=12.03, current_size=821, alloc_ratio=0.10, adjust=10
+2025-03-06 21:54:05,835 - INFO - QLD: prev_close=2.65, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-06 21:54:05,836 - INFO - Cash after SELL: 38059.42
+2025-03-06 21:54:05,836 - INFO - 2006-11-01: BUY QQQ, shares=855
+2025-03-06 21:54:05,836 - INFO - 2006-11-01: BUY IAU, shares=10
+2025-03-06 21:54:05,837 - INFO - === 2006-11-01 Rebalancing End ===
+2025-03-06 21:54:05,837 - INFO - 2006-11-02 00:00:00 OrderCompleted: BUY 855 QQQ @ 41.81, Comm=35.75
+2025-03-06 21:54:05,838 - INFO - 2006-11-02 00:00:00 OrderCompleted: BUY 10 IAU @ 12.32, Comm=0.12
+2025-03-06 21:54:06,699 - INFO - Month-end close for QQQ: 44.04
+2025-03-06 21:54:06,700 - INFO - Month-end close for IAU: 12.88
+2025-03-06 21:54:06,700 - INFO - Month-end close for QLD: 2.81
+2025-03-06 21:54:06,771 - INFO - [2006-12-01] Price=140.22, MA(short=139.31, mid=137.20, mid2=131.05, long=130.72) => Aggressive
+2025-03-06 21:54:06,771 - INFO - === 2006-12-01 Rebalancing Start ===
+2025-03-06 21:54:06,772 - INFO - Portfolio value=105068.08, cash buffer=1050.68, available=104017.40
+2025-03-06 21:54:06,772 - INFO - QQQ: prev_close=44.04, current_size=2113, alloc_ratio=0.90, adjust=12
+2025-03-06 21:54:06,772 - INFO - IAU: prev_close=12.88, current_size=831, alloc_ratio=0.10, adjust=-24
+2025-03-06 21:54:06,772 - INFO - QLD: prev_close=2.81, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-06 21:54:06,772 - INFO - 2006-12-01: SELL IAU, shares=24
+2025-03-06 21:54:06,772 - INFO - Cash after SELL: 2152.77
+2025-03-06 21:54:06,772 - INFO - 2006-12-01: BUY QQQ, shares=12
+2025-03-06 21:54:06,773 - INFO - === 2006-12-01 Rebalancing End ===
+2025-03-06 21:54:06,773 - INFO - 2006-12-04 00:00:00 OrderCompleted: SELL -24 IAU @ 12.80, Comm=0.31
+2025-03-06 21:54:06,774 - INFO - 2006-12-04 00:00:00 OrderCompleted: BUY 12 QQQ @ 43.79, Comm=0.53
+2025-03-06 21:54:07,596 - INFO - Month-end close for QQQ: 43.16
+2025-03-06 21:54:07,596 - INFO - Month-end close for IAU: 12.65
+2025-03-06 21:54:07,596 - INFO - Month-end close for QLD: 2.53
+2025-03-06 21:54:07,681 - INFO - [2007-01-03] Price=141.37, MA(short=141.74, mid=140.03, mid2=132.74, long=131.99) => Moderate
+2025-03-06 21:54:07,681 - INFO - === 2007-01-03 Rebalancing Start ===
+2025-03-06 21:54:07,681 - INFO - Portfolio value=103873.93, cash buffer=1038.74, available=102835.19
+2025-03-06 21:54:07,681 - INFO - QQQ: prev_close=43.16, current_size=2125, alloc_ratio=0.80, adjust=-219
+2025-03-06 21:54:07,681 - INFO - IAU: prev_close=12.65, current_size=807, alloc_ratio=0.10, adjust=5
+2025-03-06 21:54:07,682 - INFO - QLD: prev_close=2.53, current_size=0, alloc_ratio=0.10, adjust=4060
+2025-03-06 21:54:07,682 - INFO - 2007-01-03: SELL QQQ, shares=219
+2025-03-06 21:54:07,682 - INFO - Cash after SELL: 1933.71
+2025-03-06 21:54:07,682 - WARNING - QLD: adjusting shares 4060 -> 762 due to insufficient cash
+2025-03-06 21:54:07,683 - INFO - 2007-01-03: BUY QLD, shares=762
+2025-03-06 21:54:07,683 - INFO - 2007-01-03: BUY IAU, shares=5
+2025-03-06 21:54:07,683 - INFO - === 2007-01-03 Rebalancing End ===
+2025-03-06 21:54:07,684 - INFO - 2007-01-04 00:00:00 OrderCompleted: SELL -219 QQQ @ 43.30, Comm=9.48
+2025-03-06 21:54:07,684 - INFO - 2007-01-04 00:00:00 OrderCompleted: BUY 762 QLD @ 2.54, Comm=1.94
+2025-03-06 21:54:07,684 - INFO - 2007-01-04 00:00:00 OrderCompleted: BUY 5 IAU @ 12.42, Comm=0.06
+2025-03-06 21:54:08,485 - INFO - Month-end close for QQQ: 44.07
+2025-03-06 21:54:08,486 - INFO - Month-end close for IAU: 12.97
+2025-03-06 21:54:08,486 - INFO - Month-end close for QLD: 2.61
+2025-03-06 21:54:08,555 - INFO - [2007-02-01] Price=144.61, MA(short=142.42, mid=141.75, mid2=135.02, long=133.26) => Aggressive
+2025-03-06 21:54:08,556 - INFO - === 2007-02-01 Rebalancing Start ===
+2025-03-06 21:54:08,556 - INFO - Portfolio value=105860.69, cash buffer=1058.61, available=104802.08
+2025-03-06 21:54:08,556 - INFO - QQQ: prev_close=44.07, current_size=1906, alloc_ratio=0.90, adjust=234
+2025-03-06 21:54:08,557 - INFO - IAU: prev_close=12.97, current_size=812, alloc_ratio=0.10, adjust=-4
+2025-03-06 21:54:08,557 - INFO - QLD: prev_close=2.61, current_size=762, alloc_ratio=0.00, adjust=-762
+2025-03-06 21:54:08,557 - INFO - 2007-02-01: SELL IAU, shares=4
+2025-03-06 21:54:08,558 - INFO - 2007-02-01: SELL QLD, shares=762
+2025-03-06 21:54:08,558 - INFO - Cash after SELL: 9405.68
+2025-03-06 21:54:08,558 - WARNING - QQQ: adjusting shares 234 -> 213 due to insufficient cash
+2025-03-06 21:54:08,558 - INFO - 2007-02-01: BUY QQQ, shares=213
+2025-03-06 21:54:08,559 - INFO - === 2007-02-01 Rebalancing End ===
+2025-03-06 21:54:08,559 - INFO - 2007-02-02 00:00:00 OrderCompleted: SELL -4 IAU @ 12.96, Comm=0.05
+2025-03-06 21:54:08,560 - INFO - 2007-02-02 00:00:00 OrderCompleted: SELL -762 QLD @ 2.63, Comm=2.00
+2025-03-06 21:54:08,560 - INFO - 2007-02-02 00:00:00 OrderCompleted: BUY 213 QQQ @ 44.12, Comm=9.40
+2025-03-06 21:54:08,560 - INFO - 2007-02-02 00:00:00 TradeClosed: QLD, PnL=63.34, NetPnL=59.40
+2025-03-06 21:54:09,335 - INFO - Month-end close for QQQ: 43.33
+2025-03-06 21:54:09,336 - INFO - Month-end close for IAU: 13.30
+2025-03-06 21:54:09,337 - INFO - Month-end close for QLD: 2.52
+2025-03-06 21:54:09,406 - INFO - [2007-03-01] Price=140.51, MA(short=144.36, mid=143.06, mid2=137.37, long=134.51) => Neutral
+2025-03-06 21:54:09,406 - INFO - === 2007-03-01 Rebalancing Start ===
+2025-03-06 21:54:09,407 - INFO - Portfolio value=104086.05, cash buffer=1040.86, available=103045.19
+2025-03-06 21:54:09,407 - INFO - QQQ: prev_close=43.33, current_size=2119, alloc_ratio=0.50, adjust=-930
+2025-03-06 21:54:09,407 - INFO - IAU: prev_close=13.30, current_size=808, alloc_ratio=0.30, adjust=1517
+2025-03-06 21:54:09,407 - INFO - QLD: prev_close=2.52, current_size=0, alloc_ratio=0.20, adjust=8193
+2025-03-06 21:54:09,408 - INFO - 2007-03-01: SELL QQQ, shares=930
+2025-03-06 21:54:09,408 - INFO - Cash after SELL: 2048.98
+2025-03-06 21:54:09,408 - WARNING - QLD: adjusting shares 8193 -> 813 due to insufficient cash
+2025-03-06 21:54:09,409 - INFO - 2007-03-01: BUY QLD, shares=813
+2025-03-06 21:54:09,409 - WARNING - IAU: adjusting shares 1517 -> 153 due to insufficient cash
+2025-03-06 21:54:09,409 - INFO - 2007-03-01: BUY IAU, shares=153
+2025-03-06 21:54:09,410 - INFO - === 2007-03-01 Rebalancing End ===
+2025-03-06 21:54:09,410 - INFO - 2007-03-02 00:00:00 OrderCompleted: SELL -930 QQQ @ 42.78, Comm=39.79
+2025-03-06 21:54:09,411 - INFO - 2007-03-02 00:00:00 OrderCompleted: BUY 813 QLD @ 2.47, Comm=2.01
+2025-03-06 21:54:09,411 - INFO - 2007-03-02 00:00:00 OrderCompleted: BUY 153 IAU @ 12.94, Comm=1.98
+2025-03-06 21:54:10,321 - INFO - Month-end close for QQQ: 43.53
+2025-03-06 21:54:10,322 - INFO - Month-end close for IAU: 13.17
+2025-03-06 21:54:10,322 - INFO - Month-end close for QLD: 2.53
+2025-03-06 21:54:10,392 - INFO - [2007-04-02] Price=142.16, MA(short=140.94, mid=142.57, mid2=139.20, long=136.08) => Neutral
+2025-03-06 21:54:10,392 - INFO - === 2007-04-02 Rebalancing Start ===
+2025-03-06 21:54:10,393 - INFO - Portfolio value=104349.43, cash buffer=1043.49, available=103305.93
+2025-03-06 21:54:10,393 - INFO - QQQ: prev_close=43.53, current_size=1189, alloc_ratio=0.50, adjust=-3
+2025-03-06 21:54:10,393 - INFO - IAU: prev_close=13.17, current_size=961, alloc_ratio=0.30, adjust=1392
+2025-03-06 21:54:10,394 - INFO - QLD: prev_close=2.53, current_size=813, alloc_ratio=0.20, adjust=7351
+2025-03-06 21:54:10,394 - INFO - 2007-04-02: SELL QQQ, shares=3
+2025-03-06 21:54:10,394 - INFO - Cash after SELL: 37803.24
+2025-03-06 21:54:10,395 - INFO - 2007-04-02: BUY QLD, shares=7351
+2025-03-06 21:54:10,395 - INFO - 2007-04-02: BUY IAU, shares=1392
+2025-03-06 21:54:10,395 - INFO - === 2007-04-02 Rebalancing End ===
+2025-03-06 21:54:10,396 - INFO - 2007-04-03 00:00:00 OrderCompleted: SELL -3 QQQ @ 43.82, Comm=0.13
+2025-03-06 21:54:10,396 - INFO - 2007-04-03 00:00:00 OrderCompleted: BUY 7351 QLD @ 2.55, Comm=18.77
+2025-03-06 21:54:10,397 - INFO - 2007-04-03 00:00:00 OrderCompleted: BUY 1392 IAU @ 13.18, Comm=18.35
+2025-03-06 21:54:11,233 - INFO - Month-end close for QQQ: 45.96
+2025-03-06 21:54:11,234 - INFO - Month-end close for IAU: 13.44
+2025-03-06 21:54:11,234 - INFO - Month-end close for QLD: 2.80
+2025-03-06 21:54:11,304 - INFO - [2007-05-01] Price=148.67, MA(short=146.46, mid=143.62, mid2=141.27, long=138.18) => Aggressive
+2025-03-06 21:54:11,304 - INFO - === 2007-05-01 Rebalancing Start ===
+2025-03-06 21:54:11,304 - INFO - Portfolio value=109640.83, cash buffer=1096.41, available=108544.42
+2025-03-06 21:54:11,304 - INFO - QQQ: prev_close=45.96, current_size=1186, alloc_ratio=0.90, adjust=939
+2025-03-06 21:54:11,305 - INFO - IAU: prev_close=13.44, current_size=2353, alloc_ratio=0.10, adjust=-1546
+2025-03-06 21:54:11,305 - INFO - QLD: prev_close=2.80, current_size=8164, alloc_ratio=0.00, adjust=-8164
+2025-03-06 21:54:11,305 - INFO - 2007-05-01: SELL IAU, shares=1546
+2025-03-06 21:54:11,305 - INFO - 2007-05-01: SELL QLD, shares=8164
+2025-03-06 21:54:11,306 - INFO - Cash after SELL: 782.38
+2025-03-06 21:54:11,306 - WARNING - QQQ: adjusting shares 939 -> 17 due to insufficient cash
+2025-03-06 21:54:11,306 - INFO - 2007-05-01: BUY QQQ, shares=17
+2025-03-06 21:54:11,306 - INFO - === 2007-05-01 Rebalancing End ===
+2025-03-06 21:54:11,307 - INFO - 2007-05-02 00:00:00 OrderCompleted: SELL -1546 IAU @ 13.26, Comm=20.49
+2025-03-06 21:54:11,307 - INFO - 2007-05-02 00:00:00 OrderCompleted: SELL -8164 QLD @ 2.81, Comm=22.92
+2025-03-06 21:54:11,308 - INFO - 2007-05-02 00:00:00 OrderCompleted: BUY 17 QQQ @ 46.09, Comm=0.78
+2025-03-06 21:54:11,308 - INFO - 2007-05-02 00:00:00 TradeClosed: QLD, PnL=2144.30, NetPnL=2100.61
+2025-03-06 21:54:12,195 - INFO - Month-end close for QQQ: 47.41
+2025-03-06 21:54:12,196 - INFO - Month-end close for IAU: 13.12
+2025-03-06 21:54:12,196 - INFO - Month-end close for QLD: 2.96
+2025-03-06 21:54:12,264 - INFO - [2007-06-01] Price=154.08, MA(short=151.64, mid=148.16, mid2=143.65, long=140.93) => Aggressive
+2025-03-06 21:54:12,264 - INFO - === 2007-06-01 Rebalancing Start ===
+2025-03-06 21:54:12,264 - INFO - Portfolio value=111179.42, cash buffer=1111.79, available=110067.62
+2025-03-06 21:54:12,265 - INFO - QQQ: prev_close=47.41, current_size=1203, alloc_ratio=0.90, adjust=886
+2025-03-06 21:54:12,266 - INFO - IAU: prev_close=13.12, current_size=807, alloc_ratio=0.10, adjust=32
+2025-03-06 21:54:12,266 - INFO - QLD: prev_close=2.96, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-06 21:54:12,266 - INFO - Cash after SELL: 43366.31
+2025-03-06 21:54:12,266 - INFO - 2007-06-01: BUY QQQ, shares=886
+2025-03-06 21:54:12,266 - INFO - 2007-06-01: BUY IAU, shares=32
+2025-03-06 21:54:12,267 - INFO - === 2007-06-01 Rebalancing End ===
+2025-03-06 21:54:12,267 - INFO - 2007-06-04 00:00:00 OrderCompleted: BUY 886 QQQ @ 47.27, Comm=41.88
+2025-03-06 21:54:12,268 - INFO - 2007-06-04 00:00:00 OrderCompleted: BUY 32 IAU @ 13.30, Comm=0.43
+2025-03-06 21:54:13,119 - INFO - Month-end close for QQQ: 47.60
+2025-03-06 21:54:13,119 - INFO - Month-end close for IAU: 12.88
+2025-03-06 21:54:13,119 - INFO - Month-end close for QLD: 2.97
+2025-03-06 21:54:13,189 - INFO - [2007-07-02] Price=151.79, MA(short=151.39, mid=151.10, mid2=145.42, long=143.14) => Aggressive
+2025-03-06 21:54:13,190 - INFO - === 2007-07-02 Rebalancing Start ===
+2025-03-06 21:54:13,190 - INFO - Portfolio value=112275.57, cash buffer=1122.76, available=111152.81
+2025-03-06 21:54:13,190 - INFO - QQQ: prev_close=47.60, current_size=2089, alloc_ratio=0.90, adjust=12
+2025-03-06 21:54:13,190 - INFO - IAU: prev_close=12.88, current_size=839, alloc_ratio=0.10, adjust=23
+2025-03-06 21:54:13,191 - INFO - QLD: prev_close=2.97, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-06 21:54:13,191 - INFO - Cash after SELL: 1017.12
+2025-03-06 21:54:13,191 - INFO - 2007-07-02: BUY QQQ, shares=12
+2025-03-06 21:54:13,191 - INFO - 2007-07-02: BUY IAU, shares=23
+2025-03-06 21:54:13,192 - INFO - === 2007-07-02 Rebalancing End ===
+2025-03-06 21:54:13,192 - INFO - 2007-07-03 00:00:00 OrderCompleted: BUY 12 QQQ @ 48.09, Comm=0.58
+2025-03-06 21:54:13,193 - INFO - 2007-07-03 00:00:00 OrderCompleted: BUY 23 IAU @ 13.00, Comm=0.30
+2025-03-06 21:54:14,028 - INFO - Month-end close for QQQ: 47.53
+2025-03-06 21:54:14,029 - INFO - Month-end close for IAU: 13.18
+2025-03-06 21:54:14,029 - INFO - Month-end close for QLD: 2.94
+2025-03-06 21:54:14,118 - INFO - [2007-08-01] Price=146.43, MA(short=151.66, mid=151.70, mid2=146.88, long=145.04) => MidDefensive
+2025-03-06 21:54:14,118 - INFO - === 2007-08-01 Rebalancing Start ===
+2025-03-06 21:54:14,118 - INFO - Portfolio value=112151.30, cash buffer=1121.51, available=111029.78
+2025-03-06 21:54:14,119 - INFO - QQQ: prev_close=47.53, current_size=2101, alloc_ratio=0.40, adjust=-1167
+2025-03-06 21:54:14,119 - INFO - IAU: prev_close=13.18, current_size=862, alloc_ratio=0.40, adjust=2507
+2025-03-06 21:54:14,119 - INFO - QLD: prev_close=2.94, current_size=0, alloc_ratio=0.20, adjust=7559
+2025-03-06 21:54:14,119 - INFO - 2007-08-01: SELL QQQ, shares=1167
+2025-03-06 21:54:14,119 - INFO - Cash after SELL: 140.17
+2025-03-06 21:54:14,119 - WARNING - IAU: adjusting shares 2507 -> 10 due to insufficient cash
+2025-03-06 21:54:14,119 - INFO - 2007-08-01: BUY IAU, shares=10
+2025-03-06 21:54:14,120 - WARNING - QLD: adjusting shares 7559 -> 47 due to insufficient cash
+2025-03-06 21:54:14,120 - INFO - 2007-08-01: BUY QLD, shares=47
+2025-03-06 21:54:14,120 - INFO - === 2007-08-01 Rebalancing End ===
+2025-03-06 21:54:14,121 - INFO - 2007-08-02 00:00:00 OrderCompleted: SELL -1167 QQQ @ 47.93, Comm=55.93
+2025-03-06 21:54:14,121 - INFO - 2007-08-02 00:00:00 OrderCompleted: BUY 10 IAU @ 13.18, Comm=0.13
+2025-03-06 21:54:14,121 - INFO - 2007-08-02 00:00:00 OrderCompleted: BUY 47 QLD @ 2.98, Comm=0.14
+2025-03-06 21:54:15,037 - INFO - Month-end close for QQQ: 48.87
+2025-03-06 21:54:15,038 - INFO - Month-end close for IAU: 13.33
+2025-03-06 21:54:15,038 - INFO - Month-end close for QLD: 3.06
+2025-03-06 21:54:15,106 - INFO - [2007-09-04] Price=149.08, MA(short=145.77, mid=148.77, mid2=147.43, long=145.97) => Moderate
+2025-03-06 21:54:15,107 - INFO - === 2007-09-04 Rebalancing Start ===
+2025-03-06 21:54:15,107 - INFO - Portfolio value=114075.14, cash buffer=1140.75, available=112934.39
+2025-03-06 21:54:15,107 - INFO - QQQ: prev_close=48.87, current_size=934, alloc_ratio=0.80, adjust=914
+2025-03-06 21:54:15,108 - INFO - IAU: prev_close=13.33, current_size=872, alloc_ratio=0.10, adjust=-25
+2025-03-06 21:54:15,108 - INFO - QLD: prev_close=3.06, current_size=47, alloc_ratio=0.10, adjust=3643
+2025-03-06 21:54:15,108 - INFO - 2007-09-04: SELL IAU, shares=25
+2025-03-06 21:54:15,108 - INFO - Cash after SELL: 55746.18
+2025-03-06 21:54:15,108 - INFO - 2007-09-04: BUY QQQ, shares=914
+2025-03-06 21:54:15,109 - INFO - 2007-09-04: BUY QLD, shares=3643
+2025-03-06 21:54:15,109 - INFO - === 2007-09-04 Rebalancing End ===
+2025-03-06 21:54:15,110 - ERROR - 2007-09-05 00:00:00 MarginError: QLD
+2025-03-06 21:54:15,110 - INFO - 2007-09-05 00:00:00 OrderCompleted: SELL -25 IAU @ 13.48, Comm=0.34
+2025-03-06 21:54:15,110 - INFO - 2007-09-05 00:00:00 OrderCompleted: BUY 914 QQQ @ 49.56, Comm=45.30
+2025-03-06 21:54:15,859 - INFO - Month-end close for QQQ: 51.41
+2025-03-06 21:54:15,860 - INFO - Month-end close for IAU: 14.73
+2025-03-06 21:54:15,860 - INFO - Month-end close for QLD: 3.38
+2025-03-06 21:54:15,932 - INFO - [2007-10-01] Price=154.30, MA(short=150.05, mid=147.93, mid2=148.12, long=146.88) => Aggressive
+2025-03-06 21:54:15,933 - INFO - === 2007-10-01 Rebalancing Start ===
+2025-03-06 21:54:15,933 - INFO - Portfolio value=119539.52, cash buffer=1195.40, available=118344.13
+2025-03-06 21:54:15,933 - INFO - QQQ: prev_close=51.41, current_size=1848, alloc_ratio=0.90, adjust=223
+2025-03-06 21:54:15,934 - INFO - IAU: prev_close=14.73, current_size=847, alloc_ratio=0.10, adjust=-44
+2025-03-06 21:54:15,934 - INFO - QLD: prev_close=3.38, current_size=47, alloc_ratio=0.00, adjust=-47
+2025-03-06 21:54:15,934 - INFO - 2007-10-01: SELL IAU, shares=44
+2025-03-06 21:54:15,934 - INFO - 2007-10-01: SELL QLD, shares=47
+2025-03-06 21:54:15,935 - INFO - Cash after SELL: 10739.66
+2025-03-06 21:54:15,935 - WARNING - QQQ: adjusting shares 223 -> 208 due to insufficient cash
+2025-03-06 21:54:15,935 - INFO - 2007-10-01: BUY QQQ, shares=208
+2025-03-06 21:54:15,935 - INFO - === 2007-10-01 Rebalancing End ===
+2025-03-06 21:54:15,936 - INFO - 2007-10-02 00:00:00 OrderCompleted: SELL -44 IAU @ 14.53, Comm=0.64
+2025-03-06 21:54:15,936 - INFO - 2007-10-02 00:00:00 OrderCompleted: SELL -47 QLD @ 3.45, Comm=0.16
+2025-03-06 21:54:15,936 - INFO - 2007-10-02 00:00:00 OrderCompleted: BUY 208 QQQ @ 52.04, Comm=10.82
+2025-03-06 21:54:15,936 - INFO - 2007-10-02 00:00:00 TradeClosed: QLD, PnL=21.66, NetPnL=21.36
+2025-03-06 21:54:16,876 - INFO - Month-end close for QQQ: 55.03
+2025-03-06 21:54:16,877 - INFO - Month-end close for IAU: 15.72
+2025-03-06 21:54:16,877 - INFO - Month-end close for QLD: 3.83
+2025-03-06 21:54:16,947 - INFO - [2007-11-01] Price=151.03, MA(short=153.71, mid=151.30, mid2=150.11, long=148.23) => Neutral
+2025-03-06 21:54:16,948 - INFO - === 2007-11-01 Rebalancing Start ===
+2025-03-06 21:54:16,948 - INFO - Portfolio value=124275.12, cash buffer=1242.75, available=123032.37
+2025-03-06 21:54:16,949 - INFO - QQQ: prev_close=55.03, current_size=2056, alloc_ratio=0.50, adjust=-939
+2025-03-06 21:54:16,949 - INFO - IAU: prev_close=15.72, current_size=803, alloc_ratio=0.30, adjust=1544
+2025-03-06 21:54:16,949 - INFO - QLD: prev_close=3.83, current_size=0, alloc_ratio=0.20, adjust=6429
+2025-03-06 21:54:16,950 - INFO - 2007-11-01: SELL QQQ, shares=939
+2025-03-06 21:54:16,950 - INFO - Cash after SELL: 705.05
+2025-03-06 21:54:16,950 - WARNING - QLD: adjusting shares 6429 -> 184 due to insufficient cash
+2025-03-06 21:54:16,950 - INFO - 2007-11-01: BUY QLD, shares=184
+2025-03-06 21:54:16,950 - WARNING - IAU: adjusting shares 1544 -> 44 due to insufficient cash
+2025-03-06 21:54:16,950 - INFO - 2007-11-01: BUY IAU, shares=44
+2025-03-06 21:54:16,951 - INFO - === 2007-11-01 Rebalancing End ===
+2025-03-06 21:54:16,951 - INFO - 2007-11-02 00:00:00 OrderCompleted: SELL -939 QQQ @ 54.42, Comm=51.10
+2025-03-06 21:54:16,952 - INFO - 2007-11-02 00:00:00 OrderCompleted: BUY 184 QLD @ 3.74, Comm=0.69
+2025-03-06 21:54:16,952 - INFO - 2007-11-02 00:00:00 OrderCompleted: BUY 44 IAU @ 15.73, Comm=0.69
+2025-03-06 21:54:17,810 - INFO - Month-end close for QQQ: 51.31
+2025-03-06 21:54:17,810 - INFO - Month-end close for IAU: 15.50
+2025-03-06 21:54:17,811 - INFO - Month-end close for QLD: 3.30
+2025-03-06 21:54:17,881 - INFO - [2007-12-03] Price=147.68, MA(short=146.32, mid=150.47, mid2=150.09, long=148.47) => Defensive
+2025-03-06 21:54:17,881 - INFO - === 2007-12-03 Rebalancing Start ===
+2025-03-06 21:54:17,881 - INFO - Portfolio value=121070.40, cash buffer=1210.70, available=119859.70
+2025-03-06 21:54:17,882 - INFO - QQQ: prev_close=51.31, current_size=1117, alloc_ratio=0.00, adjust=-1117
+2025-03-06 21:54:17,882 - INFO - IAU: prev_close=15.50, current_size=847, alloc_ratio=0.50, adjust=3019
+2025-03-06 21:54:17,882 - INFO - QLD: prev_close=3.30, current_size=184, alloc_ratio=0.50, adjust=18000
+2025-03-06 21:54:17,882 - INFO - 2007-12-03: SELL QQQ, shares=1117
+2025-03-06 21:54:17,883 - INFO - Cash after SELL: 50373.04
+2025-03-06 21:54:17,883 - WARNING - QLD: adjusting shares 18000 -> 15269 due to insufficient cash
+2025-03-06 21:54:17,883 - INFO - 2007-12-03: BUY QLD, shares=15269
+2025-03-06 21:54:17,883 - INFO - 2007-12-03: BUY IAU, shares=3019
+2025-03-06 21:54:17,883 - INFO - === 2007-12-03 Rebalancing End ===
+2025-03-06 21:54:17,885 - INFO - 2007-12-04 00:00:00 OrderCompleted: SELL -1117 QQQ @ 50.49, Comm=56.40
+2025-03-06 21:54:17,885 - INFO - 2007-12-04 00:00:00 OrderCompleted: BUY 15269 QLD @ 3.18, Comm=48.58
+2025-03-06 21:54:17,885 - INFO - 2007-12-04 00:00:00 OrderCompleted: BUY 3019 IAU @ 15.81, Comm=47.72
+2025-03-06 21:54:17,885 - INFO - 2007-12-04 00:00:00 TradeClosed: QQQ, PnL=16973.32, NetPnL=16489.07
+2025-03-06 21:54:18,683 - INFO - Month-end close for QQQ: 51.22
+2025-03-06 21:54:18,683 - INFO - Month-end close for IAU: 16.49
+2025-03-06 21:54:18,683 - INFO - Month-end close for QLD: 3.10
+2025-03-06 21:54:18,752 - INFO - [2008-01-02] Price=144.93, MA(short=147.95, mid=148.08, mid2=149.64, long=149.16) => Defensive
+2025-03-06 21:54:18,752 - INFO - === 2008-01-02 Rebalancing Start ===
+2025-03-06 21:54:18,753 - INFO - Portfolio value=122334.14, cash buffer=1223.34, available=121110.80
+2025-03-06 21:54:18,753 - INFO - QQQ: prev_close=51.22, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-06 21:54:18,753 - INFO - IAU: prev_close=16.49, current_size=3866, alloc_ratio=0.50, adjust=-194
+2025-03-06 21:54:18,754 - INFO - QLD: prev_close=3.10, current_size=15453, alloc_ratio=0.50, adjust=4077
+2025-03-06 21:54:18,754 - INFO - 2008-01-02: SELL IAU, shares=194
+2025-03-06 21:54:18,754 - INFO - Cash after SELL: 10314.04
+2025-03-06 21:54:18,754 - WARNING - QLD: adjusting shares 4077 -> 3323 due to insufficient cash
+2025-03-06 21:54:18,756 - INFO - 2008-01-02: BUY QLD, shares=3323
+2025-03-06 21:54:18,756 - INFO - === 2008-01-02 Rebalancing End ===
+2025-03-06 21:54:18,756 - INFO - 2008-01-03 00:00:00 OrderCompleted: SELL -194 IAU @ 17.01, Comm=3.30
+2025-03-06 21:54:18,757 - INFO - 2008-01-03 00:00:00 OrderCompleted: BUY 3323 QLD @ 3.00, Comm=9.95
+2025-03-06 21:54:19,625 - INFO - Month-end close for QQQ: 45.13
+2025-03-06 21:54:19,626 - INFO - Month-end close for IAU: 18.30
+2025-03-06 21:54:19,626 - INFO - Month-end close for QLD: 2.35
+2025-03-06 21:54:19,694 - INFO - [2008-02-01] Price=139.58, MA(short=137.41, mid=142.99, mid2=147.65, long=148.48) => Defensive
+2025-03-06 21:54:19,695 - INFO - === 2008-02-01 Rebalancing Start ===
+2025-03-06 21:54:19,695 - INFO - Portfolio value=114703.12, cash buffer=1147.03, available=113556.09
+2025-03-06 21:54:19,695 - INFO - QQQ: prev_close=45.13, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-06 21:54:19,695 - INFO - IAU: prev_close=18.30, current_size=3672, alloc_ratio=0.50, adjust=-570
+2025-03-06 21:54:19,696 - INFO - QLD: prev_close=2.35, current_size=18776, alloc_ratio=0.50, adjust=5433
+2025-03-06 21:54:19,696 - INFO - 2008-02-01: SELL IAU, shares=570
+2025-03-06 21:54:19,696 - INFO - Cash after SELL: 3648.08
+2025-03-06 21:54:19,696 - WARNING - QLD: adjusting shares 5433 -> 1553 due to insufficient cash
+2025-03-06 21:54:19,697 - INFO - 2008-02-01: BUY QLD, shares=1553
+2025-03-06 21:54:19,697 - INFO - === 2008-02-01 Rebalancing End ===
+2025-03-06 21:54:19,697 - INFO - 2008-02-04 00:00:00 OrderCompleted: SELL -570 IAU @ 17.67, Comm=10.07
+2025-03-06 21:54:19,698 - INFO - 2008-02-04 00:00:00 OrderCompleted: BUY 1553 QLD @ 2.42, Comm=3.76
+2025-03-06 21:54:20,513 - INFO - Month-end close for QQQ: 42.95
+2025-03-06 21:54:20,514 - INFO - Month-end close for IAU: 19.27
+2025-03-06 21:54:20,514 - INFO - Month-end close for QLD: 2.15
+2025-03-06 21:54:20,584 - INFO - [2008-03-03] Price=133.50, MA(short=135.57, mid=138.37, mid2=145.38, long=147.04) => Defensive
+2025-03-06 21:54:20,584 - INFO - === 2008-03-03 Rebalancing Start ===
+2025-03-06 21:54:20,584 - INFO - Portfolio value=113099.63, cash buffer=1131.00, available=111968.63
+2025-03-06 21:54:20,584 - INFO - QQQ: prev_close=42.95, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-06 21:54:20,585 - INFO - IAU: prev_close=19.27, current_size=3102, alloc_ratio=0.50, adjust=-198
+2025-03-06 21:54:20,585 - INFO - QLD: prev_close=2.15, current_size=20329, alloc_ratio=0.50, adjust=5732
+2025-03-06 21:54:20,585 - INFO - 2008-03-03: SELL IAU, shares=198
+2025-03-06 21:54:20,586 - INFO - Cash after SELL: 9950.00
+2025-03-06 21:54:20,586 - WARNING - QLD: adjusting shares 5732 -> 4627 due to insufficient cash
+2025-03-06 21:54:20,586 - INFO - 2008-03-03: BUY QLD, shares=4627
+2025-03-06 21:54:20,586 - INFO - === 2008-03-03 Rebalancing End ===
+2025-03-06 21:54:20,587 - INFO - 2008-03-04 00:00:00 OrderCompleted: SELL -198 IAU @ 19.48, Comm=3.86
+2025-03-06 21:54:20,587 - INFO - 2008-03-04 00:00:00 OrderCompleted: BUY 4627 QLD @ 2.08, Comm=9.61
+2025-03-06 21:54:21,389 - INFO - Month-end close for QQQ: 43.72
+2025-03-06 21:54:21,390 - INFO - Month-end close for IAU: 18.13
+2025-03-06 21:54:21,390 - INFO - Month-end close for QLD: 2.19
+2025-03-06 21:54:21,463 - INFO - [2008-04-01] Price=136.61, MA(short=132.11, mid=133.92, mid2=143.57, long=145.04) => Defensive
+2025-03-06 21:54:21,464 - INFO - === 2008-04-01 Rebalancing Start ===
+2025-03-06 21:54:21,464 - INFO - Portfolio value=113878.20, cash buffer=1138.78, available=112739.42
+2025-03-06 21:54:21,464 - INFO - QQQ: prev_close=43.72, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-06 21:54:21,465 - INFO - IAU: prev_close=18.13, current_size=2904, alloc_ratio=0.50, adjust=204
+2025-03-06 21:54:21,465 - INFO - QLD: prev_close=2.19, current_size=24956, alloc_ratio=0.50, adjust=831
+2025-03-06 21:54:21,465 - INFO - Cash after SELL: 4181.63
+2025-03-06 21:54:21,466 - INFO - 2008-04-01: BUY IAU, shares=204
+2025-03-06 21:54:21,467 - INFO - 2008-04-01: BUY QLD, shares=831
+2025-03-06 21:54:21,467 - INFO - === 2008-04-01 Rebalancing End ===
+2025-03-06 21:54:21,468 - ERROR - 2008-04-02 00:00:00 MarginError: QLD
+2025-03-06 21:54:21,468 - INFO - 2008-04-02 00:00:00 OrderCompleted: BUY 204 IAU @ 17.45, Comm=3.56
+2025-03-06 21:54:22,384 - INFO - Month-end close for QQQ: 47.21
+2025-03-06 21:54:22,385 - INFO - Month-end close for IAU: 17.30
+2025-03-06 21:54:22,386 - INFO - Month-end close for QLD: 2.53
+2025-03-06 21:54:22,455 - INFO - [2008-05-01] Price=141.12, MA(short=137.22, mid=134.95, mid2=141.87, long=143.40) => Defensive
+2025-03-06 21:54:22,455 - INFO - === 2008-05-01 Rebalancing Start ===
+2025-03-06 21:54:22,455 - INFO - Portfolio value=119732.70, cash buffer=1197.33, available=118535.37
+2025-03-06 21:54:22,456 - INFO - QQQ: prev_close=47.21, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-06 21:54:22,456 - INFO - IAU: prev_close=17.30, current_size=3108, alloc_ratio=0.50, adjust=318
+2025-03-06 21:54:22,456 - INFO - QLD: prev_close=2.53, current_size=24956, alloc_ratio=0.50, adjust=-1499
+2025-03-06 21:54:22,456 - INFO - 2008-05-01: SELL QLD, shares=1499
+2025-03-06 21:54:22,457 - INFO - Cash after SELL: 618.68
+2025-03-06 21:54:22,457 - WARNING - IAU: adjusting shares 318 -> 35 due to insufficient cash
+2025-03-06 21:54:22,457 - INFO - 2008-05-01: BUY IAU, shares=35
+2025-03-06 21:54:22,457 - INFO - === 2008-05-01 Rebalancing End ===
+2025-03-06 21:54:22,458 - INFO - 2008-05-02 00:00:00 OrderCompleted: SELL -1499 QLD @ 2.74, Comm=4.11
+2025-03-06 21:54:22,458 - INFO - 2008-05-02 00:00:00 OrderCompleted: BUY 35 IAU @ 16.80, Comm=0.59
+2025-03-06 21:54:23,323 - INFO - Month-end close for QQQ: 50.01
+2025-03-06 21:54:23,324 - INFO - Month-end close for IAU: 17.49
+2025-03-06 21:54:23,324 - INFO - Month-end close for QLD: 2.83
+2025-03-06 21:54:23,393 - INFO - [2008-06-02] Price=138.90, MA(short=140.36, mid=138.03, mid2=139.99, long=142.60) => Defensive
+2025-03-06 21:54:23,393 - INFO - === 2008-06-02 Rebalancing Start ===
+2025-03-06 21:54:23,394 - INFO - Portfolio value=124287.15, cash buffer=1242.87, available=123044.28
+2025-03-06 21:54:23,394 - INFO - QQQ: prev_close=50.01, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-06 21:54:23,395 - INFO - IAU: prev_close=17.49, current_size=3143, alloc_ratio=0.50, adjust=373
+2025-03-06 21:54:23,395 - INFO - QLD: prev_close=2.83, current_size=23457, alloc_ratio=0.50, adjust=-1704
+2025-03-06 21:54:23,395 - INFO - 2008-06-02: SELL QLD, shares=1704
+2025-03-06 21:54:23,396 - INFO - Cash after SELL: 4137.92
+2025-03-06 21:54:23,397 - WARNING - IAU: adjusting shares 373 -> 236 due to insufficient cash
+2025-03-06 21:54:23,397 - INFO - 2008-06-02: BUY IAU, shares=236
+2025-03-06 21:54:23,397 - INFO - === 2008-06-02 Rebalancing End ===
+2025-03-06 21:54:23,397 - INFO - 2008-06-03 00:00:00 OrderCompleted: SELL -1704 QLD @ 2.77, Comm=4.73
+2025-03-06 21:54:23,398 - INFO - 2008-06-03 00:00:00 OrderCompleted: BUY 236 IAU @ 17.34, Comm=4.09
+2025-03-06 21:54:24,253 - INFO - Month-end close for QQQ: 45.17
+2025-03-06 21:54:24,254 - INFO - Month-end close for IAU: 18.25
+2025-03-06 21:54:24,254 - INFO - Month-end close for QLD: 2.29
+2025-03-06 21:54:24,326 - INFO - [2008-07-01] Price=128.38, MA(short=133.76, mid=137.36, mid2=138.01, long=141.25) => Defensive
+2025-03-06 21:54:24,326 - INFO - === 2008-07-01 Rebalancing Start ===
+2025-03-06 21:54:24,327 - INFO - Portfolio value=118471.08, cash buffer=1184.71, available=117286.37
+2025-03-06 21:54:24,327 - INFO - QQQ: prev_close=45.17, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-06 21:54:24,327 - INFO - IAU: prev_close=18.25, current_size=3379, alloc_ratio=0.50, adjust=-165
+2025-03-06 21:54:24,327 - INFO - QLD: prev_close=2.29, current_size=21753, alloc_ratio=0.50, adjust=3830
+2025-03-06 21:54:24,327 - INFO - 2008-07-01: SELL IAU, shares=165
+2025-03-06 21:54:24,327 - INFO - Cash after SELL: 4765.40
+2025-03-06 21:54:24,327 - WARNING - QLD: adjusting shares 3830 -> 2076 due to insufficient cash
+2025-03-06 21:54:24,328 - INFO - 2008-07-01: BUY QLD, shares=2076
+2025-03-06 21:54:24,328 - INFO - === 2008-07-01 Rebalancing End ===
+2025-03-06 21:54:24,328 - INFO - 2008-07-02 00:00:00 OrderCompleted: SELL -165 IAU @ 18.48, Comm=3.05
+2025-03-06 21:54:24,329 - INFO - 2008-07-02 00:00:00 OrderCompleted: BUY 2076 QLD @ 2.36, Comm=4.91
+2025-03-06 21:54:25,260 - INFO - Month-end close for QQQ: 45.46
+2025-03-06 21:54:25,260 - INFO - Month-end close for IAU: 18.02
+2025-03-06 21:54:25,261 - INFO - Month-end close for QLD: 2.30
+2025-03-06 21:54:25,336 - INFO - [2008-08-01] Price=126.16, MA(short=125.50, mid=130.90, mid2=134.73, long=138.16) => Defensive
+2025-03-06 21:54:25,336 - INFO - === 2008-08-01 Rebalancing Start ===
+2025-03-06 21:54:25,337 - INFO - Portfolio value=114125.45, cash buffer=1141.25, available=112984.20
+2025-03-06 21:54:25,337 - INFO - QQQ: prev_close=45.46, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-06 21:54:25,337 - INFO - IAU: prev_close=18.02, current_size=3214, alloc_ratio=0.50, adjust=-80
+2025-03-06 21:54:25,337 - INFO - QLD: prev_close=2.30, current_size=23829, alloc_ratio=0.50, adjust=709
+2025-03-06 21:54:25,337 - INFO - 2008-08-01: SELL IAU, shares=80
+2025-03-06 21:54:25,337 - INFO - Cash after SELL: 2900.80
+2025-03-06 21:54:25,338 - INFO - 2008-08-01: BUY QLD, shares=709
+2025-03-06 21:54:25,338 - INFO - === 2008-08-01 Rebalancing End ===
+2025-03-06 21:54:25,338 - INFO - 2008-08-04 00:00:00 OrderCompleted: SELL -80 IAU @ 17.83, Comm=1.43
+2025-03-06 21:54:25,339 - INFO - 2008-08-04 00:00:00 OrderCompleted: BUY 709 QLD @ 2.24, Comm=1.59
+2025-03-06 21:54:26,192 - INFO - Month-end close for QQQ: 46.12
+2025-03-06 21:54:26,193 - INFO - Month-end close for IAU: 16.39
+2025-03-06 21:54:26,193 - INFO - Month-end close for QLD: 2.35
+2025-03-06 21:54:26,264 - INFO - [2008-09-02] Price=127.99, MA(short=128.45, mid=127.31, mid2=133.29, long=135.83) => Defensive
+2025-03-06 21:54:26,265 - INFO - === 2008-09-02 Rebalancing Start ===
+2025-03-06 21:54:26,265 - INFO - Portfolio value=108426.07, cash buffer=1084.26, available=107341.81
+2025-03-06 21:54:26,265 - INFO - QQQ: prev_close=46.12, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-06 21:54:26,266 - INFO - IAU: prev_close=16.39, current_size=3134, alloc_ratio=0.50, adjust=139
+2025-03-06 21:54:26,266 - INFO - QLD: prev_close=2.35, current_size=24538, alloc_ratio=0.50, adjust=-1663
+2025-03-06 21:54:26,266 - INFO - 2008-09-02: SELL QLD, shares=1663
+2025-03-06 21:54:26,266 - INFO - Cash after SELL: 2735.71
+2025-03-06 21:54:26,267 - INFO - 2008-09-02: BUY IAU, shares=139
+2025-03-06 21:54:26,267 - INFO - === 2008-09-02 Rebalancing End ===
+2025-03-06 21:54:26,268 - INFO - 2008-09-03 00:00:00 OrderCompleted: SELL -1663 QLD @ 2.28, Comm=3.79
+2025-03-06 21:54:26,268 - INFO - 2008-09-03 00:00:00 OrderCompleted: BUY 139 IAU @ 15.84, Comm=2.20
+2025-03-06 21:54:27,138 - INFO - Month-end close for QQQ: 38.91
+2025-03-06 21:54:27,138 - INFO - Month-end close for IAU: 17.09
+2025-03-06 21:54:27,138 - INFO - Month-end close for QLD: 1.64
+2025-03-06 21:54:27,205 - INFO - [2008-10-01] Price=116.06, MA(short=121.37, mid=125.13, mid2=131.27, long=133.17) => Defensive
+2025-03-06 21:54:27,206 - INFO - === 2008-10-01 Rebalancing Start ===
+2025-03-06 21:54:27,206 - INFO - Portfolio value=97241.48, cash buffer=972.41, available=96269.06
+2025-03-06 21:54:27,206 - INFO - QQQ: prev_close=38.91, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-06 21:54:27,206 - INFO - IAU: prev_close=17.09, current_size=3273, alloc_ratio=0.50, adjust=-458
+2025-03-06 21:54:27,207 - INFO - QLD: prev_close=1.64, current_size=22875, alloc_ratio=0.50, adjust=6531
+2025-03-06 21:54:27,207 - INFO - 2008-10-01: SELL IAU, shares=458
+2025-03-06 21:54:27,207 - INFO - Cash after SELL: 4318.04
+2025-03-06 21:54:27,208 - WARNING - QLD: adjusting shares 6531 -> 2635 due to insufficient cash
+2025-03-06 21:54:27,208 - INFO - 2008-10-01: BUY QLD, shares=2635
+2025-03-06 21:54:27,208 - INFO - === 2008-10-01 Rebalancing End ===
+2025-03-06 21:54:27,209 - INFO - 2008-10-02 00:00:00 OrderCompleted: SELL -458 IAU @ 16.93, Comm=7.75
+2025-03-06 21:54:27,209 - INFO - 2008-10-02 00:00:00 OrderCompleted: BUY 2635 QLD @ 1.57, Comm=4.13
+2025-03-06 21:54:28,214 - INFO - Month-end close for QQQ: 32.89
+2025-03-06 21:54:28,215 - INFO - Month-end close for IAU: 14.32
+2025-03-06 21:54:28,215 - INFO - Month-end close for QLD: 1.09
+2025-03-06 21:54:28,283 - INFO - [2008-11-03] Price=97.11, MA(short=94.51, mid=110.51, mid2=125.69, long=127.77) => Defensive
+2025-03-06 21:54:28,284 - INFO - === 2008-11-03 Rebalancing Start ===
+2025-03-06 21:54:28,284 - INFO - Portfolio value=75896.29, cash buffer=758.96, available=75137.33
+2025-03-06 21:54:28,285 - INFO - QQQ: prev_close=32.89, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-06 21:54:28,285 - INFO - IAU: prev_close=14.32, current_size=2815, alloc_ratio=0.50, adjust=-191
+2025-03-06 21:54:28,286 - INFO - QLD: prev_close=1.09, current_size=25510, alloc_ratio=0.50, adjust=9055
+2025-03-06 21:54:28,288 - INFO - 2008-11-03: SELL IAU, shares=191
+2025-03-06 21:54:28,289 - INFO - Cash after SELL: 7928.81
+2025-03-06 21:54:28,289 - WARNING - QLD: adjusting shares 9055 -> 7287 due to insufficient cash
+2025-03-06 21:54:28,290 - INFO - 2008-11-03: BUY QLD, shares=7287
+2025-03-06 21:54:28,290 - INFO - === 2008-11-03 Rebalancing End ===
+2025-03-06 21:54:28,292 - INFO - 2008-11-04 00:00:00 OrderCompleted: SELL -191 IAU @ 14.64, Comm=2.80
+2025-03-06 21:54:28,293 - INFO - 2008-11-04 00:00:00 OrderCompleted: BUY 7287 QLD @ 1.13, Comm=8.25
+2025-03-06 21:54:29,114 - INFO - Month-end close for QQQ: 29.12
+2025-03-06 21:54:29,115 - INFO - Month-end close for IAU: 16.07
+2025-03-06 21:54:29,115 - INFO - Month-end close for QLD: 0.83
+2025-03-06 21:54:29,188 - INFO - [2008-12-01] Price=82.11, MA(short=88.67, mid=96.38, mid2=119.46, long=123.29) => Defensive
+2025-03-06 21:54:29,189 - INFO - === 2008-12-01 Rebalancing Start ===
+2025-03-06 21:54:29,189 - INFO - Portfolio value=65313.18, cash buffer=653.13, available=64660.05
+2025-03-06 21:54:29,190 - INFO - QQQ: prev_close=29.12, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-06 21:54:29,190 - INFO - IAU: prev_close=16.07, current_size=2624, alloc_ratio=0.50, adjust=-612
+2025-03-06 21:54:29,190 - INFO - QLD: prev_close=0.83, current_size=32797, alloc_ratio=0.50, adjust=6331
+2025-03-06 21:54:29,190 - INFO - 2008-12-01: SELL IAU, shares=612
+2025-03-06 21:54:29,190 - INFO - Cash after SELL: 2467.93
+2025-03-06 21:54:29,191 - WARNING - QLD: adjusting shares 6331 -> 2983 due to insufficient cash
+2025-03-06 21:54:29,191 - INFO - 2008-12-01: BUY QLD, shares=2983
+2025-03-06 21:54:29,191 - INFO - === 2008-12-01 Rebalancing End ===
+2025-03-06 21:54:29,192 - INFO - 2008-12-02 00:00:00 OrderCompleted: SELL -612 IAU @ 15.39, Comm=9.42
+2025-03-06 21:54:29,192 - INFO - 2008-12-02 00:00:00 OrderCompleted: BUY 2983 QLD @ 0.72, Comm=2.15
+2025-03-06 21:54:30,126 - INFO - Month-end close for QQQ: 29.74
+2025-03-06 21:54:30,126 - INFO - Month-end close for IAU: 17.33
+2025-03-06 21:54:30,127 - INFO - Month-end close for QLD: 0.84
+2025-03-06 21:54:30,197 - INFO - [2009-01-02] Price=92.96, MA(short=88.68, mid=88.92, mid2=111.86, long=118.37) => Defensive
+2025-03-06 21:54:30,197 - INFO - === 2009-01-02 Rebalancing Start ===
+2025-03-06 21:54:30,198 - INFO - Portfolio value=77192.37, cash buffer=771.92, available=76420.45
+2025-03-06 21:54:30,198 - INFO - QQQ: prev_close=29.74, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-06 21:54:30,198 - INFO - IAU: prev_close=17.33, current_size=2012, alloc_ratio=0.50, adjust=192
+2025-03-06 21:54:30,198 - INFO - QLD: prev_close=0.84, current_size=35780, alloc_ratio=0.50, adjust=9691
+2025-03-06 21:54:30,199 - INFO - Cash after SELL: 9728.79
+2025-03-06 21:54:30,199 - INFO - 2009-01-02: BUY QLD, shares=9691
+2025-03-06 21:54:30,199 - INFO - 2009-01-02: BUY IAU, shares=192
+2025-03-06 21:54:30,199 - INFO - === 2009-01-02 Rebalancing End ===
+2025-03-06 21:54:30,200 - ERROR - 2009-01-05 00:00:00 MarginError: IAU
+2025-03-06 21:54:30,200 - INFO - 2009-01-05 00:00:00 OrderCompleted: BUY 9691 QLD @ 0.90, Comm=8.77
+2025-03-06 21:54:31,009 - INFO - Month-end close for QQQ: 29.06
+2025-03-06 21:54:31,010 - INFO - Month-end close for IAU: 18.27
+2025-03-06 21:54:31,010 - INFO - Month-end close for QLD: 0.79
+2025-03-06 21:54:31,080 - INFO - [2009-02-02] Price=82.58, MA(short=86.38, mid=86.74, mid2=105.39, long=113.48) => Defensive
+2025-03-06 21:54:31,080 - INFO - === 2009-02-02 Rebalancing Start ===
+2025-03-06 21:54:31,080 - INFO - Portfolio value=73620.84, cash buffer=736.21, available=72884.63
+2025-03-06 21:54:31,081 - INFO - QQQ: prev_close=29.06, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-06 21:54:31,081 - INFO - IAU: prev_close=18.27, current_size=2012, alloc_ratio=0.50, adjust=-18
+2025-03-06 21:54:31,081 - INFO - QLD: prev_close=0.79, current_size=45471, alloc_ratio=0.50, adjust=567
+2025-03-06 21:54:31,081 - INFO - 2009-02-02: SELL IAU, shares=18
+2025-03-06 21:54:31,081 - INFO - Cash after SELL: 952.70
+2025-03-06 21:54:31,082 - INFO - 2009-02-02: BUY QLD, shares=567
+2025-03-06 21:54:31,082 - INFO - === 2009-02-02 Rebalancing End ===
+2025-03-06 21:54:31,082 - INFO - 2009-02-03 00:00:00 OrderCompleted: SELL -18 IAU @ 17.89, Comm=0.32
+2025-03-06 21:54:31,084 - INFO - 2009-02-03 00:00:00 OrderCompleted: BUY 567 QLD @ 0.82, Comm=0.46
+2025-03-06 21:54:31,958 - INFO - Month-end close for QQQ: 27.53
+2025-03-06 21:54:31,959 - INFO - Month-end close for IAU: 18.53
+2025-03-06 21:54:31,959 - INFO - Month-end close for QLD: 0.70
+2025-03-06 21:54:32,028 - INFO - [2009-03-02] Price=70.60, MA(short=80.35, mid=84.35, mid2=99.62, long=107.83) => Defensive
+2025-03-06 21:54:32,028 - INFO - === 2009-03-02 Rebalancing Start ===
+2025-03-06 21:54:32,028 - INFO - Portfolio value=67466.73, cash buffer=674.67, available=66792.07
+2025-03-06 21:54:32,029 - INFO - QQQ: prev_close=27.53, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-06 21:54:32,029 - INFO - IAU: prev_close=18.53, current_size=1994, alloc_ratio=0.50, adjust=-192
+2025-03-06 21:54:32,029 - INFO - QLD: prev_close=0.70, current_size=46038, alloc_ratio=0.50, adjust=1416
+2025-03-06 21:54:32,029 - INFO - 2009-03-02: SELL IAU, shares=192
+2025-03-06 21:54:32,029 - INFO - Cash after SELL: 811.65
+2025-03-06 21:54:32,030 - WARNING - QLD: adjusting shares 1416 -> 1152 due to insufficient cash
+2025-03-06 21:54:32,030 - INFO - 2009-03-02: BUY QLD, shares=1152
+2025-03-06 21:54:32,030 - INFO - === 2009-03-02 Rebalancing End ===
+2025-03-06 21:54:32,031 - INFO - 2009-03-03 00:00:00 OrderCompleted: SELL -192 IAU @ 18.18, Comm=3.49
+2025-03-06 21:54:32,032 - INFO - 2009-03-03 00:00:00 OrderCompleted: BUY 1152 QLD @ 0.67, Comm=0.77
+2025-03-06 21:54:32,965 - INFO - Month-end close for QQQ: 30.32
+2025-03-06 21:54:32,966 - INFO - Month-end close for IAU: 18.08
+2025-03-06 21:54:32,966 - INFO - Month-end close for QLD: 0.84
+2025-03-06 21:54:33,036 - INFO - [2009-04-01] Price=81.06, MA(short=76.76, mid=79.19, mid2=92.08, long=100.99) => Defensive
+2025-03-06 21:54:33,036 - INFO - === 2009-04-01 Rebalancing Start ===
+2025-03-06 21:54:33,037 - INFO - Portfolio value=77291.91, cash buffer=772.92, available=76518.99
+2025-03-06 21:54:33,037 - INFO - QQQ: prev_close=30.32, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-06 21:54:33,037 - INFO - IAU: prev_close=18.08, current_size=1802, alloc_ratio=0.50, adjust=314
+2025-03-06 21:54:33,037 - INFO - QLD: prev_close=0.84, current_size=47190, alloc_ratio=0.50, adjust=-1863
+2025-03-06 21:54:33,038 - INFO - 2009-04-01: SELL QLD, shares=1863
+2025-03-06 21:54:33,038 - INFO - Cash after SELL: 3525.75
+2025-03-06 21:54:33,038 - WARNING - IAU: adjusting shares 314 -> 194 due to insufficient cash
+2025-03-06 21:54:33,038 - INFO - 2009-04-01: BUY IAU, shares=194
+2025-03-06 21:54:33,039 - INFO - === 2009-04-01 Rebalancing End ===
+2025-03-06 21:54:33,039 - INFO - 2009-04-02 00:00:00 OrderCompleted: SELL -1863 QLD @ 0.90, Comm=1.67
+2025-03-06 21:54:33,040 - INFO - 2009-04-02 00:00:00 OrderCompleted: BUY 194 IAU @ 17.77, Comm=3.45
+2025-03-06 21:54:33,906 - INFO - Month-end close for QQQ: 34.28
+2025-03-06 21:54:33,907 - INFO - Month-end close for IAU: 17.47
+2025-03-06 21:54:33,907 - INFO - Month-end close for QLD: 1.07
+2025-03-06 21:54:33,975 - INFO - [2009-05-01] Price=87.89, MA(short=85.21, mid=79.96, mid2=86.68, long=96.49) => Defensive
+2025-03-06 21:54:33,976 - INFO - === 2009-05-01 Rebalancing Start ===
+2025-03-06 21:54:33,976 - INFO - Portfolio value=85086.65, cash buffer=850.87, available=84235.79
+2025-03-06 21:54:33,976 - INFO - QQQ: prev_close=34.28, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-06 21:54:33,977 - INFO - IAU: prev_close=17.47, current_size=1996, alloc_ratio=0.50, adjust=415
+2025-03-06 21:54:33,977 - INFO - QLD: prev_close=1.07, current_size=45327, alloc_ratio=0.50, adjust=-5827
+2025-03-06 21:54:33,977 - INFO - 2009-05-01: SELL QLD, shares=5827
+2025-03-06 21:54:33,977 - INFO - Cash after SELL: 1747.42
+2025-03-06 21:54:33,977 - WARNING - IAU: adjusting shares 415 -> 99 due to insufficient cash
+2025-03-06 21:54:33,977 - INFO - 2009-05-01: BUY IAU, shares=99
+2025-03-06 21:54:33,979 - INFO - === 2009-05-01 Rebalancing End ===
+2025-03-06 21:54:33,979 - INFO - 2009-05-04 00:00:00 OrderCompleted: SELL -5827 QLD @ 1.09, Comm=6.37
+2025-03-06 21:54:33,980 - INFO - 2009-05-04 00:00:00 OrderCompleted: BUY 99 IAU @ 17.53, Comm=1.74
+2025-03-06 21:54:34,796 - INFO - Month-end close for QQQ: 35.38
+2025-03-06 21:54:34,796 - INFO - Month-end close for IAU: 19.26
+2025-03-06 21:54:34,797 - INFO - Month-end close for QLD: 1.13
+2025-03-06 21:54:34,865 - INFO - [2009-06-01] Price=94.77, MA(short=90.70, mid=86.63, mid2=85.30, long=92.86) => Neutral
+2025-03-06 21:54:34,867 - INFO - === 2009-06-01 Rebalancing Start ===
+2025-03-06 21:54:34,867 - INFO - Portfolio value=93757.54, cash buffer=937.58, available=92819.96
+2025-03-06 21:54:34,867 - INFO - QQQ: prev_close=35.38, current_size=0, alloc_ratio=0.50, adjust=1311
+2025-03-06 21:54:34,868 - INFO - IAU: prev_close=19.26, current_size=2095, alloc_ratio=0.30, adjust=-649
+2025-03-06 21:54:34,868 - INFO - QLD: prev_close=1.13, current_size=39500, alloc_ratio=0.20, adjust=-23045
+2025-03-06 21:54:34,868 - INFO - 2009-06-01: SELL IAU, shares=649
+2025-03-06 21:54:34,868 - INFO - 2009-06-01: SELL QLD, shares=23045
+2025-03-06 21:54:34,868 - INFO - Cash after SELL: 6369.65
+2025-03-06 21:54:34,869 - WARNING - QQQ: adjusting shares 1311 -> 179 due to insufficient cash
+2025-03-06 21:54:34,869 - INFO - 2009-06-01: BUY QQQ, shares=179
+2025-03-06 21:54:34,869 - INFO - === 2009-06-01 Rebalancing End ===
+2025-03-06 21:54:34,870 - INFO - 2009-06-02 00:00:00 OrderCompleted: SELL -649 IAU @ 19.25, Comm=12.49
+2025-03-06 21:54:34,870 - INFO - 2009-06-02 00:00:00 OrderCompleted: SELL -23045 QLD @ 1.18, Comm=27.21
+2025-03-06 21:54:34,870 - INFO - 2009-06-02 00:00:00 OrderCompleted: BUY 179 QQQ @ 36.19, Comm=6.48
+2025-03-06 21:54:35,831 - INFO - Month-end close for QQQ: 36.38
+2025-03-06 21:54:35,831 - INFO - Month-end close for IAU: 18.25
+2025-03-06 21:54:35,832 - INFO - Month-end close for QLD: 1.19
+2025-03-06 21:54:35,901 - INFO - [2009-07-01] Price=92.33, MA(short=92.66, mid=90.96, mid2=85.77, long=89.11) => Moderate
+2025-03-06 21:54:35,902 - INFO - === 2009-07-01 Rebalancing Start ===
+2025-03-06 21:54:35,902 - INFO - Portfolio value=92413.86, cash buffer=924.14, available=91489.72
+2025-03-06 21:54:35,902 - INFO - QQQ: prev_close=36.38, current_size=179, alloc_ratio=0.80, adjust=1832
+2025-03-06 21:54:35,903 - INFO - IAU: prev_close=18.25, current_size=1446, alloc_ratio=0.10, adjust=-945
+2025-03-06 21:54:35,903 - INFO - QLD: prev_close=1.19, current_size=16455, alloc_ratio=0.10, adjust=-8771
+2025-03-06 21:54:35,903 - INFO - 2009-07-01: SELL IAU, shares=945
+2025-03-06 21:54:35,904 - INFO - 2009-07-01: SELL QLD, shares=8771
+2025-03-06 21:54:35,904 - INFO - Cash after SELL: 39544.92
+2025-03-06 21:54:35,904 - WARNING - QQQ: adjusting shares 1832 -> 1085 due to insufficient cash
+2025-03-06 21:54:35,904 - INFO - 2009-07-01: BUY QQQ, shares=1085
+2025-03-06 21:54:35,904 - INFO - === 2009-07-01 Rebalancing End ===
+2025-03-06 21:54:35,905 - INFO - 2009-07-02 00:00:00 OrderCompleted: SELL -945 IAU @ 18.31, Comm=17.30
+2025-03-06 21:54:35,905 - INFO - 2009-07-02 00:00:00 OrderCompleted: SELL -8771 QLD @ 1.17, Comm=10.29
+2025-03-06 21:54:35,905 - INFO - 2009-07-02 00:00:00 OrderCompleted: BUY 1085 QQQ @ 36.09, Comm=39.16
+2025-03-06 21:54:36,785 - INFO - Month-end close for QQQ: 39.45
+2025-03-06 21:54:36,786 - INFO - Month-end close for IAU: 18.70
+2025-03-06 21:54:36,786 - INFO - Month-end close for QLD: 1.39
+2025-03-06 21:54:36,868 - INFO - [2009-08-03] Price=100.44, MA(short=94.14, mid=93.11, mid2=86.65, long=87.33) => Aggressive
+2025-03-06 21:54:36,869 - INFO - === 2009-08-03 Rebalancing Start ===
+2025-03-06 21:54:36,869 - INFO - Portfolio value=98970.25, cash buffer=989.70, available=97980.55
+2025-03-06 21:54:36,869 - INFO - QQQ: prev_close=39.45, current_size=1264, alloc_ratio=0.90, adjust=971
+2025-03-06 21:54:36,869 - INFO - IAU: prev_close=18.70, current_size=501, alloc_ratio=0.10, adjust=22
+2025-03-06 21:54:36,870 - INFO - QLD: prev_close=1.39, current_size=7684, alloc_ratio=0.00, adjust=-7684
+2025-03-06 21:54:36,870 - INFO - 2009-08-03: SELL QLD, shares=7684
+2025-03-06 21:54:36,870 - INFO - Cash after SELL: 27912.95
+2025-03-06 21:54:36,870 - WARNING - QQQ: adjusting shares 971 -> 706 due to insufficient cash
+2025-03-06 21:54:36,870 - INFO - 2009-08-03: BUY QQQ, shares=706
+2025-03-06 21:54:36,871 - INFO - 2009-08-03: BUY IAU, shares=22
+2025-03-06 21:54:36,871 - INFO - === 2009-08-03 Rebalancing End ===
+2025-03-06 21:54:36,872 - INFO - 2009-08-04 00:00:00 OrderCompleted: SELL -7684 QLD @ 1.42, Comm=10.94
+2025-03-06 21:54:36,872 - INFO - 2009-08-04 00:00:00 OrderCompleted: BUY 706 QQQ @ 39.85, Comm=28.13
+2025-03-06 21:54:36,872 - INFO - 2009-08-04 00:00:00 OrderCompleted: BUY 22 IAU @ 18.85, Comm=0.41
+2025-03-06 21:54:36,872 - INFO - 2009-08-04 00:00:00 TradeClosed: QLD, PnL=-34497.84, NetPnL=-34670.56

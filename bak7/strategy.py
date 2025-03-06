@@ -1,11 +1,12 @@
 import logging
-import traceback
+import traceback  # 반드시 추가!
 import numpy as np
 import pandas as pd
 import backtrader as bt
 from typing import Dict, List, Tuple
 import config
 from data_utils import is_last_business_day_of_month, is_first_business_day_of_month
+
 
 class PortfolioDataObserver(bt.Observer):
     """
@@ -14,6 +15,7 @@ class PortfolioDataObserver(bt.Observer):
     lines = ('portfolio_value',)
     plotinfo = dict(plot=True, subplot=True, plotname='Portfolio Value')
 
+    # IMPROVEMENT: 중복기록 방지를 위해 마지막 관측된 날짜를 저장
     def __init__(self):
         super().__init__()
         self.last_observed_date = None
@@ -21,10 +23,10 @@ class PortfolioDataObserver(bt.Observer):
     def next(self):
         current_date = self._owner.data.datetime.datetime().date()
         if self.last_observed_date == current_date:
-            return  # 같은 날짜에 이미 기록했으면 중복 방지
+            return  # 같은 날짜에 이미 기록함
 
         self.last_observed_date = current_date
-        # 첫 번째 데이터(feed)에 대해서만 기록
+        # 원본 코드 유지: 첫 번째 데이터(feed)에 대해서만 기록
         if self._owner.datas.index(self._owner.data) == 0:
             self.lines.portfolio_value[0] = self._owner.broker.getvalue()
 
@@ -53,7 +55,7 @@ class MonthlyRebalanceStrategy(bt.Strategy):
         self.logger = logging.getLogger('backtest.strategy')
         self._load_configuration()
 
-        # touchstone (SPY 등) 데이터
+        # touchstone 데이터 (ex: SPY)
         self.touch = self.getdatabyname(self.p.touchstone)
 
         # SPY 이동평균 인디케이터
@@ -65,7 +67,7 @@ class MonthlyRebalanceStrategy(bt.Strategy):
         # 자산 목록 (터치스톤 제외한 투자자산)
         self._assets = list(self.p.asset_allocation.keys())
 
-        # 포트폴리오 가치 / 날짜 / 일별수익률 기록용
+        # 포트폴리오 기록용
         self.portfolio_values = []
         self.portfolio_dates = []
         self.daily_returns = []
@@ -82,6 +84,7 @@ class MonthlyRebalanceStrategy(bt.Strategy):
         self.logger.info(f"Market regime usage: {'Enabled' if self.p.use_market_regime else 'Disabled'}")
         self.logger.info(f"Moving average type: {self.p.ma_type}")
         self.logger.info(f"Fractional shares: {'Allowed' if self.p.fractional_shares else 'Not allowed'}")
+
 
     def _load_configuration(self):
         if self.p.touchstone is None:
@@ -117,7 +120,7 @@ class MonthlyRebalanceStrategy(bt.Strategy):
         """
         for asset in self._assets:
             try:
-                self.getdatabyname(asset)
+                d = self.getdatabyname(asset)
                 self.logger.info(f"Asset data loaded for: {asset}")
             except Exception as e:
                 self.logger.error(f"Data missing for asset {asset}: {e}")
@@ -162,9 +165,7 @@ class MonthlyRebalanceStrategy(bt.Strategy):
             regime = "Neutral"
             alloc = self.p.asset_allocation
 
-        self.logger.info(f"[{current_date}] Price={current_price:.2f}, "
-                         f"MA(short={ma_short:.2f}, mid={ma_mid:.2f}, "
-                         f"mid2={ma_mid2:.2f}, long={ma_long:.2f}) => {regime}")
+        self.logger.info(f"[{current_date}] Price={current_price:.2f}, MA(short={ma_short:.2f}, mid={ma_mid:.2f}, mid2={ma_mid2:.2f}, long={ma_long:.2f}) => {regime}")
         return alloc
 
     def _determine_allocation_weekly(self, current_date, current_price) -> Dict[str, float]:
@@ -180,7 +181,7 @@ class MonthlyRebalanceStrategy(bt.Strategy):
                     self.logger.warning(f"{wma_col} not found in DataFrame => Using base allocation.")
                     return self.p.asset_allocation
 
-                bar_idx = len(df) - 1
+                bar_idx = len(df) - 1  # 마지막행 가정 (데모용)
                 value = df.iloc[bar_idx].get(wma_col, np.nan)
                 if pd.isna(value):
                     self.logger.warning(f"WMA_{period} is NaN => Using base allocation.")
@@ -227,6 +228,7 @@ class MonthlyRebalanceStrategy(bt.Strategy):
                     prev_val = self.portfolio_values[-2]
                     daily_ret = (current_value / prev_val) - 1
                     self.daily_returns.append(daily_ret)
+
             else:
                 self.logger.warning(f"Invalid portfolio value on {current_date}: {current_value}")
                 return
@@ -239,7 +241,7 @@ class MonthlyRebalanceStrategy(bt.Strategy):
                 self.logger.info(f"Start date: {current_date}, initial portfolio={current_value:.2f}")
                 return
 
-            # 월말(마지막영업일) -> 종가 기록
+            # 월말(마지막영업일) -> 종가기록
             if is_last_business_day_of_month(current_date):
                 self._record_month_end_prices(current_date)
 
@@ -265,7 +267,7 @@ class MonthlyRebalanceStrategy(bt.Strategy):
 
     def _record_month_end_prices(self, current_date):
         """
-        월말 종가 기록
+        월말 종가 기록 (터치스톤 제외 자산들 포함)
         """
         for asset in self._assets:
             try:
@@ -291,6 +293,7 @@ class MonthlyRebalanceStrategy(bt.Strategy):
 
         self.logger.info(f"Portfolio value={total_value:.2f}, cash buffer={cash_buffer:.2f}, available={available_value:.2f}")
 
+        target_shares = {}
         adjustments = {}
         current_shares = {}
         missing_prices = []
@@ -308,16 +311,17 @@ class MonthlyRebalanceStrategy(bt.Strategy):
 
             alloc_ratio = target_allocation.get(asset, 0)
             if alloc_ratio <= 0:
+                # 이 자산은 0% 배분 => 전량 매도
                 adjustments[asset] = -current_size
             else:
+                # 배분 금액
                 target_val = available_value * alloc_ratio
                 if self.p.fractional_shares:
                     shares = target_val / prev_close
                 else:
                     shares = int(target_val / prev_close)
                 adjustments[asset] = shares - current_size
-            self.logger.info(f"{asset}: prev_close={prev_close:.2f}, current_size={current_size}, "
-                             f"alloc_ratio={alloc_ratio:.2f}, adjust={adjustments[asset]}")
+            self.logger.info(f"{asset}: prev_close={prev_close:.2f}, current_size={current_size}, alloc_ratio={alloc_ratio:.2f}, adjust={adjustments[asset]}")
 
         if missing_prices:
             if len(missing_prices) == len(self._assets):
@@ -326,15 +330,22 @@ class MonthlyRebalanceStrategy(bt.Strategy):
             else:
                 self.logger.warning(f"Missing price for these assets => won't trade them: {missing_prices}")
 
-        # 매도 먼저
+        # 매도부터
         sell_list = [(a, adj) for a, adj in adjustments.items() if adj < 0]
         for asset, adj in sell_list:
             self.logger.info(f"{current_date}: SELL {asset}, shares={abs(adj)}")
             self.sell(data=self.getdatabyname(asset), size=abs(adj))
 
+        # 현금 추정
+        current_cash = self.broker.getcash()
+        if pd.isna(current_cash):
+            current_cash = 0
+
+        self.logger.info(f"Cash after SELL: {current_cash:.2f}")
+
         # 매수
         buy_list = [(a, adj) for a, adj in adjustments.items() if adj > 0]
-        # 큰 금액(= shares * prev_close)부터 매수
+        # 큰 금액부터
         buy_list.sort(key=lambda x: x[1] * self._prev_month_close_prices.get(x[0], 0), reverse=True)
 
         for asset, adj in buy_list:
@@ -347,6 +358,7 @@ class MonthlyRebalanceStrategy(bt.Strategy):
             commission = cost * config.config.get("COMMISSION")
             needed = cost + commission
             if needed > self.broker.getcash():
+                # 자금 부족 => 조정
                 if self.p.fractional_shares:
                     new_shares = (self.broker.getcash() / (prev_close*(1+config.config.get("COMMISSION"))))
                 else:
@@ -365,14 +377,13 @@ class MonthlyRebalanceStrategy(bt.Strategy):
         self.logger.info(f"=== {current_date} Rebalancing End ===")
 
     def notify_order(self, order):
+        # 체결/거부 로그
         dt = self.data.datetime.datetime()
         if order.status in [order.Submitted, order.Accepted]:
             return
         elif order.status == order.Completed:
             side = 'BUY' if order.isbuy() else 'SELL'
-            self.logger.info(f"{dt} OrderCompleted: {side} {order.executed.size} "
-                             f"{order.data._name} @ {order.executed.price:.2f}, "
-                             f"Comm={order.executed.comm:.2f}")
+            self.logger.info(f"{dt} OrderCompleted: {side} {order.executed.size} {order.data._name} @ {order.executed.price:.2f}, Comm={order.executed.comm:.2f}")
         elif order.status == order.Canceled:
             self.logger.warning(f"{dt} OrderCanceled: {order.data._name}")
         elif order.status == order.Margin:
@@ -385,17 +396,124 @@ class MonthlyRebalanceStrategy(bt.Strategy):
     def notify_trade(self, trade):
         if trade.isclosed:
             dt = self.data.datetime.datetime()
-            self.logger.info(f"{dt} TradeClosed: {trade.data._name}, "
-                             f"PnL={trade.pnl:.2f}, NetPnL={trade.pnlcomm:.2f}")
+            self.logger.info(f"{dt} TradeClosed: {trade.data._name}, PnL={trade.pnl:.2f}, NetPnL={trade.pnlcomm:.2f}")
 
     def get_portfolio_dates(self):
+        """
+        Observer로 기록된 portfolio_value와 날짜를 동기화해서 반환
+        """
         return self.portfolio_dates
+    
 
     def get_portfolio_values(self):
+        """
+        Observer에 쌓인 portfolio_value를 꺼내어 list로 반환
+        """
         return self.portfolio_values
+    
 
+    def get_daily_returns(self):
+        vals = self.get_portfolio_values()
+        rets = []
+        for i in range(1, len(vals)):
+            if vals[i-1] != 0:
+                rets.append((vals[i]/vals[i-1]) - 1)
+            else:
+                rets.append(0.0)
+        return rets
+
+    def compute_final_metrics(self):
+        """
+        전체 백테스트 기간에 대한 최종 메트릭 계산
+        """
+        valid_indices = [i for i, v in enumerate(self.portfolio_values) if not pd.isna(v) and v > 0]
+        if not valid_indices:
+            self.logger.warning("No valid portfolio values to compute final metrics.")
+            return {}
+        initial = self.portfolio_values[valid_indices[0]]
+        final = self.portfolio_values[valid_indices[-1]]
+        start_date = self.portfolio_dates[valid_indices[0]]
+        end_date = self.portfolio_dates[valid_indices[-1]]
+        years = (pd.to_datetime(end_date) - pd.to_datetime(start_date)).days / 365.25
+
+        total_profit = final - initial
+        cagr = (final / initial) ** (1 / years) - 1 if years > 0 else np.nan
+
+        # MDD 계산: 누적 최대값 대비 최저값의 하락폭
+        arr = np.array([self.portfolio_values[i] for i in valid_indices])
+        cummax = np.maximum.accumulate(arr)
+        drawdowns = (arr - cummax) / cummax
+        mdd = abs(drawdowns.min() * 100)
+
+        # 일별 수익률 기반 표준편차, Sharpe, Sortino 계산
+        daily_returns = np.array(self.daily_returns)
+        if len(daily_returns) > 1:
+            std_annual = np.std(daily_returns, ddof=1) * np.sqrt(252)
+            sharpe = ((final / initial - 1) - self.p.riskfreerate) / std_annual if std_annual > 0 else np.nan
+            negative = daily_returns[daily_returns < 0]
+            downside_std = np.std(negative, ddof=1) * np.sqrt(252) if len(negative) > 1 else np.nan
+            sortino = ((final / initial - 1) - self.p.riskfreerate) / downside_std if downside_std > 0 else np.nan
+        else:
+            std_annual, sharpe, sortino = np.nan, np.nan, np.nan
+
+        return {
+        'TotalAsset': round(final, 2),
+        'TotalProfit': round(total_profit, 2),
+        'CAGR': round(cagr * 100, 2),
+        'MDD': round(mdd, 2),
+        'Sharpe': round(sharpe, 2),
+        'Sortino': round(sortino, 2),
+        'StdDev': round(std_annual, 2)
+    }
+
+    def compute_annual_metrics(self) -> dict:
+        """
+        연도별 총자산, 총이익, CAGR, MDD, Sharpe, Sortino, 표준편차 계산
+        """
+        if not self.portfolio_values or not self.portfolio_dates:
+            self.logger.warning("No portfolio data => annual metrics not computed.")
+            return {}
+
+        df = pd.DataFrame({'Date': self.portfolio_dates, 'Value': self.portfolio_values})
+        df['Date'] = pd.to_datetime(df['Date'])
+        df['Year'] = df['Date'].dt.year
+
+        results = {}
+        for year, grp in df.groupby('Year'):
+            grp = grp.sort_values('Date')
+            if len(grp) < 2:
+                continue
+            start_val = grp['Value'].iloc[0]
+            end_val = grp['Value'].iloc[-1]
+            total_profit = end_val - start_val
+            cagr = (end_val / start_val) - 1  # 한 해에 해당하므로 연간 수익률과 동일
+            daily_ret = grp['Value'].pct_change().dropna()
+            std_annual = daily_ret.std(ddof=1) * np.sqrt(252) if len(daily_ret) >= 2 else np.nan
+            sharpe = (cagr - self.p.riskfreerate) / std_annual if (std_annual > 0) else np.nan
+            negative = daily_ret[daily_ret < 0]
+            downside_std = negative.std(ddof=1) * np.sqrt(252) if len(negative) > 1 else np.nan
+            sortino = (cagr - self.p.riskfreerate) / downside_std if (downside_std > 0) else np.nan
+
+            # MDD 계산
+            arr_vals = grp['Value'].values
+            cummax = np.maximum.accumulate(arr_vals)
+            dd = (arr_vals - cummax) / cummax
+            mdd = abs(dd.min() * 100)
+
+            results[year] = {
+                'TotalAsset': round(end_val,2),
+                'TotalProfit': round(total_profit, 2),
+                'CAGR': round(cagr * 100, 2),
+                'MDD': round(mdd, 2),
+                'Sharpe': round(sharpe, 2),
+                'Sortino': round(sortino, 2),
+                'StdDev': round(std_annual, 2)
+            }
+        return results
+    
     def stop(self):
         """
         백테스트 종료 후 최종결과 로그
         """
+        # 필요하면 전체 통계 log
         self.logger.info("Strategy stop() called.")

@@ -1,3 +1,4 @@
+# main_app.py
 import os
 import sys
 import logging
@@ -6,7 +7,7 @@ import argparse
 import numpy as np
 from datetime import datetime
 import config
-from backtest import run_backtest
+from backtest import run_backtest, save_results_to_csv
 
 def setup_environment(config_file=None):
     try:
@@ -73,39 +74,11 @@ def main():
         logger = setup_environment(args.config)
         apply_arguments(args)
         logger.info("Starting backtest...")
-
-        # 백테스트 실행
         results = run_backtest(config_file=args.config, logger=logger)
         logger.info("Backtest completed.")
-
-        # Analyzer 결과를 콘솔에 추가 출력 (원하면 중복일 수도 있음)
         if results and len(results) > 0:
             strategy = results[0]
-            analysis = strategy.analyzers
-
-            returns = analysis.returns.get_analysis()
-            total_return_pct = returns.get('rtot', 0) * 100
-            annual_return_pct = returns.get('rnorm', 0) * 100
-
-            drawdown = analysis.drawdown.get_analysis()
-            max_drawdown_pct = drawdown['max']['drawdown']
-
-            sharpe = analysis.sharpe.get_analysis()
-            sharpe_ratio = sharpe.get('sharperatio', float('nan'))
-
-            final_port_value = strategy.broker.getvalue()
-            pnl = final_port_value - config.config.get("INITIAL_CASH")
-
-            print("\n===== Analyzer Results =====")
-            print(f"Final Portfolio Value: {final_port_value:,.2f}")
-            print(f"Total Return (rtot): {total_return_pct:.2f}%")
-            print(f"Annual Return (rnorm): {annual_return_pct:.2f}%")
-            print(f"Max Drawdown: {max_drawdown_pct:.2f}%")
-            print(f"Sharpe Ratio: {sharpe_ratio:.2f}")
-            print(f"Net Profit: {pnl:,.2f}")
-        else:
-            print("No results to analyze.")
-
+            save_results_to_csv(strategy, timestamp, logger)
         end_time = datetime.now()
         elapsed = (end_time - start_time).total_seconds()
         logger.info(f"Total execution time: {elapsed:.2f} seconds")
@@ -114,6 +87,26 @@ def main():
         print(f"       Execution time: {elapsed:.2f} seconds")
         print("       Results saved in:", config.config.RESULTS_DIR)
         print("================================================\n")
+        
+        if results and len(results) > 0:
+            strategy = results[0]
+            portfolio_values = strategy.get_portfolio_values()
+            if portfolio_values and len(portfolio_values) > 1:
+                valid_values = [v for v in portfolio_values if not np.isnan(v) and v > 0]
+                if len(valid_values) >= 2:
+                    total_return = ((valid_values[-1] / valid_values[0]) - 1) * 100
+                    print(f"Total Return: {total_return:.2f}%")
+                    annual_metrics = strategy.compute_annual_metrics()
+                    if annual_metrics:
+                        valid_years = [y for y in annual_metrics.keys() 
+                                    if not np.isnan(annual_metrics[y]['Return'])]
+                        if valid_years:
+                            last_year = max(valid_years)
+                            print(f"{last_year} Year Return: {annual_metrics[last_year]['Return']:.2f}%")
+                else:
+                    logger.warning("No valid portfolio values for return calculation")
+            else:
+                logger.warning("Insufficient portfolio data for total return calculation")
 
     except Exception as e:
         logging.error(f"Backtest execution failed: {e}")

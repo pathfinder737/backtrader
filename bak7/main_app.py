@@ -1,3 +1,4 @@
+# main_app.py
 import os
 import sys
 import logging
@@ -6,7 +7,7 @@ import argparse
 import numpy as np
 from datetime import datetime
 import config
-from backtest import run_backtest
+from backtest import run_backtest, save_results_to_csv
 
 def setup_environment(config_file=None):
     try:
@@ -73,39 +74,45 @@ def main():
         logger = setup_environment(args.config)
         apply_arguments(args)
         logger.info("Starting backtest...")
-
-        # 백테스트 실행
         results = run_backtest(config_file=args.config, logger=logger)
         logger.info("Backtest completed.")
-
-        # Analyzer 결과를 콘솔에 추가 출력 (원하면 중복일 수도 있음)
         if results and len(results) > 0:
             strategy = results[0]
-            analysis = strategy.analyzers
-
-            returns = analysis.returns.get_analysis()
-            total_return_pct = returns.get('rtot', 0) * 100
-            annual_return_pct = returns.get('rnorm', 0) * 100
-
-            drawdown = analysis.drawdown.get_analysis()
-            max_drawdown_pct = drawdown['max']['drawdown']
-
-            sharpe = analysis.sharpe.get_analysis()
-            sharpe_ratio = sharpe.get('sharperatio', float('nan'))
-
-            final_port_value = strategy.broker.getvalue()
-            pnl = final_port_value - config.config.get("INITIAL_CASH")
-
-            print("\n===== Analyzer Results =====")
-            print(f"Final Portfolio Value: {final_port_value:,.2f}")
-            print(f"Total Return (rtot): {total_return_pct:.2f}%")
-            print(f"Annual Return (rnorm): {annual_return_pct:.2f}%")
-            print(f"Max Drawdown: {max_drawdown_pct:.2f}%")
-            print(f"Sharpe Ratio: {sharpe_ratio:.2f}")
-            print(f"Net Profit: {pnl:,.2f}")
-        else:
-            print("No results to analyze.")
-
+            # CSV 저장 (기존 기능)
+            save_results_to_csv(strategy, timestamp, logger)
+            
+            # 최종 메트릭 및 연도별 메트릭 계산 후 출력
+            final_metrics = strategy.compute_final_metrics()
+            annual_metrics = strategy.compute_annual_metrics()
+            
+            print("\n===== 최종 결과 =====")
+            print(f"총자산: {final_metrics.get('TotalAsset', np.nan):,.2f}")
+            print(f"총이익: {final_metrics.get('TotalProfit', np.nan):,.2f}")
+            print(f"CAGR: {final_metrics.get('CAGR', np.nan):.2f}%")
+            print(f"MDD: {final_metrics.get('MDD', np.nan):.2f}%")
+            print(f"Sharpe: {final_metrics.get('Sharpe', np.nan):.2f}")
+            print(f"Sortino: {final_metrics.get('Sortino', np.nan):.2f}")
+            print(f"표준편차: {final_metrics.get('StdDev', np.nan):.2f}")
+            
+            print("\n===== 연도별 결과 =====")
+            for year in sorted(annual_metrics.keys()):
+                metrics = annual_metrics[year]
+                print(f"\n[{year}]")
+                print(f"총자산: {metrics.get('TotalAsset', np.nan):,.2f}")
+                print(f"총이익: {metrics.get('TotalProfit', np.nan):,.2f}")
+                print(f"CAGR: {metrics.get('CAGR', np.nan):.2f}%")
+                print(f"MDD: {metrics.get('MDD', np.nan):.2f}%")
+                print(f"Sharpe: {metrics.get('Sharpe', np.nan):.2f}")
+                print(f"Sortino: {metrics.get('Sortino', np.nan):.2f}")
+                print(f"표준편차: {metrics.get('StdDev', np.nan):.2f}")
+            
+            # 추가: 포트폴리오 전체 수익률도 출력 (기존 코드 참조)
+            portfolio_values = strategy.get_portfolio_values()
+            if portfolio_values and len(portfolio_values) > 1:
+                valid_values = [v for v in portfolio_values if not np.isnan(v) and v > 0]
+                if len(valid_values) >= 2:
+                    total_return = ((valid_values[-1] / valid_values[0]) - 1) * 100
+                    print(f"\n전체 수익률: {total_return:.2f}%")
         end_time = datetime.now()
         elapsed = (end_time - start_time).total_seconds()
         logger.info(f"Total execution time: {elapsed:.2f} seconds")
@@ -114,7 +121,6 @@ def main():
         print(f"       Execution time: {elapsed:.2f} seconds")
         print("       Results saved in:", config.config.RESULTS_DIR)
         print("================================================\n")
-
     except Exception as e:
         logging.error(f"Backtest execution failed: {e}")
         logging.error(traceback.format_exc())
