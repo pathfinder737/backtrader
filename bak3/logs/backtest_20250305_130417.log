@@ -1,0 +1,74 @@
+2025-03-05 13:04:17,174 - INFO - =============== Configurations ===============
+2025-03-05 13:04:17,174 - INFO - DATA_MODE: offline
+2025-03-05 13:04:17,174 - INFO - START_DATE: 2000-01-01
+2025-03-05 13:04:17,174 - INFO - END_DATE: 2024-12-31
+2025-03-05 13:04:17,174 - INFO - TICKERS: ['SPY', 'QQQ', 'IAU', 'IEF']
+2025-03-05 13:04:17,175 - INFO - ASSET_ALLOCATION: {'QQQ': 0.5, 'IAU': 0.3, 'IEF': 0.2}
+2025-03-05 13:04:17,175 - INFO - AGGRESSIVE_ALLOCATION: {'QQQ': 0.8, 'IAU': 0.2, 'IEF': 0}
+2025-03-05 13:04:17,175 - INFO - MODERATE_ALLOCATION: {'QQQ': 0.7, 'IAU': 0.2, 'IEF': 0.1}
+2025-03-05 13:04:17,175 - INFO - DEFENSIVE_ALLOCATION: {'QQQ': 0, 'IAU': 0.5, 'IEF': 0.5}
+2025-03-05 13:04:17,175 - INFO - MID_DEFENSIVE_ALLOCATION: {'QQQ': 0.3, 'IAU': 0.5, 'IEF': 0.2}
+2025-03-05 13:04:17,175 - INFO - TOUCHSTONE: SPY
+2025-03-05 13:04:17,175 - INFO - MA_PERIODS: [21, 50, 150, 200]
+2025-03-05 13:04:17,176 - INFO - WMA_PERIODS: [10, 30]
+2025-03-05 13:04:17,176 - INFO - MA_TYPE: weekly
+2025-03-05 13:04:17,176 - INFO - INITIAL_CASH: 100000.0
+2025-03-05 13:04:17,176 - INFO - COMMISSION: 0.001
+2025-03-05 13:04:17,176 - INFO - CASH_BUFFER_PERCENT: 1.0
+2025-03-05 13:04:17,176 - INFO - PROCESS_SELL_FIRST: True
+2025-03-05 13:04:17,176 - INFO - RISK_FREE_RATE: 0.01
+2025-03-05 13:04:17,176 - INFO - FRACTIONAL_SHARES: False
+2025-03-05 13:04:17,177 - INFO - USE_MARKET_REGIME: True
+2025-03-05 13:04:17,177 - INFO - LOG_LEVEL: INFO
+2025-03-05 13:04:17,177 - INFO - ===============================================
+2025-03-05 13:04:17,177 - INFO - Starting backtest...
+2025-03-05 13:04:17,177 - INFO - Loading data feeds...
+2025-03-05 13:04:17,178 - INFO - Loading data for SPY...
+2025-03-05 13:04:17,178 - INFO - Downloading data for SPY from 2000-01-01 to 2024-12-31.
+2025-03-05 13:04:18,009 - WARNING - Attempt 1/3 failed for SPY: 'Requested level (Date) does not match index name (None)'
+2025-03-05 13:04:18,009 - INFO - Retry 1/3 for SPY after 2s.
+2025-03-05 13:04:20,914 - WARNING - Attempt 2/3 failed for SPY: 'Requested level (Date) does not match index name (None)'
+2025-03-05 13:04:20,915 - INFO - Retry 2/3 for SPY after 4s.
+2025-03-05 13:04:25,771 - WARNING - Attempt 3/3 failed for SPY: 'Requested level (Date) does not match index name (None)'
+2025-03-05 13:04:25,772 - ERROR - Max retries exceeded for SPY.
+2025-03-05 13:04:25,772 - ERROR - Failed to load data for SPY: Cannot retrieve data for SPY: 'Requested level (Date) does not match index name (None)'
+2025-03-05 13:04:25,772 - ERROR - Error loading data: Touchstone ticker data retrieval failed for SPY: Cannot retrieve data for SPY: 'Requested level (Date) does not match index name (None)'
+2025-03-05 13:04:25,782 - ERROR - Traceback (most recent call last):
+  File "C:\Users\james\Projects\backtrader\data_utils.py", line 145, in download_and_preprocess
+    df = map_weekly_ma_to_daily(df, weekly_df, period)
+  File "C:\Users\james\Projects\backtrader\data_utils.py", line 189, in map_weekly_ma_to_daily
+    daily_df_merged = pd.merge_asof(daily_df_sorted, temp, on='Date', direction='backward')
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\pandas\core\reshape\merge.py", line 691, in merge_asof
+    op = _AsOfMerge(
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\pandas\core\reshape\merge.py", line 1999, in __init__
+    _OrderedMerge.__init__(
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\pandas\core\reshape\merge.py", line 1911, in __init__
+    _MergeOperation.__init__(
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\pandas\core\reshape\merge.py", line 786, in __init__
+    self.left_on, self.right_on = self._validate_left_right_on(left_on, right_on)
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\pandas\core\reshape\merge.py", line 2048, in _validate_left_right_on
+    else self.left.index.get_level_values(left_on_0)
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\pandas\core\indexes\base.py", line 2102, in _get_level_values
+    self._validate_index_level(level)
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\pandas\core\indexes\base.py", line 2012, in _validate_index_level
+    raise KeyError(
+KeyError: 'Requested level (Date) does not match index name (None)'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\james\Projects\backtrader\data_utils.py", line 220, in prepare_backtrader_data
+    df = download_and_preprocess(ticker=ticker, start_date=start_date, end_date=end_date,
+  File "C:\Users\james\Projects\backtrader\data_utils.py", line 155, in download_and_preprocess
+    raise ConnectionError(f"Cannot retrieve data for {ticker}: {e}")
+ConnectionError: Cannot retrieve data for SPY: 'Requested level (Date) does not match index name (None)'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\james\Projects\backtrader\backtest.py", line 61, in run_backtest
+    data_feeds = prepare_backtrader_data(
+  File "C:\Users\james\Projects\backtrader\data_utils.py", line 233, in prepare_backtrader_data
+    raise ValueError(f"Touchstone ticker data retrieval failed for {touchstone}: {e}")
+ValueError: Touchstone ticker data retrieval failed for SPY: Cannot retrieve data for SPY: 'Requested level (Date) does not match index name (None)'
+

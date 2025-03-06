@@ -1,0 +1,70 @@
+2025-03-05 15:24:07,125 - INFO - =============== Configurations ===============
+2025-03-05 15:24:07,125 - INFO - DATA_MODE: offline
+2025-03-05 15:24:07,126 - INFO - START_DATE: 2000-01-01
+2025-03-05 15:24:07,126 - INFO - END_DATE: 2024-12-31
+2025-03-05 15:24:07,126 - INFO - TICKERS: ['SPY', 'QQQ', 'IAU', 'IEF']
+2025-03-05 15:24:07,126 - INFO - ASSET_ALLOCATION: {'QQQ': 0.5, 'IAU': 0.3, 'IEF': 0.2}
+2025-03-05 15:24:07,126 - INFO - AGGRESSIVE_ALLOCATION: {'QQQ': 0.8, 'IAU': 0.2, 'IEF': 0}
+2025-03-05 15:24:07,126 - INFO - MODERATE_ALLOCATION: {'QQQ': 0.7, 'IAU': 0.2, 'IEF': 0.1}
+2025-03-05 15:24:07,127 - INFO - DEFENSIVE_ALLOCATION: {'QQQ': 0, 'IAU': 0.5, 'IEF': 0.5}
+2025-03-05 15:24:07,127 - INFO - MID_DEFENSIVE_ALLOCATION: {'QQQ': 0.3, 'IAU': 0.5, 'IEF': 0.2}
+2025-03-05 15:24:07,127 - INFO - TOUCHSTONE: SPY
+2025-03-05 15:24:07,127 - INFO - MA_PERIODS: [21, 50, 150, 200]
+2025-03-05 15:24:07,127 - INFO - WMA_PERIODS: [10, 30]
+2025-03-05 15:24:07,127 - INFO - MA_TYPE: weekly
+2025-03-05 15:24:07,127 - INFO - INITIAL_CASH: 100000.0
+2025-03-05 15:24:07,127 - INFO - COMMISSION: 0.001
+2025-03-05 15:24:07,127 - INFO - CASH_BUFFER_PERCENT: 1.0
+2025-03-05 15:24:07,128 - INFO - PROCESS_SELL_FIRST: True
+2025-03-05 15:24:07,128 - INFO - RISK_FREE_RATE: 0.01
+2025-03-05 15:24:07,128 - INFO - FRACTIONAL_SHARES: False
+2025-03-05 15:24:07,128 - INFO - USE_MARKET_REGIME: True
+2025-03-05 15:24:07,128 - INFO - LOG_LEVEL: INFO
+2025-03-05 15:24:07,128 - INFO - ===============================================
+2025-03-05 15:24:07,128 - INFO - Starting backtest...
+2025-03-05 15:24:07,128 - INFO - Loading data feeds...
+2025-03-05 15:24:07,129 - INFO - Loading data for SPY...
+2025-03-05 15:24:07,129 - INFO - Downloading data for SPY from 2000-01-01 to 2024-12-31.
+2025-03-05 15:24:08,012 - INFO - Saved weekly data for SPY to C:\Users\james\Projects\backtrader\data\SPY_weekly.csv.
+2025-03-05 15:24:08,055 - INFO - Saved preprocessed data for SPY to C:\Users\james\Projects\backtrader\data\SPY.csv (6289 rows).
+2025-03-05 15:24:08,056 - INFO - Data feed created for SPY.
+2025-03-05 15:24:08,056 - INFO - Weekly data feed created for SPY_weekly.
+2025-03-05 15:24:08,056 - INFO - Loading data for QQQ...
+2025-03-05 15:24:08,057 - INFO - Downloading data for QQQ from 2000-01-01 to 2024-12-31.
+2025-03-05 15:24:08,988 - INFO - QQQ is not the touchstone; skipping weekly WMA computation.
+2025-03-05 15:24:09,031 - INFO - Saved preprocessed data for QQQ to C:\Users\james\Projects\backtrader\data\QQQ.csv (6289 rows).
+2025-03-05 15:24:09,032 - INFO - Data feed created for QQQ.
+2025-03-05 15:24:09,032 - INFO - Loading data for IAU...
+2025-03-05 15:24:09,032 - INFO - Downloading data for IAU from 2000-01-01 to 2024-12-31.
+2025-03-05 15:24:09,769 - INFO - IAU is not the touchstone; skipping weekly WMA computation.
+2025-03-05 15:24:09,806 - INFO - Saved preprocessed data for IAU to C:\Users\james\Projects\backtrader\data\IAU.csv (5014 rows).
+2025-03-05 15:24:09,811 - INFO - Data feed created for IAU.
+2025-03-05 15:24:09,811 - INFO - Loading data for IEF...
+2025-03-05 15:24:09,812 - INFO - Downloading data for IEF from 2000-01-01 to 2024-12-31.
+2025-03-05 15:24:10,756 - INFO - IEF is not the touchstone; skipping weekly WMA computation.
+2025-03-05 15:24:10,796 - INFO - Saved preprocessed data for IEF to C:\Users\james\Projects\backtrader\data\IEF.csv (5644 rows).
+2025-03-05 15:24:10,796 - INFO - Data feed created for IEF.
+2025-03-05 15:24:10,797 - INFO - Loaded data for 5 tickers.
+2025-03-05 15:24:10,797 - INFO - Added data for SPY.
+2025-03-05 15:24:10,798 - INFO - Added data for SPY_weekly.
+2025-03-05 15:24:10,798 - INFO - Added data for QQQ.
+2025-03-05 15:24:10,798 - INFO - Added data for IAU.
+2025-03-05 15:24:10,799 - INFO - Added data for IEF.
+2025-03-05 15:24:10,799 - INFO - All data feeds loaded.
+2025-03-05 15:24:10,799 - INFO - Initial portfolio value: 100,000.00
+2025-03-05 15:24:10,799 - ERROR - Error during backtesting: 'wma_10' is not in list
+2025-03-05 15:24:10,800 - ERROR - Traceback (most recent call last):
+  File "C:\Users\james\Projects\backtrader\backtest.py", line 404, in run_backtest
+    results = cerebro.run()
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\backtrader\cerebro.py", line 1132, in run
+    runstrat = self.runstrategies(iterstrat)
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\backtrader\cerebro.py", line 1215, in runstrategies
+    data._start()
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\backtrader\feed.py", line 203, in _start
+    self.start()
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\backtrader\feeds\pandafeed.py", line 230, in start
+    raise e  # let user now something failed
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\backtrader\feeds\pandafeed.py", line 222, in start
+    v = colnames.index(v.lower())
+ValueError: 'wma_10' is not in list
+

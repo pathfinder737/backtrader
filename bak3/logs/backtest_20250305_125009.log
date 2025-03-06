@@ -1,0 +1,1133 @@
+2025-03-05 12:50:09,612 - INFO - =============== Configurations ===============
+2025-03-05 12:50:09,612 - INFO - DATA_MODE: offline
+2025-03-05 12:50:09,612 - INFO - START_DATE: 2000-01-01
+2025-03-05 12:50:09,612 - INFO - END_DATE: 2024-12-31
+2025-03-05 12:50:09,612 - INFO - TICKERS: ['SPY', 'QQQ', 'IAU', 'IEF']
+2025-03-05 12:50:09,612 - INFO - ASSET_ALLOCATION: {'QQQ': 0.5, 'IAU': 0.3, 'IEF': 0.2}
+2025-03-05 12:50:09,612 - INFO - AGGRESSIVE_ALLOCATION: {'QQQ': 0.8, 'IAU': 0.2, 'IEF': 0}
+2025-03-05 12:50:09,613 - INFO - MODERATE_ALLOCATION: {'QQQ': 0.7, 'IAU': 0.2, 'IEF': 0.1}
+2025-03-05 12:50:09,617 - INFO - DEFENSIVE_ALLOCATION: {'QQQ': 0, 'IAU': 0.5, 'IEF': 0.5}
+2025-03-05 12:50:09,617 - INFO - MID_DEFENSIVE_ALLOCATION: {'QQQ': 0.3, 'IAU': 0.5, 'IEF': 0.2}
+2025-03-05 12:50:09,617 - INFO - TOUCHSTONE: SPY
+2025-03-05 12:50:09,617 - INFO - MA_PERIODS: [21, 50, 150, 200]
+2025-03-05 12:50:09,617 - INFO - WMA_PERIODS: [10, 30]
+2025-03-05 12:50:09,618 - INFO - MA_TYPE: weekly
+2025-03-05 12:50:09,618 - INFO - INITIAL_CASH: 100000.0
+2025-03-05 12:50:09,618 - INFO - COMMISSION: 0.001
+2025-03-05 12:50:09,618 - INFO - CASH_BUFFER_PERCENT: 1.0
+2025-03-05 12:50:09,619 - INFO - PROCESS_SELL_FIRST: True
+2025-03-05 12:50:09,619 - INFO - RISK_FREE_RATE: 0.01
+2025-03-05 12:50:09,619 - INFO - FRACTIONAL_SHARES: False
+2025-03-05 12:50:09,619 - INFO - USE_MARKET_REGIME: True
+2025-03-05 12:50:09,619 - INFO - LOG_LEVEL: INFO
+2025-03-05 12:50:09,619 - INFO - ===============================================
+2025-03-05 12:50:09,620 - INFO - Starting backtest...
+2025-03-05 12:50:09,620 - INFO - Loading data feeds...
+2025-03-05 12:50:09,620 - INFO - Loading data for SPY...
+2025-03-05 12:50:09,620 - INFO - Using cached data for SPY: C:\Users\james\Projects\backtrader\data\SPY.csv
+2025-03-05 12:50:09,633 - INFO - Data feed created for SPY.
+2025-03-05 12:50:09,633 - INFO - Loading data for QQQ...
+2025-03-05 12:50:09,635 - INFO - Using cached data for QQQ: C:\Users\james\Projects\backtrader\data\QQQ.csv
+2025-03-05 12:50:09,646 - INFO - Data feed created for QQQ.
+2025-03-05 12:50:09,646 - INFO - Loading data for IAU...
+2025-03-05 12:50:09,646 - INFO - Using cached data for IAU: C:\Users\james\Projects\backtrader\data\IAU.csv
+2025-03-05 12:50:09,656 - INFO - Data feed created for IAU.
+2025-03-05 12:50:09,656 - INFO - Loading data for IEF...
+2025-03-05 12:50:09,656 - INFO - Using cached data for IEF: C:\Users\james\Projects\backtrader\data\IEF.csv
+2025-03-05 12:50:09,667 - INFO - Data feed created for IEF.
+2025-03-05 12:50:09,667 - INFO - Loaded data for 4 tickers.
+2025-03-05 12:50:09,667 - INFO - Added data for SPY.
+2025-03-05 12:50:09,667 - INFO - Added data for QQQ.
+2025-03-05 12:50:09,668 - INFO - Added data for IAU.
+2025-03-05 12:50:09,668 - INFO - Added data for IEF.
+2025-03-05 12:50:09,668 - INFO - All data feeds loaded.
+2025-03-05 12:50:09,668 - INFO - Initial portfolio value: 100,000.00
+2025-03-05 12:50:11,813 - INFO - Asset data loaded for: QQQ
+2025-03-05 12:50:11,814 - INFO - Asset data loaded for: IAU
+2025-03-05 12:50:11,814 - INFO - Asset data loaded for: IEF
+2025-03-05 12:50:11,814 - INFO - Market regime usage: Enabled
+2025-03-05 12:50:11,814 - INFO - Moving average type: weekly
+2025-03-05 12:50:11,814 - INFO - Fractional shares: Not allowed
+2025-03-05 12:50:12,043 - INFO - Start date: 2005-01-28, Initial value: 100000.00
+2025-03-05 12:50:12,210 - INFO - Recorded QQQ month-end close: 37.40
+2025-03-05 12:50:12,210 - INFO - Recorded IAU month-end close: 8.45
+2025-03-05 12:50:12,211 - INFO - Recorded IEF month-end close: 85.69
+2025-03-05 12:50:12,290 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:12,290 - INFO - === 2005-02-01 Rebalancing Start ===
+2025-03-05 12:50:12,290 - INFO - Total value: 100000.00, Cash buffer: 1000.00, Available: 99000.00
+2025-03-05 12:50:12,291 - INFO - QQQ: Target Ratio 0.5000, Target Value 49500.00, Target Shares 1323, Current Shares 0, Adjustment 1323
+2025-03-05 12:50:12,291 - INFO - IAU: Target Ratio 0.3000, Target Value 29700.00, Target Shares 3513, Current Shares 0, Adjustment 3513
+2025-03-05 12:50:12,291 - INFO - IEF: Target Ratio 0.2000, Target Value 19800.00, Target Shares 231, Current Shares 0, Adjustment 231
+2025-03-05 12:50:12,291 - INFO - Current cash: 100000.00, Estimated cash after sales: 100000.00
+2025-03-05 12:50:12,291 - INFO - 2005-02-01: Buy 1323 shares of QQQ
+2025-03-05 12:50:12,292 - INFO - 2005-02-01: Buy 3513 shares of IAU
+2025-03-05 12:50:12,292 - INFO - 2005-02-01: Buy 231 shares of IEF
+2025-03-05 12:50:12,292 - INFO - Total Sell Value: 0.00, Total Buy Value: 98973.50
+2025-03-05 12:50:12,292 - INFO - Rebalancing complete. Portfolio value: 100000.00, Estimated remaining cash: 927.53
+2025-03-05 12:50:12,292 - INFO - === 2005-02-01 Rebalancing End ===
+2025-03-05 12:50:12,293 - INFO - Order Completed [2005-02-02 00:00:00]: BUY 1323.0000 shares of QQQ @ 37.64, Commission: 49.80, Total: 49797.72
+2025-03-05 12:50:12,294 - INFO - Order Completed [2005-02-02 00:00:00]: BUY 3513.0000 shares of IAU @ 8.45, Commission: 29.67, Total: 29670.80
+2025-03-05 12:50:12,294 - INFO - Order Completed [2005-02-02 00:00:00]: BUY 231.0000 shares of IEF @ 85.41, Commission: 19.73, Total: 19729.71
+2025-03-05 12:50:13,086 - INFO - Recorded QQQ month-end close: 37.22
+2025-03-05 12:50:13,087 - INFO - Recorded IAU month-end close: 8.72
+2025-03-05 12:50:13,087 - INFO - Recorded IEF month-end close: 84.26
+2025-03-05 12:50:13,162 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:13,163 - INFO - === 2005-03-01 Rebalancing Start ===
+2025-03-05 12:50:13,163 - INFO - Total value: 100306.52, Cash buffer: 1003.07, Available: 99303.46
+2025-03-05 12:50:13,163 - INFO - QQQ: Target Ratio 0.5000, Target Value 49651.73, Target Shares 1334, Current Shares 1323, Adjustment 11
+2025-03-05 12:50:13,163 - INFO - IAU: Target Ratio 0.3000, Target Value 29791.04, Target Shares 3415, Current Shares 3513, Adjustment -98
+2025-03-05 12:50:13,164 - INFO - IEF: Target Ratio 0.2000, Target Value 19860.69, Target Shares 235, Current Shares 231, Adjustment 4
+2025-03-05 12:50:13,164 - INFO - 2005-03-01: Sell 98 shares of IAU
+2025-03-05 12:50:13,164 - INFO - Current cash: 702.57, Estimated cash after sales: 1556.47
+2025-03-05 12:50:13,164 - INFO - 2005-03-01: Buy 11 shares of QQQ
+2025-03-05 12:50:13,164 - INFO - 2005-03-01: Buy 4 shares of IEF
+2025-03-05 12:50:13,165 - INFO - Total Sell Value: 854.76, Total Buy Value: 746.46
+2025-03-05 12:50:13,165 - INFO - Rebalancing complete. Portfolio value: 100306.52, Estimated remaining cash: 809.27
+2025-03-05 12:50:13,165 - INFO - === 2005-03-01 Rebalancing End ===
+2025-03-05 12:50:13,165 - INFO - Order Completed [2005-03-02 00:00:00]: SELL -98.0000 shares of IAU @ 8.65, Commission: 0.85, Total: 827.71
+2025-03-05 12:50:13,166 - INFO - Order Completed [2005-03-02 00:00:00]: BUY 11.0000 shares of QQQ @ 37.41, Commission: 0.41, Total: 411.51
+2025-03-05 12:50:13,166 - INFO - Order Completed [2005-03-02 00:00:00]: BUY 4.0000 shares of IEF @ 83.97, Commission: 0.34, Total: 335.88
+2025-03-05 12:50:14,035 - INFO - Recorded QQQ month-end close: 36.57
+2025-03-05 12:50:14,036 - INFO - Recorded IAU month-end close: 8.58
+2025-03-05 12:50:14,036 - INFO - Recorded IEF month-end close: 83.69
+2025-03-05 12:50:14,099 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:14,100 - INFO - === 2005-04-01 Rebalancing Start ===
+2025-03-05 12:50:14,100 - INFO - Total value: 97849.68, Cash buffer: 978.50, Available: 96871.18
+2025-03-05 12:50:14,100 - INFO - QQQ: Target Ratio 0.5000, Target Value 48435.59, Target Shares 1324, Current Shares 1334, Adjustment -10
+2025-03-05 12:50:14,100 - INFO - IAU: Target Ratio 0.3000, Target Value 29061.35, Target Shares 3388, Current Shares 3415, Adjustment -27
+2025-03-05 12:50:14,101 - INFO - IEF: Target Ratio 0.2000, Target Value 19374.24, Target Shares 231, Current Shares 235, Adjustment -4
+2025-03-05 12:50:14,101 - INFO - 2005-04-01: Sell 10 shares of QQQ
+2025-03-05 12:50:14,101 - INFO - 2005-04-01: Sell 27 shares of IAU
+2025-03-05 12:50:14,102 - INFO - 2005-04-01: Sell 4 shares of IEF
+2025-03-05 12:50:14,102 - INFO - Current cash: 801.29, Estimated cash after sales: 1732.37
+2025-03-05 12:50:14,102 - INFO - Total Sell Value: 932.01, Total Buy Value: 0.00
+2025-03-05 12:50:14,102 - INFO - Rebalancing complete. Portfolio value: 97849.68, Estimated remaining cash: 1732.37
+2025-03-05 12:50:14,102 - INFO - === 2005-04-01 Rebalancing End ===
+2025-03-05 12:50:14,103 - INFO - Order Completed [2005-04-04 00:00:00]: SELL -10.0000 shares of QQQ @ 36.25, Commission: 0.36, Total: 376.38
+2025-03-05 12:50:14,104 - INFO - Order Completed [2005-04-04 00:00:00]: SELL -27.0000 shares of IAU @ 8.49, Commission: 0.23, Total: 228.04
+2025-03-05 12:50:14,104 - INFO - Order Completed [2005-04-04 00:00:00]: SELL -4.0000 shares of IEF @ 83.49, Commission: 0.33, Total: 341.54
+2025-03-05 12:50:14,941 - INFO - Recorded QQQ month-end close: 34.98
+2025-03-05 12:50:14,941 - INFO - Recorded IAU month-end close: 8.69
+2025-03-05 12:50:14,942 - INFO - Recorded IEF month-end close: 85.51
+2025-03-05 12:50:15,015 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:15,015 - INFO - === 2005-05-02 Rebalancing Start ===
+2025-03-05 12:50:15,015 - INFO - Total value: 97052.53, Cash buffer: 970.53, Available: 96082.00
+2025-03-05 12:50:15,015 - INFO - QQQ: Target Ratio 0.5000, Target Value 48041.00, Target Shares 1373, Current Shares 1324, Adjustment 49
+2025-03-05 12:50:15,016 - INFO - IAU: Target Ratio 0.3000, Target Value 28824.60, Target Shares 3318, Current Shares 3388, Adjustment -70
+2025-03-05 12:50:15,016 - INFO - IEF: Target Ratio 0.2000, Target Value 19216.40, Target Shares 224, Current Shares 231, Adjustment -7
+2025-03-05 12:50:15,016 - INFO - 2005-05-02: Sell 70 shares of IAU
+2025-03-05 12:50:15,016 - INFO - 2005-05-02: Sell 7 shares of IEF
+2025-03-05 12:50:15,016 - INFO - Current cash: 1725.94, Estimated cash after sales: 2931.33
+2025-03-05 12:50:15,016 - INFO - 2005-05-02: Buy 49 shares of QQQ
+2025-03-05 12:50:15,017 - INFO - Total Sell Value: 1206.59, Total Buy Value: 1714.02
+2025-03-05 12:50:15,017 - INFO - Rebalancing complete. Portfolio value: 97052.53, Estimated remaining cash: 1215.59
+2025-03-05 12:50:15,017 - INFO - === 2005-05-02 Rebalancing End ===
+2025-03-05 12:50:15,018 - INFO - Order Completed [2005-05-03 00:00:00]: SELL -70.0000 shares of IAU @ 8.57, Commission: 0.60, Total: 591.22
+2025-03-05 12:50:15,018 - INFO - Order Completed [2005-05-03 00:00:00]: SELL -7.0000 shares of IEF @ 85.39, Commission: 0.60, Total: 597.70
+2025-03-05 12:50:15,018 - INFO - Order Completed [2005-05-03 00:00:00]: BUY 49.0000 shares of QQQ @ 35.05, Commission: 1.72, Total: 1717.45
+2025-03-05 12:50:15,878 - INFO - Recorded QQQ month-end close: 38.08
+2025-03-05 12:50:15,879 - INFO - Recorded IAU month-end close: 8.34
+2025-03-05 12:50:15,879 - INFO - Recorded IEF month-end close: 86.81
+2025-03-05 12:50:15,940 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:15,940 - INFO - === 2005-06-01 Rebalancing Start ===
+2025-03-05 12:50:15,941 - INFO - Total value: 100997.96, Cash buffer: 1009.98, Available: 99987.98
+2025-03-05 12:50:15,941 - INFO - QQQ: Target Ratio 0.5000, Target Value 49993.99, Target Shares 1312, Current Shares 1373, Adjustment -61
+2025-03-05 12:50:15,941 - INFO - IAU: Target Ratio 0.3000, Target Value 29996.39, Target Shares 3597, Current Shares 3318, Adjustment 279
+2025-03-05 12:50:15,941 - INFO - IEF: Target Ratio 0.2000, Target Value 19997.60, Target Shares 230, Current Shares 224, Adjustment 6
+2025-03-05 12:50:15,942 - INFO - 2005-06-01: Sell 61 shares of QQQ
+2025-03-05 12:50:15,942 - INFO - Current cash: 1203.35, Estimated cash after sales: 3523.91
+2025-03-05 12:50:15,942 - INFO - 2005-06-01: Buy 279 shares of IAU
+2025-03-05 12:50:15,942 - INFO - 2005-06-01: Buy 6 shares of IEF
+2025-03-05 12:50:15,942 - INFO - Total Sell Value: 2322.88, Total Buy Value: 2847.16
+2025-03-05 12:50:15,943 - INFO - Rebalancing complete. Portfolio value: 100997.96, Estimated remaining cash: 673.90
+2025-03-05 12:50:15,943 - INFO - === 2005-06-01 Rebalancing End ===
+2025-03-05 12:50:15,943 - INFO - Order Completed [2005-06-02 00:00:00]: SELL -61.0000 shares of QQQ @ 38.33, Commission: 2.34, Total: 2290.29
+2025-03-05 12:50:15,944 - INFO - Order Completed [2005-06-02 00:00:00]: BUY 279.0000 shares of IAU @ 8.41, Commission: 2.35, Total: 2345.27
+2025-03-05 12:50:15,944 - INFO - Order Completed [2005-06-02 00:00:00]: BUY 6.0000 shares of IEF @ 87.01, Commission: 0.52, Total: 522.06
+2025-03-05 12:50:16,817 - INFO - Recorded QQQ month-end close: 36.78
+2025-03-05 12:50:16,818 - INFO - Recorded IAU month-end close: 8.69
+2025-03-05 12:50:16,818 - INFO - Recorded IEF month-end close: 86.96
+2025-03-05 12:50:16,882 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:16,882 - INFO - === 2005-07-01 Rebalancing Start ===
+2025-03-05 12:50:16,883 - INFO - Total value: 99374.36, Cash buffer: 993.74, Available: 98380.61
+2025-03-05 12:50:16,883 - INFO - QQQ: Target Ratio 0.5000, Target Value 49190.31, Target Shares 1337, Current Shares 1312, Adjustment 25
+2025-03-05 12:50:16,883 - INFO - IAU: Target Ratio 0.3000, Target Value 29514.18, Target Shares 3395, Current Shares 3597, Adjustment -202
+2025-03-05 12:50:16,883 - INFO - IEF: Target Ratio 0.2000, Target Value 19676.12, Target Shares 226, Current Shares 230, Adjustment -4
+2025-03-05 12:50:16,884 - INFO - 2005-07-01: Sell 202 shares of IAU
+2025-03-05 12:50:16,884 - INFO - 2005-07-01: Sell 4 shares of IEF
+2025-03-05 12:50:16,884 - INFO - Current cash: 668.94, Estimated cash after sales: 2770.46
+2025-03-05 12:50:16,884 - INFO - 2005-07-01: Buy 25 shares of QQQ
+2025-03-05 12:50:16,885 - INFO - Total Sell Value: 2103.62, Total Buy Value: 919.50
+2025-03-05 12:50:16,885 - INFO - Rebalancing complete. Portfolio value: 99374.36, Estimated remaining cash: 1850.04
+2025-03-05 12:50:16,885 - INFO - === 2005-07-01 Rebalancing End ===
+2025-03-05 12:50:16,886 - INFO - Order Completed [2005-07-05 00:00:00]: SELL -202.0000 shares of IAU @ 8.47, Commission: 1.71, Total: 1705.47
+2025-03-05 12:50:16,886 - INFO - Order Completed [2005-07-05 00:00:00]: SELL -4.0000 shares of IEF @ 85.69, Commission: 0.34, Total: 341.71
+2025-03-05 12:50:16,886 - INFO - Order Completed [2005-07-05 00:00:00]: BUY 25.0000 shares of QQQ @ 36.60, Commission: 0.91, Total: 915.00
+2025-03-05 12:50:17,637 - INFO - Recorded QQQ month-end close: 39.58
+2025-03-05 12:50:17,638 - INFO - Recorded IAU month-end close: 8.58
+2025-03-05 12:50:17,638 - INFO - Recorded IEF month-end close: 84.80
+2025-03-05 12:50:17,703 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:17,703 - INFO - === 2005-08-01 Rebalancing Start ===
+2025-03-05 12:50:17,704 - INFO - Total value: 103202.11, Cash buffer: 1032.02, Available: 102170.09
+2025-03-05 12:50:17,704 - INFO - QQQ: Target Ratio 0.5000, Target Value 51085.04, Target Shares 1290, Current Shares 1337, Adjustment -47
+2025-03-05 12:50:17,704 - INFO - IAU: Target Ratio 0.3000, Target Value 30651.03, Target Shares 3573, Current Shares 3395, Adjustment 178
+2025-03-05 12:50:17,704 - INFO - IEF: Target Ratio 0.2000, Target Value 20434.02, Target Shares 240, Current Shares 226, Adjustment 14
+2025-03-05 12:50:17,705 - INFO - 2005-08-01: Sell 47 shares of QQQ
+2025-03-05 12:50:17,705 - INFO - Current cash: 1805.48, Estimated cash after sales: 3663.88
+2025-03-05 12:50:17,705 - INFO - 2005-08-01: Buy 178 shares of IAU
+2025-03-05 12:50:17,706 - INFO - 2005-08-01: Buy 14 shares of IEF
+2025-03-05 12:50:17,706 - INFO - Total Sell Value: 1860.26, Total Buy Value: 2714.08
+2025-03-05 12:50:17,707 - INFO - Rebalancing complete. Portfolio value: 103202.11, Estimated remaining cash: 947.08
+2025-03-05 12:50:17,707 - INFO - === 2005-08-01 Rebalancing End ===
+2025-03-05 12:50:17,707 - INFO - Order Completed [2005-08-02 00:00:00]: SELL -47.0000 shares of QQQ @ 39.70, Commission: 1.87, Total: 1763.82
+2025-03-05 12:50:17,708 - INFO - Order Completed [2005-08-02 00:00:00]: BUY 178.0000 shares of IAU @ 8.63, Commission: 1.54, Total: 1535.78
+2025-03-05 12:50:17,708 - INFO - Order Completed [2005-08-02 00:00:00]: BUY 14.0000 shares of IEF @ 84.35, Commission: 1.18, Total: 1180.90
+2025-03-05 12:50:18,629 - INFO - Recorded QQQ month-end close: 38.98
+2025-03-05 12:50:18,630 - INFO - Recorded IAU month-end close: 8.69
+2025-03-05 12:50:18,630 - INFO - Recorded IEF month-end close: 86.22
+2025-03-05 12:50:18,694 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:18,695 - INFO - === 2005-09-01 Rebalancing Start ===
+2025-03-05 12:50:18,695 - INFO - Total value: 103418.01, Cash buffer: 1034.18, Available: 102383.83
+2025-03-05 12:50:18,695 - INFO - QQQ: Target Ratio 0.5000, Target Value 51191.92, Target Shares 1313, Current Shares 1290, Adjustment 23
+2025-03-05 12:50:18,696 - INFO - IAU: Target Ratio 0.3000, Target Value 30715.15, Target Shares 3536, Current Shares 3573, Adjustment -37
+2025-03-05 12:50:18,696 - INFO - IEF: Target Ratio 0.2000, Target Value 20476.77, Target Shares 237, Current Shares 240, Adjustment -3
+2025-03-05 12:50:18,696 - INFO - 2005-09-01: Sell 37 shares of IAU
+2025-03-05 12:50:18,696 - INFO - 2005-09-01: Sell 3 shares of IEF
+2025-03-05 12:50:18,697 - INFO - Current cash: 950.11, Estimated cash after sales: 1529.57
+2025-03-05 12:50:18,697 - INFO - 2005-09-01: Buy 23 shares of QQQ
+2025-03-05 12:50:18,697 - INFO - Total Sell Value: 580.04, Total Buy Value: 896.54
+2025-03-05 12:50:18,697 - INFO - Rebalancing complete. Portfolio value: 103418.01, Estimated remaining cash: 632.14
+2025-03-05 12:50:18,697 - INFO - === 2005-09-01 Rebalancing End ===
+2025-03-05 12:50:18,698 - INFO - Order Completed [2005-09-02 00:00:00]: SELL -37.0000 shares of IAU @ 8.85, Commission: 0.33, Total: 312.73
+2025-03-05 12:50:18,698 - INFO - Order Completed [2005-09-02 00:00:00]: SELL -3.0000 shares of IEF @ 85.97, Commission: 0.26, Total: 256.09
+2025-03-05 12:50:18,698 - INFO - Order Completed [2005-09-02 00:00:00]: BUY 23.0000 shares of QQQ @ 39.00, Commission: 0.90, Total: 897.00
+2025-03-05 12:50:19,562 - INFO - Recorded QQQ month-end close: 39.46
+2025-03-05 12:50:19,562 - INFO - Recorded IAU month-end close: 9.36
+2025-03-05 12:50:19,562 - INFO - Recorded IEF month-end close: 84.44
+2025-03-05 12:50:19,627 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:19,627 - INFO - === 2005-10-03 Rebalancing Start ===
+2025-03-05 12:50:19,628 - INFO - Total value: 105341.07, Cash buffer: 1053.41, Available: 104287.66
+2025-03-05 12:50:19,628 - INFO - QQQ: Target Ratio 0.5000, Target Value 52143.83, Target Shares 1321, Current Shares 1313, Adjustment 8
+2025-03-05 12:50:19,628 - INFO - IAU: Target Ratio 0.3000, Target Value 31286.30, Target Shares 3342, Current Shares 3536, Adjustment -194
+2025-03-05 12:50:19,628 - INFO - IEF: Target Ratio 0.2000, Target Value 20857.53, Target Shares 247, Current Shares 237, Adjustment 10
+2025-03-05 12:50:19,629 - INFO - 2005-10-03: Sell 194 shares of IAU
+2025-03-05 12:50:19,629 - INFO - Current cash: 636.84, Estimated cash after sales: 2450.87
+2025-03-05 12:50:19,629 - INFO - 2005-10-03: Buy 8 shares of QQQ
+2025-03-05 12:50:19,629 - INFO - 2005-10-03: Buy 10 shares of IEF
+2025-03-05 12:50:19,629 - INFO - Total Sell Value: 1815.84, Total Buy Value: 1160.08
+2025-03-05 12:50:19,629 - INFO - Rebalancing complete. Portfolio value: 105341.07, Estimated remaining cash: 1289.63
+2025-03-05 12:50:19,629 - INFO - === 2005-10-03 Rebalancing End ===
+2025-03-05 12:50:19,630 - INFO - Order Completed [2005-10-04 00:00:00]: SELL -194.0000 shares of IAU @ 9.35, Commission: 1.81, Total: 1639.71
+2025-03-05 12:50:19,630 - INFO - Order Completed [2005-10-04 00:00:00]: BUY 8.0000 shares of QQQ @ 39.62, Commission: 0.32, Total: 316.96
+2025-03-05 12:50:19,630 - INFO - Order Completed [2005-10-04 00:00:00]: BUY 10.0000 shares of IEF @ 84.00, Commission: 0.84, Total: 840.00
+2025-03-05 12:50:20,447 - INFO - Recorded QQQ month-end close: 38.87
+2025-03-05 12:50:20,447 - INFO - Recorded IAU month-end close: 9.29
+2025-03-05 12:50:20,448 - INFO - Recorded IEF month-end close: 83.12
+2025-03-05 12:50:20,514 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:20,514 - INFO - === 2005-11-01 Rebalancing Start ===
+2025-03-05 12:50:20,514 - INFO - Total value: 103623.63, Cash buffer: 1036.24, Available: 102587.40
+2025-03-05 12:50:20,515 - INFO - QQQ: Target Ratio 0.5000, Target Value 51293.70, Target Shares 1319, Current Shares 1321, Adjustment -2
+2025-03-05 12:50:20,515 - INFO - IAU: Target Ratio 0.3000, Target Value 30776.22, Target Shares 3311, Current Shares 3342, Adjustment -31
+2025-03-05 12:50:20,515 - INFO - IEF: Target Ratio 0.2000, Target Value 20517.48, Target Shares 246, Current Shares 247, Adjustment -1
+2025-03-05 12:50:20,516 - INFO - 2005-11-01: Sell 2 shares of QQQ
+2025-03-05 12:50:20,516 - INFO - 2005-11-01: Sell 31 shares of IAU
+2025-03-05 12:50:20,516 - INFO - 2005-11-01: Sell 1 shares of IEF
+2025-03-05 12:50:20,517 - INFO - Current cash: 1290.04, Estimated cash after sales: 1738.56
+2025-03-05 12:50:20,517 - INFO - Total Sell Value: 448.97, Total Buy Value: 0.00
+2025-03-05 12:50:20,517 - INFO - Rebalancing complete. Portfolio value: 103623.63, Estimated remaining cash: 1738.56
+2025-03-05 12:50:20,517 - INFO - === 2005-11-01 Rebalancing End ===
+2025-03-05 12:50:20,518 - INFO - Order Completed [2005-11-02 00:00:00]: SELL -2.0000 shares of QQQ @ 38.73, Commission: 0.08, Total: 75.13
+2025-03-05 12:50:20,518 - INFO - Order Completed [2005-11-02 00:00:00]: SELL -31.0000 shares of IAU @ 9.21, Commission: 0.29, Total: 262.02
+2025-03-05 12:50:20,518 - INFO - Order Completed [2005-11-02 00:00:00]: SELL -1.0000 shares of IEF @ 82.65, Commission: 0.08, Total: 85.31
+2025-03-05 12:50:21,347 - INFO - Recorded QQQ month-end close: 41.24
+2025-03-05 12:50:21,348 - INFO - Recorded IAU month-end close: 9.83
+2025-03-05 12:50:21,348 - INFO - Recorded IEF month-end close: 83.35
+2025-03-05 12:50:21,418 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:21,418 - INFO - === 2005-12-01 Rebalancing Start ===
+2025-03-05 12:50:21,418 - INFO - Total value: 110757.45, Cash buffer: 1107.57, Available: 109649.88
+2025-03-05 12:50:21,418 - INFO - QQQ: Target Ratio 0.5000, Target Value 54824.94, Target Shares 1329, Current Shares 1319, Adjustment 10
+2025-03-05 12:50:21,418 - INFO - IAU: Target Ratio 0.3000, Target Value 32894.96, Target Shares 3347, Current Shares 3311, Adjustment 36
+2025-03-05 12:50:21,418 - INFO - IEF: Target Ratio 0.2000, Target Value 21929.98, Target Shares 263, Current Shares 246, Adjustment 17
+2025-03-05 12:50:21,418 - INFO - Current cash: 1735.21, Estimated cash after sales: 1735.21
+2025-03-05 12:50:21,419 - INFO - 2005-12-01: Buy 10 shares of QQQ
+2025-03-05 12:50:21,419 - INFO - 2005-12-01: Buy 36 shares of IAU
+2025-03-05 12:50:21,419 - WARNING - Adjusting buy order for IEF: 17 -> 11
+2025-03-05 12:50:21,419 - INFO - 2005-12-01: Buy 11 shares of IEF
+2025-03-05 12:50:21,420 - INFO - Total Sell Value: 0.00, Total Buy Value: 1683.06
+2025-03-05 12:50:21,420 - INFO - Rebalancing complete. Portfolio value: 110757.45, Estimated remaining cash: 50.47
+2025-03-05 12:50:21,420 - INFO - === 2005-12-01 Rebalancing End ===
+2025-03-05 12:50:21,420 - INFO - Order Completed [2005-12-02 00:00:00]: BUY 10.0000 shares of QQQ @ 41.94, Commission: 0.42, Total: 419.40
+2025-03-05 12:50:21,421 - INFO - Order Completed [2005-12-02 00:00:00]: BUY 36.0000 shares of IAU @ 10.00, Commission: 0.36, Total: 359.86
+2025-03-05 12:50:21,421 - INFO - Order Completed [2005-12-02 00:00:00]: BUY 11.0000 shares of IEF @ 82.89, Commission: 0.91, Total: 911.79
+2025-03-05 12:50:22,242 - INFO - Recorded QQQ month-end close: 40.41
+2025-03-05 12:50:22,243 - INFO - Recorded IAU month-end close: 10.35
+2025-03-05 12:50:22,243 - INFO - Recorded IEF month-end close: 83.91
+2025-03-05 12:50:22,308 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:22,308 - INFO - === 2006-01-03 Rebalancing Start ===
+2025-03-05 12:50:22,308 - INFO - Total value: 112124.54, Cash buffer: 1121.25, Available: 111003.29
+2025-03-05 12:50:22,309 - INFO - QQQ: Target Ratio 0.5000, Target Value 55501.65, Target Shares 1373, Current Shares 1329, Adjustment 44
+2025-03-05 12:50:22,310 - INFO - IAU: Target Ratio 0.3000, Target Value 33300.99, Target Shares 3218, Current Shares 3347, Adjustment -129
+2025-03-05 12:50:22,310 - INFO - IEF: Target Ratio 0.2000, Target Value 22200.66, Target Shares 264, Current Shares 257, Adjustment 7
+2025-03-05 12:50:22,310 - INFO - 2006-01-03: Sell 129 shares of IAU
+2025-03-05 12:50:22,310 - INFO - Current cash: 42.47, Estimated cash after sales: 1375.77
+2025-03-05 12:50:22,310 - WARNING - Adjusting buy order for QQQ: 44 -> 34
+2025-03-05 12:50:22,311 - INFO - 2006-01-03: Buy 34 shares of QQQ
+2025-03-05 12:50:22,311 - ERROR - Insufficient cash to buy IEF.
+2025-03-05 12:50:22,311 - INFO - Total Sell Value: 1334.63, Total Buy Value: 1373.94
+2025-03-05 12:50:22,311 - INFO - Rebalancing complete. Portfolio value: 112124.54, Estimated remaining cash: 0.46
+2025-03-05 12:50:22,311 - INFO - === 2006-01-03 Rebalancing End ===
+2025-03-05 12:50:22,312 - INFO - Order Completed [2006-01-04 00:00:00]: SELL -129.0000 shares of IAU @ 10.59, Commission: 1.37, Total: 1092.47
+2025-03-05 12:50:22,312 - ERROR - Margin Error [2006-01-04 00:00:00]: QQQ
+2025-03-05 12:50:23,082 - INFO - Recorded QQQ month-end close: 42.00
+2025-03-05 12:50:23,082 - INFO - Recorded IAU month-end close: 11.36
+2025-03-05 12:50:23,082 - INFO - Recorded IEF month-end close: 83.32
+2025-03-05 12:50:23,148 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:23,148 - INFO - === 2006-02-01 Rebalancing Start ===
+2025-03-05 12:50:23,148 - INFO - Total value: 115279.96, Cash buffer: 1152.80, Available: 114127.16
+2025-03-05 12:50:23,148 - INFO - QQQ: Target Ratio 0.5000, Target Value 57063.58, Target Shares 1358, Current Shares 1329, Adjustment 29
+2025-03-05 12:50:23,149 - INFO - IAU: Target Ratio 0.3000, Target Value 34238.15, Target Shares 3014, Current Shares 3218, Adjustment -204
+2025-03-05 12:50:23,149 - INFO - IEF: Target Ratio 0.2000, Target Value 22825.43, Target Shares 273, Current Shares 257, Adjustment 16
+2025-03-05 12:50:23,149 - INFO - 2006-02-01: Sell 204 shares of IAU
+2025-03-05 12:50:23,149 - INFO - Current cash: 1407.22, Estimated cash after sales: 3721.93
+2025-03-05 12:50:23,150 - INFO - 2006-02-01: Buy 29 shares of QQQ
+2025-03-05 12:50:23,150 - INFO - 2006-02-01: Buy 16 shares of IEF
+2025-03-05 12:50:23,150 - INFO - Total Sell Value: 2317.03, Total Buy Value: 2551.12
+2025-03-05 12:50:23,150 - INFO - Rebalancing complete. Portfolio value: 115279.96, Estimated remaining cash: 1168.26
+2025-03-05 12:50:23,150 - INFO - === 2006-02-01 Rebalancing End ===
+2025-03-05 12:50:23,151 - INFO - Order Completed [2006-02-02 00:00:00]: SELL -204.0000 shares of IAU @ 11.41, Commission: 2.33, Total: 1727.62
+2025-03-05 12:50:23,151 - INFO - Order Completed [2006-02-02 00:00:00]: BUY 29.0000 shares of QQQ @ 42.01, Commission: 1.22, Total: 1218.29
+2025-03-05 12:50:23,152 - INFO - Order Completed [2006-02-02 00:00:00]: BUY 16.0000 shares of IEF @ 82.86, Commission: 1.33, Total: 1325.76
+2025-03-05 12:50:23,852 - INFO - Recorded QQQ month-end close: 41.10
+2025-03-05 12:50:23,853 - INFO - Recorded IAU month-end close: 11.21
+2025-03-05 12:50:23,853 - INFO - Recorded IEF month-end close: 82.97
+2025-03-05 12:50:23,920 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:23,921 - INFO - === 2006-03-01 Rebalancing Start ===
+2025-03-05 12:50:23,921 - INFO - Total value: 114146.88, Cash buffer: 1141.47, Available: 113005.42
+2025-03-05 12:50:23,921 - INFO - QQQ: Target Ratio 0.5000, Target Value 56502.71, Target Shares 1374, Current Shares 1358, Adjustment 16
+2025-03-05 12:50:23,922 - INFO - IAU: Target Ratio 0.3000, Target Value 33901.62, Target Shares 3024, Current Shares 3014, Adjustment 10
+2025-03-05 12:50:23,922 - INFO - IEF: Target Ratio 0.2000, Target Value 22601.08, Target Shares 272, Current Shares 273, Adjustment -1
+2025-03-05 12:50:23,922 - INFO - 2006-03-01: Sell 1 shares of IEF
+2025-03-05 12:50:23,923 - INFO - Current cash: 1185.94, Estimated cash after sales: 1268.82
+2025-03-05 12:50:23,923 - INFO - 2006-03-01: Buy 16 shares of QQQ
+2025-03-05 12:50:23,923 - INFO - 2006-03-01: Buy 10 shares of IAU
+2025-03-05 12:50:23,923 - INFO - Total Sell Value: 82.97, Total Buy Value: 769.70
+2025-03-05 12:50:23,924 - INFO - Rebalancing complete. Portfolio value: 114146.88, Estimated remaining cash: 498.35
+2025-03-05 12:50:23,924 - INFO - === 2006-03-01 Rebalancing End ===
+2025-03-05 12:50:23,924 - INFO - Order Completed [2006-03-02 00:00:00]: SELL -1.0000 shares of IEF @ 82.31, Commission: 0.08, Total: 85.07
+2025-03-05 12:50:23,925 - INFO - Order Completed [2006-03-02 00:00:00]: BUY 16.0000 shares of QQQ @ 41.55, Commission: 0.66, Total: 664.80
+2025-03-05 12:50:23,925 - INFO - Order Completed [2006-03-02 00:00:00]: BUY 10.0000 shares of IAU @ 11.28, Commission: 0.11, Total: 112.76
+2025-03-05 12:50:24,851 - INFO - Recorded QQQ month-end close: 41.93
+2025-03-05 12:50:24,852 - INFO - Recorded IAU month-end close: 11.65
+2025-03-05 12:50:24,852 - INFO - Recorded IEF month-end close: 81.58
+2025-03-05 12:50:24,919 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:24,920 - INFO - === 2006-04-03 Rebalancing Start ===
+2025-03-05 12:50:24,920 - INFO - Total value: 115681.99, Cash buffer: 1156.82, Available: 114525.17
+2025-03-05 12:50:24,920 - INFO - QQQ: Target Ratio 0.5000, Target Value 57262.59, Target Shares 1365, Current Shares 1374, Adjustment -9
+2025-03-05 12:50:24,920 - INFO - IAU: Target Ratio 0.3000, Target Value 34357.55, Target Shares 2950, Current Shares 3024, Adjustment -74
+2025-03-05 12:50:24,920 - INFO - IEF: Target Ratio 0.2000, Target Value 22905.03, Target Shares 280, Current Shares 272, Adjustment 8
+2025-03-05 12:50:24,922 - INFO - 2006-04-03: Sell 9 shares of QQQ
+2025-03-05 12:50:24,922 - INFO - 2006-04-03: Sell 74 shares of IAU
+2025-03-05 12:50:24,922 - INFO - Current cash: 489.83, Estimated cash after sales: 1727.76
+2025-03-05 12:50:24,923 - INFO - 2006-04-03: Buy 8 shares of IEF
+2025-03-05 12:50:24,923 - INFO - Total Sell Value: 1239.17, Total Buy Value: 652.64
+2025-03-05 12:50:24,923 - INFO - Rebalancing complete. Portfolio value: 115681.99, Estimated remaining cash: 1074.47
+2025-03-05 12:50:24,923 - INFO - === 2006-04-03 Rebalancing End ===
+2025-03-05 12:50:24,924 - INFO - Order Completed [2006-04-04 00:00:00]: SELL -9.0000 shares of QQQ @ 42.05, Commission: 0.38, Total: 339.65
+2025-03-05 12:50:24,924 - INFO - Order Completed [2006-04-04 00:00:00]: SELL -74.0000 shares of IAU @ 11.71, Commission: 0.87, Total: 627.37
+2025-03-05 12:50:24,924 - INFO - Order Completed [2006-04-04 00:00:00]: BUY 8.0000 shares of IEF @ 81.29, Commission: 0.65, Total: 650.32
+2025-03-05 12:50:25,706 - INFO - Recorded QQQ month-end close: 41.85
+2025-03-05 12:50:25,706 - INFO - Recorded IAU month-end close: 13.04
+2025-03-05 12:50:25,706 - INFO - Recorded IEF month-end close: 80.81
+2025-03-05 12:50:25,795 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:25,795 - INFO - === 2006-05-01 Rebalancing Start ===
+2025-03-05 12:50:25,796 - INFO - Total value: 118550.55, Cash buffer: 1185.51, Available: 117365.04
+2025-03-05 12:50:25,799 - INFO - QQQ: Target Ratio 0.5000, Target Value 58682.52, Target Shares 1402, Current Shares 1365, Adjustment 37
+2025-03-05 12:50:25,800 - INFO - IAU: Target Ratio 0.3000, Target Value 35209.51, Target Shares 2700, Current Shares 2950, Adjustment -250
+2025-03-05 12:50:25,801 - INFO - IEF: Target Ratio 0.2000, Target Value 23473.01, Target Shares 290, Current Shares 280, Adjustment 10
+2025-03-05 12:50:25,802 - INFO - 2006-05-01: Sell 250 shares of IAU
+2025-03-05 12:50:25,803 - INFO - Current cash: 1082.75, Estimated cash after sales: 4338.49
+2025-03-05 12:50:25,804 - INFO - 2006-05-01: Buy 37 shares of QQQ
+2025-03-05 12:50:25,804 - INFO - 2006-05-01: Buy 10 shares of IEF
+2025-03-05 12:50:25,805 - INFO - Total Sell Value: 3259.00, Total Buy Value: 2356.55
+2025-03-05 12:50:25,805 - INFO - Rebalancing complete. Portfolio value: 118550.55, Estimated remaining cash: 1979.58
+2025-03-05 12:50:25,806 - INFO - === 2006-05-01 Rebalancing End ===
+2025-03-05 12:50:25,807 - INFO - Order Completed [2006-05-02 00:00:00]: SELL -250.0000 shares of IAU @ 13.16, Commission: 3.29, Total: 2119.50
+2025-03-05 12:50:25,808 - INFO - Order Completed [2006-05-02 00:00:00]: BUY 37.0000 shares of QQQ @ 41.62, Commission: 1.54, Total: 1539.94
+2025-03-05 12:50:25,809 - INFO - Order Completed [2006-05-02 00:00:00]: BUY 10.0000 shares of IEF @ 80.11, Commission: 0.80, Total: 801.10
+2025-03-05 12:50:26,739 - INFO - Recorded QQQ month-end close: 38.82
+2025-03-05 12:50:26,740 - INFO - Recorded IAU month-end close: 12.84
+2025-03-05 12:50:26,740 - INFO - Recorded IEF month-end close: 80.43
+2025-03-05 12:50:26,809 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:26,810 - INFO - === 2006-06-01 Rebalancing Start ===
+2025-03-05 12:50:26,810 - INFO - Total value: 114877.86, Cash buffer: 1148.78, Available: 113729.08
+2025-03-05 12:50:26,811 - INFO - QQQ: Target Ratio 0.5000, Target Value 56864.54, Target Shares 1464, Current Shares 1402, Adjustment 62
+2025-03-05 12:50:26,811 - INFO - IAU: Target Ratio 0.3000, Target Value 34118.72, Target Shares 2657, Current Shares 2700, Adjustment -43
+2025-03-05 12:50:26,811 - INFO - IEF: Target Ratio 0.2000, Target Value 22745.82, Target Shares 282, Current Shares 290, Adjustment -8
+2025-03-05 12:50:26,811 - INFO - 2006-06-01: Sell 43 shares of IAU
+2025-03-05 12:50:26,811 - INFO - 2006-06-01: Sell 8 shares of IEF
+2025-03-05 12:50:26,812 - INFO - Current cash: 2026.08, Estimated cash after sales: 3220.44
+2025-03-05 12:50:26,812 - INFO - 2006-06-01: Buy 62 shares of QQQ
+2025-03-05 12:50:26,813 - INFO - Total Sell Value: 1195.56, Total Buy Value: 2406.84
+2025-03-05 12:50:26,813 - INFO - Rebalancing complete. Portfolio value: 114877.86, Estimated remaining cash: 811.19
+2025-03-05 12:50:26,813 - INFO - === 2006-06-01 Rebalancing End ===
+2025-03-05 12:50:26,814 - INFO - Order Completed [2006-06-02 00:00:00]: SELL -43.0000 shares of IAU @ 12.60, Commission: 0.54, Total: 364.55
+2025-03-05 12:50:26,814 - INFO - Order Completed [2006-06-02 00:00:00]: SELL -8.0000 shares of IEF @ 80.78, Commission: 0.65, Total: 678.35
+2025-03-05 12:50:26,814 - INFO - Order Completed [2006-06-02 00:00:00]: BUY 62.0000 shares of QQQ @ 39.96, Commission: 2.48, Total: 2477.52
+2025-03-05 12:50:27,711 - INFO - Recorded QQQ month-end close: 38.77
+2025-03-05 12:50:27,712 - INFO - Recorded IAU month-end close: 12.25
+2025-03-05 12:50:27,712 - INFO - Recorded IEF month-end close: 80.32
+2025-03-05 12:50:27,781 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:27,782 - INFO - === 2006-07-03 Rebalancing Start ===
+2025-03-05 12:50:27,782 - INFO - Total value: 113550.55, Cash buffer: 1135.51, Available: 112415.04
+2025-03-05 12:50:27,782 - INFO - QQQ: Target Ratio 0.5000, Target Value 56207.52, Target Shares 1449, Current Shares 1464, Adjustment -15
+2025-03-05 12:50:27,782 - INFO - IAU: Target Ratio 0.3000, Target Value 33724.51, Target Shares 2753, Current Shares 2657, Adjustment 96
+2025-03-05 12:50:27,783 - INFO - IEF: Target Ratio 0.2000, Target Value 22483.01, Target Shares 279, Current Shares 282, Adjustment -3
+2025-03-05 12:50:27,783 - INFO - 2006-07-03: Sell 15 shares of QQQ
+2025-03-05 12:50:27,783 - INFO - 2006-07-03: Sell 3 shares of IEF
+2025-03-05 12:50:27,784 - INFO - Current cash: 733.02, Estimated cash after sales: 1554.70
+2025-03-05 12:50:27,784 - INFO - 2006-07-03: Buy 96 shares of IAU
+2025-03-05 12:50:27,784 - INFO - Total Sell Value: 822.51, Total Buy Value: 1175.62
+2025-03-05 12:50:27,784 - INFO - Rebalancing complete. Portfolio value: 113550.55, Estimated remaining cash: 377.91
+2025-03-05 12:50:27,784 - INFO - === 2006-07-03 Rebalancing End ===
+2025-03-05 12:50:27,785 - INFO - Order Completed [2006-07-05 00:00:00]: SELL -15.0000 shares of QQQ @ 38.64, Commission: 0.58, Total: 568.96
+2025-03-05 12:50:27,786 - INFO - Order Completed [2006-07-05 00:00:00]: SELL -3.0000 shares of IEF @ 79.83, Commission: 0.24, Total: 254.38
+2025-03-05 12:50:27,786 - INFO - Order Completed [2006-07-05 00:00:00]: BUY 96.0000 shares of IAU @ 12.51, Commission: 1.20, Total: 1201.34
+2025-03-05 12:50:28,669 - INFO - Recorded QQQ month-end close: 37.10
+2025-03-05 12:50:28,670 - INFO - Recorded IAU month-end close: 12.65
+2025-03-05 12:50:28,670 - INFO - Recorded IEF month-end close: 81.35
+2025-03-05 12:50:28,736 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:28,737 - INFO - === 2006-08-01 Rebalancing Start ===
+2025-03-05 12:50:28,737 - INFO - Total value: 111301.88, Cash buffer: 1113.02, Available: 110188.86
+2025-03-05 12:50:28,737 - INFO - QQQ: Target Ratio 0.5000, Target Value 55094.43, Target Shares 1485, Current Shares 1449, Adjustment 36
+2025-03-05 12:50:28,737 - INFO - IAU: Target Ratio 0.3000, Target Value 33056.66, Target Shares 2612, Current Shares 2753, Adjustment -141
+2025-03-05 12:50:28,738 - INFO - IEF: Target Ratio 0.2000, Target Value 22037.77, Target Shares 270, Current Shares 279, Adjustment -9
+2025-03-05 12:50:28,738 - INFO - 2006-08-01: Sell 141 shares of IAU
+2025-03-05 12:50:28,738 - INFO - 2006-08-01: Sell 9 shares of IEF
+2025-03-05 12:50:28,738 - INFO - Current cash: 348.74, Estimated cash after sales: 2862.31
+2025-03-05 12:50:28,738 - INFO - 2006-08-01: Buy 36 shares of QQQ
+2025-03-05 12:50:28,738 - INFO - Total Sell Value: 2516.08, Total Buy Value: 1335.60
+2025-03-05 12:50:28,739 - INFO - Rebalancing complete. Portfolio value: 111301.88, Estimated remaining cash: 1525.37
+2025-03-05 12:50:28,739 - INFO - === 2006-08-01 Rebalancing End ===
+2025-03-05 12:50:28,739 - INFO - Order Completed [2006-08-02 00:00:00]: SELL -141.0000 shares of IAU @ 13.05, Commission: 1.84, Total: 1215.24
+2025-03-05 12:50:28,740 - INFO - Order Completed [2006-08-02 00:00:00]: SELL -9.0000 shares of IEF @ 81.05, Commission: 0.73, Total: 763.14
+2025-03-05 12:50:28,740 - INFO - Order Completed [2006-08-02 00:00:00]: BUY 36.0000 shares of QQQ @ 36.61, Commission: 1.32, Total: 1317.96
+2025-03-05 12:50:29,781 - INFO - Recorded QQQ month-end close: 38.87
+2025-03-05 12:50:29,782 - INFO - Recorded IAU month-end close: 12.46
+2025-03-05 12:50:29,783 - INFO - Recorded IEF month-end close: 82.46
+2025-03-05 12:50:29,858 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:29,858 - INFO - === 2006-09-01 Rebalancing Start ===
+2025-03-05 12:50:29,858 - INFO - Total value: 114378.17, Cash buffer: 1143.78, Available: 113234.39
+2025-03-05 12:50:29,858 - INFO - QQQ: Target Ratio 0.5000, Target Value 56617.19, Target Shares 1456, Current Shares 1485, Adjustment -29
+2025-03-05 12:50:29,858 - INFO - IAU: Target Ratio 0.3000, Target Value 33970.32, Target Shares 2725, Current Shares 2612, Adjustment 113
+2025-03-05 12:50:29,858 - INFO - IEF: Target Ratio 0.2000, Target Value 22646.88, Target Shares 274, Current Shares 270, Adjustment 4
+2025-03-05 12:50:29,858 - INFO - 2006-09-01: Sell 29 shares of QQQ
+2025-03-05 12:50:29,858 - INFO - Current cash: 1596.40, Estimated cash after sales: 2722.50
+2025-03-05 12:50:29,859 - INFO - 2006-09-01: Buy 113 shares of IAU
+2025-03-05 12:50:29,859 - INFO - 2006-09-01: Buy 4 shares of IEF
+2025-03-05 12:50:29,859 - INFO - Total Sell Value: 1127.23, Total Buy Value: 1738.27
+2025-03-05 12:50:29,859 - INFO - Rebalancing complete. Portfolio value: 114378.17, Estimated remaining cash: 982.49
+2025-03-05 12:50:29,859 - INFO - === 2006-09-01 Rebalancing End ===
+2025-03-05 12:50:29,860 - INFO - Order Completed [2006-09-05 00:00:00]: SELL -29.0000 shares of QQQ @ 39.10, Commission: 1.13, Total: 1099.06
+2025-03-05 12:50:29,860 - INFO - Order Completed [2006-09-05 00:00:00]: BUY 113.0000 shares of IAU @ 12.65, Commission: 1.43, Total: 1429.45
+2025-03-05 12:50:29,860 - INFO - Order Completed [2006-09-05 00:00:00]: BUY 4.0000 shares of IEF @ 82.16, Commission: 0.33, Total: 328.64
+2025-03-05 12:50:30,723 - INFO - Recorded QQQ month-end close: 40.65
+2025-03-05 12:50:30,723 - INFO - Recorded IAU month-end close: 11.90
+2025-03-05 12:50:30,723 - INFO - Recorded IEF month-end close: 83.14
+2025-03-05 12:50:30,790 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:30,791 - INFO - === 2006-10-02 Rebalancing Start ===
+2025-03-05 12:50:30,791 - INFO - Total value: 114356.43, Cash buffer: 1143.56, Available: 113212.87
+2025-03-05 12:50:30,791 - INFO - QQQ: Target Ratio 0.5000, Target Value 56606.43, Target Shares 1392, Current Shares 1456, Adjustment -64
+2025-03-05 12:50:30,792 - INFO - IAU: Target Ratio 0.3000, Target Value 33963.86, Target Shares 2853, Current Shares 2725, Adjustment 128
+2025-03-05 12:50:30,792 - INFO - IEF: Target Ratio 0.2000, Target Value 22642.57, Target Shares 272, Current Shares 274, Adjustment -2
+2025-03-05 12:50:30,792 - INFO - 2006-10-02: Sell 64 shares of QQQ
+2025-03-05 12:50:30,792 - INFO - 2006-10-02: Sell 2 shares of IEF
+2025-03-05 12:50:30,793 - INFO - Current cash: 969.31, Estimated cash after sales: 3734.43
+2025-03-05 12:50:30,793 - INFO - 2006-10-02: Buy 128 shares of IAU
+2025-03-05 12:50:30,793 - INFO - Total Sell Value: 2767.88, Total Buy Value: 1523.71
+2025-03-05 12:50:30,793 - INFO - Rebalancing complete. Portfolio value: 114356.43, Estimated remaining cash: 2209.19
+2025-03-05 12:50:30,793 - INFO - === 2006-10-02 Rebalancing End ===
+2025-03-05 12:50:30,794 - INFO - Order Completed [2006-10-03 00:00:00]: SELL -64.0000 shares of QQQ @ 40.02, Commission: 2.56, Total: 2425.51
+2025-03-05 12:50:30,795 - INFO - Order Completed [2006-10-03 00:00:00]: SELL -2.0000 shares of IEF @ 83.04, Commission: 0.17, Total: 169.51
+2025-03-05 12:50:30,795 - INFO - Order Completed [2006-10-03 00:00:00]: BUY 128.0000 shares of IAU @ 11.60, Commission: 1.48, Total: 1484.80
+2025-03-05 12:50:31,726 - INFO - Recorded QQQ month-end close: 42.58
+2025-03-05 12:50:31,727 - INFO - Recorded IAU month-end close: 12.03
+2025-03-05 12:50:31,727 - INFO - Recorded IEF month-end close: 83.27
+2025-03-05 12:50:31,808 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:31,808 - INFO - === 2006-11-01 Rebalancing Start ===
+2025-03-05 12:50:31,808 - INFO - Total value: 118401.86, Cash buffer: 1184.02, Available: 117217.84
+2025-03-05 12:50:31,808 - INFO - QQQ: Target Ratio 0.5000, Target Value 58608.92, Target Shares 1376, Current Shares 1392, Adjustment -16
+2025-03-05 12:50:31,809 - INFO - IAU: Target Ratio 0.3000, Target Value 35165.35, Target Shares 2924, Current Shares 2853, Adjustment 71
+2025-03-05 12:50:31,809 - INFO - IEF: Target Ratio 0.2000, Target Value 23443.57, Target Shares 281, Current Shares 272, Adjustment 9
+2025-03-05 12:50:31,809 - INFO - 2006-11-01: Sell 16 shares of QQQ
+2025-03-05 12:50:31,810 - INFO - Current cash: 2207.66, Estimated cash after sales: 2888.26
+2025-03-05 12:50:31,810 - INFO - 2006-11-01: Buy 71 shares of IAU
+2025-03-05 12:50:31,810 - INFO - 2006-11-01: Buy 9 shares of IEF
+2025-03-05 12:50:31,810 - INFO - Total Sell Value: 681.28, Total Buy Value: 1603.28
+2025-03-05 12:50:31,810 - INFO - Rebalancing complete. Portfolio value: 118401.86, Estimated remaining cash: 1283.38
+2025-03-05 12:50:31,811 - INFO - === 2006-11-01 Rebalancing End ===
+2025-03-05 12:50:31,811 - INFO - Order Completed [2006-11-02 00:00:00]: SELL -16.0000 shares of QQQ @ 41.81, Commission: 0.67, Total: 606.38
+2025-03-05 12:50:31,812 - INFO - Order Completed [2006-11-02 00:00:00]: BUY 71.0000 shares of IAU @ 12.32, Commission: 0.87, Total: 874.86
+2025-03-05 12:50:31,812 - INFO - Order Completed [2006-11-02 00:00:00]: BUY 9.0000 shares of IEF @ 83.13, Commission: 0.75, Total: 748.17
+2025-03-05 12:50:32,736 - INFO - Recorded QQQ month-end close: 44.04
+2025-03-05 12:50:32,736 - INFO - Recorded IAU month-end close: 12.88
+2025-03-05 12:50:32,738 - INFO - Recorded IEF month-end close: 84.05
+2025-03-05 12:50:32,812 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:32,814 - INFO - === 2006-12-01 Rebalancing Start ===
+2025-03-05 12:50:32,814 - INFO - Total value: 122429.52, Cash buffer: 1224.30, Available: 121205.22
+2025-03-05 12:50:32,814 - INFO - QQQ: Target Ratio 0.5000, Target Value 60602.61, Target Shares 1376, Current Shares 1376, Adjustment 0
+2025-03-05 12:50:32,814 - INFO - IAU: Target Ratio 0.3000, Target Value 36361.57, Target Shares 2822, Current Shares 2924, Adjustment -102
+2025-03-05 12:50:32,814 - INFO - IEF: Target Ratio 0.2000, Target Value 24241.04, Target Shares 288, Current Shares 281, Adjustment 7
+2025-03-05 12:50:32,815 - INFO - 2006-12-01: Sell 102 shares of IAU
+2025-03-05 12:50:32,815 - INFO - Current cash: 1251.30, Estimated cash after sales: 2564.15
+2025-03-05 12:50:32,815 - INFO - 2006-12-01: Buy 7 shares of IEF
+2025-03-05 12:50:32,815 - INFO - Total Sell Value: 1314.17, Total Buy Value: 588.35
+2025-03-05 12:50:32,816 - INFO - Rebalancing complete. Portfolio value: 122429.52, Estimated remaining cash: 1975.21
+2025-03-05 12:50:32,816 - INFO - === 2006-12-01 Rebalancing End ===
+2025-03-05 12:50:32,816 - INFO - Order Completed [2006-12-04 00:00:00]: SELL -102.0000 shares of IAU @ 12.80, Commission: 1.31, Total: 917.49
+2025-03-05 12:50:32,817 - INFO - Order Completed [2006-12-04 00:00:00]: BUY 7.0000 shares of IEF @ 83.84, Commission: 0.59, Total: 586.88
+2025-03-05 12:50:33,623 - INFO - Recorded QQQ month-end close: 43.16
+2025-03-05 12:50:33,623 - INFO - Recorded IAU month-end close: 12.65
+2025-03-05 12:50:33,624 - INFO - Recorded IEF month-end close: 82.44
+2025-03-05 12:50:33,689 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:33,689 - INFO - === 2007-01-03 Rebalancing Start ===
+2025-03-05 12:50:33,689 - INFO - Total value: 120440.53, Cash buffer: 1204.41, Available: 119236.13
+2025-03-05 12:50:33,690 - INFO - QQQ: Target Ratio 0.5000, Target Value 59618.06, Target Shares 1381, Current Shares 1376, Adjustment 5
+2025-03-05 12:50:33,690 - INFO - IAU: Target Ratio 0.3000, Target Value 35770.84, Target Shares 2827, Current Shares 2822, Adjustment 5
+2025-03-05 12:50:33,690 - INFO - IEF: Target Ratio 0.2000, Target Value 23847.23, Target Shares 289, Current Shares 288, Adjustment 1
+2025-03-05 12:50:33,690 - INFO - Current cash: 1968.33, Estimated cash after sales: 1968.33
+2025-03-05 12:50:33,691 - INFO - 2007-01-03: Buy 5 shares of QQQ
+2025-03-05 12:50:33,691 - INFO - 2007-01-03: Buy 5 shares of IAU
+2025-03-05 12:50:33,691 - INFO - 2007-01-03: Buy 1 shares of IEF
+2025-03-05 12:50:33,691 - INFO - Total Sell Value: 0.00, Total Buy Value: 361.49
+2025-03-05 12:50:33,691 - INFO - Rebalancing complete. Portfolio value: 120440.53, Estimated remaining cash: 1606.48
+2025-03-05 12:50:33,692 - INFO - === 2007-01-03 Rebalancing End ===
+2025-03-05 12:50:33,692 - INFO - Order Completed [2007-01-04 00:00:00]: BUY 5.0000 shares of QQQ @ 43.30, Commission: 0.22, Total: 216.50
+2025-03-05 12:50:33,693 - INFO - Order Completed [2007-01-04 00:00:00]: BUY 5.0000 shares of IAU @ 12.42, Commission: 0.06, Total: 62.10
+2025-03-05 12:50:33,693 - INFO - Order Completed [2007-01-04 00:00:00]: BUY 1.0000 shares of IEF @ 82.83, Commission: 0.08, Total: 82.83
+2025-03-05 12:50:34,460 - INFO - Recorded QQQ month-end close: 44.07
+2025-03-05 12:50:34,461 - INFO - Recorded IAU month-end close: 12.97
+2025-03-05 12:50:34,461 - INFO - Recorded IEF month-end close: 82.11
+2025-03-05 12:50:34,524 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:34,524 - INFO - === 2007-02-01 Rebalancing Start ===
+2025-03-05 12:50:34,525 - INFO - Total value: 122902.71, Cash buffer: 1229.03, Available: 121673.68
+2025-03-05 12:50:34,525 - INFO - QQQ: Target Ratio 0.5000, Target Value 60836.84, Target Shares 1380, Current Shares 1381, Adjustment -1
+2025-03-05 12:50:34,525 - INFO - IAU: Target Ratio 0.3000, Target Value 36502.10, Target Shares 2814, Current Shares 2827, Adjustment -13
+2025-03-05 12:50:34,525 - INFO - IEF: Target Ratio 0.2000, Target Value 24334.74, Target Shares 296, Current Shares 289, Adjustment 7
+2025-03-05 12:50:34,526 - INFO - 2007-02-01: Sell 1 shares of QQQ
+2025-03-05 12:50:34,526 - INFO - 2007-02-01: Sell 13 shares of IAU
+2025-03-05 12:50:34,526 - INFO - Current cash: 1606.54, Estimated cash after sales: 1819.00
+2025-03-05 12:50:34,527 - INFO - 2007-02-01: Buy 7 shares of IEF
+2025-03-05 12:50:34,527 - INFO - Total Sell Value: 212.68, Total Buy Value: 574.77
+2025-03-05 12:50:34,527 - INFO - Rebalancing complete. Portfolio value: 122902.71, Estimated remaining cash: 1243.66
+2025-03-05 12:50:34,527 - INFO - === 2007-02-01 Rebalancing End ===
+2025-03-05 12:50:34,528 - INFO - Order Completed [2007-02-02 00:00:00]: SELL -1.0000 shares of QQQ @ 44.12, Commission: 0.04, Total: 37.92
+2025-03-05 12:50:34,529 - INFO - Order Completed [2007-02-02 00:00:00]: SELL -13.0000 shares of IAU @ 12.96, Commission: 0.17, Total: 117.01
+2025-03-05 12:50:34,529 - INFO - Order Completed [2007-02-02 00:00:00]: BUY 7.0000 shares of IEF @ 81.79, Commission: 0.57, Total: 572.53
+2025-03-05 12:50:35,286 - INFO - Recorded QQQ month-end close: 43.33
+2025-03-05 12:50:35,286 - INFO - Recorded IAU month-end close: 13.30
+2025-03-05 12:50:35,286 - INFO - Recorded IEF month-end close: 83.48
+2025-03-05 12:50:35,354 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:35,355 - INFO - === 2007-03-01 Rebalancing Start ===
+2025-03-05 12:50:35,355 - INFO - Total value: 122487.69, Cash buffer: 1224.88, Available: 121262.81
+2025-03-05 12:50:35,355 - INFO - QQQ: Target Ratio 0.5000, Target Value 60631.40, Target Shares 1399, Current Shares 1380, Adjustment 19
+2025-03-05 12:50:35,355 - INFO - IAU: Target Ratio 0.3000, Target Value 36378.84, Target Shares 2736, Current Shares 2814, Adjustment -78
+2025-03-05 12:50:35,355 - INFO - IEF: Target Ratio 0.2000, Target Value 24252.56, Target Shares 290, Current Shares 296, Adjustment -6
+2025-03-05 12:50:35,355 - INFO - 2007-03-01: Sell 78 shares of IAU
+2025-03-05 12:50:35,356 - INFO - 2007-03-01: Sell 6 shares of IEF
+2025-03-05 12:50:35,356 - INFO - Current cash: 1245.77, Estimated cash after sales: 2782.20
+2025-03-05 12:50:35,356 - INFO - 2007-03-01: Buy 19 shares of QQQ
+2025-03-05 12:50:35,356 - INFO - Total Sell Value: 1537.97, Total Buy Value: 823.27
+2025-03-05 12:50:35,356 - INFO - Rebalancing complete. Portfolio value: 122487.69, Estimated remaining cash: 1958.11
+2025-03-05 12:50:35,356 - INFO - === 2007-03-01 Rebalancing End ===
+2025-03-05 12:50:35,357 - INFO - Order Completed [2007-03-02 00:00:00]: SELL -78.0000 shares of IAU @ 12.94, Commission: 1.01, Total: 702.08
+2025-03-05 12:50:35,357 - INFO - Order Completed [2007-03-02 00:00:00]: SELL -6.0000 shares of IEF @ 83.42, Commission: 0.50, Total: 507.64
+2025-03-05 12:50:35,358 - INFO - Order Completed [2007-03-02 00:00:00]: BUY 19.0000 shares of QQQ @ 42.78, Commission: 0.81, Total: 812.82
+2025-03-05 12:50:36,310 - INFO - Recorded QQQ month-end close: 43.53
+2025-03-05 12:50:36,310 - INFO - Recorded IAU month-end close: 13.17
+2025-03-05 12:50:36,311 - INFO - Recorded IEF month-end close: 83.09
+2025-03-05 12:50:36,380 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:36,381 - INFO - === 2007-04-02 Rebalancing Start ===
+2025-03-05 12:50:36,381 - INFO - Total value: 123018.07, Cash buffer: 1230.18, Available: 121787.89
+2025-03-05 12:50:36,381 - INFO - QQQ: Target Ratio 0.5000, Target Value 60893.95, Target Shares 1398, Current Shares 1399, Adjustment -1
+2025-03-05 12:50:36,382 - INFO - IAU: Target Ratio 0.3000, Target Value 36536.37, Target Shares 2775, Current Shares 2736, Adjustment 39
+2025-03-05 12:50:36,382 - INFO - IEF: Target Ratio 0.2000, Target Value 24357.58, Target Shares 293, Current Shares 290, Adjustment 3
+2025-03-05 12:50:36,383 - INFO - 2007-04-02: Sell 1 shares of QQQ
+2025-03-05 12:50:36,383 - INFO - Current cash: 1940.31, Estimated cash after sales: 1983.80
+2025-03-05 12:50:36,383 - INFO - 2007-04-02: Buy 39 shares of IAU
+2025-03-05 12:50:36,384 - INFO - 2007-04-02: Buy 3 shares of IEF
+2025-03-05 12:50:36,384 - INFO - Total Sell Value: 43.53, Total Buy Value: 762.74
+2025-03-05 12:50:36,384 - INFO - Rebalancing complete. Portfolio value: 123018.07, Estimated remaining cash: 1220.29
+2025-03-05 12:50:36,384 - INFO - === 2007-04-02 Rebalancing End ===
+2025-03-05 12:50:36,385 - INFO - Order Completed [2007-04-03 00:00:00]: SELL -1.0000 shares of QQQ @ 43.82, Commission: 0.04, Total: 37.98
+2025-03-05 12:50:36,385 - INFO - Order Completed [2007-04-03 00:00:00]: BUY 39.0000 shares of IAU @ 13.18, Commission: 0.51, Total: 514.10
+2025-03-05 12:50:36,386 - INFO - Order Completed [2007-04-03 00:00:00]: BUY 3.0000 shares of IEF @ 82.79, Commission: 0.25, Total: 248.37
+2025-03-05 12:50:37,296 - INFO - Recorded QQQ month-end close: 45.96
+2025-03-05 12:50:37,296 - INFO - Recorded IAU month-end close: 13.44
+2025-03-05 12:50:37,296 - INFO - Recorded IEF month-end close: 83.27
+2025-03-05 12:50:37,372 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:37,372 - INFO - === 2007-05-01 Rebalancing Start ===
+2025-03-05 12:50:37,372 - INFO - Total value: 126798.29, Cash buffer: 1267.98, Available: 125530.31
+2025-03-05 12:50:37,373 - INFO - QQQ: Target Ratio 0.5000, Target Value 62765.16, Target Shares 1365, Current Shares 1398, Adjustment -33
+2025-03-05 12:50:37,373 - INFO - IAU: Target Ratio 0.3000, Target Value 37659.09, Target Shares 2802, Current Shares 2775, Adjustment 27
+2025-03-05 12:50:37,373 - INFO - IEF: Target Ratio 0.2000, Target Value 25106.06, Target Shares 301, Current Shares 293, Adjustment 8
+2025-03-05 12:50:37,373 - INFO - 2007-05-01: Sell 33 shares of QQQ
+2025-03-05 12:50:37,374 - INFO - Current cash: 1220.86, Estimated cash after sales: 2736.02
+2025-03-05 12:50:37,374 - INFO - 2007-05-01: Buy 27 shares of IAU
+2025-03-05 12:50:37,374 - INFO - 2007-05-01: Buy 8 shares of IEF
+2025-03-05 12:50:37,375 - INFO - Total Sell Value: 1516.68, Total Buy Value: 1029.04
+2025-03-05 12:50:37,375 - INFO - Rebalancing complete. Portfolio value: 126798.29, Estimated remaining cash: 1705.95
+2025-03-05 12:50:37,375 - INFO - === 2007-05-01 Rebalancing End ===
+2025-03-05 12:50:37,375 - INFO - Order Completed [2007-05-02 00:00:00]: SELL -33.0000 shares of QQQ @ 46.09, Commission: 1.52, Total: 1253.48
+2025-03-05 12:50:37,376 - INFO - Order Completed [2007-05-02 00:00:00]: BUY 27.0000 shares of IAU @ 13.26, Commission: 0.36, Total: 357.91
+2025-03-05 12:50:37,376 - INFO - Order Completed [2007-05-02 00:00:00]: BUY 8.0000 shares of IEF @ 82.99, Commission: 0.66, Total: 663.92
+2025-03-05 12:50:38,289 - INFO - Recorded QQQ month-end close: 47.41
+2025-03-05 12:50:38,289 - INFO - Recorded IAU month-end close: 13.12
+2025-03-05 12:50:38,289 - INFO - Recorded IEF month-end close: 81.80
+2025-03-05 12:50:38,357 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:38,358 - INFO - === 2007-06-01 Rebalancing Start ===
+2025-03-05 12:50:38,358 - INFO - Total value: 128190.40, Cash buffer: 1281.90, Available: 126908.49
+2025-03-05 12:50:38,358 - INFO - QQQ: Target Ratio 0.5000, Target Value 63454.25, Target Shares 1338, Current Shares 1365, Adjustment -27
+2025-03-05 12:50:38,358 - INFO - IAU: Target Ratio 0.3000, Target Value 38072.55, Target Shares 2902, Current Shares 2802, Adjustment 100
+2025-03-05 12:50:38,358 - INFO - IEF: Target Ratio 0.2000, Target Value 25381.70, Target Shares 310, Current Shares 301, Adjustment 9
+2025-03-05 12:50:38,359 - INFO - 2007-06-01: Sell 27 shares of QQQ
+2025-03-05 12:50:38,359 - INFO - Current cash: 1717.45, Estimated cash after sales: 2996.24
+2025-03-05 12:50:38,359 - INFO - 2007-06-01: Buy 100 shares of IAU
+2025-03-05 12:50:38,360 - INFO - 2007-06-01: Buy 9 shares of IEF
+2025-03-05 12:50:38,360 - INFO - Total Sell Value: 1280.07, Total Buy Value: 2048.00
+2025-03-05 12:50:38,360 - INFO - Rebalancing complete. Portfolio value: 128190.40, Estimated remaining cash: 946.19
+2025-03-05 12:50:38,360 - INFO - === 2007-06-01 Rebalancing End ===
+2025-03-05 12:50:38,361 - INFO - Order Completed [2007-06-04 00:00:00]: SELL -27.0000 shares of QQQ @ 47.27, Commission: 1.28, Total: 1025.57
+2025-03-05 12:50:38,361 - INFO - Order Completed [2007-06-04 00:00:00]: BUY 100.0000 shares of IAU @ 13.30, Commission: 1.33, Total: 1330.20
+2025-03-05 12:50:38,361 - INFO - Order Completed [2007-06-04 00:00:00]: BUY 9.0000 shares of IEF @ 81.22, Commission: 0.73, Total: 730.98
+2025-03-05 12:50:39,231 - INFO - Recorded QQQ month-end close: 47.60
+2025-03-05 12:50:39,232 - INFO - Recorded IAU month-end close: 12.88
+2025-03-05 12:50:39,232 - INFO - Recorded IEF month-end close: 81.09
+2025-03-05 12:50:39,313 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:39,315 - INFO - === 2007-07-02 Rebalancing Start ===
+2025-03-05 12:50:39,316 - INFO - Total value: 128056.41, Cash buffer: 1280.56, Available: 126775.84
+2025-03-05 12:50:39,316 - INFO - QQQ: Target Ratio 0.5000, Target Value 63387.92, Target Shares 1331, Current Shares 1338, Adjustment -7
+2025-03-05 12:50:39,316 - INFO - IAU: Target Ratio 0.3000, Target Value 38032.75, Target Shares 2952, Current Shares 2902, Adjustment 50
+2025-03-05 12:50:39,317 - INFO - IEF: Target Ratio 0.2000, Target Value 25355.17, Target Shares 312, Current Shares 310, Adjustment 2
+2025-03-05 12:50:39,317 - INFO - 2007-07-02: Sell 7 shares of QQQ
+2025-03-05 12:50:39,317 - INFO - Current cash: 929.23, Estimated cash after sales: 1262.09
+2025-03-05 12:50:39,318 - INFO - 2007-07-02: Buy 50 shares of IAU
+2025-03-05 12:50:39,318 - INFO - 2007-07-02: Buy 2 shares of IEF
+2025-03-05 12:50:39,318 - INFO - Total Sell Value: 333.20, Total Buy Value: 806.28
+2025-03-05 12:50:39,319 - INFO - Rebalancing complete. Portfolio value: 128056.41, Estimated remaining cash: 455.01
+2025-03-05 12:50:39,319 - INFO - === 2007-07-02 Rebalancing End ===
+2025-03-05 12:50:39,320 - INFO - Order Completed [2007-07-03 00:00:00]: SELL -7.0000 shares of QQQ @ 48.09, Commission: 0.34, Total: 265.89
+2025-03-05 12:50:39,320 - INFO - Order Completed [2007-07-03 00:00:00]: BUY 50.0000 shares of IAU @ 13.00, Commission: 0.65, Total: 650.00
+2025-03-05 12:50:39,321 - INFO - Order Completed [2007-07-03 00:00:00]: BUY 2.0000 shares of IEF @ 80.90, Commission: 0.16, Total: 161.80
+2025-03-05 12:50:40,157 - INFO - Recorded QQQ month-end close: 47.53
+2025-03-05 12:50:40,158 - INFO - Recorded IAU month-end close: 13.18
+2025-03-05 12:50:40,158 - INFO - Recorded IEF month-end close: 82.60
+2025-03-05 12:50:40,226 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:40,227 - INFO - === 2007-08-01 Rebalancing Start ===
+2025-03-05 12:50:40,228 - INFO - Total value: 128756.10, Cash buffer: 1287.56, Available: 127468.54
+2025-03-05 12:50:40,228 - INFO - QQQ: Target Ratio 0.5000, Target Value 63734.27, Target Shares 1340, Current Shares 1331, Adjustment 9
+2025-03-05 12:50:40,228 - INFO - IAU: Target Ratio 0.3000, Target Value 38240.56, Target Shares 2900, Current Shares 2952, Adjustment -52
+2025-03-05 12:50:40,229 - INFO - IEF: Target Ratio 0.2000, Target Value 25493.71, Target Shares 308, Current Shares 312, Adjustment -4
+2025-03-05 12:50:40,229 - INFO - 2007-08-01: Sell 52 shares of IAU
+2025-03-05 12:50:40,229 - INFO - 2007-08-01: Sell 4 shares of IEF
+2025-03-05 12:50:40,230 - INFO - Current cash: 452.91, Estimated cash after sales: 1467.75
+2025-03-05 12:50:40,230 - INFO - 2007-08-01: Buy 9 shares of QQQ
+2025-03-05 12:50:40,230 - INFO - Total Sell Value: 1015.86, Total Buy Value: 427.77
+2025-03-05 12:50:40,230 - INFO - Rebalancing complete. Portfolio value: 128756.10, Estimated remaining cash: 1039.56
+2025-03-05 12:50:40,231 - INFO - === 2007-08-01 Rebalancing End ===
+2025-03-05 12:50:40,231 - INFO - Order Completed [2007-08-02 00:00:00]: SELL -52.0000 shares of IAU @ 13.18, Commission: 0.69, Total: 484.05
+2025-03-05 12:50:40,232 - INFO - Order Completed [2007-08-02 00:00:00]: SELL -4.0000 shares of IEF @ 82.10, Commission: 0.33, Total: 337.71
+2025-03-05 12:50:40,232 - INFO - Order Completed [2007-08-02 00:00:00]: BUY 9.0000 shares of QQQ @ 47.93, Commission: 0.43, Total: 431.37
+2025-03-05 12:50:41,098 - INFO - Recorded QQQ month-end close: 48.87
+2025-03-05 12:50:41,099 - INFO - Recorded IAU month-end close: 13.33
+2025-03-05 12:50:41,099 - INFO - Recorded IEF month-end close: 84.14
+2025-03-05 12:50:41,170 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:41,172 - INFO - === 2007-09-04 Rebalancing Start ===
+2025-03-05 12:50:41,172 - INFO - Total value: 132542.56, Cash buffer: 1325.43, Available: 131217.13
+2025-03-05 12:50:41,172 - INFO - QQQ: Target Ratio 0.5000, Target Value 65608.57, Target Shares 1342, Current Shares 1340, Adjustment 2
+2025-03-05 12:50:41,173 - INFO - IAU: Target Ratio 0.3000, Target Value 39365.14, Target Shares 2953, Current Shares 2900, Adjustment 53
+2025-03-05 12:50:41,173 - INFO - IEF: Target Ratio 0.2000, Target Value 26243.43, Target Shares 311, Current Shares 308, Adjustment 3
+2025-03-05 12:50:41,173 - INFO - Current cash: 1033.96, Estimated cash after sales: 1033.96
+2025-03-05 12:50:41,174 - INFO - 2007-09-04: Buy 2 shares of QQQ
+2025-03-05 12:50:41,174 - INFO - 2007-09-04: Buy 53 shares of IAU
+2025-03-05 12:50:41,175 - WARNING - Adjusting buy order for IEF: 3 -> 2
+2025-03-05 12:50:41,175 - INFO - 2007-09-04: Buy 2 shares of IEF
+2025-03-05 12:50:41,175 - INFO - Total Sell Value: 0.00, Total Buy Value: 972.40
+2025-03-05 12:50:41,175 - INFO - Rebalancing complete. Portfolio value: 132542.56, Estimated remaining cash: 60.58
+2025-03-05 12:50:41,176 - INFO - === 2007-09-04 Rebalancing End ===
+2025-03-05 12:50:41,176 - INFO - Order Completed [2007-09-05 00:00:00]: BUY 2.0000 shares of QQQ @ 49.56, Commission: 0.10, Total: 99.12
+2025-03-05 12:50:41,176 - INFO - Order Completed [2007-09-05 00:00:00]: BUY 53.0000 shares of IAU @ 13.48, Commission: 0.71, Total: 714.33
+2025-03-05 12:50:41,177 - INFO - Order Completed [2007-09-05 00:00:00]: BUY 2.0000 shares of IEF @ 83.78, Commission: 0.17, Total: 167.56
+2025-03-05 12:50:41,921 - INFO - Recorded QQQ month-end close: 51.41
+2025-03-05 12:50:41,922 - INFO - Recorded IAU month-end close: 14.73
+2025-03-05 12:50:41,922 - INFO - Recorded IEF month-end close: 83.88
+2025-03-05 12:50:41,988 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:41,988 - INFO - === 2007-10-01 Rebalancing Start ===
+2025-03-05 12:50:41,989 - INFO - Total value: 139501.68, Cash buffer: 1395.02, Available: 138106.67
+2025-03-05 12:50:41,989 - INFO - QQQ: Target Ratio 0.5000, Target Value 69053.33, Target Shares 1343, Current Shares 1342, Adjustment 1
+2025-03-05 12:50:41,990 - INFO - IAU: Target Ratio 0.3000, Target Value 41432.00, Target Shares 2813, Current Shares 2953, Adjustment -140
+2025-03-05 12:50:41,990 - INFO - IEF: Target Ratio 0.2000, Target Value 27621.33, Target Shares 329, Current Shares 310, Adjustment 19
+2025-03-05 12:50:41,990 - INFO - 2007-10-01: Sell 140 shares of IAU
+2025-03-05 12:50:41,991 - INFO - Current cash: 51.96, Estimated cash after sales: 2111.54
+2025-03-05 12:50:41,991 - INFO - 2007-10-01: Buy 1 shares of QQQ
+2025-03-05 12:50:41,991 - INFO - 2007-10-01: Buy 19 shares of IEF
+2025-03-05 12:50:41,991 - INFO - Total Sell Value: 2061.64, Total Buy Value: 1645.13
+2025-03-05 12:50:41,992 - INFO - Rebalancing complete. Portfolio value: 139501.68, Estimated remaining cash: 464.76
+2025-03-05 12:50:41,992 - INFO - === 2007-10-01 Rebalancing End ===
+2025-03-05 12:50:41,993 - INFO - Order Completed [2007-10-02 00:00:00]: SELL -140.0000 shares of IAU @ 14.53, Commission: 2.03, Total: 1313.68
+2025-03-05 12:50:41,993 - INFO - Order Completed [2007-10-02 00:00:00]: BUY 1.0000 shares of QQQ @ 52.04, Commission: 0.05, Total: 52.04
+2025-03-05 12:50:41,993 - INFO - Order Completed [2007-10-02 00:00:00]: BUY 19.0000 shares of IEF @ 83.65, Commission: 1.59, Total: 1589.35
+2025-03-05 12:50:42,884 - INFO - Recorded QQQ month-end close: 55.03
+2025-03-05 12:50:42,884 - INFO - Recorded IAU month-end close: 15.72
+2025-03-05 12:50:42,885 - INFO - Recorded IEF month-end close: 84.47
+2025-03-05 12:50:42,952 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:42,952 - INFO - === 2007-11-01 Rebalancing Start ===
+2025-03-05 12:50:42,953 - INFO - Total value: 144832.63, Cash buffer: 1448.33, Available: 143384.30
+2025-03-05 12:50:42,953 - INFO - QQQ: Target Ratio 0.5000, Target Value 71692.15, Target Shares 1302, Current Shares 1343, Adjustment -41
+2025-03-05 12:50:42,953 - INFO - IAU: Target Ratio 0.3000, Target Value 43015.29, Target Shares 2736, Current Shares 2813, Adjustment -77
+2025-03-05 12:50:42,954 - INFO - IEF: Target Ratio 0.2000, Target Value 28676.86, Target Shares 339, Current Shares 329, Adjustment 10
+2025-03-05 12:50:42,955 - INFO - 2007-11-01: Sell 41 shares of QQQ
+2025-03-05 12:50:42,955 - INFO - 2007-11-01: Sell 77 shares of IAU
+2025-03-05 12:50:42,955 - INFO - Current cash: 441.37, Estimated cash after sales: 3904.58
+2025-03-05 12:50:42,955 - INFO - 2007-11-01: Buy 10 shares of IEF
+2025-03-05 12:50:42,955 - INFO - Total Sell Value: 3466.67, Total Buy Value: 844.70
+2025-03-05 12:50:42,955 - INFO - Rebalancing complete. Portfolio value: 144832.63, Estimated remaining cash: 3059.03
+2025-03-05 12:50:42,956 - INFO - === 2007-11-01 Rebalancing End ===
+2025-03-05 12:50:42,956 - INFO - Order Completed [2007-11-02 00:00:00]: SELL -41.0000 shares of QQQ @ 54.42, Commission: 2.23, Total: 1561.22
+2025-03-05 12:50:42,957 - INFO - Order Completed [2007-11-02 00:00:00]: SELL -77.0000 shares of IAU @ 15.73, Commission: 1.21, Total: 722.52
+2025-03-05 12:50:42,957 - INFO - Order Completed [2007-11-02 00:00:00]: BUY 10.0000 shares of IEF @ 84.65, Commission: 0.85, Total: 846.50
+2025-03-05 12:50:43,795 - INFO - Recorded QQQ month-end close: 51.31
+2025-03-05 12:50:43,796 - INFO - Recorded IAU month-end close: 15.50
+2025-03-05 12:50:43,796 - INFO - Recorded IEF month-end close: 87.58
+2025-03-05 12:50:43,869 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:43,870 - INFO - === 2007-12-03 Rebalancing Start ===
+2025-03-05 12:50:43,871 - INFO - Total value: 141847.37, Cash buffer: 1418.47, Available: 140428.90
+2025-03-05 12:50:43,871 - INFO - QQQ: Target Ratio 0.5000, Target Value 70214.45, Target Shares 1368, Current Shares 1302, Adjustment 66
+2025-03-05 12:50:43,871 - INFO - IAU: Target Ratio 0.3000, Target Value 42128.67, Target Shares 2718, Current Shares 2736, Adjustment -18
+2025-03-05 12:50:43,872 - INFO - IEF: Target Ratio 0.2000, Target Value 28085.78, Target Shares 320, Current Shares 339, Adjustment -19
+2025-03-05 12:50:43,872 - INFO - 2007-12-03: Sell 18 shares of IAU
+2025-03-05 12:50:43,872 - INFO - 2007-12-03: Sell 19 shares of IEF
+2025-03-05 12:50:43,872 - INFO - Current cash: 3032.86, Estimated cash after sales: 4973.90
+2025-03-05 12:50:43,873 - INFO - 2007-12-03: Buy 66 shares of QQQ
+2025-03-05 12:50:43,873 - INFO - Total Sell Value: 1942.98, Total Buy Value: 3386.46
+2025-03-05 12:50:43,873 - INFO - Rebalancing complete. Portfolio value: 141847.37, Estimated remaining cash: 1584.06
+2025-03-05 12:50:43,873 - INFO - === 2007-12-03 Rebalancing End ===
+2025-03-05 12:50:43,874 - INFO - Order Completed [2007-12-04 00:00:00]: SELL -18.0000 shares of IAU @ 15.81, Commission: 0.28, Total: 168.90
+2025-03-05 12:50:43,874 - INFO - Order Completed [2007-12-04 00:00:00]: SELL -19.0000 shares of IEF @ 87.84, Commission: 1.67, Total: 1603.34
+2025-03-05 12:50:43,875 - INFO - Order Completed [2007-12-04 00:00:00]: BUY 66.0000 shares of QQQ @ 50.49, Commission: 3.33, Total: 3332.34
+2025-03-05 12:50:44,687 - INFO - Recorded QQQ month-end close: 51.22
+2025-03-05 12:50:44,687 - INFO - Recorded IAU month-end close: 16.49
+2025-03-05 12:50:44,688 - INFO - Recorded IEF month-end close: 87.01
+2025-03-05 12:50:44,781 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:44,782 - INFO - === 2008-01-02 Rebalancing Start ===
+2025-03-05 12:50:44,783 - INFO - Total value: 144797.42, Cash buffer: 1447.97, Available: 143349.45
+2025-03-05 12:50:44,784 - INFO - QQQ: Target Ratio 0.5000, Target Value 71674.72, Target Shares 1399, Current Shares 1368, Adjustment 31
+2025-03-05 12:50:44,784 - INFO - IAU: Target Ratio 0.3000, Target Value 43004.83, Target Shares 2607, Current Shares 2718, Adjustment -111
+2025-03-05 12:50:44,785 - INFO - IEF: Target Ratio 0.2000, Target Value 28669.89, Target Shares 329, Current Shares 320, Adjustment 9
+2025-03-05 12:50:44,785 - INFO - 2008-01-02: Sell 111 shares of IAU
+2025-03-05 12:50:44,785 - INFO - Current cash: 1648.74, Estimated cash after sales: 3477.30
+2025-03-05 12:50:44,786 - INFO - 2008-01-02: Buy 31 shares of QQQ
+2025-03-05 12:50:44,786 - INFO - 2008-01-02: Buy 9 shares of IEF
+2025-03-05 12:50:44,786 - INFO - Total Sell Value: 1830.39, Total Buy Value: 2370.91
+2025-03-05 12:50:44,787 - INFO - Rebalancing complete. Portfolio value: 144797.42, Estimated remaining cash: 1104.02
+2025-03-05 12:50:44,787 - INFO - === 2008-01-02 Rebalancing End ===
+2025-03-05 12:50:44,788 - INFO - Order Completed [2008-01-03 00:00:00]: SELL -111.0000 shares of IAU @ 17.01, Commission: 1.89, Total: 1041.56
+2025-03-05 12:50:44,789 - INFO - Order Completed [2008-01-03 00:00:00]: BUY 31.0000 shares of QQQ @ 50.41, Commission: 1.56, Total: 1562.71
+2025-03-05 12:50:44,789 - INFO - Order Completed [2008-01-03 00:00:00]: BUY 9.0000 shares of IEF @ 87.50, Commission: 0.79, Total: 787.50
+2025-03-05 12:50:45,661 - INFO - Recorded QQQ month-end close: 45.13
+2025-03-05 12:50:45,662 - INFO - Recorded IAU month-end close: 18.30
+2025-03-05 12:50:45,662 - INFO - Recorded IEF month-end close: 89.93
+2025-03-05 12:50:45,734 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:45,735 - INFO - === 2008-02-01 Rebalancing Start ===
+2025-03-05 12:50:45,735 - INFO - Total value: 141114.54, Cash buffer: 1411.15, Available: 139703.39
+2025-03-05 12:50:45,735 - INFO - QQQ: Target Ratio 0.5000, Target Value 69851.70, Target Shares 1547, Current Shares 1399, Adjustment 148
+2025-03-05 12:50:45,735 - INFO - IAU: Target Ratio 0.3000, Target Value 41911.02, Target Shares 2290, Current Shares 2607, Adjustment -317
+2025-03-05 12:50:45,736 - INFO - IEF: Target Ratio 0.2000, Target Value 27940.68, Target Shares 310, Current Shares 329, Adjustment -19
+2025-03-05 12:50:45,736 - INFO - 2008-02-01: Sell 317 shares of IAU
+2025-03-05 12:50:45,736 - INFO - 2008-02-01: Sell 19 shares of IEF
+2025-03-05 12:50:45,736 - INFO - Current cash: 1182.84, Estimated cash after sales: 8685.10
+2025-03-05 12:50:45,736 - INFO - 2008-02-01: Buy 148 shares of QQQ
+2025-03-05 12:50:45,736 - INFO - Total Sell Value: 7509.77, Total Buy Value: 6679.24
+2025-03-05 12:50:45,736 - INFO - Rebalancing complete. Portfolio value: 141114.54, Estimated remaining cash: 1999.19
+2025-03-05 12:50:45,736 - INFO - === 2008-02-01 Rebalancing End ===
+2025-03-05 12:50:45,737 - INFO - Order Completed [2008-02-04 00:00:00]: SELL -317.0000 shares of IAU @ 17.67, Commission: 5.60, Total: 2974.55
+2025-03-05 12:50:45,738 - INFO - Order Completed [2008-02-04 00:00:00]: SELL -19.0000 shares of IEF @ 89.40, Commission: 1.70, Total: 1604.95
+2025-03-05 12:50:45,738 - INFO - Order Completed [2008-02-04 00:00:00]: BUY 148.0000 shares of QQQ @ 45.58, Commission: 6.75, Total: 6745.84
+2025-03-05 12:50:46,559 - INFO - Recorded QQQ month-end close: 42.95
+2025-03-05 12:50:46,559 - INFO - Recorded IAU month-end close: 19.27
+2025-03-05 12:50:46,560 - INFO - Recorded IEF month-end close: 90.76
+2025-03-05 12:50:46,629 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:46,629 - INFO - === 2008-03-03 Rebalancing Start ===
+2025-03-05 12:50:46,630 - INFO - Total value: 140320.77, Cash buffer: 1403.21, Available: 138917.56
+2025-03-05 12:50:46,630 - INFO - QQQ: Target Ratio 0.5000, Target Value 69458.78, Target Shares 1617, Current Shares 1547, Adjustment 70
+2025-03-05 12:50:46,631 - INFO - IAU: Target Ratio 0.3000, Target Value 41675.27, Target Shares 2162, Current Shares 2290, Adjustment -128
+2025-03-05 12:50:46,631 - INFO - IEF: Target Ratio 0.2000, Target Value 27783.51, Target Shares 306, Current Shares 310, Adjustment -4
+2025-03-05 12:50:46,631 - INFO - 2008-03-03: Sell 128 shares of IAU
+2025-03-05 12:50:46,632 - INFO - 2008-03-03: Sell 4 shares of IEF
+2025-03-05 12:50:46,632 - INFO - Current cash: 1723.58, Estimated cash after sales: 4550.61
+2025-03-05 12:50:46,632 - INFO - 2008-03-03: Buy 70 shares of QQQ
+2025-03-05 12:50:46,632 - INFO - Total Sell Value: 2829.86, Total Buy Value: 3006.50
+2025-03-05 12:50:46,632 - INFO - Rebalancing complete. Portfolio value: 140320.77, Estimated remaining cash: 1541.10
+2025-03-05 12:50:46,632 - INFO - === 2008-03-03 Rebalancing End ===
+2025-03-05 12:50:46,633 - INFO - Order Completed [2008-03-04 00:00:00]: SELL -128.0000 shares of IAU @ 19.48, Commission: 2.49, Total: 1201.08
+2025-03-05 12:50:46,633 - INFO - Order Completed [2008-03-04 00:00:00]: SELL -4.0000 shares of IEF @ 90.35, Commission: 0.36, Total: 337.89
+2025-03-05 12:50:46,633 - INFO - Order Completed [2008-03-04 00:00:00]: BUY 70.0000 shares of QQQ @ 42.40, Commission: 2.97, Total: 2968.00
+2025-03-05 12:50:47,397 - INFO - Recorded QQQ month-end close: 43.72
+2025-03-05 12:50:47,397 - INFO - Recorded IAU month-end close: 18.13
+2025-03-05 12:50:47,397 - INFO - Recorded IEF month-end close: 91.69
+2025-03-05 12:50:47,466 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:47,467 - INFO - === 2008-04-01 Rebalancing Start ===
+2025-03-05 12:50:47,467 - INFO - Total value: 140681.02, Cash buffer: 1406.81, Available: 139274.21
+2025-03-05 12:50:47,468 - INFO - QQQ: Target Ratio 0.5000, Target Value 69637.10, Target Shares 1592, Current Shares 1617, Adjustment -25
+2025-03-05 12:50:47,468 - INFO - IAU: Target Ratio 0.3000, Target Value 41782.26, Target Shares 2304, Current Shares 2162, Adjustment 142
+2025-03-05 12:50:47,468 - INFO - IEF: Target Ratio 0.2000, Target Value 27854.84, Target Shares 303, Current Shares 306, Adjustment -3
+2025-03-05 12:50:47,469 - INFO - 2008-04-01: Sell 25 shares of QQQ
+2025-03-05 12:50:47,469 - INFO - 2008-04-01: Sell 3 shares of IEF
+2025-03-05 12:50:47,470 - INFO - Current cash: 1604.09, Estimated cash after sales: 2970.79
+2025-03-05 12:50:47,476 - INFO - 2008-04-01: Buy 142 shares of IAU
+2025-03-05 12:50:47,477 - INFO - Total Sell Value: 1368.07, Total Buy Value: 2575.03
+2025-03-05 12:50:47,477 - INFO - Rebalancing complete. Portfolio value: 140681.02, Estimated remaining cash: 393.19
+2025-03-05 12:50:47,478 - INFO - === 2008-04-01 Rebalancing End ===
+2025-03-05 12:50:47,479 - INFO - Order Completed [2008-04-02 00:00:00]: SELL -25.0000 shares of QQQ @ 45.70, Commission: 1.14, Total: 992.38
+2025-03-05 12:50:47,480 - INFO - Order Completed [2008-04-02 00:00:00]: SELL -3.0000 shares of IEF @ 90.32, Commission: 0.27, Total: 253.41
+2025-03-05 12:50:47,480 - INFO - Order Completed [2008-04-02 00:00:00]: BUY 142.0000 shares of IAU @ 17.45, Commission: 2.48, Total: 2477.62
+2025-03-05 12:50:48,468 - INFO - Recorded QQQ month-end close: 47.21
+2025-03-05 12:50:48,469 - INFO - Recorded IAU month-end close: 17.30
+2025-03-05 12:50:48,469 - INFO - Recorded IEF month-end close: 89.17
+2025-03-05 12:50:48,549 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:48,550 - INFO - === 2008-05-01 Rebalancing Start ===
+2025-03-05 12:50:48,550 - INFO - Total value: 143630.55, Cash buffer: 1436.31, Available: 142194.25
+2025-03-05 12:50:48,550 - INFO - QQQ: Target Ratio 0.5000, Target Value 71097.12, Target Shares 1505, Current Shares 1592, Adjustment -87
+2025-03-05 12:50:48,550 - INFO - IAU: Target Ratio 0.3000, Target Value 42658.27, Target Shares 2466, Current Shares 2304, Adjustment 162
+2025-03-05 12:50:48,551 - INFO - IEF: Target Ratio 0.2000, Target Value 28438.85, Target Shares 318, Current Shares 303, Adjustment 15
+2025-03-05 12:50:48,551 - INFO - 2008-05-01: Sell 87 shares of QQQ
+2025-03-05 12:50:48,552 - INFO - Current cash: 536.04, Estimated cash after sales: 4639.20
+2025-03-05 12:50:48,552 - INFO - 2008-05-01: Buy 162 shares of IAU
+2025-03-05 12:50:48,552 - INFO - 2008-05-01: Buy 15 shares of IEF
+2025-03-05 12:50:48,553 - INFO - Total Sell Value: 4107.27, Total Buy Value: 4139.83
+2025-03-05 12:50:48,553 - INFO - Rebalancing complete. Portfolio value: 143630.55, Estimated remaining cash: 495.24
+2025-03-05 12:50:48,553 - INFO - === 2008-05-01 Rebalancing End ===
+2025-03-05 12:50:48,554 - INFO - Order Completed [2008-05-02 00:00:00]: SELL -87.0000 shares of QQQ @ 49.16, Commission: 4.28, Total: 3453.48
+2025-03-05 12:50:48,554 - INFO - Order Completed [2008-05-02 00:00:00]: BUY 162.0000 shares of IAU @ 16.80, Commission: 2.72, Total: 2721.60
+2025-03-05 12:50:48,555 - INFO - Order Completed [2008-05-02 00:00:00]: BUY 15.0000 shares of IEF @ 88.29, Commission: 1.32, Total: 1324.35
+2025-03-05 12:50:49,367 - INFO - Recorded QQQ month-end close: 50.01
+2025-03-05 12:50:49,368 - INFO - Recorded IAU month-end close: 17.49
+2025-03-05 12:50:49,368 - INFO - Recorded IEF month-end close: 87.31
+2025-03-05 12:50:49,438 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:49,438 - INFO - === 2008-06-02 Rebalancing Start ===
+2025-03-05 12:50:49,439 - INFO - Total value: 146323.85, Cash buffer: 1463.24, Available: 144860.61
+2025-03-05 12:50:49,439 - INFO - QQQ: Target Ratio 0.5000, Target Value 72430.31, Target Shares 1448, Current Shares 1505, Adjustment -57
+2025-03-05 12:50:49,439 - INFO - IAU: Target Ratio 0.3000, Target Value 43458.18, Target Shares 2484, Current Shares 2466, Adjustment 18
+2025-03-05 12:50:49,440 - INFO - IEF: Target Ratio 0.2000, Target Value 28972.12, Target Shares 331, Current Shares 318, Adjustment 13
+2025-03-05 12:50:49,440 - INFO - 2008-06-02: Sell 57 shares of QQQ
+2025-03-05 12:50:49,440 - INFO - Current cash: 758.69, Estimated cash after sales: 3606.41
+2025-03-05 12:50:49,441 - INFO - 2008-06-02: Buy 18 shares of IAU
+2025-03-05 12:50:49,441 - INFO - 2008-06-02: Buy 13 shares of IEF
+2025-03-05 12:50:49,441 - INFO - Total Sell Value: 2850.57, Total Buy Value: 1449.92
+2025-03-05 12:50:49,441 - INFO - Rebalancing complete. Portfolio value: 146323.85, Estimated remaining cash: 2155.04
+2025-03-05 12:50:49,441 - INFO - === 2008-06-02 Rebalancing End ===
+2025-03-05 12:50:49,442 - INFO - Order Completed [2008-06-03 00:00:00]: SELL -57.0000 shares of QQQ @ 49.59, Commission: 2.83, Total: 2262.62
+2025-03-05 12:50:49,442 - INFO - Order Completed [2008-06-03 00:00:00]: BUY 18.0000 shares of IAU @ 17.34, Commission: 0.31, Total: 312.08
+2025-03-05 12:50:49,443 - INFO - Order Completed [2008-06-03 00:00:00]: BUY 13.0000 shares of IEF @ 87.36, Commission: 1.14, Total: 1135.68
+2025-03-05 12:50:50,288 - INFO - Recorded QQQ month-end close: 45.17
+2025-03-05 12:50:50,289 - INFO - Recorded IAU month-end close: 18.25
+2025-03-05 12:50:50,289 - INFO - Recorded IEF month-end close: 88.00
+2025-03-05 12:50:50,357 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:50,357 - INFO - === 2008-07-01 Rebalancing Start ===
+2025-03-05 12:50:50,357 - INFO - Total value: 143392.60, Cash buffer: 1433.93, Available: 141958.68
+2025-03-05 12:50:50,357 - INFO - QQQ: Target Ratio 0.5000, Target Value 70979.34, Target Shares 1571, Current Shares 1448, Adjustment 123
+2025-03-05 12:50:50,358 - INFO - IAU: Target Ratio 0.3000, Target Value 42587.60, Target Shares 2334, Current Shares 2484, Adjustment -150
+2025-03-05 12:50:50,358 - INFO - IEF: Target Ratio 0.2000, Target Value 28391.74, Target Shares 322, Current Shares 331, Adjustment -9
+2025-03-05 12:50:50,358 - INFO - 2008-07-01: Sell 150 shares of IAU
+2025-03-05 12:50:50,358 - INFO - 2008-07-01: Sell 9 shares of IEF
+2025-03-05 12:50:50,359 - INFO - Current cash: 2133.28, Estimated cash after sales: 5658.65
+2025-03-05 12:50:50,359 - INFO - 2008-07-01: Buy 123 shares of QQQ
+2025-03-05 12:50:50,359 - INFO - Total Sell Value: 3528.90, Total Buy Value: 5555.91
+2025-03-05 12:50:50,359 - INFO - Rebalancing complete. Portfolio value: 143392.60, Estimated remaining cash: 97.19
+2025-03-05 12:50:50,360 - INFO - === 2008-07-01 Rebalancing End ===
+2025-03-05 12:50:50,360 - INFO - Order Completed [2008-07-02 00:00:00]: SELL -150.0000 shares of IAU @ 18.48, Commission: 2.77, Total: 1557.87
+2025-03-05 12:50:50,361 - INFO - Order Completed [2008-07-02 00:00:00]: SELL -9.0000 shares of IEF @ 87.55, Commission: 0.79, Total: 762.82
+2025-03-05 12:50:50,361 - INFO - Order Completed [2008-07-02 00:00:00]: BUY 123.0000 shares of QQQ @ 45.95, Commission: 5.65, Total: 5651.85
+2025-03-05 12:50:51,273 - INFO - Recorded QQQ month-end close: 45.46
+2025-03-05 12:50:51,273 - INFO - Recorded IAU month-end close: 18.02
+2025-03-05 12:50:51,273 - INFO - Recorded IEF month-end close: 88.34
+2025-03-05 12:50:51,341 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:51,341 - INFO - === 2008-08-01 Rebalancing Start ===
+2025-03-05 12:50:51,341 - INFO - Total value: 140795.71, Cash buffer: 1407.96, Available: 139387.75
+2025-03-05 12:50:51,341 - INFO - QQQ: Target Ratio 0.5000, Target Value 69693.88, Target Shares 1533, Current Shares 1571, Adjustment -38
+2025-03-05 12:50:51,342 - INFO - IAU: Target Ratio 0.3000, Target Value 41816.33, Target Shares 2320, Current Shares 2334, Adjustment -14
+2025-03-05 12:50:51,342 - INFO - IEF: Target Ratio 0.2000, Target Value 27877.55, Target Shares 315, Current Shares 322, Adjustment -7
+2025-03-05 12:50:51,343 - INFO - 2008-08-01: Sell 38 shares of QQQ
+2025-03-05 12:50:51,343 - INFO - 2008-08-01: Sell 14 shares of IAU
+2025-03-05 12:50:51,343 - INFO - 2008-08-01: Sell 7 shares of IEF
+2025-03-05 12:50:51,344 - INFO - Current cash: 32.17, Estimated cash after sales: 2627.77
+2025-03-05 12:50:51,344 - INFO - Total Sell Value: 2598.20, Total Buy Value: 0.00
+2025-03-05 12:50:51,344 - INFO - Rebalancing complete. Portfolio value: 140795.71, Estimated remaining cash: 2627.77
+2025-03-05 12:50:51,344 - INFO - === 2008-08-01 Rebalancing End ===
+2025-03-05 12:50:51,345 - INFO - Order Completed [2008-08-04 00:00:00]: SELL -38.0000 shares of QQQ @ 44.87, Commission: 1.71, Total: 1527.03
+2025-03-05 12:50:51,345 - INFO - Order Completed [2008-08-04 00:00:00]: SELL -14.0000 shares of IAU @ 17.83, Commission: 0.25, Total: 145.40
+2025-03-05 12:50:51,346 - INFO - Order Completed [2008-08-04 00:00:00]: SELL -7.0000 shares of IEF @ 87.92, Commission: 0.62, Total: 593.30
+2025-03-05 12:50:52,166 - INFO - Recorded QQQ month-end close: 46.12
+2025-03-05 12:50:52,166 - INFO - Recorded IAU month-end close: 16.39
+2025-03-05 12:50:52,167 - INFO - Recorded IEF month-end close: 89.38
+2025-03-05 12:50:52,233 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:52,234 - INFO - === 2008-09-02 Rebalancing Start ===
+2025-03-05 12:50:52,234 - INFO - Total value: 137335.48, Cash buffer: 1373.35, Available: 135962.13
+2025-03-05 12:50:52,234 - INFO - QQQ: Target Ratio 0.5000, Target Value 67981.06, Target Shares 1474, Current Shares 1533, Adjustment -59
+2025-03-05 12:50:52,235 - INFO - IAU: Target Ratio 0.3000, Target Value 40788.64, Target Shares 2488, Current Shares 2320, Adjustment 168
+2025-03-05 12:50:52,236 - INFO - IEF: Target Ratio 0.2000, Target Value 27192.43, Target Shares 304, Current Shares 315, Adjustment -11
+2025-03-05 12:50:52,236 - INFO - 2008-09-02: Sell 59 shares of QQQ
+2025-03-05 12:50:52,236 - INFO - 2008-09-02: Sell 11 shares of IEF
+2025-03-05 12:50:52,237 - INFO - Current cash: 2599.66, Estimated cash after sales: 6300.22
+2025-03-05 12:50:52,237 - INFO - 2008-09-02: Buy 168 shares of IAU
+2025-03-05 12:50:52,237 - INFO - Total Sell Value: 3704.26, Total Buy Value: 2754.19
+2025-03-05 12:50:52,237 - INFO - Rebalancing complete. Portfolio value: 137335.48, Estimated remaining cash: 3543.27
+2025-03-05 12:50:52,237 - INFO - === 2008-09-02 Rebalancing End ===
+2025-03-05 12:50:52,238 - INFO - Order Completed [2008-09-03 00:00:00]: SELL -59.0000 shares of QQQ @ 45.45, Commission: 2.68, Total: 2370.91
+2025-03-05 12:50:52,238 - INFO - Order Completed [2008-09-03 00:00:00]: SELL -11.0000 shares of IEF @ 89.56, Commission: 0.99, Total: 932.34
+2025-03-05 12:50:52,239 - INFO - Order Completed [2008-09-03 00:00:00]: BUY 168.0000 shares of IAU @ 15.84, Commission: 2.66, Total: 2661.12
+2025-03-05 12:50:53,131 - INFO - Recorded QQQ month-end close: 38.91
+2025-03-05 12:50:53,131 - INFO - Recorded IAU month-end close: 17.09
+2025-03-05 12:50:53,131 - INFO - Recorded IEF month-end close: 88.96
+2025-03-05 12:50:53,196 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:53,197 - INFO - === 2008-10-01 Rebalancing Start ===
+2025-03-05 12:50:53,197 - INFO - Total value: 130407.04, Cash buffer: 1304.07, Available: 129102.97
+2025-03-05 12:50:53,198 - INFO - QQQ: Target Ratio 0.5000, Target Value 64551.49, Target Shares 1658, Current Shares 1474, Adjustment 184
+2025-03-05 12:50:53,198 - INFO - IAU: Target Ratio 0.3000, Target Value 38730.89, Target Shares 2265, Current Shares 2488, Adjustment -223
+2025-03-05 12:50:53,198 - INFO - IEF: Target Ratio 0.2000, Target Value 25820.59, Target Shares 290, Current Shares 304, Adjustment -14
+2025-03-05 12:50:53,198 - INFO - 2008-10-01: Sell 223 shares of IAU
+2025-03-05 12:50:53,199 - INFO - 2008-10-01: Sell 14 shares of IEF
+2025-03-05 12:50:53,199 - INFO - Current cash: 3598.92, Estimated cash after sales: 8651.27
+2025-03-05 12:50:53,199 - INFO - 2008-10-01: Buy 184 shares of QQQ
+2025-03-05 12:50:53,199 - INFO - Total Sell Value: 5057.40, Total Buy Value: 7159.44
+2025-03-05 12:50:53,199 - INFO - Rebalancing complete. Portfolio value: 130407.04, Estimated remaining cash: 1484.67
+2025-03-05 12:50:53,201 - INFO - === 2008-10-01 Rebalancing End ===
+2025-03-05 12:50:53,201 - INFO - Order Completed [2008-10-02 00:00:00]: SELL -223.0000 shares of IAU @ 16.93, Commission: 3.77, Total: 2398.16
+2025-03-05 12:50:53,201 - INFO - Order Completed [2008-10-02 00:00:00]: SELL -14.0000 shares of IEF @ 89.43, Commission: 1.25, Total: 1186.61
+2025-03-05 12:50:53,202 - INFO - Order Completed [2008-10-02 00:00:00]: BUY 184.0000 shares of QQQ @ 38.25, Commission: 7.04, Total: 7038.00
+2025-03-05 12:50:54,106 - INFO - Recorded QQQ month-end close: 32.89
+2025-03-05 12:50:54,107 - INFO - Recorded IAU month-end close: 14.32
+2025-03-05 12:50:54,107 - INFO - Recorded IEF month-end close: 87.89
+2025-03-05 12:50:54,179 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:54,180 - INFO - === 2008-11-03 Rebalancing Start ===
+2025-03-05 12:50:54,180 - INFO - Total value: 113703.53, Cash buffer: 1137.04, Available: 112566.50
+2025-03-05 12:50:54,180 - INFO - QQQ: Target Ratio 0.5000, Target Value 56283.25, Target Shares 1711, Current Shares 1658, Adjustment 53
+2025-03-05 12:50:54,180 - INFO - IAU: Target Ratio 0.3000, Target Value 33769.95, Target Shares 2358, Current Shares 2265, Adjustment 93
+2025-03-05 12:50:54,180 - INFO - IEF: Target Ratio 0.2000, Target Value 22513.30, Target Shares 256, Current Shares 290, Adjustment -34
+2025-03-05 12:50:54,181 - INFO - 2008-11-03: Sell 34 shares of IEF
+2025-03-05 12:50:54,181 - INFO - Current cash: 1575.82, Estimated cash after sales: 4561.09
+2025-03-05 12:50:54,181 - INFO - 2008-11-03: Buy 53 shares of QQQ
+2025-03-05 12:50:54,181 - INFO - 2008-11-03: Buy 93 shares of IAU
+2025-03-05 12:50:54,181 - INFO - Total Sell Value: 2988.26, Total Buy Value: 3074.56
+2025-03-05 12:50:54,181 - INFO - Rebalancing complete. Portfolio value: 113703.53, Estimated remaining cash: 1483.46
+2025-03-05 12:50:54,182 - INFO - === 2008-11-03 Rebalancing End ===
+2025-03-05 12:50:54,182 - INFO - Order Completed [2008-11-04 00:00:00]: SELL -34.0000 shares of IEF @ 87.74, Commission: 2.98, Total: 2881.77
+2025-03-05 12:50:54,183 - INFO - Order Completed [2008-11-04 00:00:00]: BUY 53.0000 shares of QQQ @ 33.46, Commission: 1.77, Total: 1773.38
+2025-03-05 12:50:54,183 - INFO - Order Completed [2008-11-04 00:00:00]: BUY 93.0000 shares of IAU @ 14.64, Commission: 1.36, Total: 1361.33
+2025-03-05 12:50:54,932 - INFO - Recorded QQQ month-end close: 29.12
+2025-03-05 12:50:54,932 - INFO - Recorded IAU month-end close: 16.07
+2025-03-05 12:50:54,932 - INFO - Recorded IEF month-end close: 94.36
+2025-03-05 12:50:54,999 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:54,999 - INFO - === 2008-12-01 Rebalancing Start ===
+2025-03-05 12:50:54,999 - INFO - Total value: 107639.87, Cash buffer: 1076.40, Available: 106563.47
+2025-03-05 12:50:55,000 - INFO - QQQ: Target Ratio 0.5000, Target Value 53281.73, Target Shares 1829, Current Shares 1711, Adjustment 118
+2025-03-05 12:50:55,000 - INFO - IAU: Target Ratio 0.3000, Target Value 31969.04, Target Shares 1989, Current Shares 2358, Adjustment -369
+2025-03-05 12:50:55,000 - INFO - IEF: Target Ratio 0.2000, Target Value 21312.69, Target Shares 225, Current Shares 256, Adjustment -31
+2025-03-05 12:50:55,001 - INFO - 2008-12-01: Sell 369 shares of IAU
+2025-03-05 12:50:55,001 - INFO - 2008-12-01: Sell 31 shares of IEF
+2025-03-05 12:50:55,001 - INFO - Current cash: 1418.15, Estimated cash after sales: 10263.55
+2025-03-05 12:50:55,001 - INFO - 2008-12-01: Buy 118 shares of QQQ
+2025-03-05 12:50:55,002 - INFO - Total Sell Value: 8854.25, Total Buy Value: 3436.16
+2025-03-05 12:50:55,002 - INFO - Rebalancing complete. Portfolio value: 107639.87, Estimated remaining cash: 6823.95
+2025-03-05 12:50:55,002 - INFO - === 2008-12-01 Rebalancing End ===
+2025-03-05 12:50:55,003 - INFO - Order Completed [2008-12-02 00:00:00]: SELL -369.0000 shares of IAU @ 15.39, Commission: 5.68, Total: 4024.78
+2025-03-05 12:50:55,004 - INFO - Order Completed [2008-12-02 00:00:00]: SELL -31.0000 shares of IEF @ 95.26, Commission: 2.95, Total: 2627.49
+2025-03-05 12:50:55,005 - INFO - Order Completed [2008-12-02 00:00:00]: BUY 118.0000 shares of QQQ @ 27.30, Commission: 3.22, Total: 3221.40
+2025-03-05 12:50:55,907 - INFO - Recorded QQQ month-end close: 29.74
+2025-03-05 12:50:55,907 - INFO - Recorded IAU month-end close: 17.33
+2025-03-05 12:50:55,908 - INFO - Recorded IEF month-end close: 98.53
+2025-03-05 12:50:55,974 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:55,975 - INFO - === 2009-01-02 Rebalancing Start ===
+2025-03-05 12:50:55,975 - INFO - Total value: 119774.24, Cash buffer: 1197.74, Available: 118576.50
+2025-03-05 12:50:55,975 - INFO - QQQ: Target Ratio 0.5000, Target Value 59288.25, Target Shares 1993, Current Shares 1829, Adjustment 164
+2025-03-05 12:50:55,975 - INFO - IAU: Target Ratio 0.3000, Target Value 35572.95, Target Shares 2052, Current Shares 1989, Adjustment 63
+2025-03-05 12:50:55,976 - INFO - IEF: Target Ratio 0.2000, Target Value 23715.30, Target Shares 240, Current Shares 225, Adjustment 15
+2025-03-05 12:50:55,976 - INFO - Current cash: 6818.34, Estimated cash after sales: 6818.34
+2025-03-05 12:50:55,976 - INFO - 2009-01-02: Buy 164 shares of QQQ
+2025-03-05 12:50:55,977 - INFO - 2009-01-02: Buy 63 shares of IAU
+2025-03-05 12:50:55,977 - WARNING - Adjusting buy order for IEF: 15 -> 8
+2025-03-05 12:50:55,977 - INFO - 2009-01-02: Buy 8 shares of IEF
+2025-03-05 12:50:55,977 - INFO - Total Sell Value: 0.00, Total Buy Value: 6757.52
+2025-03-05 12:50:55,978 - INFO - Rebalancing complete. Portfolio value: 119774.24, Estimated remaining cash: 54.07
+2025-03-05 12:50:55,978 - INFO - === 2009-01-02 Rebalancing End ===
+2025-03-05 12:50:55,978 - ERROR - Margin Error [2009-01-05 00:00:00]: IEF
+2025-03-05 12:50:55,979 - INFO - Order Completed [2009-01-05 00:00:00]: BUY 164.0000 shares of QQQ @ 30.83, Commission: 5.06, Total: 5056.12
+2025-03-05 12:50:55,979 - INFO - Order Completed [2009-01-05 00:00:00]: BUY 63.0000 shares of IAU @ 16.75, Commission: 1.06, Total: 1055.12
+2025-03-05 12:50:56,863 - INFO - Recorded QQQ month-end close: 29.06
+2025-03-05 12:50:56,863 - INFO - Recorded IAU month-end close: 18.27
+2025-03-05 12:50:56,864 - INFO - Recorded IEF month-end close: 94.70
+2025-03-05 12:50:56,929 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:56,930 - INFO - === 2009-02-02 Rebalancing Start ===
+2025-03-05 12:50:56,930 - INFO - Total value: 117182.74, Cash buffer: 1171.83, Available: 116010.91
+2025-03-05 12:50:56,930 - INFO - QQQ: Target Ratio 0.5000, Target Value 58005.46, Target Shares 1996, Current Shares 1993, Adjustment 3
+2025-03-05 12:50:56,930 - INFO - IAU: Target Ratio 0.3000, Target Value 34803.27, Target Shares 1904, Current Shares 2052, Adjustment -148
+2025-03-05 12:50:56,930 - INFO - IEF: Target Ratio 0.2000, Target Value 23202.18, Target Shares 245, Current Shares 225, Adjustment 20
+2025-03-05 12:50:56,931 - INFO - 2009-02-02: Sell 148 shares of IAU
+2025-03-05 12:50:56,931 - INFO - Current cash: 700.99, Estimated cash after sales: 3402.54
+2025-03-05 12:50:56,931 - INFO - 2009-02-02: Buy 3 shares of QQQ
+2025-03-05 12:50:56,931 - INFO - 2009-02-02: Buy 20 shares of IEF
+2025-03-05 12:50:56,931 - INFO - Total Sell Value: 2704.26, Total Buy Value: 1981.18
+2025-03-05 12:50:56,932 - INFO - Rebalancing complete. Portfolio value: 117182.74, Estimated remaining cash: 1419.38
+2025-03-05 12:50:56,932 - INFO - === 2009-02-02 Rebalancing End ===
+2025-03-05 12:50:56,932 - INFO - Order Completed [2009-02-03 00:00:00]: SELL -148.0000 shares of IAU @ 17.89, Commission: 2.65, Total: 1640.81
+2025-03-05 12:50:56,933 - INFO - Order Completed [2009-02-03 00:00:00]: BUY 3.0000 shares of QQQ @ 29.47, Commission: 0.09, Total: 88.41
+2025-03-05 12:50:56,933 - INFO - Order Completed [2009-02-03 00:00:00]: BUY 20.0000 shares of IEF @ 94.84, Commission: 1.90, Total: 1896.80
+2025-03-05 12:50:57,659 - INFO - Recorded QQQ month-end close: 27.53
+2025-03-05 12:50:57,660 - INFO - Recorded IAU month-end close: 18.53
+2025-03-05 12:50:57,660 - INFO - Recorded IEF month-end close: 93.74
+2025-03-05 12:50:57,730 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:57,730 - INFO - === 2009-03-02 Rebalancing Start ===
+2025-03-05 12:50:57,731 - INFO - Total value: 112328.07, Cash buffer: 1123.28, Available: 111204.79
+2025-03-05 12:50:57,731 - INFO - QQQ: Target Ratio 0.5000, Target Value 55602.39, Target Shares 2019, Current Shares 1996, Adjustment 23
+2025-03-05 12:50:57,731 - INFO - IAU: Target Ratio 0.3000, Target Value 33361.44, Target Shares 1800, Current Shares 1904, Adjustment -104
+2025-03-05 12:50:57,731 - INFO - IEF: Target Ratio 0.2000, Target Value 22240.96, Target Shares 237, Current Shares 245, Adjustment -8
+2025-03-05 12:50:57,731 - INFO - 2009-03-02: Sell 104 shares of IAU
+2025-03-05 12:50:57,731 - INFO - 2009-03-02: Sell 8 shares of IEF
+2025-03-05 12:50:57,731 - INFO - Current cash: 1358.86, Estimated cash after sales: 4033.43
+2025-03-05 12:50:57,731 - INFO - 2009-03-02: Buy 23 shares of QQQ
+2025-03-05 12:50:57,732 - INFO - Total Sell Value: 2677.25, Total Buy Value: 633.19
+2025-03-05 12:50:57,732 - INFO - Rebalancing complete. Portfolio value: 112328.07, Estimated remaining cash: 3399.61
+2025-03-05 12:50:57,732 - INFO - === 2009-03-02 Rebalancing End ===
+2025-03-05 12:50:57,732 - INFO - Order Completed [2009-03-03 00:00:00]: SELL -104.0000 shares of IAU @ 18.18, Commission: 1.89, Total: 1153.00
+2025-03-05 12:50:57,733 - INFO - Order Completed [2009-03-03 00:00:00]: SELL -8.0000 shares of IEF @ 93.90, Commission: 0.75, Total: 684.65
+2025-03-05 12:50:57,733 - INFO - Order Completed [2009-03-03 00:00:00]: BUY 23.0000 shares of QQQ @ 26.86, Commission: 0.62, Total: 617.78
+2025-03-05 12:50:58,623 - INFO - Recorded QQQ month-end close: 30.32
+2025-03-05 12:50:58,624 - INFO - Recorded IAU month-end close: 18.08
+2025-03-05 12:50:58,624 - INFO - Recorded IEF month-end close: 96.59
+2025-03-05 12:50:58,731 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:58,732 - INFO - === 2009-04-01 Rebalancing Start ===
+2025-03-05 12:50:58,733 - INFO - Total value: 121179.13, Cash buffer: 1211.79, Available: 119967.34
+2025-03-05 12:50:58,734 - INFO - QQQ: Target Ratio 0.5000, Target Value 59983.67, Target Shares 1978, Current Shares 2019, Adjustment -41
+2025-03-05 12:50:58,734 - INFO - IAU: Target Ratio 0.3000, Target Value 35990.20, Target Shares 1990, Current Shares 1800, Adjustment 190
+2025-03-05 12:50:58,735 - INFO - IEF: Target Ratio 0.2000, Target Value 23993.47, Target Shares 248, Current Shares 237, Adjustment 11
+2025-03-05 12:50:58,736 - INFO - 2009-04-01: Sell 41 shares of QQQ
+2025-03-05 12:50:58,737 - INFO - Current cash: 3379.74, Estimated cash after sales: 4621.62
+2025-03-05 12:50:58,737 - INFO - 2009-04-01: Buy 190 shares of IAU
+2025-03-05 12:50:58,738 - INFO - 2009-04-01: Buy 11 shares of IEF
+2025-03-05 12:50:58,739 - INFO - Total Sell Value: 1243.12, Total Buy Value: 4497.31
+2025-03-05 12:50:58,739 - INFO - Rebalancing complete. Portfolio value: 121179.13, Estimated remaining cash: 119.81
+2025-03-05 12:50:58,740 - INFO - === 2009-04-01 Rebalancing End ===
+2025-03-05 12:50:58,741 - INFO - Order Completed [2009-04-02 00:00:00]: SELL -41.0000 shares of QQQ @ 31.32, Commission: 1.28, Total: 1564.21
+2025-03-05 12:50:58,742 - INFO - Order Completed [2009-04-02 00:00:00]: BUY 190.0000 shares of IAU @ 17.77, Commission: 3.38, Total: 3375.92
+2025-03-05 12:50:58,742 - INFO - Order Completed [2009-04-02 00:00:00]: BUY 11.0000 shares of IEF @ 96.22, Commission: 1.06, Total: 1058.42
+2025-03-05 12:50:59,619 - INFO - Recorded QQQ month-end close: 34.28
+2025-03-05 12:50:59,619 - INFO - Recorded IAU month-end close: 17.47
+2025-03-05 12:50:59,620 - INFO - Recorded IEF month-end close: 93.67
+2025-03-05 12:50:59,687 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:50:59,688 - INFO - === 2009-05-01 Rebalancing Start ===
+2025-03-05 12:50:59,688 - INFO - Total value: 125943.86, Cash buffer: 1259.44, Available: 124684.43
+2025-03-05 12:50:59,688 - INFO - QQQ: Target Ratio 0.5000, Target Value 62342.21, Target Shares 1818, Current Shares 1978, Adjustment -160
+2025-03-05 12:50:59,689 - INFO - IAU: Target Ratio 0.3000, Target Value 37405.33, Target Shares 2141, Current Shares 1990, Adjustment 151
+2025-03-05 12:50:59,689 - INFO - IEF: Target Ratio 0.2000, Target Value 24936.89, Target Shares 266, Current Shares 248, Adjustment 18
+2025-03-05 12:50:59,689 - INFO - 2009-05-01: Sell 160 shares of QQQ
+2025-03-05 12:50:59,689 - INFO - Current cash: 223.81, Estimated cash after sales: 5703.12
+2025-03-05 12:50:59,690 - INFO - 2009-05-01: Buy 151 shares of IAU
+2025-03-05 12:50:59,690 - INFO - 2009-05-01: Buy 18 shares of IEF
+2025-03-05 12:50:59,690 - INFO - Total Sell Value: 5484.80, Total Buy Value: 4323.73
+2025-03-05 12:50:59,690 - INFO - Rebalancing complete. Portfolio value: 125943.86, Estimated remaining cash: 1375.07
+2025-03-05 12:50:59,690 - INFO - === 2009-05-01 Rebalancing End ===
+2025-03-05 12:50:59,691 - INFO - Order Completed [2009-05-04 00:00:00]: SELL -160.0000 shares of QQQ @ 34.68, Commission: 5.55, Total: 6104.22
+2025-03-05 12:50:59,691 - INFO - Order Completed [2009-05-04 00:00:00]: BUY 151.0000 shares of IAU @ 17.53, Commission: 2.65, Total: 2647.33
+2025-03-05 12:50:59,692 - INFO - Order Completed [2009-05-04 00:00:00]: BUY 18.0000 shares of IEF @ 93.15, Commission: 1.68, Total: 1676.70
+2025-03-05 12:51:00,547 - INFO - Recorded QQQ month-end close: 35.38
+2025-03-05 12:51:00,547 - INFO - Recorded IAU month-end close: 19.26
+2025-03-05 12:51:00,548 - INFO - Recorded IEF month-end close: 91.45
+2025-03-05 12:51:00,617 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:51:00,618 - INFO - === 2009-06-01 Rebalancing Start ===
+2025-03-05 12:51:00,618 - INFO - Total value: 132470.54, Cash buffer: 1324.71, Available: 131145.84
+2025-03-05 12:51:00,618 - INFO - QQQ: Target Ratio 0.5000, Target Value 65572.92, Target Shares 1853, Current Shares 1818, Adjustment 35
+2025-03-05 12:51:00,618 - INFO - IAU: Target Ratio 0.3000, Target Value 39343.75, Target Shares 2043, Current Shares 2141, Adjustment -98
+2025-03-05 12:51:00,619 - INFO - IEF: Target Ratio 0.2000, Target Value 26229.17, Target Shares 286, Current Shares 266, Adjustment 20
+2025-03-05 12:51:00,619 - INFO - 2009-06-01: Sell 98 shares of IAU
+2025-03-05 12:51:00,619 - INFO - Current cash: 1438.70, Estimated cash after sales: 3323.90
+2025-03-05 12:51:00,619 - INFO - 2009-06-01: Buy 35 shares of QQQ
+2025-03-05 12:51:00,619 - INFO - 2009-06-01: Buy 20 shares of IEF
+2025-03-05 12:51:00,620 - INFO - Total Sell Value: 1887.09, Total Buy Value: 3067.30
+2025-03-05 12:51:00,620 - INFO - Rebalancing complete. Portfolio value: 132470.54, Estimated remaining cash: 253.53
+2025-03-05 12:51:00,620 - INFO - === 2009-06-01 Rebalancing End ===
+2025-03-05 12:51:00,621 - INFO - Order Completed [2009-06-02 00:00:00]: SELL -98.0000 shares of IAU @ 19.25, Commission: 1.89, Total: 1189.14
+2025-03-05 12:51:00,621 - INFO - Order Completed [2009-06-02 00:00:00]: BUY 35.0000 shares of QQQ @ 36.19, Commission: 1.27, Total: 1266.65
+2025-03-05 12:51:00,621 - INFO - Order Completed [2009-06-02 00:00:00]: BUY 20.0000 shares of IEF @ 89.92, Commission: 1.80, Total: 1798.40
+2025-03-05 12:51:01,600 - INFO - Recorded QQQ month-end close: 36.38
+2025-03-05 12:51:01,600 - INFO - Recorded IAU month-end close: 18.25
+2025-03-05 12:51:01,600 - INFO - Recorded IEF month-end close: 90.67
+2025-03-05 12:51:01,675 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:51:01,675 - INFO - === 2009-07-01 Rebalancing Start ===
+2025-03-05 12:51:01,676 - INFO - Total value: 131314.07, Cash buffer: 1313.14, Available: 130000.92
+2025-03-05 12:51:01,677 - INFO - QQQ: Target Ratio 0.5000, Target Value 65000.46, Target Shares 1786, Current Shares 1853, Adjustment -67
+2025-03-05 12:51:01,677 - INFO - IAU: Target Ratio 0.3000, Target Value 39000.28, Target Shares 2137, Current Shares 2043, Adjustment 94
+2025-03-05 12:51:01,677 - INFO - IEF: Target Ratio 0.2000, Target Value 26000.18, Target Shares 286, Current Shares 286, Adjustment 0
+2025-03-05 12:51:01,678 - INFO - 2009-07-01: Sell 67 shares of QQQ
+2025-03-05 12:51:01,678 - INFO - Current cash: 255.00, Estimated cash after sales: 2690.03
+2025-03-05 12:51:01,678 - INFO - 2009-07-01: Buy 94 shares of IAU
+2025-03-05 12:51:01,679 - INFO - Total Sell Value: 2437.46, Total Buy Value: 1715.50
+2025-03-05 12:51:01,679 - INFO - Rebalancing complete. Portfolio value: 131314.07, Estimated remaining cash: 972.81
+2025-03-05 12:51:01,679 - INFO - === 2009-07-01 Rebalancing End ===
+2025-03-05 12:51:01,680 - INFO - Order Completed [2009-07-02 00:00:00]: SELL -67.0000 shares of QQQ @ 36.09, Commission: 2.42, Total: 2553.66
+2025-03-05 12:51:01,681 - INFO - Order Completed [2009-07-02 00:00:00]: BUY 94.0000 shares of IAU @ 18.31, Commission: 1.72, Total: 1721.14
+2025-03-05 12:51:02,629 - INFO - Recorded QQQ month-end close: 39.45
+2025-03-05 12:51:02,629 - INFO - Recorded IAU month-end close: 18.70
+2025-03-05 12:51:02,629 - INFO - Recorded IEF month-end close: 91.17
+2025-03-05 12:51:02,702 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:51:02,703 - INFO - === 2009-08-03 Rebalancing Start ===
+2025-03-05 12:51:02,703 - INFO - Total value: 138353.36, Cash buffer: 1383.53, Available: 136969.83
+2025-03-05 12:51:02,703 - INFO - QQQ: Target Ratio 0.5000, Target Value 68484.92, Target Shares 1735, Current Shares 1786, Adjustment -51
+2025-03-05 12:51:02,704 - INFO - IAU: Target Ratio 0.3000, Target Value 41090.95, Target Shares 2197, Current Shares 2137, Adjustment 60
+2025-03-05 12:51:02,704 - INFO - IEF: Target Ratio 0.2000, Target Value 27393.97, Target Shares 300, Current Shares 286, Adjustment 14
+2025-03-05 12:51:02,705 - INFO - 2009-08-03: Sell 51 shares of QQQ
+2025-03-05 12:51:02,705 - INFO - Current cash: 947.75, Estimated cash after sales: 2957.69
+2025-03-05 12:51:02,705 - INFO - 2009-08-03: Buy 60 shares of IAU
+2025-03-05 12:51:02,705 - INFO - 2009-08-03: Buy 14 shares of IEF
+2025-03-05 12:51:02,705 - INFO - Total Sell Value: 2011.95, Total Buy Value: 2398.38
+2025-03-05 12:51:02,705 - INFO - Rebalancing complete. Portfolio value: 138353.36, Estimated remaining cash: 556.91
+2025-03-05 12:51:02,706 - INFO - === 2009-08-03 Rebalancing End ===
+2025-03-05 12:51:02,706 - INFO - Order Completed [2009-08-04 00:00:00]: SELL -51.0000 shares of QQQ @ 39.85, Commission: 2.03, Total: 1943.83
+2025-03-05 12:51:02,707 - INFO - Order Completed [2009-08-04 00:00:00]: BUY 60.0000 shares of IAU @ 18.85, Commission: 1.13, Total: 1131.00
+2025-03-05 12:51:02,707 - INFO - Order Completed [2009-08-04 00:00:00]: BUY 14.0000 shares of IEF @ 90.17, Commission: 1.26, Total: 1262.38
+2025-03-05 12:51:03,610 - INFO - Recorded QQQ month-end close: 40.03
+2025-03-05 12:51:03,611 - INFO - Recorded IAU month-end close: 18.69
+2025-03-05 12:51:03,612 - INFO - Recorded IEF month-end close: 91.60
+2025-03-05 12:51:03,680 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:51:03,681 - INFO - === 2009-09-01 Rebalancing Start ===
+2025-03-05 12:51:03,681 - INFO - Total value: 137479.94, Cash buffer: 1374.80, Available: 136105.14
+2025-03-05 12:51:03,681 - INFO - QQQ: Target Ratio 0.5000, Target Value 68052.57, Target Shares 1700, Current Shares 1735, Adjustment -35
+2025-03-05 12:51:03,681 - INFO - IAU: Target Ratio 0.3000, Target Value 40831.54, Target Shares 2184, Current Shares 2197, Adjustment -13
+2025-03-05 12:51:03,682 - INFO - IEF: Target Ratio 0.2000, Target Value 27221.03, Target Shares 297, Current Shares 300, Adjustment -3
+2025-03-05 12:51:03,682 - INFO - 2009-09-01: Sell 35 shares of QQQ
+2025-03-05 12:51:03,683 - INFO - 2009-09-01: Sell 13 shares of IAU
+2025-03-05 12:51:03,683 - INFO - 2009-09-01: Sell 3 shares of IEF
+2025-03-05 12:51:03,684 - INFO - Current cash: 582.30, Estimated cash after sales: 2499.20
+2025-03-05 12:51:03,684 - INFO - Total Sell Value: 1918.82, Total Buy Value: 0.00
+2025-03-05 12:51:03,684 - INFO - Rebalancing complete. Portfolio value: 137479.94, Estimated remaining cash: 2499.20
+2025-03-05 12:51:03,685 - INFO - === 2009-09-01 Rebalancing End ===
+2025-03-05 12:51:03,685 - INFO - Order Completed [2009-09-02 00:00:00]: SELL -35.0000 shares of QQQ @ 39.07, Commission: 1.37, Total: 1334.00
+2025-03-05 12:51:03,686 - INFO - Order Completed [2009-09-02 00:00:00]: SELL -13.0000 shares of IAU @ 18.95, Commission: 0.25, Total: 163.56
+2025-03-05 12:51:03,686 - INFO - Order Completed [2009-09-02 00:00:00]: SELL -3.0000 shares of IEF @ 91.71, Commission: 0.28, Total: 260.79
+2025-03-05 12:51:04,531 - INFO - Recorded QQQ month-end close: 42.25
+2025-03-05 12:51:04,531 - INFO - Recorded IAU month-end close: 19.79
+2025-03-05 12:51:04,532 - INFO - Recorded IEF month-end close: 92.37
+2025-03-05 12:51:04,601 - WARNING - Failed to get wma_10: Attribute not found in self.touch.lines. Using base allocation.
+2025-03-05 12:51:04,602 - INFO - === 2009-10-01 Rebalancing Start ===
+2025-03-05 12:51:04,602 - INFO - Total value: 142549.05, Cash buffer: 1425.49, Available: 141123.56
+2025-03-05 12:51:04,603 - INFO - QQQ: Target Ratio 0.5000, Target Value 70561.78, Target Shares 1670, Current Shares 1700, Adjustment -30
+2025-03-05 12:51:04,603 - INFO - IAU: Target Ratio 0.3000, Target Value 42337.07, Target Shares 2139, Current Shares 2184, Adjustment -45
+2025-03-05 12:51:04,603 - INFO - IEF: Target Ratio 0.2000, Target Value 28224.71, Target Shares 305, Current Shares 297, Adjustment 8
+2025-03-05 12:51:04,604 - INFO - 2009-10-01: Sell 30 shares of QQQ
+2025-03-05 12:51:04,604 - INFO - 2009-10-01: Sell 45 shares of IAU
+2025-03-05 12:51:04,604 - INFO - Current cash: 2469.34, Estimated cash after sales: 4625.05
+2025-03-05 12:51:04,604 - INFO - 2009-10-01: Buy 8 shares of IEF
+2025-03-05 12:51:04,604 - INFO - Total Sell Value: 2157.87, Total Buy Value: 738.96
+2025-03-05 12:51:04,604 - INFO - Rebalancing complete. Portfolio value: 142549.05, Estimated remaining cash: 3885.35
+2025-03-05 12:51:04,604 - INFO - === 2009-10-01 Rebalancing End ===
+2025-03-05 12:51:04,605 - INFO - Order Completed [2009-10-02 00:00:00]: SELL -30.0000 shares of QQQ @ 40.72, Commission: 1.22, Total: 1143.43
+2025-03-05 12:51:04,606 - INFO - Order Completed [2009-10-02 00:00:00]: SELL -45.0000 shares of IAU @ 19.58, Commission: 0.88, Total: 566.18
+2025-03-05 12:51:04,606 - INFO - Order Completed [2009-10-02 00:00:00]: BUY 8.0000 shares of IEF @ 93.21, Commission: 0.75, Total: 745.68
