@@ -1,0 +1,548 @@
+2025-03-08 09:05:59,160 - INFO - =============== Configurations ===============
+2025-03-08 09:05:59,162 - INFO - DATA_MODE: offline
+2025-03-08 09:05:59,163 - INFO - START_DATE: 2000-01-01
+2025-03-08 09:05:59,164 - INFO - END_DATE: 2025-3-31
+2025-03-08 09:05:59,167 - INFO - TICKERS: ['SPY', 'VT', 'EEM', 'TLT', 'BMX', 'GLD', 'DBC']
+2025-03-08 09:05:59,169 - INFO - ASSET_ALLOCATION: {'VT': 0.25, 'EEM': 0.25, 'TLT': 0.15, 'BMX': 0.15, 'GLD': 0.1, 'DBC': 0.1}
+2025-03-08 09:05:59,171 - INFO - AGGRESSIVE_ALLOCATION: {'VT': 0.25, 'EEM': 0.25, 'TLT': 0.15, 'BMX': 0.15, 'GLD': 0.1, 'DBC': 0.1}
+2025-03-08 09:05:59,199 - INFO - MODERATE_ALLOCATION: {'VT': 0.25, 'EEM': 0.25, 'TLT': 0.15, 'BMX': 0.15, 'GLD': 0.1, 'DBC': 0.1}
+2025-03-08 09:05:59,199 - INFO - MID_DEFENSIVE_ALLOCATION: {'VT': 0.25, 'EEM': 0.25, 'TLT': 0.15, 'BMX': 0.15, 'GLD': 0.1, 'DBC': 0.1}
+2025-03-08 09:05:59,201 - INFO - DEFENSIVE_ALLOCATION: {'VT': 0.25, 'EEM': 0.25, 'TLT': 0.15, 'BMX': 0.15, 'GLD': 0.1, 'DBC': 0.1}
+2025-03-08 09:05:59,202 - INFO - TOUCHSTONE: SPY
+2025-03-08 09:05:59,203 - INFO - MA_PERIODS: [21, 50, 150, 200]
+2025-03-08 09:05:59,204 - INFO - WMA_PERIODS: [10, 30]
+2025-03-08 09:05:59,204 - INFO - MA_TYPE: daily
+2025-03-08 09:05:59,205 - INFO - INITIAL_CASH: 100000.0
+2025-03-08 09:05:59,206 - INFO - COMMISSION: 0.001
+2025-03-08 09:05:59,207 - INFO - CASH_BUFFER_PERCENT: 1.0
+2025-03-08 09:05:59,209 - INFO - PROCESS_SELL_FIRST: True
+2025-03-08 09:05:59,209 - INFO - RISK_FREE_RATE: 0.01
+2025-03-08 09:05:59,210 - INFO - FRACTIONAL_SHARES: False
+2025-03-08 09:05:59,211 - INFO - USE_MARKET_REGIME: False
+2025-03-08 09:05:59,213 - INFO - REBALANCING_TERM: YEAR
+2025-03-08 09:05:59,214 - INFO - LOG_LEVEL: INFO
+2025-03-08 09:05:59,215 - INFO - ===============================================
+2025-03-08 09:05:59,219 - INFO - Starting backtest...
+2025-03-08 09:05:59,222 - INFO - Loading data feeds...
+2025-03-08 09:05:59,226 - INFO - Loading data for SPY...
+2025-03-08 09:05:59,229 - INFO - Downloading data for SPY from 2000-01-01 to 2025-3-31.
+2025-03-08 09:06:00,206 - INFO - Saved RAW data for SPY to C:\Users\james\Projects\backtrader\data\SPY_raw.csv (6334 rows).
+2025-03-08 09:06:00,207 - INFO - Loading data for VT...
+2025-03-08 09:06:00,209 - INFO - Downloading data for VT from 2000-01-01 to 2025-3-31.
+2025-03-08 09:06:00,812 - INFO - Saved RAW data for VT to C:\Users\james\Projects\backtrader\data\VT_raw.csv (4201 rows).
+2025-03-08 09:06:00,814 - INFO - Loading data for EEM...
+2025-03-08 09:06:00,815 - INFO - Downloading data for EEM from 2000-01-01 to 2025-3-31.
+2025-03-08 09:06:01,546 - INFO - Saved RAW data for EEM to C:\Users\james\Projects\backtrader\data\EEM_raw.csv (5511 rows).
+2025-03-08 09:06:01,547 - INFO - Loading data for TLT...
+2025-03-08 09:06:01,548 - INFO - Downloading data for TLT from 2000-01-01 to 2025-3-31.
+2025-03-08 09:06:02,299 - INFO - Saved RAW data for TLT to C:\Users\james\Projects\backtrader\data\TLT_raw.csv (5689 rows).
+2025-03-08 09:06:02,300 - INFO - Loading data for BMX...
+2025-03-08 09:06:02,301 - INFO - Downloading data for BMX from 2000-01-01 to 2025-3-31.
+2025-03-08 09:06:02,669 - INFO - Found 10908 missing values in BMX data.
+2025-03-08 09:06:02,670 - INFO - BMX: Column 'Open' has 1818 NaN
+2025-03-08 09:06:02,671 - INFO - BMX: Column 'High' has 1818 NaN
+2025-03-08 09:06:02,671 - INFO - BMX: Column 'Low' has 1818 NaN
+2025-03-08 09:06:02,672 - INFO - BMX: Column 'Close' has 1818 NaN
+2025-03-08 09:06:02,673 - INFO - BMX: Column 'Volume' has 1818 NaN
+2025-03-08 09:06:02,674 - INFO - BMX: Column 'Adj Close' has 1818 NaN
+2025-03-08 09:06:02,732 - INFO - Saved RAW data for BMX to C:\Users\james\Projects\backtrader\data\BMX_raw.csv (3680 rows).
+2025-03-08 09:06:02,732 - INFO - Loading data for GLD...
+2025-03-08 09:06:02,734 - INFO - Downloading data for GLD from 2000-01-01 to 2025-3-31.
+2025-03-08 09:06:03,376 - INFO - Saved RAW data for GLD to C:\Users\james\Projects\backtrader\data\GLD_raw.csv (5107 rows).
+2025-03-08 09:06:03,377 - INFO - Loading data for DBC...
+2025-03-08 09:06:03,379 - INFO - Downloading data for DBC from 2000-01-01 to 2025-3-31.
+2025-03-08 09:06:03,957 - INFO - Saved RAW data for DBC to C:\Users\james\Projects\backtrader\data\DBC_raw.csv (4802 rows).
+2025-03-08 09:06:03,959 - INFO - Max start date among non-touchstone: 2010-07-21 00:00:00
+2025-03-08 09:06:04,069 - INFO - Saved ALIGNED data for SPY to C:\Users\james\Projects\backtrader\data\SPY.csv (3933 rows).
+2025-03-08 09:06:04,070 - INFO - Created data feed for SPY with 3933 rows after slicing.
+2025-03-08 09:06:04,122 - INFO - Saved ALIGNED data for VT to C:\Users\james\Projects\backtrader\data\VT.csv (3681 rows).
+2025-03-08 09:06:04,124 - INFO - Created data feed for VT with 3681 rows after slicing.
+2025-03-08 09:06:04,183 - INFO - Saved ALIGNED data for EEM to C:\Users\james\Projects\backtrader\data\EEM.csv (3681 rows).
+2025-03-08 09:06:04,185 - INFO - Created data feed for EEM with 3681 rows after slicing.
+2025-03-08 09:06:04,244 - INFO - Saved ALIGNED data for TLT to C:\Users\james\Projects\backtrader\data\TLT.csv (3681 rows).
+2025-03-08 09:06:04,245 - INFO - Created data feed for TLT with 3681 rows after slicing.
+2025-03-08 09:06:04,305 - INFO - Saved ALIGNED data for BMX to C:\Users\james\Projects\backtrader\data\BMX.csv (3680 rows).
+2025-03-08 09:06:04,307 - INFO - Created data feed for BMX with 3680 rows after slicing.
+2025-03-08 09:06:04,364 - INFO - Saved ALIGNED data for GLD to C:\Users\james\Projects\backtrader\data\GLD.csv (3681 rows).
+2025-03-08 09:06:04,365 - INFO - Created data feed for GLD with 3681 rows after slicing.
+2025-03-08 09:06:04,424 - INFO - Saved ALIGNED data for DBC to C:\Users\james\Projects\backtrader\data\DBC.csv (3681 rows).
+2025-03-08 09:06:04,425 - INFO - Created data feed for DBC with 3681 rows after slicing.
+2025-03-08 09:06:04,426 - INFO - Loaded and aligned data for 7 tickers.
+2025-03-08 09:06:04,429 - INFO - Added data for SPY.
+2025-03-08 09:06:04,431 - INFO - Added data for VT.
+2025-03-08 09:06:04,433 - INFO - Added data for EEM.
+2025-03-08 09:06:04,435 - INFO - Added data for TLT.
+2025-03-08 09:06:04,437 - INFO - Added data for BMX.
+2025-03-08 09:06:04,439 - INFO - Added data for GLD.
+2025-03-08 09:06:04,440 - INFO - Added data for DBC.
+2025-03-08 09:06:04,441 - INFO - All data feeds loaded.
+2025-03-08 09:06:04,442 - INFO - Initial portfolio value: 100,000.00
+2025-03-08 09:06:22,768 - INFO - Asset data loaded for: VT
+2025-03-08 09:06:22,772 - INFO - Asset data loaded for: EEM
+2025-03-08 09:06:22,774 - INFO - Asset data loaded for: TLT
+2025-03-08 09:06:22,776 - INFO - Asset data loaded for: BMX
+2025-03-08 09:06:22,779 - INFO - Asset data loaded for: GLD
+2025-03-08 09:06:22,783 - INFO - Asset data loaded for: DBC
+2025-03-08 09:06:22,785 - INFO - Market regime usage: Disabled
+2025-03-08 09:06:22,786 - INFO - Moving average type: daily
+2025-03-08 09:06:22,787 - INFO - Fractional shares: Not allowed
+2025-03-08 09:06:23,172 - INFO - Start date: 2010-07-21, initial portfolio=100000.00
+2025-03-08 09:06:27,738 - INFO - Period-end close for VT: 47.80
+2025-03-08 09:06:27,739 - INFO - Period-end close for EEM: 47.64
+2025-03-08 09:06:27,740 - INFO - Period-end close for TLT: 94.12
+2025-03-08 09:06:27,742 - INFO - Period-end close for BMX: 8.00
+2025-03-08 09:06:27,743 - INFO - Period-end close for GLD: 138.72
+2025-03-08 09:06:27,744 - INFO - Period-end close for DBC: 27.55
+2025-03-08 09:06:27,918 - INFO - [2011-01-03] Market regime disabled; using base allocation.
+2025-03-08 09:06:27,920 - INFO - === 2011-01-03 Rebalancing Start ===
+2025-03-08 09:06:27,921 - INFO - [Rebalancing Info] Date=2011-01-03, SPY Close=127.05, MA_21=124.75, MA_50=121.95, MA_150=114.41, MA_200=114.89
+2025-03-08 09:06:27,922 - INFO - Portfolio value=100000.00, cash buffer=1000.00, available=99000.00
+2025-03-08 09:06:27,923 - INFO - VT: prev_close=47.80, current_size=0, alloc_ratio=0.25, adjust=517
+2025-03-08 09:06:27,924 - INFO - EEM: prev_close=47.64, current_size=0, alloc_ratio=0.25, adjust=519
+2025-03-08 09:06:27,925 - INFO - TLT: prev_close=94.12, current_size=0, alloc_ratio=0.15, adjust=157
+2025-03-08 09:06:27,926 - INFO - BMX: prev_close=8.00, current_size=0, alloc_ratio=0.15, adjust=1856
+2025-03-08 09:06:27,926 - INFO - GLD: prev_close=138.72, current_size=0, alloc_ratio=0.10, adjust=71
+2025-03-08 09:06:27,927 - INFO - DBC: prev_close=27.55, current_size=0, alloc_ratio=0.10, adjust=359
+2025-03-08 09:06:27,928 - INFO - 2011-01-03: BUY EEM, shares=519
+2025-03-08 09:06:27,930 - INFO - 2011-01-03: BUY VT, shares=517
+2025-03-08 09:06:27,930 - INFO - 2011-01-03: BUY BMX, shares=1856
+2025-03-08 09:06:27,936 - INFO - 2011-01-03: BUY TLT, shares=157
+2025-03-08 09:06:27,938 - INFO - 2011-01-03: BUY DBC, shares=359
+2025-03-08 09:06:27,939 - INFO - 2011-01-03: BUY GLD, shares=71
+2025-03-08 09:06:27,940 - INFO - === 2011-01-03 Rebalancing End ===
+2025-03-08 09:06:27,944 - INFO - 2011-01-04 00:00:00 OrderCompleted: BUY 519 EEM @ 48.26, Comm=25.05
+2025-03-08 09:06:27,945 - INFO - 2011-01-04 00:00:00 OrderCompleted: BUY 517 VT @ 48.40, Comm=25.02
+2025-03-08 09:06:27,945 - INFO - 2011-01-04 00:00:00 OrderCompleted: BUY 1856 BMX @ 8.00, Comm=14.85
+2025-03-08 09:06:27,946 - INFO - 2011-01-04 00:00:00 OrderCompleted: BUY 157 TLT @ 93.41, Comm=14.67
+2025-03-08 09:06:27,946 - INFO - 2011-01-04 00:00:00 OrderCompleted: BUY 359 DBC @ 27.69, Comm=9.94
+2025-03-08 09:06:27,947 - INFO - 2011-01-04 00:00:00 OrderCompleted: BUY 71 GLD @ 136.24, Comm=9.67
+2025-03-08 09:06:36,027 - INFO - Period-end close for VT: 43.18
+2025-03-08 09:06:36,036 - INFO - Period-end close for EEM: 37.94
+2025-03-08 09:06:36,038 - INFO - Period-end close for TLT: 121.25
+2025-03-08 09:06:36,051 - INFO - Period-end close for BMX: 6.48
+2025-03-08 09:06:36,053 - INFO - Period-end close for GLD: 151.99
+2025-03-08 09:06:36,055 - INFO - Period-end close for DBC: 26.84
+2025-03-08 09:06:36,252 - INFO - [2012-01-03] Market regime disabled; using base allocation.
+2025-03-08 09:06:36,256 - INFO - === 2012-01-03 Rebalancing Start ===
+2025-03-08 09:06:36,257 - INFO - [Rebalancing Info] Date=2012-01-03, SPY Close=127.50, MA_21=124.63, MA_50=124.08, MA_150=123.68, MA_200=126.05
+2025-03-08 09:06:36,259 - INFO - Portfolio value=95640.06, cash buffer=956.40, available=94683.66
+2025-03-08 09:06:36,260 - INFO - VT: prev_close=43.18, current_size=517, alloc_ratio=0.25, adjust=31
+2025-03-08 09:06:36,262 - INFO - EEM: prev_close=37.94, current_size=519, alloc_ratio=0.25, adjust=104
+2025-03-08 09:06:36,264 - INFO - TLT: prev_close=121.25, current_size=157, alloc_ratio=0.15, adjust=-40
+2025-03-08 09:06:36,266 - INFO - BMX: prev_close=6.48, current_size=1856, alloc_ratio=0.15, adjust=335
+2025-03-08 09:06:36,268 - INFO - GLD: prev_close=151.99, current_size=71, alloc_ratio=0.10, adjust=-9
+2025-03-08 09:06:36,271 - INFO - DBC: prev_close=26.84, current_size=359, alloc_ratio=0.10, adjust=-7
+2025-03-08 09:06:36,273 - INFO - 2012-01-03: SELL TLT, shares=40
+2025-03-08 09:06:36,276 - INFO - 2012-01-03: SELL GLD, shares=9
+2025-03-08 09:06:36,281 - INFO - 2012-01-03: SELL DBC, shares=7
+2025-03-08 09:06:36,284 - WARNING - EEM: adjusting shares 104 -> 18 due to insufficient cash
+2025-03-08 09:06:36,286 - INFO - 2012-01-03: BUY EEM, shares=18
+2025-03-08 09:06:36,289 - WARNING - BMX: adjusting shares 335 -> 108 due to insufficient cash
+2025-03-08 09:06:36,291 - INFO - 2012-01-03: BUY BMX, shares=108
+2025-03-08 09:06:36,295 - WARNING - VT: adjusting shares 31 -> 16 due to insufficient cash
+2025-03-08 09:06:36,297 - INFO - 2012-01-03: BUY VT, shares=16
+2025-03-08 09:06:36,300 - INFO - === 2012-01-03 Rebalancing End ===
+2025-03-08 09:06:36,308 - INFO - 2012-01-04 00:00:00 OrderCompleted: SELL -40 TLT @ 119.26, Comm=4.77
+2025-03-08 09:06:36,310 - INFO - 2012-01-04 00:00:00 OrderCompleted: SELL -9 GLD @ 155.43, Comm=1.40
+2025-03-08 09:06:36,312 - INFO - 2012-01-04 00:00:00 OrderCompleted: SELL -7 DBC @ 27.61, Comm=0.19
+2025-03-08 09:06:36,314 - INFO - 2012-01-04 00:00:00 OrderCompleted: BUY 18 EEM @ 38.74, Comm=0.70
+2025-03-08 09:06:36,317 - INFO - 2012-01-04 00:00:00 OrderCompleted: BUY 108 BMX @ 6.55, Comm=0.71
+2025-03-08 09:06:36,318 - INFO - 2012-01-04 00:00:00 OrderCompleted: BUY 16 VT @ 43.78, Comm=0.70
+2025-03-08 09:06:44,509 - INFO - Period-end close for VT: 49.42
+2025-03-08 09:06:44,511 - INFO - Period-end close for EEM: 44.35
+2025-03-08 09:06:44,512 - INFO - Period-end close for TLT: 121.18
+2025-03-08 09:06:44,513 - INFO - Period-end close for BMX: 6.30
+2025-03-08 09:06:44,513 - INFO - Period-end close for GLD: 162.02
+2025-03-08 09:06:44,514 - INFO - Period-end close for DBC: 27.78
+2025-03-08 09:06:44,661 - INFO - [2013-01-02] Market regime disabled; using base allocation.
+2025-03-08 09:06:44,665 - INFO - === 2013-01-02 Rebalancing Start ===
+2025-03-08 09:06:44,666 - INFO - [Rebalancing Info] Date=2013-01-02, SPY Close=146.06, MA_21=142.77, MA_50=141.46, MA_150=139.85, MA_200=139.28
+2025-03-08 09:06:44,666 - INFO - Portfolio value=101757.07, cash buffer=1017.57, available=100739.50
+2025-03-08 09:06:44,668 - INFO - VT: prev_close=49.42, current_size=533, alloc_ratio=0.25, adjust=-24
+2025-03-08 09:06:44,669 - INFO - EEM: prev_close=44.35, current_size=537, alloc_ratio=0.25, adjust=30
+2025-03-08 09:06:44,670 - INFO - TLT: prev_close=121.18, current_size=117, alloc_ratio=0.15, adjust=7
+2025-03-08 09:06:44,671 - INFO - BMX: prev_close=6.30, current_size=1964, alloc_ratio=0.15, adjust=434
+2025-03-08 09:06:44,672 - INFO - GLD: prev_close=162.02, current_size=62, alloc_ratio=0.10, adjust=0
+2025-03-08 09:06:44,672 - INFO - DBC: prev_close=27.78, current_size=352, alloc_ratio=0.10, adjust=10
+2025-03-08 09:06:44,673 - INFO - 2013-01-02: SELL VT, shares=24
+2025-03-08 09:06:44,674 - INFO - 2013-01-02: BUY BMX, shares=434
+2025-03-08 09:06:44,675 - INFO - 2013-01-02: BUY EEM, shares=30
+2025-03-08 09:06:44,676 - INFO - 2013-01-02: BUY TLT, shares=7
+2025-03-08 09:06:44,678 - INFO - 2013-01-02: BUY DBC, shares=10
+2025-03-08 09:06:44,679 - INFO - === 2013-01-02 Rebalancing End ===
+2025-03-08 09:06:44,682 - INFO - 2013-01-03 00:00:00 OrderCompleted: SELL -24 VT @ 50.20, Comm=1.20
+2025-03-08 09:06:44,683 - INFO - 2013-01-03 00:00:00 OrderCompleted: BUY 434 BMX @ 5.95, Comm=2.58
+2025-03-08 09:06:44,686 - INFO - 2013-01-03 00:00:00 OrderCompleted: BUY 30 EEM @ 44.90, Comm=1.35
+2025-03-08 09:06:44,686 - INFO - 2013-01-03 00:00:00 OrderCompleted: BUY 7 TLT @ 119.38, Comm=0.84
+2025-03-08 09:06:44,688 - INFO - 2013-01-03 00:00:00 OrderCompleted: BUY 10 DBC @ 27.75, Comm=0.28
+2025-03-08 09:06:53,496 - INFO - Period-end close for VT: 59.40
+2025-03-08 09:06:53,497 - INFO - Period-end close for EEM: 41.80
+2025-03-08 09:06:53,499 - INFO - Period-end close for TLT: 101.86
+2025-03-08 09:06:53,500 - INFO - Period-end close for BMX: 6.19
+2025-03-08 09:06:53,501 - INFO - Period-end close for GLD: 116.12
+2025-03-08 09:06:53,502 - INFO - Period-end close for DBC: 25.66
+2025-03-08 09:06:53,732 - INFO - [2014-01-02] Market regime disabled; using base allocation.
+2025-03-08 09:06:53,735 - INFO - === 2014-01-02 Rebalancing Start ===
+2025-03-08 09:06:53,737 - INFO - [Rebalancing Info] Date=2014-01-02, SPY Close=182.92, MA_21=181.13, MA_50=179.25, MA_150=170.96, MA_200=168.18
+2025-03-08 09:06:53,738 - INFO - Portfolio value=97667.00, cash buffer=976.67, available=96690.33
+2025-03-08 09:06:53,739 - INFO - VT: prev_close=59.40, current_size=509, alloc_ratio=0.25, adjust=-103
+2025-03-08 09:06:53,740 - INFO - EEM: prev_close=41.80, current_size=567, alloc_ratio=0.25, adjust=11
+2025-03-08 09:06:53,741 - INFO - TLT: prev_close=101.86, current_size=124, alloc_ratio=0.15, adjust=18
+2025-03-08 09:06:53,742 - INFO - BMX: prev_close=6.19, current_size=2398, alloc_ratio=0.15, adjust=-55
+2025-03-08 09:06:53,743 - INFO - GLD: prev_close=116.12, current_size=62, alloc_ratio=0.10, adjust=21
+2025-03-08 09:06:53,745 - INFO - DBC: prev_close=25.66, current_size=362, alloc_ratio=0.10, adjust=14
+2025-03-08 09:06:53,746 - INFO - 2014-01-02: SELL VT, shares=103
+2025-03-08 09:06:53,747 - INFO - 2014-01-02: SELL BMX, shares=55
+2025-03-08 09:06:53,749 - WARNING - GLD: adjusting shares 21 -> 9 due to insufficient cash
+2025-03-08 09:06:53,750 - INFO - 2014-01-02: BUY GLD, shares=9
+2025-03-08 09:06:53,752 - WARNING - TLT: adjusting shares 18 -> 10 due to insufficient cash
+2025-03-08 09:06:53,753 - INFO - 2014-01-02: BUY TLT, shares=10
+2025-03-08 09:06:53,754 - INFO - 2014-01-02: BUY EEM, shares=11
+2025-03-08 09:06:53,755 - INFO - 2014-01-02: BUY DBC, shares=14
+2025-03-08 09:06:53,757 - INFO - === 2014-01-02 Rebalancing End ===
+2025-03-08 09:06:53,761 - INFO - 2014-01-03 00:00:00 OrderCompleted: SELL -103 VT @ 58.68, Comm=6.04
+2025-03-08 09:06:53,762 - INFO - 2014-01-03 00:00:00 OrderCompleted: SELL -55 BMX @ 6.19, Comm=0.34
+2025-03-08 09:06:53,763 - INFO - 2014-01-03 00:00:00 OrderCompleted: BUY 9 GLD @ 118.64, Comm=1.07
+2025-03-08 09:06:53,764 - INFO - 2014-01-03 00:00:00 OrderCompleted: BUY 10 TLT @ 101.81, Comm=1.02
+2025-03-08 09:06:53,765 - INFO - 2014-01-03 00:00:00 OrderCompleted: BUY 11 EEM @ 40.39, Comm=0.44
+2025-03-08 09:06:53,766 - INFO - 2014-01-03 00:00:00 OrderCompleted: BUY 14 DBC @ 25.25, Comm=0.35
+2025-03-08 09:07:02,234 - INFO - Period-end close for VT: 60.12
+2025-03-08 09:07:02,237 - INFO - Period-end close for EEM: 39.29
+2025-03-08 09:07:02,240 - INFO - Period-end close for TLT: 125.92
+2025-03-08 09:07:02,243 - INFO - Period-end close for BMX: 3.11
+2025-03-08 09:07:02,244 - INFO - Period-end close for GLD: 113.58
+2025-03-08 09:07:02,247 - INFO - Period-end close for DBC: 18.45
+2025-03-08 09:07:02,434 - INFO - [2015-01-02] Market regime disabled; using base allocation.
+2025-03-08 09:07:02,438 - INFO - === 2015-01-02 Rebalancing Start ===
+2025-03-08 09:07:02,440 - INFO - [Rebalancing Info] Date=2015-01-02, SPY Close=205.43, MA_21=205.53, MA_50=203.91, MA_150=198.77, MA_200=195.94
+2025-03-08 09:07:02,442 - INFO - Portfolio value=90959.66, cash buffer=909.60, available=90050.06
+2025-03-08 09:07:02,444 - INFO - VT: prev_close=60.12, current_size=406, alloc_ratio=0.25, adjust=-32
+2025-03-08 09:07:02,446 - INFO - EEM: prev_close=39.29, current_size=578, alloc_ratio=0.25, adjust=-6
+2025-03-08 09:07:02,448 - INFO - TLT: prev_close=125.92, current_size=134, alloc_ratio=0.15, adjust=-27
+2025-03-08 09:07:02,449 - INFO - BMX: prev_close=3.11, current_size=2343, alloc_ratio=0.15, adjust=2000
+2025-03-08 09:07:02,450 - INFO - GLD: prev_close=113.58, current_size=71, alloc_ratio=0.10, adjust=8
+2025-03-08 09:07:02,452 - INFO - DBC: prev_close=18.45, current_size=376, alloc_ratio=0.10, adjust=112
+2025-03-08 09:07:02,455 - INFO - 2015-01-02: SELL VT, shares=32
+2025-03-08 09:07:02,457 - INFO - 2015-01-02: SELL EEM, shares=6
+2025-03-08 09:07:02,460 - INFO - 2015-01-02: SELL TLT, shares=27
+2025-03-08 09:07:02,462 - WARNING - BMX: adjusting shares 2000 -> 1477 due to insufficient cash
+2025-03-08 09:07:02,463 - INFO - 2015-01-02: BUY BMX, shares=1477
+2025-03-08 09:07:02,467 - INFO - 2015-01-02: BUY DBC, shares=112
+2025-03-08 09:07:02,470 - INFO - 2015-01-02: BUY GLD, shares=8
+2025-03-08 09:07:02,475 - INFO - === 2015-01-02 Rebalancing End ===
+2025-03-08 09:07:02,481 - INFO - 2015-01-05 00:00:00 OrderCompleted: SELL -32 VT @ 59.65, Comm=1.91
+2025-03-08 09:07:02,483 - INFO - 2015-01-05 00:00:00 OrderCompleted: SELL -6 EEM @ 38.52, Comm=0.23
+2025-03-08 09:07:02,484 - INFO - 2015-01-05 00:00:00 OrderCompleted: SELL -27 TLT @ 128.01, Comm=3.46
+2025-03-08 09:07:02,486 - INFO - 2015-01-05 00:00:00 OrderCompleted: BUY 1477 BMX @ 3.22, Comm=4.76
+2025-03-08 09:07:02,488 - INFO - 2015-01-05 00:00:00 OrderCompleted: BUY 112 DBC @ 18.15, Comm=2.03
+2025-03-08 09:07:02,489 - INFO - 2015-01-05 00:00:00 OrderCompleted: BUY 8 GLD @ 114.78, Comm=0.92
+2025-03-08 09:07:12,376 - INFO - Period-end close for VT: 57.62
+2025-03-08 09:07:12,379 - INFO - Period-end close for EEM: 32.19
+2025-03-08 09:07:12,380 - INFO - Period-end close for TLT: 120.58
+2025-03-08 09:07:12,381 - INFO - Period-end close for BMX: 4.15
+2025-03-08 09:07:12,398 - INFO - Period-end close for GLD: 101.46
+2025-03-08 09:07:12,400 - INFO - Period-end close for DBC: 13.36
+2025-03-08 09:07:12,580 - INFO - [2016-01-04] Market regime disabled; using base allocation.
+2025-03-08 09:07:12,581 - INFO - === 2016-01-04 Rebalancing Start ===
+2025-03-08 09:07:12,584 - INFO - [Rebalancing Info] Date=2016-01-04, SPY Close=201.02, MA_21=204.99, MA_50=206.87, MA_150=204.91, MA_200=206.16
+2025-03-08 09:07:12,586 - INFO - Portfolio value=85172.95, cash buffer=851.73, available=84321.22
+2025-03-08 09:07:12,588 - INFO - VT: prev_close=57.62, current_size=374, alloc_ratio=0.25, adjust=-9
+2025-03-08 09:07:12,589 - INFO - EEM: prev_close=32.19, current_size=572, alloc_ratio=0.25, adjust=82
+2025-03-08 09:07:12,592 - INFO - TLT: prev_close=120.58, current_size=107, alloc_ratio=0.15, adjust=-3
+2025-03-08 09:07:12,593 - INFO - BMX: prev_close=4.15, current_size=3820, alloc_ratio=0.15, adjust=-773
+2025-03-08 09:07:12,594 - INFO - GLD: prev_close=101.46, current_size=79, alloc_ratio=0.10, adjust=4
+2025-03-08 09:07:12,604 - INFO - DBC: prev_close=13.36, current_size=488, alloc_ratio=0.10, adjust=143
+2025-03-08 09:07:12,621 - INFO - 2016-01-04: SELL VT, shares=9
+2025-03-08 09:07:12,623 - INFO - 2016-01-04: SELL TLT, shares=3
+2025-03-08 09:07:12,636 - INFO - 2016-01-04: SELL BMX, shares=773
+2025-03-08 09:07:12,638 - WARNING - EEM: adjusting shares 82 -> 76 due to insufficient cash
+2025-03-08 09:07:12,655 - INFO - 2016-01-04: BUY EEM, shares=76
+2025-03-08 09:07:12,658 - INFO - 2016-01-04: BUY DBC, shares=143
+2025-03-08 09:07:12,661 - INFO - 2016-01-04: BUY GLD, shares=4
+2025-03-08 09:07:12,663 - INFO - === 2016-01-04 Rebalancing End ===
+2025-03-08 09:07:12,671 - INFO - 2016-01-05 00:00:00 OrderCompleted: SELL -9 VT @ 56.69, Comm=0.51
+2025-03-08 09:07:12,673 - INFO - 2016-01-05 00:00:00 OrderCompleted: SELL -3 TLT @ 120.88, Comm=0.36
+2025-03-08 09:07:12,674 - INFO - 2016-01-05 00:00:00 OrderCompleted: SELL -773 BMX @ 4.03, Comm=3.12
+2025-03-08 09:07:12,679 - INFO - 2016-01-05 00:00:00 OrderCompleted: BUY 76 EEM @ 31.45, Comm=2.39
+2025-03-08 09:07:12,682 - INFO - 2016-01-05 00:00:00 OrderCompleted: BUY 143 DBC @ 13.22, Comm=1.89
+2025-03-08 09:07:12,684 - INFO - 2016-01-05 00:00:00 OrderCompleted: BUY 4 GLD @ 103.13, Comm=0.41
+2025-03-08 09:07:21,006 - INFO - Period-end close for VT: 61.00
+2025-03-08 09:07:21,007 - INFO - Period-end close for EEM: 35.01
+2025-03-08 09:07:21,008 - INFO - Period-end close for TLT: 119.13
+2025-03-08 09:07:21,010 - INFO - Period-end close for BMX: 4.84
+2025-03-08 09:07:21,010 - INFO - Period-end close for GLD: 109.61
+2025-03-08 09:07:21,011 - INFO - Period-end close for DBC: 15.84
+2025-03-08 09:07:21,184 - INFO - [2017-01-03] Market regime disabled; using base allocation.
+2025-03-08 09:07:21,187 - INFO - === 2017-01-03 Rebalancing Start ===
+2025-03-08 09:07:21,189 - INFO - [Rebalancing Info] Date=2017-01-03, SPY Close=225.24, MA_21=224.90, MA_50=219.75, MA_150=216.05, MA_200=213.68
+2025-03-08 09:07:21,191 - INFO - Portfolio value=93281.03, cash buffer=932.81, available=92348.21
+2025-03-08 09:07:21,193 - INFO - VT: prev_close=61.00, current_size=365, alloc_ratio=0.25, adjust=13
+2025-03-08 09:07:21,195 - INFO - EEM: prev_close=35.01, current_size=648, alloc_ratio=0.25, adjust=11
+2025-03-08 09:07:21,197 - INFO - TLT: prev_close=119.13, current_size=104, alloc_ratio=0.15, adjust=12
+2025-03-08 09:07:21,199 - INFO - BMX: prev_close=4.84, current_size=3047, alloc_ratio=0.15, adjust=-185
+2025-03-08 09:07:21,201 - INFO - GLD: prev_close=109.61, current_size=83, alloc_ratio=0.10, adjust=1
+2025-03-08 09:07:21,202 - INFO - DBC: prev_close=15.84, current_size=631, alloc_ratio=0.10, adjust=-48
+2025-03-08 09:07:21,205 - INFO - 2017-01-03: SELL BMX, shares=185
+2025-03-08 09:07:21,209 - INFO - 2017-01-03: SELL DBC, shares=48
+2025-03-08 09:07:21,213 - INFO - 2017-01-03: BUY TLT, shares=12
+2025-03-08 09:07:21,216 - INFO - 2017-01-03: BUY VT, shares=13
+2025-03-08 09:07:21,218 - INFO - 2017-01-03: BUY EEM, shares=11
+2025-03-08 09:07:21,223 - INFO - 2017-01-03: BUY GLD, shares=1
+2025-03-08 09:07:21,225 - INFO - === 2017-01-03 Rebalancing End ===
+2025-03-08 09:07:21,234 - INFO - 2017-01-04 00:00:00 OrderCompleted: SELL -185 BMX @ 4.85, Comm=0.90
+2025-03-08 09:07:21,238 - INFO - 2017-01-04 00:00:00 OrderCompleted: SELL -48 DBC @ 15.66, Comm=0.75
+2025-03-08 09:07:21,242 - INFO - 2017-01-04 00:00:00 OrderCompleted: BUY 12 TLT @ 119.76, Comm=1.44
+2025-03-08 09:07:21,248 - INFO - 2017-01-04 00:00:00 OrderCompleted: BUY 13 VT @ 61.71, Comm=0.80
+2025-03-08 09:07:21,250 - INFO - 2017-01-04 00:00:00 OrderCompleted: BUY 11 EEM @ 35.63, Comm=0.39
+2025-03-08 09:07:21,254 - INFO - 2017-01-04 00:00:00 OrderCompleted: BUY 1 GLD @ 111.06, Comm=0.11
+2025-03-08 09:07:29,188 - INFO - Period-end close for VT: 74.26
+2025-03-08 09:07:29,194 - INFO - Period-end close for EEM: 47.12
+2025-03-08 09:07:29,195 - INFO - Period-end close for TLT: 126.86
+2025-03-08 09:07:29,197 - INFO - Period-end close for BMX: 0.23
+2025-03-08 09:07:29,198 - INFO - Period-end close for GLD: 123.65
+2025-03-08 09:07:29,198 - INFO - Period-end close for DBC: 16.61
+2025-03-08 09:07:29,356 - INFO - [2018-01-02] Market regime disabled; using base allocation.
+2025-03-08 09:07:29,357 - INFO - === 2018-01-02 Rebalancing Start ===
+2025-03-08 09:07:29,358 - INFO - [Rebalancing Info] Date=2018-01-02, SPY Close=268.77, MA_21=266.29, MA_50=261.78, MA_150=251.85, MA_200=248.15
+2025-03-08 09:07:29,359 - INFO - Portfolio value=96077.30, cash buffer=960.77, available=95116.53
+2025-03-08 09:07:29,359 - INFO - VT: prev_close=74.26, current_size=378, alloc_ratio=0.25, adjust=-58
+2025-03-08 09:07:29,361 - INFO - EEM: prev_close=47.12, current_size=659, alloc_ratio=0.25, adjust=-155
+2025-03-08 09:07:29,362 - INFO - TLT: prev_close=126.86, current_size=116, alloc_ratio=0.15, adjust=-4
+2025-03-08 09:07:29,363 - INFO - BMX: prev_close=0.23, current_size=2862, alloc_ratio=0.15, adjust=59170
+2025-03-08 09:07:29,364 - INFO - GLD: prev_close=123.65, current_size=84, alloc_ratio=0.10, adjust=-8
+2025-03-08 09:07:29,366 - INFO - DBC: prev_close=16.61, current_size=583, alloc_ratio=0.10, adjust=-11
+2025-03-08 09:07:29,367 - INFO - 2018-01-02: SELL VT, shares=58
+2025-03-08 09:07:29,370 - INFO - 2018-01-02: SELL EEM, shares=155
+2025-03-08 09:07:29,372 - INFO - 2018-01-02: SELL TLT, shares=4
+2025-03-08 09:07:29,374 - INFO - 2018-01-02: SELL GLD, shares=8
+2025-03-08 09:07:29,377 - INFO - 2018-01-02: SELL DBC, shares=11
+2025-03-08 09:07:29,378 - WARNING - BMX: adjusting shares 59170 -> 2887 due to insufficient cash
+2025-03-08 09:07:29,380 - INFO - 2018-01-02: BUY BMX, shares=2887
+2025-03-08 09:07:29,381 - INFO - === 2018-01-02 Rebalancing End ===
+2025-03-08 09:07:29,388 - INFO - 2018-01-03 00:00:00 OrderCompleted: SELL -58 VT @ 75.00, Comm=4.35
+2025-03-08 09:07:29,389 - INFO - 2018-01-03 00:00:00 OrderCompleted: SELL -155 EEM @ 48.29, Comm=7.48
+2025-03-08 09:07:29,390 - INFO - 2018-01-03 00:00:00 OrderCompleted: SELL -4 TLT @ 126.00, Comm=0.50
+2025-03-08 09:07:29,391 - INFO - 2018-01-03 00:00:00 OrderCompleted: SELL -8 GLD @ 125.05, Comm=1.00
+2025-03-08 09:07:29,392 - INFO - 2018-01-03 00:00:00 OrderCompleted: SELL -11 DBC @ 16.74, Comm=0.18
+2025-03-08 09:07:29,393 - INFO - 2018-01-03 00:00:00 OrderCompleted: BUY 2887 BMX @ 0.23, Comm=0.66
+2025-03-08 09:07:37,233 - INFO - Period-end close for VT: 65.46
+2025-03-08 09:07:37,238 - INFO - Period-end close for EEM: 39.06
+2025-03-08 09:07:37,240 - INFO - Period-end close for TLT: 121.51
+2025-03-08 09:07:37,242 - INFO - Period-end close for BMX: 4.90
+2025-03-08 09:07:37,243 - INFO - Period-end close for GLD: 121.25
+2025-03-08 09:07:37,245 - INFO - Period-end close for DBC: 14.49
+2025-03-08 09:07:37,458 - INFO - [2019-01-02] Market regime disabled; using base allocation.
+2025-03-08 09:07:37,460 - INFO - === 2019-01-02 Rebalancing Start ===
+2025-03-08 09:07:37,461 - INFO - [Rebalancing Info] Date=2019-01-02, SPY Close=250.18, MA_21=257.34, MA_50=265.45, MA_150=276.67, MA_200=274.22
+2025-03-08 09:07:37,462 - INFO - Portfolio value=113551.44, cash buffer=1135.51, available=112415.92
+2025-03-08 09:07:37,464 - INFO - VT: prev_close=65.46, current_size=320, alloc_ratio=0.25, adjust=109
+2025-03-08 09:07:37,465 - INFO - EEM: prev_close=39.06, current_size=504, alloc_ratio=0.25, adjust=215
+2025-03-08 09:07:37,467 - INFO - TLT: prev_close=121.51, current_size=112, alloc_ratio=0.15, adjust=26
+2025-03-08 09:07:37,469 - INFO - BMX: prev_close=4.90, current_size=5749, alloc_ratio=0.15, adjust=-2308
+2025-03-08 09:07:37,471 - INFO - GLD: prev_close=121.25, current_size=76, alloc_ratio=0.10, adjust=16
+2025-03-08 09:07:37,473 - INFO - DBC: prev_close=14.49, current_size=572, alloc_ratio=0.10, adjust=203
+2025-03-08 09:07:37,474 - INFO - 2019-01-02: SELL BMX, shares=2308
+2025-03-08 09:07:37,476 - INFO - 2019-01-02: BUY EEM, shares=215
+2025-03-08 09:07:37,477 - INFO - 2019-01-02: BUY VT, shares=109
+2025-03-08 09:07:37,479 - INFO - 2019-01-02: BUY TLT, shares=26
+2025-03-08 09:07:37,482 - INFO - 2019-01-02: BUY DBC, shares=203
+2025-03-08 09:07:37,484 - INFO - 2019-01-02: BUY GLD, shares=16
+2025-03-08 09:07:37,487 - INFO - === 2019-01-02 Rebalancing End ===
+2025-03-08 09:07:37,491 - INFO - 2019-01-03 00:00:00 OrderCompleted: SELL -2308 BMX @ 4.82, Comm=11.12
+2025-03-08 09:07:37,492 - INFO - 2019-01-03 00:00:00 OrderCompleted: BUY 215 EEM @ 38.73, Comm=8.33
+2025-03-08 09:07:37,493 - INFO - 2019-01-03 00:00:00 OrderCompleted: BUY 109 VT @ 65.11, Comm=7.10
+2025-03-08 09:07:37,495 - INFO - 2019-01-03 00:00:00 OrderCompleted: BUY 26 TLT @ 122.29, Comm=3.18
+2025-03-08 09:07:37,497 - INFO - 2019-01-03 00:00:00 OrderCompleted: BUY 203 DBC @ 14.64, Comm=2.97
+2025-03-08 09:07:37,498 - INFO - 2019-01-03 00:00:00 OrderCompleted: BUY 16 GLD @ 121.78, Comm=1.95
+2025-03-08 09:07:46,068 - INFO - Period-end close for VT: 80.99
+2025-03-08 09:07:46,070 - INFO - Period-end close for EEM: 44.87
+2025-03-08 09:07:46,071 - INFO - Period-end close for TLT: 135.48
+2025-03-08 09:07:46,074 - INFO - Period-end close for BMX: 4.90
+2025-03-08 09:07:46,077 - INFO - Period-end close for GLD: 142.90
+2025-03-08 09:07:46,078 - INFO - Period-end close for DBC: 15.95
+2025-03-08 09:07:46,236 - INFO - [2020-01-02] Market regime disabled; using base allocation.
+2025-03-08 09:07:46,237 - INFO - === 2020-01-02 Rebalancing Start ===
+2025-03-08 09:07:46,239 - INFO - [Rebalancing Info] Date=2020-01-02, SPY Close=324.87, MA_21=318.12, MA_50=312.25, MA_150=299.98, MA_200=296.66
+2025-03-08 09:07:46,241 - INFO - Portfolio value=130476.83, cash buffer=1304.77, available=129172.06
+2025-03-08 09:07:46,242 - INFO - VT: prev_close=80.99, current_size=429, alloc_ratio=0.25, adjust=-31
+2025-03-08 09:07:46,243 - INFO - EEM: prev_close=44.87, current_size=719, alloc_ratio=0.25, adjust=0
+2025-03-08 09:07:46,245 - INFO - TLT: prev_close=135.48, current_size=138, alloc_ratio=0.15, adjust=5
+2025-03-08 09:07:46,246 - INFO - BMX: prev_close=4.90, current_size=3441, alloc_ratio=0.15, adjust=513
+2025-03-08 09:07:46,247 - INFO - GLD: prev_close=142.90, current_size=92, alloc_ratio=0.10, adjust=-2
+2025-03-08 09:07:46,248 - INFO - DBC: prev_close=15.95, current_size=775, alloc_ratio=0.10, adjust=34
+2025-03-08 09:07:46,249 - INFO - 2020-01-02: SELL VT, shares=31
+2025-03-08 09:07:46,251 - INFO - 2020-01-02: SELL GLD, shares=2
+2025-03-08 09:07:46,254 - WARNING - BMX: adjusting shares 513 -> 219 due to insufficient cash
+2025-03-08 09:07:46,257 - INFO - 2020-01-02: BUY BMX, shares=219
+2025-03-08 09:07:46,259 - INFO - 2020-01-02: BUY TLT, shares=5
+2025-03-08 09:07:46,260 - INFO - 2020-01-02: BUY DBC, shares=34
+2025-03-08 09:07:46,262 - INFO - === 2020-01-02 Rebalancing End ===
+2025-03-08 09:07:46,267 - INFO - 2020-01-03 00:00:00 OrderCompleted: SELL -31 VT @ 80.90, Comm=2.51
+2025-03-08 09:07:46,268 - INFO - 2020-01-03 00:00:00 OrderCompleted: SELL -2 GLD @ 145.75, Comm=0.29
+2025-03-08 09:07:46,270 - INFO - 2020-01-03 00:00:00 OrderCompleted: BUY 219 BMX @ 4.82, Comm=1.06
+2025-03-08 09:07:46,272 - INFO - 2020-01-03 00:00:00 OrderCompleted: BUY 5 TLT @ 138.27, Comm=0.69
+2025-03-08 09:07:46,273 - INFO - 2020-01-03 00:00:00 OrderCompleted: BUY 34 DBC @ 16.23, Comm=0.55
+2025-03-08 09:07:54,279 - INFO - Period-end close for VT: 92.58
+2025-03-08 09:07:54,282 - INFO - Period-end close for EEM: 51.67
+2025-03-08 09:07:54,284 - INFO - Period-end close for TLT: 157.73
+2025-03-08 09:07:54,286 - INFO - Period-end close for BMX: 4.90
+2025-03-08 09:07:54,289 - INFO - Period-end close for GLD: 178.36
+2025-03-08 09:07:54,290 - INFO - Period-end close for DBC: 14.70
+2025-03-08 09:07:54,466 - INFO - [2021-01-04] Market regime disabled; using base allocation.
+2025-03-08 09:07:54,467 - INFO - === 2021-01-04 Rebalancing Start ===
+2025-03-08 09:07:54,468 - INFO - [Rebalancing Info] Date=2021-01-04, SPY Close=368.79, MA_21=369.12, MA_50=358.48, MA_150=338.68, MA_200=323.50
+2025-03-08 09:07:54,471 - INFO - Portfolio value=144295.04, cash buffer=1442.95, available=142852.09
+2025-03-08 09:07:54,472 - INFO - VT: prev_close=92.58, current_size=398, alloc_ratio=0.25, adjust=-13
+2025-03-08 09:07:54,474 - INFO - EEM: prev_close=51.67, current_size=719, alloc_ratio=0.25, adjust=-28
+2025-03-08 09:07:54,476 - INFO - TLT: prev_close=157.73, current_size=143, alloc_ratio=0.15, adjust=-8
+2025-03-08 09:07:54,479 - INFO - BMX: prev_close=4.90, current_size=3660, alloc_ratio=0.15, adjust=713
+2025-03-08 09:07:54,481 - INFO - GLD: prev_close=178.36, current_size=90, alloc_ratio=0.10, adjust=-10
+2025-03-08 09:07:54,485 - INFO - DBC: prev_close=14.70, current_size=809, alloc_ratio=0.10, adjust=162
+2025-03-08 09:07:54,487 - INFO - 2021-01-04: SELL VT, shares=13
+2025-03-08 09:07:54,491 - INFO - 2021-01-04: SELL EEM, shares=28
+2025-03-08 09:07:54,495 - INFO - 2021-01-04: SELL TLT, shares=8
+2025-03-08 09:07:54,498 - INFO - 2021-01-04: SELL GLD, shares=10
+2025-03-08 09:07:54,500 - WARNING - BMX: adjusting shares 713 -> 320 due to insufficient cash
+2025-03-08 09:07:54,501 - INFO - 2021-01-04: BUY BMX, shares=320
+2025-03-08 09:07:54,503 - WARNING - DBC: adjusting shares 162 -> 106 due to insufficient cash
+2025-03-08 09:07:54,505 - INFO - 2021-01-04: BUY DBC, shares=106
+2025-03-08 09:07:54,507 - INFO - === 2021-01-04 Rebalancing End ===
+2025-03-08 09:07:54,516 - INFO - 2021-01-05 00:00:00 OrderCompleted: SELL -13 VT @ 92.14, Comm=1.20
+2025-03-08 09:07:54,517 - INFO - 2021-01-05 00:00:00 OrderCompleted: SELL -28 EEM @ 52.49, Comm=1.47
+2025-03-08 09:07:54,519 - INFO - 2021-01-05 00:00:00 OrderCompleted: SELL -8 TLT @ 156.95, Comm=1.26
+2025-03-08 09:07:54,520 - INFO - 2021-01-05 00:00:00 OrderCompleted: SELL -10 GLD @ 182.87, Comm=1.83
+2025-03-08 09:07:54,522 - INFO - 2021-01-05 00:00:00 OrderCompleted: BUY 320 BMX @ 4.82, Comm=1.54
+2025-03-08 09:07:54,523 - INFO - 2021-01-05 00:00:00 OrderCompleted: BUY 106 DBC @ 14.89, Comm=1.58
+2025-03-08 09:08:02,406 - INFO - Period-end close for VT: 107.43
+2025-03-08 09:08:02,411 - INFO - Period-end close for EEM: 48.85
+2025-03-08 09:08:02,413 - INFO - Period-end close for TLT: 148.19
+2025-03-08 09:08:02,414 - INFO - Period-end close for BMX: 4.90
+2025-03-08 09:08:02,415 - INFO - Period-end close for GLD: 170.96
+2025-03-08 09:08:02,416 - INFO - Period-end close for DBC: 20.78
+2025-03-08 09:08:02,574 - INFO - [2022-01-03] Market regime disabled; using base allocation.
+2025-03-08 09:08:02,576 - INFO - === 2022-01-03 Rebalancing Start ===
+2025-03-08 09:08:02,577 - INFO - [Rebalancing Info] Date=2022-01-03, SPY Close=477.71, MA_21=468.13, MA_50=465.11, MA_150=446.51, MA_200=437.64
+2025-03-08 09:08:02,579 - INFO - Portfolio value=151326.12, cash buffer=1513.26, available=149812.86
+2025-03-08 09:08:02,580 - INFO - VT: prev_close=107.43, current_size=385, alloc_ratio=0.25, adjust=-37
+2025-03-08 09:08:02,583 - INFO - EEM: prev_close=48.85, current_size=691, alloc_ratio=0.25, adjust=75
+2025-03-08 09:08:02,584 - INFO - TLT: prev_close=148.19, current_size=135, alloc_ratio=0.15, adjust=16
+2025-03-08 09:08:02,585 - INFO - BMX: prev_close=4.90, current_size=3980, alloc_ratio=0.15, adjust=606
+2025-03-08 09:08:02,586 - INFO - GLD: prev_close=170.96, current_size=80, alloc_ratio=0.10, adjust=7
+2025-03-08 09:08:02,588 - INFO - DBC: prev_close=20.78, current_size=915, alloc_ratio=0.10, adjust=-195
+2025-03-08 09:08:02,589 - INFO - 2022-01-03: SELL VT, shares=37
+2025-03-08 09:08:02,591 - INFO - 2022-01-03: SELL DBC, shares=195
+2025-03-08 09:08:02,592 - INFO - 2022-01-03: BUY EEM, shares=75
+2025-03-08 09:08:02,593 - INFO - 2022-01-03: BUY BMX, shares=606
+2025-03-08 09:08:02,597 - INFO - 2022-01-03: BUY TLT, shares=16
+2025-03-08 09:08:02,599 - INFO - 2022-01-03: BUY GLD, shares=7
+2025-03-08 09:08:02,601 - INFO - === 2022-01-03 Rebalancing End ===
+2025-03-08 09:08:02,606 - INFO - 2022-01-04 00:00:00 OrderCompleted: SELL -37 VT @ 108.53, Comm=4.02
+2025-03-08 09:08:02,608 - INFO - 2022-01-04 00:00:00 OrderCompleted: SELL -195 DBC @ 21.00, Comm=4.09
+2025-03-08 09:08:02,609 - INFO - 2022-01-04 00:00:00 OrderCompleted: BUY 75 EEM @ 49.26, Comm=3.69
+2025-03-08 09:08:02,610 - INFO - 2022-01-04 00:00:00 OrderCompleted: BUY 606 BMX @ 4.82, Comm=2.92
+2025-03-08 09:08:02,612 - INFO - 2022-01-04 00:00:00 OrderCompleted: BUY 16 TLT @ 143.61, Comm=2.30
+2025-03-08 09:08:02,615 - INFO - 2022-01-04 00:00:00 OrderCompleted: BUY 7 GLD @ 168.90, Comm=1.18
+2025-03-08 09:08:11,481 - INFO - Period-end close for VT: 86.19
+2025-03-08 09:08:11,484 - INFO - Period-end close for EEM: 37.90
+2025-03-08 09:08:11,486 - INFO - Period-end close for TLT: 99.56
+2025-03-08 09:08:11,487 - INFO - Period-end close for BMX: 4.90
+2025-03-08 09:08:11,488 - INFO - Period-end close for GLD: 169.64
+2025-03-08 09:08:11,489 - INFO - Period-end close for DBC: 24.65
+2025-03-08 09:08:11,657 - INFO - [2023-01-03] Market regime disabled; using base allocation.
+2025-03-08 09:08:11,659 - INFO - === 2023-01-03 Rebalancing Start ===
+2025-03-08 09:08:11,662 - INFO - [Rebalancing Info] Date=2023-01-03, SPY Close=380.82, MA_21=389.11, MA_50=389.35, MA_150=390.64, MA_200=399.62
+2025-03-08 09:08:11,664 - INFO - Portfolio value=131476.11, cash buffer=1314.76, available=130161.35
+2025-03-08 09:08:11,665 - INFO - VT: prev_close=86.19, current_size=348, alloc_ratio=0.25, adjust=29
+2025-03-08 09:08:11,669 - INFO - EEM: prev_close=37.90, current_size=766, alloc_ratio=0.25, adjust=92
+2025-03-08 09:08:11,670 - INFO - TLT: prev_close=99.56, current_size=151, alloc_ratio=0.15, adjust=45
+2025-03-08 09:08:11,672 - INFO - BMX: prev_close=4.90, current_size=4586, alloc_ratio=0.15, adjust=-602
+2025-03-08 09:08:11,673 - INFO - GLD: prev_close=169.64, current_size=87, alloc_ratio=0.10, adjust=-11
+2025-03-08 09:08:11,677 - INFO - DBC: prev_close=24.65, current_size=720, alloc_ratio=0.10, adjust=-192
+2025-03-08 09:08:11,680 - INFO - 2023-01-03: SELL BMX, shares=602
+2025-03-08 09:08:11,685 - INFO - 2023-01-03: SELL GLD, shares=11
+2025-03-08 09:08:11,689 - INFO - 2023-01-03: SELL DBC, shares=192
+2025-03-08 09:08:11,693 - WARNING - TLT: adjusting shares 45 -> 21 due to insufficient cash
+2025-03-08 09:08:11,695 - INFO - 2023-01-03: BUY TLT, shares=21
+2025-03-08 09:08:11,697 - WARNING - EEM: adjusting shares 92 -> 57 due to insufficient cash
+2025-03-08 09:08:11,700 - INFO - 2023-01-03: BUY EEM, shares=57
+2025-03-08 09:08:11,702 - WARNING - VT: adjusting shares 29 -> 25 due to insufficient cash
+2025-03-08 09:08:11,704 - INFO - 2023-01-03: BUY VT, shares=25
+2025-03-08 09:08:11,707 - INFO - === 2023-01-03 Rebalancing End ===
+2025-03-08 09:08:11,716 - INFO - 2023-01-04 00:00:00 OrderCompleted: SELL -602 BMX @ 4.82, Comm=2.90
+2025-03-08 09:08:11,719 - INFO - 2023-01-04 00:00:00 OrderCompleted: SELL -11 GLD @ 172.86, Comm=1.90
+2025-03-08 09:08:11,720 - INFO - 2023-01-04 00:00:00 OrderCompleted: SELL -192 DBC @ 23.75, Comm=4.56
+2025-03-08 09:08:11,722 - INFO - 2023-01-04 00:00:00 OrderCompleted: BUY 21 TLT @ 103.22, Comm=2.17
+2025-03-08 09:08:11,726 - INFO - 2023-01-04 00:00:00 OrderCompleted: BUY 57 EEM @ 38.90, Comm=2.22
+2025-03-08 09:08:11,727 - INFO - 2023-01-04 00:00:00 OrderCompleted: BUY 25 VT @ 87.02, Comm=2.18
+2025-03-08 09:08:19,451 - INFO - Period-end close for VT: 102.88
+2025-03-08 09:08:19,454 - INFO - Period-end close for EEM: 40.21
+2025-03-08 09:08:19,458 - INFO - Period-end close for TLT: 98.88
+2025-03-08 09:08:19,461 - INFO - Period-end close for BMX: 4.90
+2025-03-08 09:08:19,463 - INFO - Period-end close for GLD: 191.17
+2025-03-08 09:08:19,465 - INFO - Period-end close for DBC: 22.04
+2025-03-08 09:08:19,698 - INFO - [2024-01-02] Market regime disabled; using base allocation.
+2025-03-08 09:08:19,700 - INFO - === 2024-01-02 Rebalancing Start ===
+2025-03-08 09:08:19,701 - INFO - [Rebalancing Info] Date=2024-01-02, SPY Close=472.65, MA_21=467.70, MA_50=450.24, MA_150=443.35, MA_200=434.74
+2025-03-08 09:08:19,703 - INFO - Portfolio value=138201.02, cash buffer=1382.01, available=136819.01
+2025-03-08 09:08:19,707 - INFO - VT: prev_close=102.88, current_size=373, alloc_ratio=0.25, adjust=-41
+2025-03-08 09:08:19,708 - INFO - EEM: prev_close=40.21, current_size=823, alloc_ratio=0.25, adjust=27
+2025-03-08 09:08:19,710 - INFO - TLT: prev_close=98.88, current_size=172, alloc_ratio=0.15, adjust=35
+2025-03-08 09:08:19,712 - INFO - BMX: prev_close=4.90, current_size=3984, alloc_ratio=0.15, adjust=204
+2025-03-08 09:08:19,713 - INFO - GLD: prev_close=191.17, current_size=76, alloc_ratio=0.10, adjust=-5
+2025-03-08 09:08:19,715 - INFO - DBC: prev_close=22.04, current_size=528, alloc_ratio=0.10, adjust=92
+2025-03-08 09:08:19,717 - INFO - 2024-01-02: SELL VT, shares=41
+2025-03-08 09:08:19,720 - INFO - 2024-01-02: SELL GLD, shares=5
+2025-03-08 09:08:19,722 - INFO - 2024-01-02: BUY TLT, shares=35
+2025-03-08 09:08:19,725 - INFO - 2024-01-02: BUY DBC, shares=92
+2025-03-08 09:08:19,727 - INFO - 2024-01-02: BUY EEM, shares=27
+2025-03-08 09:08:19,730 - INFO - 2024-01-02: BUY BMX, shares=204
+2025-03-08 09:08:19,732 - INFO - === 2024-01-02 Rebalancing End ===
+2025-03-08 09:08:19,737 - INFO - 2024-01-03 00:00:00 OrderCompleted: SELL -41 VT @ 101.40, Comm=4.16
+2025-03-08 09:08:19,739 - INFO - 2024-01-03 00:00:00 OrderCompleted: SELL -5 GLD @ 188.77, Comm=0.94
+2025-03-08 09:08:19,740 - INFO - 2024-01-03 00:00:00 OrderCompleted: BUY 35 TLT @ 97.38, Comm=3.41
+2025-03-08 09:08:19,741 - INFO - 2024-01-03 00:00:00 OrderCompleted: BUY 92 DBC @ 21.99, Comm=2.02
+2025-03-08 09:08:19,742 - INFO - 2024-01-03 00:00:00 OrderCompleted: BUY 27 EEM @ 39.33, Comm=1.06
+2025-03-08 09:08:19,743 - INFO - 2024-01-03 00:00:00 OrderCompleted: BUY 204 BMX @ 4.82, Comm=0.98
+2025-03-08 09:08:28,337 - INFO - Period-end close for VT: 117.48
+2025-03-08 09:08:28,339 - INFO - Period-end close for EEM: 41.82
+2025-03-08 09:08:28,340 - INFO - Period-end close for TLT: 87.33
+2025-03-08 09:08:28,341 - INFO - Period-end close for BMX: 4.90
+2025-03-08 09:08:28,341 - INFO - Period-end close for GLD: 242.13
+2025-03-08 09:08:28,342 - INFO - Period-end close for DBC: 21.38
+2025-03-08 09:08:28,525 - INFO - [2025-01-02] Market regime disabled; using base allocation.
+2025-03-08 09:08:28,527 - INFO - === 2025-01-02 Rebalancing Start ===
+2025-03-08 09:08:28,528 - INFO - [Rebalancing Info] Date=2025-01-02, SPY Close=584.64, MA_21=598.83, MA_50=592.84, MA_150=566.65, MA_200=554.08
+2025-03-08 09:08:28,529 - INFO - Portfolio value=146468.14, cash buffer=1464.68, available=145003.46
+2025-03-08 09:08:28,530 - INFO - VT: prev_close=117.48, current_size=332, alloc_ratio=0.25, adjust=-24
+2025-03-08 09:08:28,530 - INFO - EEM: prev_close=41.82, current_size=850, alloc_ratio=0.25, adjust=16
+2025-03-08 09:08:28,531 - INFO - TLT: prev_close=87.33, current_size=207, alloc_ratio=0.15, adjust=42
+2025-03-08 09:08:28,533 - INFO - BMX: prev_close=4.90, current_size=4188, alloc_ratio=0.15, adjust=250
+2025-03-08 09:08:28,534 - INFO - GLD: prev_close=242.13, current_size=71, alloc_ratio=0.10, adjust=-12
+2025-03-08 09:08:28,538 - INFO - DBC: prev_close=21.38, current_size=620, alloc_ratio=0.10, adjust=58
+2025-03-08 09:08:28,539 - INFO - 2025-01-02: SELL VT, shares=24
+2025-03-08 09:08:28,541 - INFO - 2025-01-02: SELL GLD, shares=12
+2025-03-08 09:08:28,542 - WARNING - TLT: adjusting shares 42 -> 29 due to insufficient cash
+2025-03-08 09:08:28,543 - INFO - 2025-01-02: BUY TLT, shares=29
+2025-03-08 09:08:28,545 - INFO - 2025-01-02: BUY DBC, shares=58
+2025-03-08 09:08:28,546 - INFO - 2025-01-02: BUY BMX, shares=250
+2025-03-08 09:08:28,547 - INFO - 2025-01-02: BUY EEM, shares=16
+2025-03-08 09:08:28,548 - INFO - === 2025-01-02 Rebalancing End ===
+2025-03-08 09:08:28,553 - INFO - 2025-01-03 00:00:00 OrderCompleted: SELL -24 VT @ 117.82, Comm=2.83
+2025-03-08 09:08:28,555 - INFO - 2025-01-03 00:00:00 OrderCompleted: SELL -12 GLD @ 244.56, Comm=2.93
+2025-03-08 09:08:28,555 - INFO - 2025-01-03 00:00:00 OrderCompleted: BUY 29 TLT @ 87.72, Comm=2.54
+2025-03-08 09:08:28,556 - INFO - 2025-01-03 00:00:00 OrderCompleted: BUY 58 DBC @ 21.55, Comm=1.25
+2025-03-08 09:08:28,557 - INFO - 2025-01-03 00:00:00 OrderCompleted: BUY 250 BMX @ 4.82, Comm=1.21
+2025-03-08 09:08:28,558 - INFO - 2025-01-03 00:00:00 OrderCompleted: BUY 16 EEM @ 42.09, Comm=0.67
+2025-03-08 09:08:32,658 - INFO - Strategy stop() called.
+2025-03-08 09:08:32,661 - INFO - Final portfolio value: 151,622.10
+2025-03-08 09:08:32,662 - INFO - Total return: 51.62%
+2025-03-08 09:08:32,662 - INFO - [Analyzer] Total Return (rtot): 41.62%
+2025-03-08 09:08:32,663 - INFO - [Analyzer] Annual Return (rnorm): 2.70%
+2025-03-08 09:08:32,664 - INFO - [Analyzer] Max Drawdown: 22.88%
+2025-03-08 09:08:32,665 - INFO - [Analyzer] Sharpe Ratio: 0.22
+2025-03-08 09:08:34,334 - INFO - Saved portfolio value chart to C:\Users\james\Projects\backtrader\results\portfolio_value_20250308_090832.png.
+2025-03-08 09:08:34,404 - INFO - Saved portfolio values to C:\Users\james\Projects\backtrader\results\portfolio_values_20250308_090832.csv.
+2025-03-08 09:08:34,639 - INFO - Saved annual stats to C:\Users\james\Projects\backtrader\results\annual_stats_20250308_090834.csv.
+2025-03-08 09:08:34,664 - INFO - Saved rebalance history to C:\Users\james\Projects\backtrader\results\rebalance_history_20250308_090834.csv.
+2025-03-08 09:08:34,668 - INFO - Backtest completed.
+2025-03-08 09:08:34,681 - INFO - Total execution time: 155.53 seconds

@@ -1,0 +1,729 @@
+2025-03-08 08:33:12,138 - INFO - =============== Configurations ===============
+2025-03-08 08:33:12,141 - INFO - DATA_MODE: offline
+2025-03-08 08:33:12,143 - INFO - START_DATE: 2000-01-01
+2025-03-08 08:33:12,147 - INFO - END_DATE: 2025-3-31
+2025-03-08 08:33:12,150 - INFO - TICKERS: ['SPY', 'VOO', 'EFA', 'EEM', 'DBC', 'GLD', 'EDV', 'LTPZ', 'LQD', 'EMLC']
+2025-03-08 08:33:12,153 - INFO - ASSET_ALLOCATION: {'VOO': 0.12, 'EFA': 0.12, 'EEM': 0.12, 'DBC': 0.07, 'GLD': 0.07, 'EDV': 0.18, 'LTPZ': 0.18, 'LQD': 0.07, 'EMLC': 0.07}
+2025-03-08 08:33:12,155 - INFO - AGGRESSIVE_ALLOCATION: {'VOO': 0.12, 'EFA': 0.12, 'EEM': 0.12, 'DBC': 0.07, 'GLD': 0.07, 'EDV': 0.18, 'LTPZ': 0.18, 'LQD': 0.07, 'EMLC': 0.07}
+2025-03-08 08:33:12,160 - INFO - MODERATE_ALLOCATION: {'VOO': 0.12, 'EFA': 0.12, 'EEM': 0.12, 'DBC': 0.07, 'GLD': 0.07, 'EDV': 0.18, 'LTPZ': 0.18, 'LQD': 0.07, 'EMLC': 0.07}
+2025-03-08 08:33:12,161 - INFO - MID_DEFENSIVE_ALLOCATION: {'VOO': 0.12, 'EFA': 0.12, 'EEM': 0.12, 'DBC': 0.07, 'GLD': 0.07, 'EDV': 0.18, 'LTPZ': 0.18, 'LQD': 0.07, 'EMLC': 0.07}
+2025-03-08 08:33:12,164 - INFO - DEFENSIVE_ALLOCATION: {'VOO': 0.12, 'EFA': 0.12, 'EEM': 0.12, 'DBC': 0.07, 'GLD': 0.07, 'EDV': 0.18, 'LTPZ': 0.18, 'LQD': 0.07, 'EMLC': 0.07}
+2025-03-08 08:33:12,168 - INFO - TOUCHSTONE: SPY
+2025-03-08 08:33:12,171 - INFO - MA_PERIODS: [21, 50, 150, 200]
+2025-03-08 08:33:12,174 - INFO - WMA_PERIODS: [10, 30]
+2025-03-08 08:33:12,178 - INFO - MA_TYPE: daily
+2025-03-08 08:33:12,180 - INFO - INITIAL_CASH: 100000.0
+2025-03-08 08:33:12,183 - INFO - COMMISSION: 0.001
+2025-03-08 08:33:12,187 - INFO - CASH_BUFFER_PERCENT: 1.0
+2025-03-08 08:33:12,188 - INFO - PROCESS_SELL_FIRST: True
+2025-03-08 08:33:12,191 - INFO - RISK_FREE_RATE: 0.01
+2025-03-08 08:33:12,193 - INFO - FRACTIONAL_SHARES: False
+2025-03-08 08:33:12,197 - INFO - USE_MARKET_REGIME: False
+2025-03-08 08:33:12,200 - INFO - REBALANCING_TERM: YEAR
+2025-03-08 08:33:12,202 - INFO - LOG_LEVEL: INFO
+2025-03-08 08:33:12,205 - INFO - ===============================================
+2025-03-08 08:33:12,207 - INFO - Starting backtest...
+2025-03-08 08:33:12,213 - INFO - Loading data feeds...
+2025-03-08 08:33:12,216 - INFO - Loading data for SPY...
+2025-03-08 08:33:12,221 - INFO - Downloading data for SPY from 2000-01-01 to 2025-3-31.
+2025-03-08 08:33:14,067 - INFO - Saved RAW data for SPY to C:\Users\james\Projects\backtrader\data\SPY_raw.csv (6334 rows).
+2025-03-08 08:33:14,071 - INFO - Loading data for VOO...
+2025-03-08 08:33:14,077 - INFO - Downloading data for VOO from 2000-01-01 to 2025-3-31.
+2025-03-08 08:33:14,716 - INFO - Saved RAW data for VOO to C:\Users\james\Projects\backtrader\data\VOO_raw.csv (3646 rows).
+2025-03-08 08:33:14,720 - INFO - Loading data for EFA...
+2025-03-08 08:33:14,733 - INFO - Downloading data for EFA from 2000-01-01 to 2025-3-31.
+2025-03-08 08:33:15,568 - INFO - Saved RAW data for EFA to C:\Users\james\Projects\backtrader\data\EFA_raw.csv (5917 rows).
+2025-03-08 08:33:15,571 - INFO - Loading data for EEM...
+2025-03-08 08:33:15,574 - INFO - Downloading data for EEM from 2000-01-01 to 2025-3-31.
+2025-03-08 08:33:16,326 - INFO - Saved RAW data for EEM to C:\Users\james\Projects\backtrader\data\EEM_raw.csv (5511 rows).
+2025-03-08 08:33:16,329 - INFO - Loading data for DBC...
+2025-03-08 08:33:16,333 - INFO - Downloading data for DBC from 2000-01-01 to 2025-3-31.
+2025-03-08 08:33:17,031 - INFO - Saved RAW data for DBC to C:\Users\james\Projects\backtrader\data\DBC_raw.csv (4802 rows).
+2025-03-08 08:33:17,032 - INFO - Loading data for GLD...
+2025-03-08 08:33:17,033 - INFO - Downloading data for GLD from 2000-01-01 to 2025-3-31.
+2025-03-08 08:33:17,635 - INFO - Saved RAW data for GLD to C:\Users\james\Projects\backtrader\data\GLD_raw.csv (5107 rows).
+2025-03-08 08:33:17,635 - INFO - Loading data for EDV...
+2025-03-08 08:33:17,637 - INFO - Downloading data for EDV from 2000-01-01 to 2025-3-31.
+2025-03-08 08:33:18,272 - INFO - Saved RAW data for EDV to C:\Users\james\Projects\backtrader\data\EDV_raw.csv (4305 rows).
+2025-03-08 08:33:18,273 - INFO - Loading data for LTPZ...
+2025-03-08 08:33:18,275 - INFO - Downloading data for LTPZ from 2000-01-01 to 2025-3-31.
+2025-03-08 08:33:18,869 - INFO - Saved RAW data for LTPZ to C:\Users\james\Projects\backtrader\data\LTPZ_raw.csv (3899 rows).
+2025-03-08 08:33:18,870 - INFO - Loading data for LQD...
+2025-03-08 08:33:18,872 - INFO - Downloading data for LQD from 2000-01-01 to 2025-3-31.
+2025-03-08 08:33:19,568 - INFO - Saved RAW data for LQD to C:\Users\james\Projects\backtrader\data\LQD_raw.csv (5689 rows).
+2025-03-08 08:33:19,569 - INFO - Loading data for EMLC...
+2025-03-08 08:33:19,570 - INFO - Downloading data for EMLC from 2000-01-01 to 2025-3-31.
+2025-03-08 08:33:20,075 - INFO - Saved RAW data for EMLC to C:\Users\james\Projects\backtrader\data\EMLC_raw.csv (3679 rows).
+2025-03-08 08:33:20,077 - INFO - Max start date among non-touchstone: 2010-09-09 00:00:00
+2025-03-08 08:33:20,187 - INFO - Saved ALIGNED data for SPY to C:\Users\james\Projects\backtrader\data\SPY.csv (3898 rows).
+2025-03-08 08:33:20,189 - INFO - Created data feed for SPY with 3898 rows after slicing.
+2025-03-08 08:33:20,241 - INFO - Saved ALIGNED data for VOO to C:\Users\james\Projects\backtrader\data\VOO.csv (3646 rows).
+2025-03-08 08:33:20,242 - INFO - Created data feed for VOO with 3646 rows after slicing.
+2025-03-08 08:33:20,298 - INFO - Saved ALIGNED data for EFA to C:\Users\james\Projects\backtrader\data\EFA.csv (3646 rows).
+2025-03-08 08:33:20,299 - INFO - Created data feed for EFA with 3646 rows after slicing.
+2025-03-08 08:33:20,357 - INFO - Saved ALIGNED data for EEM to C:\Users\james\Projects\backtrader\data\EEM.csv (3646 rows).
+2025-03-08 08:33:20,358 - INFO - Created data feed for EEM with 3646 rows after slicing.
+2025-03-08 08:33:20,416 - INFO - Saved ALIGNED data for DBC to C:\Users\james\Projects\backtrader\data\DBC.csv (3646 rows).
+2025-03-08 08:33:20,418 - INFO - Created data feed for DBC with 3646 rows after slicing.
+2025-03-08 08:33:20,476 - INFO - Saved ALIGNED data for GLD to C:\Users\james\Projects\backtrader\data\GLD.csv (3646 rows).
+2025-03-08 08:33:20,477 - INFO - Created data feed for GLD with 3646 rows after slicing.
+2025-03-08 08:33:20,559 - INFO - Saved ALIGNED data for EDV to C:\Users\james\Projects\backtrader\data\EDV.csv (3646 rows).
+2025-03-08 08:33:20,561 - INFO - Created data feed for EDV with 3646 rows after slicing.
+2025-03-08 08:33:20,603 - INFO - Saved ALIGNED data for LTPZ to C:\Users\james\Projects\backtrader\data\LTPZ.csv (3646 rows).
+2025-03-08 08:33:20,604 - INFO - Created data feed for LTPZ with 3646 rows after slicing.
+2025-03-08 08:33:20,656 - INFO - Saved ALIGNED data for LQD to C:\Users\james\Projects\backtrader\data\LQD.csv (3646 rows).
+2025-03-08 08:33:20,658 - INFO - Created data feed for LQD with 3646 rows after slicing.
+2025-03-08 08:33:20,714 - INFO - Saved ALIGNED data for EMLC to C:\Users\james\Projects\backtrader\data\EMLC.csv (3646 rows).
+2025-03-08 08:33:20,716 - INFO - Created data feed for EMLC with 3646 rows after slicing.
+2025-03-08 08:33:20,717 - INFO - Loaded and aligned data for 10 tickers.
+2025-03-08 08:33:20,719 - INFO - Added data for SPY.
+2025-03-08 08:33:20,722 - INFO - Added data for VOO.
+2025-03-08 08:33:20,724 - INFO - Added data for EFA.
+2025-03-08 08:33:20,726 - INFO - Added data for EEM.
+2025-03-08 08:33:20,728 - INFO - Added data for DBC.
+2025-03-08 08:33:20,730 - INFO - Added data for GLD.
+2025-03-08 08:33:20,732 - INFO - Added data for EDV.
+2025-03-08 08:33:20,733 - INFO - Added data for LTPZ.
+2025-03-08 08:33:20,735 - INFO - Added data for LQD.
+2025-03-08 08:33:20,736 - INFO - Added data for EMLC.
+2025-03-08 08:33:20,737 - INFO - All data feeds loaded.
+2025-03-08 08:33:20,738 - INFO - Initial portfolio value: 100,000.00
+2025-03-08 08:33:48,261 - INFO - Asset data loaded for: VOO
+2025-03-08 08:33:48,263 - INFO - Asset data loaded for: EFA
+2025-03-08 08:33:48,264 - INFO - Asset data loaded for: EEM
+2025-03-08 08:33:48,265 - INFO - Asset data loaded for: DBC
+2025-03-08 08:33:48,266 - INFO - Asset data loaded for: GLD
+2025-03-08 08:33:48,267 - INFO - Asset data loaded for: EDV
+2025-03-08 08:33:48,268 - INFO - Asset data loaded for: LTPZ
+2025-03-08 08:33:48,269 - INFO - Asset data loaded for: LQD
+2025-03-08 08:33:48,275 - INFO - Asset data loaded for: EMLC
+2025-03-08 08:33:48,276 - INFO - Market regime usage: Disabled
+2025-03-08 08:33:48,278 - INFO - Moving average type: daily
+2025-03-08 08:33:48,279 - INFO - Fractional shares: Not allowed
+2025-03-08 08:33:48,744 - INFO - Start date: 2010-09-09, initial portfolio=100000.00
+2025-03-08 08:33:53,232 - INFO - Period-end close for VOO: 115.14
+2025-03-08 08:33:53,234 - INFO - Period-end close for EFA: 58.22
+2025-03-08 08:33:53,235 - INFO - Period-end close for EEM: 47.64
+2025-03-08 08:33:53,236 - INFO - Period-end close for DBC: 27.55
+2025-03-08 08:33:53,237 - INFO - Period-end close for GLD: 138.72
+2025-03-08 08:33:53,238 - INFO - Period-end close for EDV: 82.80
+2025-03-08 08:33:53,239 - INFO - Period-end close for LTPZ: 54.35
+2025-03-08 08:33:53,239 - INFO - Period-end close for LQD: 108.44
+2025-03-08 08:33:53,240 - INFO - Period-end close for EMLC: 53.32
+2025-03-08 08:33:53,399 - INFO - [2011-01-03] Market regime disabled; using base allocation.
+2025-03-08 08:33:53,400 - INFO - === 2011-01-03 Rebalancing Start ===
+2025-03-08 08:33:53,401 - INFO - [Rebalancing Info] Date=2011-01-03, SPY Close=127.05, MA_21=124.75, MA_50=121.95, MA_150=114.41, MA_200=114.89
+2025-03-08 08:33:53,402 - INFO - Portfolio value=100000.00, cash buffer=1000.00, available=99000.00
+2025-03-08 08:33:53,403 - INFO - VOO: prev_close=115.14, current_size=0, alloc_ratio=0.12, adjust=103
+2025-03-08 08:33:53,403 - INFO - EFA: prev_close=58.22, current_size=0, alloc_ratio=0.12, adjust=204
+2025-03-08 08:33:53,404 - INFO - EEM: prev_close=47.64, current_size=0, alloc_ratio=0.12, adjust=249
+2025-03-08 08:33:53,405 - INFO - DBC: prev_close=27.55, current_size=0, alloc_ratio=0.07, adjust=251
+2025-03-08 08:33:53,405 - INFO - GLD: prev_close=138.72, current_size=0, alloc_ratio=0.07, adjust=49
+2025-03-08 08:33:53,406 - INFO - EDV: prev_close=82.80, current_size=0, alloc_ratio=0.18, adjust=215
+2025-03-08 08:33:53,410 - INFO - LTPZ: prev_close=54.35, current_size=0, alloc_ratio=0.18, adjust=327
+2025-03-08 08:33:53,415 - INFO - LQD: prev_close=108.44, current_size=0, alloc_ratio=0.07, adjust=63
+2025-03-08 08:33:53,417 - INFO - EMLC: prev_close=53.32, current_size=0, alloc_ratio=0.07, adjust=129
+2025-03-08 08:33:53,420 - INFO - 2011-01-03: BUY EDV, shares=215
+2025-03-08 08:33:53,421 - INFO - 2011-01-03: BUY LTPZ, shares=327
+2025-03-08 08:33:53,423 - INFO - 2011-01-03: BUY EFA, shares=204
+2025-03-08 08:33:53,425 - INFO - 2011-01-03: BUY EEM, shares=249
+2025-03-08 08:33:53,428 - INFO - 2011-01-03: BUY VOO, shares=103
+2025-03-08 08:33:53,429 - INFO - 2011-01-03: BUY DBC, shares=251
+2025-03-08 08:33:53,431 - INFO - 2011-01-03: BUY EMLC, shares=129
+2025-03-08 08:33:53,432 - INFO - 2011-01-03: BUY LQD, shares=63
+2025-03-08 08:33:53,433 - INFO - 2011-01-03: BUY GLD, shares=49
+2025-03-08 08:33:53,435 - INFO - === 2011-01-03 Rebalancing End ===
+2025-03-08 08:33:53,441 - INFO - 2011-01-04 00:00:00 OrderCompleted: BUY 215 EDV @ 80.96, Comm=17.41
+2025-03-08 08:33:53,442 - INFO - 2011-01-04 00:00:00 OrderCompleted: BUY 327 LTPZ @ 54.00, Comm=17.66
+2025-03-08 08:33:53,444 - INFO - 2011-01-04 00:00:00 OrderCompleted: BUY 204 EFA @ 58.95, Comm=12.03
+2025-03-08 08:33:53,445 - INFO - 2011-01-04 00:00:00 OrderCompleted: BUY 249 EEM @ 48.26, Comm=12.02
+2025-03-08 08:33:53,446 - INFO - 2011-01-04 00:00:00 OrderCompleted: BUY 103 VOO @ 116.56, Comm=12.01
+2025-03-08 08:33:53,447 - INFO - 2011-01-04 00:00:00 OrderCompleted: BUY 251 DBC @ 27.69, Comm=6.95
+2025-03-08 08:33:53,449 - INFO - 2011-01-04 00:00:00 OrderCompleted: BUY 129 EMLC @ 53.40, Comm=6.89
+2025-03-08 08:33:53,450 - INFO - 2011-01-04 00:00:00 OrderCompleted: BUY 63 LQD @ 108.98, Comm=6.87
+2025-03-08 08:33:53,451 - INFO - 2011-01-04 00:00:00 OrderCompleted: BUY 49 GLD @ 136.24, Comm=6.68
+2025-03-08 08:34:01,540 - INFO - Period-end close for VOO: 114.90
+2025-03-08 08:34:01,542 - INFO - Period-end close for EFA: 49.53
+2025-03-08 08:34:01,543 - INFO - Period-end close for EEM: 37.94
+2025-03-08 08:34:01,545 - INFO - Period-end close for DBC: 26.84
+2025-03-08 08:34:01,546 - INFO - Period-end close for GLD: 151.99
+2025-03-08 08:34:01,547 - INFO - Period-end close for EDV: 121.94
+2025-03-08 08:34:01,548 - INFO - Period-end close for LTPZ: 65.25
+2025-03-08 08:34:01,549 - INFO - Period-end close for LQD: 113.76
+2025-03-08 08:34:01,550 - INFO - Period-end close for EMLC: 49.02
+2025-03-08 08:34:01,761 - INFO - [2012-01-03] Market regime disabled; using base allocation.
+2025-03-08 08:34:01,762 - INFO - === 2012-01-03 Rebalancing Start ===
+2025-03-08 08:34:01,763 - INFO - [Rebalancing Info] Date=2012-01-03, SPY Close=127.50, MA_21=124.63, MA_50=124.08, MA_150=123.68, MA_200=126.05
+2025-03-08 08:34:01,765 - INFO - Portfolio value=108628.47, cash buffer=1086.28, available=107542.18
+2025-03-08 08:34:01,769 - INFO - VOO: prev_close=114.90, current_size=103, alloc_ratio=0.12, adjust=9
+2025-03-08 08:34:01,773 - INFO - EFA: prev_close=49.53, current_size=204, alloc_ratio=0.12, adjust=56
+2025-03-08 08:34:01,774 - INFO - EEM: prev_close=37.94, current_size=249, alloc_ratio=0.12, adjust=91
+2025-03-08 08:34:01,777 - INFO - DBC: prev_close=26.84, current_size=251, alloc_ratio=0.07, adjust=29
+2025-03-08 08:34:01,779 - INFO - GLD: prev_close=151.99, current_size=49, alloc_ratio=0.07, adjust=0
+2025-03-08 08:34:01,781 - INFO - EDV: prev_close=121.94, current_size=215, alloc_ratio=0.18, adjust=-57
+2025-03-08 08:34:01,783 - INFO - LTPZ: prev_close=65.25, current_size=327, alloc_ratio=0.18, adjust=-31
+2025-03-08 08:34:01,785 - INFO - LQD: prev_close=113.76, current_size=63, alloc_ratio=0.07, adjust=3
+2025-03-08 08:34:01,788 - INFO - EMLC: prev_close=49.02, current_size=129, alloc_ratio=0.07, adjust=24
+2025-03-08 08:34:01,790 - INFO - 2012-01-03: SELL EDV, shares=57
+2025-03-08 08:34:01,795 - INFO - 2012-01-03: SELL LTPZ, shares=31
+2025-03-08 08:34:01,796 - WARNING - EEM: adjusting shares 91 -> 37 due to insufficient cash
+2025-03-08 08:34:01,797 - INFO - 2012-01-03: BUY EEM, shares=37
+2025-03-08 08:34:01,798 - WARNING - EFA: adjusting shares 56 -> 28 due to insufficient cash
+2025-03-08 08:34:01,798 - INFO - 2012-01-03: BUY EFA, shares=28
+2025-03-08 08:34:01,799 - INFO - 2012-01-03: BUY EMLC, shares=24
+2025-03-08 08:34:01,800 - INFO - 2012-01-03: BUY VOO, shares=9
+2025-03-08 08:34:01,801 - INFO - 2012-01-03: BUY DBC, shares=29
+2025-03-08 08:34:01,801 - INFO - 2012-01-03: BUY LQD, shares=3
+2025-03-08 08:34:01,802 - INFO - === 2012-01-03 Rebalancing End ===
+2025-03-08 08:34:01,808 - INFO - 2012-01-04 00:00:00 OrderCompleted: SELL -57 EDV @ 119.23, Comm=6.80
+2025-03-08 08:34:01,809 - INFO - 2012-01-04 00:00:00 OrderCompleted: SELL -31 LTPZ @ 65.27, Comm=2.02
+2025-03-08 08:34:01,810 - INFO - 2012-01-04 00:00:00 OrderCompleted: BUY 37 EEM @ 38.74, Comm=1.43
+2025-03-08 08:34:01,812 - INFO - 2012-01-04 00:00:00 OrderCompleted: BUY 28 EFA @ 50.57, Comm=1.42
+2025-03-08 08:34:01,815 - INFO - 2012-01-04 00:00:00 OrderCompleted: BUY 24 EMLC @ 49.18, Comm=1.18
+2025-03-08 08:34:01,817 - INFO - 2012-01-04 00:00:00 OrderCompleted: BUY 9 VOO @ 116.44, Comm=1.05
+2025-03-08 08:34:01,820 - INFO - 2012-01-04 00:00:00 OrderCompleted: BUY 29 DBC @ 27.61, Comm=0.80
+2025-03-08 08:34:01,823 - INFO - 2012-01-04 00:00:00 OrderCompleted: BUY 3 LQD @ 113.75, Comm=0.34
+2025-03-08 08:34:10,158 - INFO - Period-end close for VOO: 130.38
+2025-03-08 08:34:10,161 - INFO - Period-end close for EFA: 56.86
+2025-03-08 08:34:10,163 - INFO - Period-end close for EEM: 44.35
+2025-03-08 08:34:10,165 - INFO - Period-end close for DBC: 27.78
+2025-03-08 08:34:10,167 - INFO - Period-end close for GLD: 162.02
+2025-03-08 08:34:10,170 - INFO - Period-end close for EDV: 116.00
+2025-03-08 08:34:10,172 - INFO - Period-end close for LTPZ: 71.65
+2025-03-08 08:34:10,173 - INFO - Period-end close for LQD: 120.99
+2025-03-08 08:34:10,174 - INFO - Period-end close for EMLC: 54.90
+2025-03-08 08:34:10,328 - INFO - [2013-01-02] Market regime disabled; using base allocation.
+2025-03-08 08:34:10,329 - INFO - === 2013-01-02 Rebalancing Start ===
+2025-03-08 08:34:10,331 - INFO - [Rebalancing Info] Date=2013-01-02, SPY Close=146.06, MA_21=142.77, MA_50=141.46, MA_150=139.85, MA_200=139.28
+2025-03-08 08:34:10,332 - INFO - Portfolio value=116474.43, cash buffer=1164.74, available=115309.68
+2025-03-08 08:34:10,333 - INFO - VOO: prev_close=130.38, current_size=112, alloc_ratio=0.12, adjust=-6
+2025-03-08 08:34:10,334 - INFO - EFA: prev_close=56.86, current_size=232, alloc_ratio=0.12, adjust=11
+2025-03-08 08:34:10,335 - INFO - EEM: prev_close=44.35, current_size=286, alloc_ratio=0.12, adjust=25
+2025-03-08 08:34:10,336 - INFO - DBC: prev_close=27.78, current_size=280, alloc_ratio=0.07, adjust=10
+2025-03-08 08:34:10,336 - INFO - GLD: prev_close=162.02, current_size=49, alloc_ratio=0.07, adjust=0
+2025-03-08 08:34:10,339 - INFO - EDV: prev_close=116.00, current_size=158, alloc_ratio=0.18, adjust=20
+2025-03-08 08:34:10,340 - INFO - LTPZ: prev_close=71.65, current_size=296, alloc_ratio=0.18, adjust=-7
+2025-03-08 08:34:10,342 - INFO - LQD: prev_close=120.99, current_size=66, alloc_ratio=0.07, adjust=0
+2025-03-08 08:34:10,343 - INFO - EMLC: prev_close=54.90, current_size=153, alloc_ratio=0.07, adjust=-6
+2025-03-08 08:34:10,344 - INFO - 2013-01-02: SELL VOO, shares=6
+2025-03-08 08:34:10,346 - INFO - 2013-01-02: SELL LTPZ, shares=7
+2025-03-08 08:34:10,347 - INFO - 2013-01-02: SELL EMLC, shares=6
+2025-03-08 08:34:10,348 - INFO - 2013-01-02: BUY EDV, shares=20
+2025-03-08 08:34:10,350 - INFO - 2013-01-02: BUY EEM, shares=25
+2025-03-08 08:34:10,351 - INFO - 2013-01-02: BUY EFA, shares=11
+2025-03-08 08:34:10,353 - INFO - 2013-01-02: BUY DBC, shares=10
+2025-03-08 08:34:10,357 - INFO - === 2013-01-02 Rebalancing End ===
+2025-03-08 08:34:10,366 - INFO - 2013-01-03 00:00:00 OrderCompleted: SELL -6 VOO @ 133.64, Comm=0.80
+2025-03-08 08:34:10,368 - INFO - 2013-01-03 00:00:00 OrderCompleted: SELL -7 LTPZ @ 70.96, Comm=0.50
+2025-03-08 08:34:10,370 - INFO - 2013-01-03 00:00:00 OrderCompleted: SELL -6 EMLC @ 54.80, Comm=0.33
+2025-03-08 08:34:10,371 - INFO - 2013-01-03 00:00:00 OrderCompleted: BUY 20 EDV @ 113.00, Comm=2.26
+2025-03-08 08:34:10,372 - INFO - 2013-01-03 00:00:00 OrderCompleted: BUY 25 EEM @ 44.90, Comm=1.12
+2025-03-08 08:34:10,373 - INFO - 2013-01-03 00:00:00 OrderCompleted: BUY 11 EFA @ 57.33, Comm=0.63
+2025-03-08 08:34:10,374 - INFO - 2013-01-03 00:00:00 OrderCompleted: BUY 10 DBC @ 27.75, Comm=0.28
+2025-03-08 08:34:18,717 - INFO - Period-end close for VOO: 169.15
+2025-03-08 08:34:18,720 - INFO - Period-end close for EFA: 67.10
+2025-03-08 08:34:18,722 - INFO - Period-end close for EEM: 41.80
+2025-03-08 08:34:18,723 - INFO - Period-end close for DBC: 25.66
+2025-03-08 08:34:18,723 - INFO - Period-end close for GLD: 116.12
+2025-03-08 08:34:18,724 - INFO - Period-end close for EDV: 88.77
+2025-03-08 08:34:18,725 - INFO - Period-end close for LTPZ: 57.19
+2025-03-08 08:34:18,725 - INFO - Period-end close for LQD: 114.19
+2025-03-08 08:34:18,726 - INFO - Period-end close for EMLC: 47.10
+2025-03-08 08:34:18,879 - INFO - [2014-01-02] Market regime disabled; using base allocation.
+2025-03-08 08:34:18,881 - INFO - === 2014-01-02 Rebalancing Start ===
+2025-03-08 08:34:18,883 - INFO - [Rebalancing Info] Date=2014-01-02, SPY Close=182.92, MA_21=181.13, MA_50=179.25, MA_150=170.96, MA_200=168.18
+2025-03-08 08:34:18,887 - INFO - Portfolio value=107700.72, cash buffer=1077.01, available=106623.71
+2025-03-08 08:34:18,891 - INFO - VOO: prev_close=169.15, current_size=106, alloc_ratio=0.12, adjust=-31
+2025-03-08 08:34:18,893 - INFO - EFA: prev_close=67.10, current_size=243, alloc_ratio=0.12, adjust=-53
+2025-03-08 08:34:18,897 - INFO - EEM: prev_close=41.80, current_size=311, alloc_ratio=0.12, adjust=-5
+2025-03-08 08:34:18,898 - INFO - DBC: prev_close=25.66, current_size=290, alloc_ratio=0.07, adjust=0
+2025-03-08 08:34:18,902 - INFO - GLD: prev_close=116.12, current_size=49, alloc_ratio=0.07, adjust=15
+2025-03-08 08:34:18,904 - INFO - EDV: prev_close=88.77, current_size=178, alloc_ratio=0.18, adjust=38
+2025-03-08 08:34:18,908 - INFO - LTPZ: prev_close=57.19, current_size=289, alloc_ratio=0.18, adjust=46
+2025-03-08 08:34:18,911 - INFO - LQD: prev_close=114.19, current_size=66, alloc_ratio=0.07, adjust=-1
+2025-03-08 08:34:18,913 - INFO - EMLC: prev_close=47.10, current_size=147, alloc_ratio=0.07, adjust=11
+2025-03-08 08:34:18,916 - INFO - 2014-01-02: SELL VOO, shares=31
+2025-03-08 08:34:18,921 - INFO - 2014-01-02: SELL EFA, shares=53
+2025-03-08 08:34:18,925 - INFO - 2014-01-02: SELL EEM, shares=5
+2025-03-08 08:34:18,928 - INFO - 2014-01-02: SELL LQD, shares=1
+2025-03-08 08:34:18,930 - WARNING - EDV: adjusting shares 38 -> 14 due to insufficient cash
+2025-03-08 08:34:18,932 - INFO - 2014-01-02: BUY EDV, shares=14
+2025-03-08 08:34:18,935 - WARNING - LTPZ: adjusting shares 46 -> 23 due to insufficient cash
+2025-03-08 08:34:18,938 - INFO - 2014-01-02: BUY LTPZ, shares=23
+2025-03-08 08:34:18,940 - WARNING - GLD: adjusting shares 15 -> 11 due to insufficient cash
+2025-03-08 08:34:18,944 - INFO - 2014-01-02: BUY GLD, shares=11
+2025-03-08 08:34:18,946 - INFO - 2014-01-02: BUY EMLC, shares=11
+2025-03-08 08:34:18,948 - INFO - === 2014-01-02 Rebalancing End ===
+2025-03-08 08:34:18,957 - INFO - 2014-01-03 00:00:00 OrderCompleted: SELL -31 VOO @ 167.88, Comm=5.20
+2025-03-08 08:34:18,961 - INFO - 2014-01-03 00:00:00 OrderCompleted: SELL -53 EFA @ 66.02, Comm=3.50
+2025-03-08 08:34:18,967 - INFO - 2014-01-03 00:00:00 OrderCompleted: SELL -5 EEM @ 40.39, Comm=0.20
+2025-03-08 08:34:18,974 - INFO - 2014-01-03 00:00:00 OrderCompleted: SELL -1 LQD @ 114.22, Comm=0.11
+2025-03-08 08:34:18,979 - INFO - 2014-01-03 00:00:00 OrderCompleted: BUY 14 EDV @ 88.86, Comm=1.24
+2025-03-08 08:34:18,982 - INFO - 2014-01-03 00:00:00 OrderCompleted: BUY 23 LTPZ @ 57.55, Comm=1.32
+2025-03-08 08:34:18,986 - INFO - 2014-01-03 00:00:00 OrderCompleted: BUY 11 GLD @ 118.64, Comm=1.31
+2025-03-08 08:34:18,991 - INFO - 2014-01-03 00:00:00 OrderCompleted: BUY 11 EMLC @ 46.90, Comm=0.52
+2025-03-08 08:34:27,498 - INFO - Period-end close for VOO: 188.40
+2025-03-08 08:34:27,500 - INFO - Period-end close for EFA: 60.84
+2025-03-08 08:34:27,501 - INFO - Period-end close for EEM: 39.29
+2025-03-08 08:34:27,502 - INFO - Period-end close for DBC: 18.45
+2025-03-08 08:34:27,503 - INFO - Period-end close for GLD: 113.58
+2025-03-08 08:34:27,504 - INFO - Period-end close for EDV: 123.94
+2025-03-08 08:34:27,505 - INFO - Period-end close for LTPZ: 67.21
+2025-03-08 08:34:27,509 - INFO - Period-end close for LQD: 119.41
+2025-03-08 08:34:27,511 - INFO - Period-end close for EMLC: 42.34
+2025-03-08 08:34:27,667 - INFO - [2015-01-02] Market regime disabled; using base allocation.
+2025-03-08 08:34:27,669 - INFO - === 2015-01-02 Rebalancing Start ===
+2025-03-08 08:34:27,670 - INFO - [Rebalancing Info] Date=2015-01-02, SPY Close=205.43, MA_21=205.53, MA_50=203.91, MA_150=198.77, MA_200=195.94
+2025-03-08 08:34:27,672 - INFO - Portfolio value=115527.95, cash buffer=1155.28, available=114372.67
+2025-03-08 08:34:27,673 - INFO - VOO: prev_close=188.40, current_size=75, alloc_ratio=0.12, adjust=-3
+2025-03-08 08:34:27,674 - INFO - EFA: prev_close=60.84, current_size=190, alloc_ratio=0.12, adjust=35
+2025-03-08 08:34:27,675 - INFO - EEM: prev_close=39.29, current_size=306, alloc_ratio=0.12, adjust=43
+2025-03-08 08:34:27,676 - INFO - DBC: prev_close=18.45, current_size=290, alloc_ratio=0.07, adjust=143
+2025-03-08 08:34:27,677 - INFO - GLD: prev_close=113.58, current_size=60, alloc_ratio=0.07, adjust=10
+2025-03-08 08:34:27,678 - INFO - EDV: prev_close=123.94, current_size=192, alloc_ratio=0.18, adjust=-26
+2025-03-08 08:34:27,681 - INFO - LTPZ: prev_close=67.21, current_size=312, alloc_ratio=0.18, adjust=-6
+2025-03-08 08:34:27,682 - INFO - LQD: prev_close=119.41, current_size=65, alloc_ratio=0.07, adjust=2
+2025-03-08 08:34:27,684 - INFO - EMLC: prev_close=42.34, current_size=158, alloc_ratio=0.07, adjust=31
+2025-03-08 08:34:27,685 - INFO - 2015-01-02: SELL VOO, shares=3
+2025-03-08 08:34:27,686 - INFO - 2015-01-02: SELL EDV, shares=26
+2025-03-08 08:34:27,688 - INFO - 2015-01-02: SELL LTPZ, shares=6
+2025-03-08 08:34:27,689 - INFO - 2015-01-02: BUY DBC, shares=143
+2025-03-08 08:34:27,690 - INFO - 2015-01-02: BUY EFA, shares=35
+2025-03-08 08:34:27,692 - INFO - 2015-01-02: BUY EEM, shares=43
+2025-03-08 08:34:27,693 - INFO - 2015-01-02: BUY EMLC, shares=31
+2025-03-08 08:34:27,695 - INFO - 2015-01-02: BUY GLD, shares=10
+2025-03-08 08:34:27,698 - INFO - 2015-01-02: BUY LQD, shares=2
+2025-03-08 08:34:27,700 - INFO - === 2015-01-02 Rebalancing End ===
+2025-03-08 08:34:27,709 - INFO - 2015-01-05 00:00:00 OrderCompleted: SELL -3 VOO @ 187.26, Comm=0.56
+2025-03-08 08:34:27,712 - INFO - 2015-01-05 00:00:00 OrderCompleted: SELL -26 EDV @ 127.44, Comm=3.31
+2025-03-08 08:34:27,714 - INFO - 2015-01-05 00:00:00 OrderCompleted: SELL -6 LTPZ @ 68.50, Comm=0.41
+2025-03-08 08:34:27,715 - INFO - 2015-01-05 00:00:00 OrderCompleted: BUY 143 DBC @ 18.15, Comm=2.60
+2025-03-08 08:34:27,716 - INFO - 2015-01-05 00:00:00 OrderCompleted: BUY 35 EFA @ 59.73, Comm=2.09
+2025-03-08 08:34:27,717 - INFO - 2015-01-05 00:00:00 OrderCompleted: BUY 43 EEM @ 38.52, Comm=1.66
+2025-03-08 08:34:27,718 - INFO - 2015-01-05 00:00:00 OrderCompleted: BUY 31 EMLC @ 41.98, Comm=1.30
+2025-03-08 08:34:27,719 - INFO - 2015-01-05 00:00:00 OrderCompleted: BUY 10 GLD @ 114.78, Comm=1.15
+2025-03-08 08:34:27,720 - INFO - 2015-01-05 00:00:00 OrderCompleted: BUY 2 LQD @ 120.19, Comm=0.24
+2025-03-08 08:34:36,724 - INFO - Period-end close for VOO: 186.93
+2025-03-08 08:34:36,726 - INFO - Period-end close for EFA: 58.72
+2025-03-08 08:34:36,727 - INFO - Period-end close for EEM: 32.19
+2025-03-08 08:34:36,728 - INFO - Period-end close for DBC: 13.36
+2025-03-08 08:34:36,729 - INFO - Period-end close for GLD: 101.46
+2025-03-08 08:34:36,729 - INFO - Period-end close for EDV: 113.20
+2025-03-08 08:34:36,729 - INFO - Period-end close for LTPZ: 60.86
+2025-03-08 08:34:36,731 - INFO - Period-end close for LQD: 114.01
+2025-03-08 08:34:36,732 - INFO - Period-end close for EMLC: 34.00
+2025-03-08 08:34:36,881 - INFO - [2016-01-04] Market regime disabled; using base allocation.
+2025-03-08 08:34:36,884 - INFO - === 2016-01-04 Rebalancing Start ===
+2025-03-08 08:34:36,886 - INFO - [Rebalancing Info] Date=2016-01-04, SPY Close=201.02, MA_21=204.99, MA_50=206.87, MA_150=204.91, MA_200=206.16
+2025-03-08 08:34:36,888 - INFO - Portfolio value=103153.74, cash buffer=1031.54, available=102122.21
+2025-03-08 08:34:36,891 - INFO - VOO: prev_close=186.93, current_size=72, alloc_ratio=0.12, adjust=-7
+2025-03-08 08:34:36,892 - INFO - EFA: prev_close=58.72, current_size=225, alloc_ratio=0.12, adjust=-17
+2025-03-08 08:34:36,895 - INFO - EEM: prev_close=32.19, current_size=349, alloc_ratio=0.12, adjust=31
+2025-03-08 08:34:36,898 - INFO - DBC: prev_close=13.36, current_size=433, alloc_ratio=0.07, adjust=102
+2025-03-08 08:34:36,899 - INFO - GLD: prev_close=101.46, current_size=70, alloc_ratio=0.07, adjust=0
+2025-03-08 08:34:36,901 - INFO - EDV: prev_close=113.20, current_size=166, alloc_ratio=0.18, adjust=-4
+2025-03-08 08:34:36,902 - INFO - LTPZ: prev_close=60.86, current_size=306, alloc_ratio=0.18, adjust=-4
+2025-03-08 08:34:36,905 - INFO - LQD: prev_close=114.01, current_size=67, alloc_ratio=0.07, adjust=-5
+2025-03-08 08:34:36,910 - INFO - EMLC: prev_close=34.00, current_size=189, alloc_ratio=0.07, adjust=21
+2025-03-08 08:34:36,917 - INFO - 2016-01-04: SELL VOO, shares=7
+2025-03-08 08:34:36,919 - INFO - 2016-01-04: SELL EFA, shares=17
+2025-03-08 08:34:36,923 - INFO - 2016-01-04: SELL EDV, shares=4
+2025-03-08 08:34:36,926 - INFO - 2016-01-04: SELL LTPZ, shares=4
+2025-03-08 08:34:36,931 - INFO - 2016-01-04: SELL LQD, shares=5
+2025-03-08 08:34:36,933 - WARNING - DBC: adjusting shares 102 -> 88 due to insufficient cash
+2025-03-08 08:34:36,935 - INFO - 2016-01-04: BUY DBC, shares=88
+2025-03-08 08:34:36,940 - INFO - 2016-01-04: BUY EEM, shares=31
+2025-03-08 08:34:36,941 - INFO - 2016-01-04: BUY EMLC, shares=21
+2025-03-08 08:34:36,943 - INFO - === 2016-01-04 Rebalancing End ===
+2025-03-08 08:34:36,951 - INFO - 2016-01-05 00:00:00 OrderCompleted: SELL -7 VOO @ 184.57, Comm=1.29
+2025-03-08 08:34:36,953 - INFO - 2016-01-05 00:00:00 OrderCompleted: SELL -17 EFA @ 57.71, Comm=0.98
+2025-03-08 08:34:36,954 - INFO - 2016-01-05 00:00:00 OrderCompleted: SELL -4 EDV @ 114.32, Comm=0.46
+2025-03-08 08:34:36,955 - INFO - 2016-01-05 00:00:00 OrderCompleted: SELL -4 LTPZ @ 60.88, Comm=0.24
+2025-03-08 08:34:36,956 - INFO - 2016-01-05 00:00:00 OrderCompleted: SELL -5 LQD @ 114.09, Comm=0.57
+2025-03-08 08:34:36,957 - INFO - 2016-01-05 00:00:00 OrderCompleted: BUY 88 DBC @ 13.22, Comm=1.16
+2025-03-08 08:34:36,959 - INFO - 2016-01-05 00:00:00 OrderCompleted: BUY 31 EEM @ 31.45, Comm=0.97
+2025-03-08 08:34:36,960 - INFO - 2016-01-05 00:00:00 OrderCompleted: BUY 21 EMLC @ 33.62, Comm=0.71
+2025-03-08 08:34:44,772 - INFO - Period-end close for VOO: 205.31
+2025-03-08 08:34:44,776 - INFO - Period-end close for EFA: 57.73
+2025-03-08 08:34:44,778 - INFO - Period-end close for EEM: 35.01
+2025-03-08 08:34:44,781 - INFO - Period-end close for DBC: 15.84
+2025-03-08 08:34:44,782 - INFO - Period-end close for GLD: 109.61
+2025-03-08 08:34:44,783 - INFO - Period-end close for EDV: 109.42
+2025-03-08 08:34:44,784 - INFO - Period-end close for LTPZ: 64.97
+2025-03-08 08:34:44,785 - INFO - Period-end close for LQD: 117.18
+2025-03-08 08:34:44,786 - INFO - Period-end close for EMLC: 35.20
+2025-03-08 08:34:44,936 - INFO - [2017-01-03] Market regime disabled; using base allocation.
+2025-03-08 08:34:44,938 - INFO - === 2017-01-03 Rebalancing Start ===
+2025-03-08 08:34:44,939 - INFO - [Rebalancing Info] Date=2017-01-03, SPY Close=225.24, MA_21=224.90, MA_50=219.75, MA_150=216.05, MA_200=213.68
+2025-03-08 08:34:44,941 - INFO - Portfolio value=108983.45, cash buffer=1089.83, available=107893.61
+2025-03-08 08:34:44,942 - INFO - VOO: prev_close=205.31, current_size=65, alloc_ratio=0.12, adjust=-2
+2025-03-08 08:34:44,945 - INFO - EFA: prev_close=57.73, current_size=208, alloc_ratio=0.12, adjust=16
+2025-03-08 08:34:44,946 - INFO - EEM: prev_close=35.01, current_size=380, alloc_ratio=0.12, adjust=-11
+2025-03-08 08:34:44,947 - INFO - DBC: prev_close=15.84, current_size=521, alloc_ratio=0.07, adjust=-45
+2025-03-08 08:34:44,948 - INFO - GLD: prev_close=109.61, current_size=70, alloc_ratio=0.07, adjust=-2
+2025-03-08 08:34:44,949 - INFO - EDV: prev_close=109.42, current_size=162, alloc_ratio=0.18, adjust=15
+2025-03-08 08:34:44,949 - INFO - LTPZ: prev_close=64.97, current_size=302, alloc_ratio=0.18, adjust=-4
+2025-03-08 08:34:44,953 - INFO - LQD: prev_close=117.18, current_size=62, alloc_ratio=0.07, adjust=2
+2025-03-08 08:34:44,954 - INFO - EMLC: prev_close=35.20, current_size=210, alloc_ratio=0.07, adjust=4
+2025-03-08 08:34:44,955 - INFO - 2017-01-03: SELL VOO, shares=2
+2025-03-08 08:34:44,956 - INFO - 2017-01-03: SELL EEM, shares=11
+2025-03-08 08:34:44,962 - INFO - 2017-01-03: SELL DBC, shares=45
+2025-03-08 08:34:44,965 - INFO - 2017-01-03: SELL GLD, shares=2
+2025-03-08 08:34:44,967 - INFO - 2017-01-03: SELL LTPZ, shares=4
+2025-03-08 08:34:44,970 - INFO - 2017-01-03: BUY EDV, shares=15
+2025-03-08 08:34:44,972 - INFO - 2017-01-03: BUY EFA, shares=16
+2025-03-08 08:34:44,974 - INFO - 2017-01-03: BUY LQD, shares=2
+2025-03-08 08:34:44,974 - INFO - 2017-01-03: BUY EMLC, shares=4
+2025-03-08 08:34:44,975 - INFO - === 2017-01-03 Rebalancing End ===
+2025-03-08 08:34:44,983 - INFO - 2017-01-04 00:00:00 OrderCompleted: SELL -2 VOO @ 207.20, Comm=0.41
+2025-03-08 08:34:44,985 - INFO - 2017-01-04 00:00:00 OrderCompleted: SELL -11 EEM @ 35.63, Comm=0.39
+2025-03-08 08:34:44,988 - INFO - 2017-01-04 00:00:00 OrderCompleted: SELL -45 DBC @ 15.66, Comm=0.70
+2025-03-08 08:34:44,995 - INFO - 2017-01-04 00:00:00 OrderCompleted: SELL -2 GLD @ 111.06, Comm=0.22
+2025-03-08 08:34:44,998 - INFO - 2017-01-04 00:00:00 OrderCompleted: SELL -4 LTPZ @ 65.55, Comm=0.26
+2025-03-08 08:34:45,000 - INFO - 2017-01-04 00:00:00 OrderCompleted: BUY 15 EDV @ 110.14, Comm=1.65
+2025-03-08 08:34:45,003 - INFO - 2017-01-04 00:00:00 OrderCompleted: BUY 16 EFA @ 58.40, Comm=0.93
+2025-03-08 08:34:45,008 - INFO - 2017-01-04 00:00:00 OrderCompleted: BUY 2 LQD @ 117.53, Comm=0.24
+2025-03-08 08:34:45,010 - INFO - 2017-01-04 00:00:00 OrderCompleted: BUY 4 EMLC @ 35.00, Comm=0.14
+2025-03-08 08:34:52,958 - INFO - Period-end close for VOO: 245.29
+2025-03-08 08:34:52,961 - INFO - Period-end close for EFA: 70.31
+2025-03-08 08:34:52,961 - INFO - Period-end close for EEM: 47.12
+2025-03-08 08:34:52,964 - INFO - Period-end close for DBC: 16.61
+2025-03-08 08:34:52,966 - INFO - Period-end close for GLD: 123.65
+2025-03-08 08:34:52,978 - INFO - Period-end close for EDV: 120.99
+2025-03-08 08:34:52,980 - INFO - Period-end close for LTPZ: 69.23
+2025-03-08 08:34:52,983 - INFO - Period-end close for LQD: 121.56
+2025-03-08 08:34:52,986 - INFO - Period-end close for EMLC: 37.96
+2025-03-08 08:34:53,192 - INFO - [2018-01-02] Market regime disabled; using base allocation.
+2025-03-08 08:34:53,194 - INFO - === 2018-01-02 Rebalancing Start ===
+2025-03-08 08:34:53,195 - INFO - [Rebalancing Info] Date=2018-01-02, SPY Close=268.77, MA_21=266.29, MA_50=261.78, MA_150=251.85, MA_200=248.15
+2025-03-08 08:34:53,198 - INFO - Portfolio value=124014.92, cash buffer=1240.15, available=122774.77
+2025-03-08 08:34:53,199 - INFO - VOO: prev_close=245.29, current_size=63, alloc_ratio=0.12, adjust=-3
+2025-03-08 08:34:53,200 - INFO - EFA: prev_close=70.31, current_size=224, alloc_ratio=0.12, adjust=-15
+2025-03-08 08:34:53,201 - INFO - EEM: prev_close=47.12, current_size=369, alloc_ratio=0.12, adjust=-57
+2025-03-08 08:34:53,203 - INFO - DBC: prev_close=16.61, current_size=476, alloc_ratio=0.07, adjust=41
+2025-03-08 08:34:53,206 - INFO - GLD: prev_close=123.65, current_size=68, alloc_ratio=0.07, adjust=1
+2025-03-08 08:34:53,207 - INFO - EDV: prev_close=120.99, current_size=177, alloc_ratio=0.18, adjust=5
+2025-03-08 08:34:53,211 - INFO - LTPZ: prev_close=69.23, current_size=298, alloc_ratio=0.18, adjust=21
+2025-03-08 08:34:53,214 - INFO - LQD: prev_close=121.56, current_size=64, alloc_ratio=0.07, adjust=6
+2025-03-08 08:34:53,216 - INFO - EMLC: prev_close=37.96, current_size=214, alloc_ratio=0.07, adjust=12
+2025-03-08 08:34:53,217 - INFO - 2018-01-02: SELL VOO, shares=3
+2025-03-08 08:34:53,222 - INFO - 2018-01-02: SELL EFA, shares=15
+2025-03-08 08:34:53,226 - INFO - 2018-01-02: SELL EEM, shares=57
+2025-03-08 08:34:53,228 - WARNING - LTPZ: adjusting shares 21 -> 13 due to insufficient cash
+2025-03-08 08:34:53,230 - INFO - 2018-01-02: BUY LTPZ, shares=13
+2025-03-08 08:34:53,233 - INFO - 2018-01-02: BUY LQD, shares=6
+2025-03-08 08:34:53,235 - INFO - 2018-01-02: BUY DBC, shares=41
+2025-03-08 08:34:53,238 - INFO - 2018-01-02: BUY EDV, shares=5
+2025-03-08 08:34:53,243 - INFO - 2018-01-02: BUY EMLC, shares=12
+2025-03-08 08:34:53,247 - INFO - 2018-01-02: BUY GLD, shares=1
+2025-03-08 08:34:53,251 - INFO - === 2018-01-02 Rebalancing End ===
+2025-03-08 08:34:53,266 - INFO - 2018-01-03 00:00:00 OrderCompleted: SELL -3 VOO @ 247.24, Comm=0.74
+2025-03-08 08:34:53,269 - INFO - 2018-01-03 00:00:00 OrderCompleted: SELL -15 EFA @ 70.89, Comm=1.06
+2025-03-08 08:34:53,271 - INFO - 2018-01-03 00:00:00 OrderCompleted: SELL -57 EEM @ 48.29, Comm=2.75
+2025-03-08 08:34:53,274 - INFO - 2018-01-03 00:00:00 OrderCompleted: BUY 13 LTPZ @ 68.84, Comm=0.89
+2025-03-08 08:34:53,278 - INFO - 2018-01-03 00:00:00 OrderCompleted: BUY 6 LQD @ 120.94, Comm=0.73
+2025-03-08 08:34:53,282 - INFO - 2018-01-03 00:00:00 OrderCompleted: BUY 41 DBC @ 16.74, Comm=0.69
+2025-03-08 08:34:53,284 - INFO - 2018-01-03 00:00:00 OrderCompleted: BUY 5 EDV @ 119.65, Comm=0.60
+2025-03-08 08:34:53,285 - INFO - 2018-01-03 00:00:00 OrderCompleted: BUY 12 EMLC @ 38.42, Comm=0.46
+2025-03-08 08:34:53,290 - INFO - 2018-01-03 00:00:00 OrderCompleted: BUY 1 GLD @ 125.05, Comm=0.13
+2025-03-08 08:35:02,225 - INFO - Period-end close for VOO: 229.81
+2025-03-08 08:35:02,227 - INFO - Period-end close for EFA: 58.78
+2025-03-08 08:35:02,228 - INFO - Period-end close for EEM: 39.06
+2025-03-08 08:35:02,229 - INFO - Period-end close for DBC: 14.49
+2025-03-08 08:35:02,230 - INFO - Period-end close for GLD: 121.25
+2025-03-08 08:35:02,231 - INFO - Period-end close for EDV: 113.46
+2025-03-08 08:35:02,232 - INFO - Period-end close for LTPZ: 62.39
+2025-03-08 08:35:02,234 - INFO - Period-end close for LQD: 112.82
+2025-03-08 08:35:02,234 - INFO - Period-end close for EMLC: 33.00
+2025-03-08 08:35:02,388 - INFO - [2019-01-02] Market regime disabled; using base allocation.
+2025-03-08 08:35:02,390 - INFO - === 2019-01-02 Rebalancing Start ===
+2025-03-08 08:35:02,392 - INFO - [Rebalancing Info] Date=2019-01-02, SPY Close=250.18, MA_21=257.34, MA_50=265.45, MA_150=276.67, MA_200=274.22
+2025-03-08 08:35:02,393 - INFO - Portfolio value=111818.32, cash buffer=1118.18, available=110700.14
+2025-03-08 08:35:02,394 - INFO - VOO: prev_close=229.81, current_size=60, alloc_ratio=0.12, adjust=-3
+2025-03-08 08:35:02,395 - INFO - EFA: prev_close=58.78, current_size=209, alloc_ratio=0.12, adjust=16
+2025-03-08 08:35:02,396 - INFO - EEM: prev_close=39.06, current_size=312, alloc_ratio=0.12, adjust=28
+2025-03-08 08:35:02,397 - INFO - DBC: prev_close=14.49, current_size=517, alloc_ratio=0.07, adjust=17
+2025-03-08 08:35:02,399 - INFO - GLD: prev_close=121.25, current_size=69, alloc_ratio=0.07, adjust=-6
+2025-03-08 08:35:02,401 - INFO - EDV: prev_close=113.46, current_size=182, alloc_ratio=0.18, adjust=-7
+2025-03-08 08:35:02,404 - INFO - LTPZ: prev_close=62.39, current_size=311, alloc_ratio=0.18, adjust=8
+2025-03-08 08:35:02,406 - INFO - LQD: prev_close=112.82, current_size=70, alloc_ratio=0.07, adjust=-2
+2025-03-08 08:35:02,409 - INFO - EMLC: prev_close=33.00, current_size=226, alloc_ratio=0.07, adjust=8
+2025-03-08 08:35:02,411 - INFO - 2019-01-02: SELL VOO, shares=3
+2025-03-08 08:35:02,413 - INFO - 2019-01-02: SELL GLD, shares=6
+2025-03-08 08:35:02,415 - INFO - 2019-01-02: SELL EDV, shares=7
+2025-03-08 08:35:02,417 - INFO - 2019-01-02: SELL LQD, shares=2
+2025-03-08 08:35:02,420 - INFO - 2019-01-02: BUY EEM, shares=28
+2025-03-08 08:35:02,421 - INFO - 2019-01-02: BUY EFA, shares=16
+2025-03-08 08:35:02,423 - INFO - 2019-01-02: BUY LTPZ, shares=8
+2025-03-08 08:35:02,425 - INFO - 2019-01-02: BUY EMLC, shares=8
+2025-03-08 08:35:02,426 - INFO - 2019-01-02: BUY DBC, shares=17
+2025-03-08 08:35:02,427 - INFO - === 2019-01-02 Rebalancing End ===
+2025-03-08 08:35:02,436 - INFO - 2019-01-03 00:00:00 OrderCompleted: SELL -3 VOO @ 228.10, Comm=0.68
+2025-03-08 08:35:02,438 - INFO - 2019-01-03 00:00:00 OrderCompleted: SELL -6 GLD @ 121.78, Comm=0.73
+2025-03-08 08:35:02,438 - INFO - 2019-01-03 00:00:00 OrderCompleted: SELL -7 EDV @ 114.46, Comm=0.80
+2025-03-08 08:35:02,439 - INFO - 2019-01-03 00:00:00 OrderCompleted: SELL -2 LQD @ 113.00, Comm=0.23
+2025-03-08 08:35:02,441 - INFO - 2019-01-03 00:00:00 OrderCompleted: BUY 28 EEM @ 38.73, Comm=1.08
+2025-03-08 08:35:02,441 - INFO - 2019-01-03 00:00:00 OrderCompleted: BUY 16 EFA @ 58.52, Comm=0.94
+2025-03-08 08:35:02,443 - INFO - 2019-01-03 00:00:00 OrderCompleted: BUY 8 LTPZ @ 62.89, Comm=0.50
+2025-03-08 08:35:02,443 - INFO - 2019-01-03 00:00:00 OrderCompleted: BUY 8 EMLC @ 33.12, Comm=0.26
+2025-03-08 08:35:02,444 - INFO - 2019-01-03 00:00:00 OrderCompleted: BUY 17 DBC @ 14.64, Comm=0.25
+2025-03-08 08:35:11,100 - INFO - Period-end close for VOO: 295.80
+2025-03-08 08:35:11,101 - INFO - Period-end close for EFA: 69.44
+2025-03-08 08:35:11,102 - INFO - Period-end close for EEM: 44.87
+2025-03-08 08:35:11,104 - INFO - Period-end close for DBC: 15.95
+2025-03-08 08:35:11,105 - INFO - Period-end close for GLD: 142.90
+2025-03-08 08:35:11,105 - INFO - Period-end close for EDV: 129.98
+2025-03-08 08:35:11,106 - INFO - Period-end close for LTPZ: 72.03
+2025-03-08 08:35:11,108 - INFO - Period-end close for LQD: 127.96
+2025-03-08 08:35:11,109 - INFO - Period-end close for EMLC: 34.01
+2025-03-08 08:35:11,236 - INFO - [2020-01-02] Market regime disabled; using base allocation.
+2025-03-08 08:35:11,238 - INFO - === 2020-01-02 Rebalancing Start ===
+2025-03-08 08:35:11,239 - INFO - [Rebalancing Info] Date=2020-01-02, SPY Close=324.87, MA_21=318.12, MA_50=312.25, MA_150=299.98, MA_200=296.66
+2025-03-08 08:35:11,240 - INFO - Portfolio value=130385.27, cash buffer=1303.85, available=129081.42
+2025-03-08 08:35:11,241 - INFO - VOO: prev_close=295.80, current_size=57, alloc_ratio=0.12, adjust=-5
+2025-03-08 08:35:11,242 - INFO - EFA: prev_close=69.44, current_size=225, alloc_ratio=0.12, adjust=-2
+2025-03-08 08:35:11,243 - INFO - EEM: prev_close=44.87, current_size=340, alloc_ratio=0.12, adjust=5
+2025-03-08 08:35:11,244 - INFO - DBC: prev_close=15.95, current_size=534, alloc_ratio=0.07, adjust=32
+2025-03-08 08:35:11,245 - INFO - GLD: prev_close=142.90, current_size=63, alloc_ratio=0.07, adjust=0
+2025-03-08 08:35:11,246 - INFO - EDV: prev_close=129.98, current_size=175, alloc_ratio=0.18, adjust=3
+2025-03-08 08:35:11,247 - INFO - LTPZ: prev_close=72.03, current_size=319, alloc_ratio=0.18, adjust=3
+2025-03-08 08:35:11,248 - INFO - LQD: prev_close=127.96, current_size=68, alloc_ratio=0.07, adjust=2
+2025-03-08 08:35:11,249 - INFO - EMLC: prev_close=34.01, current_size=234, alloc_ratio=0.07, adjust=31
+2025-03-08 08:35:11,250 - INFO - 2020-01-02: SELL VOO, shares=5
+2025-03-08 08:35:11,252 - INFO - 2020-01-02: SELL EFA, shares=2
+2025-03-08 08:35:11,253 - INFO - 2020-01-02: BUY EMLC, shares=31
+2025-03-08 08:35:11,255 - INFO - 2020-01-02: BUY DBC, shares=32
+2025-03-08 08:35:11,257 - INFO - 2020-01-02: BUY EDV, shares=3
+2025-03-08 08:35:11,260 - INFO - 2020-01-02: BUY LQD, shares=2
+2025-03-08 08:35:11,263 - INFO - 2020-01-02: BUY EEM, shares=5
+2025-03-08 08:35:11,265 - INFO - 2020-01-02: BUY LTPZ, shares=3
+2025-03-08 08:35:11,266 - INFO - === 2020-01-02 Rebalancing End ===
+2025-03-08 08:35:11,271 - INFO - 2020-01-03 00:00:00 OrderCompleted: SELL -5 VOO @ 295.22, Comm=1.48
+2025-03-08 08:35:11,272 - INFO - 2020-01-03 00:00:00 OrderCompleted: SELL -2 EFA @ 69.19, Comm=0.14
+2025-03-08 08:35:11,272 - INFO - 2020-01-03 00:00:00 OrderCompleted: BUY 31 EMLC @ 33.89, Comm=1.05
+2025-03-08 08:35:11,273 - INFO - 2020-01-03 00:00:00 OrderCompleted: BUY 32 DBC @ 16.23, Comm=0.52
+2025-03-08 08:35:11,274 - INFO - 2020-01-03 00:00:00 OrderCompleted: BUY 3 EDV @ 133.28, Comm=0.40
+2025-03-08 08:35:11,275 - INFO - 2020-01-03 00:00:00 OrderCompleted: BUY 2 LQD @ 128.40, Comm=0.26
+2025-03-08 08:35:11,277 - INFO - 2020-01-03 00:00:00 OrderCompleted: BUY 5 EEM @ 45.03, Comm=0.23
+2025-03-08 08:35:11,277 - INFO - 2020-01-03 00:00:00 OrderCompleted: BUY 3 LTPZ @ 73.91, Comm=0.22
+2025-03-08 08:35:20,681 - INFO - Period-end close for VOO: 343.69
+2025-03-08 08:35:20,683 - INFO - Period-end close for EFA: 72.96
+2025-03-08 08:35:20,685 - INFO - Period-end close for EEM: 51.67
+2025-03-08 08:35:20,687 - INFO - Period-end close for DBC: 14.70
+2025-03-08 08:35:20,688 - INFO - Period-end close for GLD: 178.36
+2025-03-08 08:35:20,689 - INFO - Period-end close for EDV: 152.30
+2025-03-08 08:35:20,691 - INFO - Period-end close for LTPZ: 88.62
+2025-03-08 08:35:20,693 - INFO - Period-end close for LQD: 138.13
+2025-03-08 08:35:20,696 - INFO - Period-end close for EMLC: 33.27
+2025-03-08 08:35:20,888 - INFO - [2021-01-04] Market regime disabled; using base allocation.
+2025-03-08 08:35:20,891 - INFO - === 2021-01-04 Rebalancing Start ===
+2025-03-08 08:35:20,893 - INFO - [Rebalancing Info] Date=2021-01-04, SPY Close=368.79, MA_21=369.12, MA_50=358.48, MA_150=338.68, MA_200=323.50
+2025-03-08 08:35:20,895 - INFO - Portfolio value=146257.40, cash buffer=1462.57, available=144794.83
+2025-03-08 08:35:20,898 - INFO - VOO: prev_close=343.69, current_size=52, alloc_ratio=0.12, adjust=-2
+2025-03-08 08:35:20,899 - INFO - EFA: prev_close=72.96, current_size=223, alloc_ratio=0.12, adjust=15
+2025-03-08 08:35:20,903 - INFO - EEM: prev_close=51.67, current_size=345, alloc_ratio=0.12, adjust=-9
+2025-03-08 08:35:20,905 - INFO - DBC: prev_close=14.70, current_size=566, alloc_ratio=0.07, adjust=123
+2025-03-08 08:35:20,910 - INFO - GLD: prev_close=178.36, current_size=63, alloc_ratio=0.07, adjust=-7
+2025-03-08 08:35:20,912 - INFO - EDV: prev_close=152.30, current_size=178, alloc_ratio=0.18, adjust=-7
+2025-03-08 08:35:20,914 - INFO - LTPZ: prev_close=88.62, current_size=322, alloc_ratio=0.18, adjust=-28
+2025-03-08 08:35:20,917 - INFO - LQD: prev_close=138.13, current_size=70, alloc_ratio=0.07, adjust=3
+2025-03-08 08:35:20,921 - INFO - EMLC: prev_close=33.27, current_size=265, alloc_ratio=0.07, adjust=39
+2025-03-08 08:35:20,925 - INFO - 2021-01-04: SELL VOO, shares=2
+2025-03-08 08:35:20,927 - INFO - 2021-01-04: SELL EEM, shares=9
+2025-03-08 08:35:20,930 - INFO - 2021-01-04: SELL GLD, shares=7
+2025-03-08 08:35:20,934 - INFO - 2021-01-04: SELL EDV, shares=7
+2025-03-08 08:35:20,936 - INFO - 2021-01-04: SELL LTPZ, shares=28
+2025-03-08 08:35:20,939 - WARNING - DBC: adjusting shares 123 -> 20 due to insufficient cash
+2025-03-08 08:35:20,941 - INFO - 2021-01-04: BUY DBC, shares=20
+2025-03-08 08:35:20,944 - WARNING - EMLC: adjusting shares 39 -> 8 due to insufficient cash
+2025-03-08 08:35:20,946 - INFO - 2021-01-04: BUY EMLC, shares=8
+2025-03-08 08:35:20,948 - WARNING - EFA: adjusting shares 15 -> 4 due to insufficient cash
+2025-03-08 08:35:20,949 - INFO - 2021-01-04: BUY EFA, shares=4
+2025-03-08 08:35:20,951 - WARNING - LQD: adjusting shares 3 -> 2 due to insufficient cash
+2025-03-08 08:35:20,954 - INFO - 2021-01-04: BUY LQD, shares=2
+2025-03-08 08:35:20,956 - INFO - === 2021-01-04 Rebalancing End ===
+2025-03-08 08:35:20,967 - INFO - 2021-01-05 00:00:00 OrderCompleted: SELL -2 VOO @ 338.40, Comm=0.68
+2025-03-08 08:35:20,969 - INFO - 2021-01-05 00:00:00 OrderCompleted: SELL -9 EEM @ 52.49, Comm=0.47
+2025-03-08 08:35:20,970 - INFO - 2021-01-05 00:00:00 OrderCompleted: SELL -7 GLD @ 182.87, Comm=1.28
+2025-03-08 08:35:20,972 - INFO - 2021-01-05 00:00:00 OrderCompleted: SELL -7 EDV @ 151.55, Comm=1.06
+2025-03-08 08:35:20,974 - INFO - 2021-01-05 00:00:00 OrderCompleted: SELL -28 LTPZ @ 88.62, Comm=2.48
+2025-03-08 08:35:20,975 - INFO - 2021-01-05 00:00:00 OrderCompleted: BUY 20 DBC @ 14.89, Comm=0.30
+2025-03-08 08:35:20,978 - INFO - 2021-01-05 00:00:00 OrderCompleted: BUY 8 EMLC @ 33.22, Comm=0.27
+2025-03-08 08:35:20,980 - INFO - 2021-01-05 00:00:00 OrderCompleted: BUY 4 EFA @ 73.58, Comm=0.29
+2025-03-08 08:35:20,981 - INFO - 2021-01-05 00:00:00 OrderCompleted: BUY 2 LQD @ 137.06, Comm=0.27
+2025-03-08 08:35:29,590 - INFO - Period-end close for VOO: 436.57
+2025-03-08 08:35:29,592 - INFO - Period-end close for EFA: 78.68
+2025-03-08 08:35:29,594 - INFO - Period-end close for EEM: 48.85
+2025-03-08 08:35:29,595 - INFO - Period-end close for DBC: 20.78
+2025-03-08 08:35:29,596 - INFO - Period-end close for GLD: 170.96
+2025-03-08 08:35:29,597 - INFO - Period-end close for EDV: 140.00
+2025-03-08 08:35:29,599 - INFO - Period-end close for LTPZ: 91.35
+2025-03-08 08:35:29,600 - INFO - Period-end close for LQD: 132.52
+2025-03-08 08:35:29,601 - INFO - Period-end close for EMLC: 28.60
+2025-03-08 08:35:29,774 - INFO - [2022-01-03] Market regime disabled; using base allocation.
+2025-03-08 08:35:29,776 - INFO - === 2022-01-03 Rebalancing Start ===
+2025-03-08 08:35:29,777 - INFO - [Rebalancing Info] Date=2022-01-03, SPY Close=477.71, MA_21=468.13, MA_50=465.11, MA_150=446.51, MA_200=437.64
+2025-03-08 08:35:29,778 - INFO - Portfolio value=149921.54, cash buffer=1499.22, available=148422.32
+2025-03-08 08:35:29,779 - INFO - VOO: prev_close=436.57, current_size=50, alloc_ratio=0.12, adjust=-10
+2025-03-08 08:35:29,780 - INFO - EFA: prev_close=78.68, current_size=227, alloc_ratio=0.12, adjust=-1
+2025-03-08 08:35:29,780 - INFO - EEM: prev_close=48.85, current_size=336, alloc_ratio=0.12, adjust=28
+2025-03-08 08:35:29,781 - INFO - DBC: prev_close=20.78, current_size=586, alloc_ratio=0.07, adjust=-87
+2025-03-08 08:35:29,783 - INFO - GLD: prev_close=170.96, current_size=56, alloc_ratio=0.07, adjust=4
+2025-03-08 08:35:29,784 - INFO - EDV: prev_close=140.00, current_size=171, alloc_ratio=0.18, adjust=19
+2025-03-08 08:35:29,785 - INFO - LTPZ: prev_close=91.35, current_size=294, alloc_ratio=0.18, adjust=-2
+2025-03-08 08:35:29,786 - INFO - LQD: prev_close=132.52, current_size=72, alloc_ratio=0.07, adjust=6
+2025-03-08 08:35:29,787 - INFO - EMLC: prev_close=28.60, current_size=273, alloc_ratio=0.07, adjust=90
+2025-03-08 08:35:29,788 - INFO - 2022-01-03: SELL VOO, shares=10
+2025-03-08 08:35:29,789 - INFO - 2022-01-03: SELL EFA, shares=1
+2025-03-08 08:35:29,791 - INFO - 2022-01-03: SELL DBC, shares=87
+2025-03-08 08:35:29,792 - INFO - 2022-01-03: SELL LTPZ, shares=2
+2025-03-08 08:35:29,795 - INFO - 2022-01-03: BUY EDV, shares=19
+2025-03-08 08:35:29,797 - INFO - 2022-01-03: BUY EMLC, shares=90
+2025-03-08 08:35:29,799 - INFO - 2022-01-03: BUY EEM, shares=28
+2025-03-08 08:35:29,800 - INFO - 2022-01-03: BUY LQD, shares=6
+2025-03-08 08:35:29,802 - INFO - 2022-01-03: BUY GLD, shares=4
+2025-03-08 08:35:29,803 - INFO - === 2022-01-03 Rebalancing End ===
+2025-03-08 08:35:29,810 - INFO - 2022-01-04 00:00:00 OrderCompleted: SELL -10 VOO @ 440.58, Comm=4.41
+2025-03-08 08:35:29,812 - INFO - 2022-01-04 00:00:00 OrderCompleted: SELL -1 EFA @ 79.68, Comm=0.08
+2025-03-08 08:35:29,813 - INFO - 2022-01-04 00:00:00 OrderCompleted: SELL -87 DBC @ 21.00, Comm=1.83
+2025-03-08 08:35:29,814 - INFO - 2022-01-04 00:00:00 OrderCompleted: SELL -2 LTPZ @ 88.86, Comm=0.18
+2025-03-08 08:35:29,816 - INFO - 2022-01-04 00:00:00 OrderCompleted: BUY 19 EDV @ 134.76, Comm=2.56
+2025-03-08 08:35:29,817 - INFO - 2022-01-04 00:00:00 OrderCompleted: BUY 90 EMLC @ 28.37, Comm=2.55
+2025-03-08 08:35:29,818 - INFO - 2022-01-04 00:00:00 OrderCompleted: BUY 28 EEM @ 49.26, Comm=1.38
+2025-03-08 08:35:29,818 - INFO - 2022-01-04 00:00:00 OrderCompleted: BUY 6 LQD @ 130.94, Comm=0.79
+2025-03-08 08:35:29,819 - INFO - 2022-01-04 00:00:00 OrderCompleted: BUY 4 GLD @ 168.90, Comm=0.68
+2025-03-08 08:35:38,916 - INFO - Period-end close for VOO: 351.34
+2025-03-08 08:35:38,918 - INFO - Period-end close for EFA: 65.64
+2025-03-08 08:35:38,919 - INFO - Period-end close for EEM: 37.90
+2025-03-08 08:35:38,922 - INFO - Period-end close for DBC: 24.65
+2025-03-08 08:35:38,923 - INFO - Period-end close for GLD: 169.64
+2025-03-08 08:35:38,926 - INFO - Period-end close for EDV: 82.83
+2025-03-08 08:35:38,927 - INFO - Period-end close for LTPZ: 58.24
+2025-03-08 08:35:38,928 - INFO - Period-end close for LQD: 105.43
+2025-03-08 08:35:38,931 - INFO - Period-end close for EMLC: 24.23
+2025-03-08 08:35:39,148 - INFO - [2023-01-03] Market regime disabled; using base allocation.
+2025-03-08 08:35:39,150 - INFO - === 2023-01-03 Rebalancing Start ===
+2025-03-08 08:35:39,152 - INFO - [Rebalancing Info] Date=2023-01-03, SPY Close=380.82, MA_21=389.11, MA_50=389.35, MA_150=390.64, MA_200=399.62
+2025-03-08 08:35:39,155 - INFO - Portfolio value=119190.20, cash buffer=1191.90, available=117998.30
+2025-03-08 08:35:39,156 - INFO - VOO: prev_close=351.34, current_size=40, alloc_ratio=0.12, adjust=0
+2025-03-08 08:35:39,159 - INFO - EFA: prev_close=65.64, current_size=226, alloc_ratio=0.12, adjust=-11
+2025-03-08 08:35:39,160 - INFO - EEM: prev_close=37.90, current_size=364, alloc_ratio=0.12, adjust=9
+2025-03-08 08:35:39,162 - INFO - DBC: prev_close=24.65, current_size=499, alloc_ratio=0.07, adjust=-164
+2025-03-08 08:35:39,164 - INFO - GLD: prev_close=169.64, current_size=60, alloc_ratio=0.07, adjust=-12
+2025-03-08 08:35:39,166 - INFO - EDV: prev_close=82.83, current_size=190, alloc_ratio=0.18, adjust=66
+2025-03-08 08:35:39,169 - INFO - LTPZ: prev_close=58.24, current_size=292, alloc_ratio=0.18, adjust=72
+2025-03-08 08:35:39,171 - INFO - LQD: prev_close=105.43, current_size=78, alloc_ratio=0.07, adjust=0
+2025-03-08 08:35:39,173 - INFO - EMLC: prev_close=24.23, current_size=363, alloc_ratio=0.07, adjust=-23
+2025-03-08 08:35:39,175 - INFO - 2023-01-03: SELL EFA, shares=11
+2025-03-08 08:35:39,177 - INFO - 2023-01-03: SELL DBC, shares=164
+2025-03-08 08:35:39,181 - INFO - 2023-01-03: SELL GLD, shares=12
+2025-03-08 08:35:39,183 - INFO - 2023-01-03: SELL EMLC, shares=23
+2025-03-08 08:35:39,186 - WARNING - EDV: adjusting shares 66 -> 44 due to insufficient cash
+2025-03-08 08:35:39,190 - INFO - 2023-01-03: BUY EDV, shares=44
+2025-03-08 08:35:39,195 - WARNING - LTPZ: adjusting shares 72 -> 62 due to insufficient cash
+2025-03-08 08:35:39,199 - INFO - 2023-01-03: BUY LTPZ, shares=62
+2025-03-08 08:35:39,204 - INFO - 2023-01-03: BUY EEM, shares=9
+2025-03-08 08:35:39,207 - INFO - === 2023-01-03 Rebalancing End ===
+2025-03-08 08:35:39,218 - INFO - 2023-01-04 00:00:00 OrderCompleted: SELL -11 EFA @ 67.18, Comm=0.74
+2025-03-08 08:35:39,222 - INFO - 2023-01-04 00:00:00 OrderCompleted: SELL -164 DBC @ 23.75, Comm=3.90
+2025-03-08 08:35:39,225 - INFO - 2023-01-04 00:00:00 OrderCompleted: SELL -12 GLD @ 172.86, Comm=2.07
+2025-03-08 08:35:39,228 - INFO - 2023-01-04 00:00:00 OrderCompleted: SELL -23 EMLC @ 24.31, Comm=0.56
+2025-03-08 08:35:39,229 - INFO - 2023-01-04 00:00:00 OrderCompleted: BUY 44 EDV @ 86.84, Comm=3.82
+2025-03-08 08:35:39,232 - INFO - 2023-01-04 00:00:00 OrderCompleted: BUY 62 LTPZ @ 59.81, Comm=3.71
+2025-03-08 08:35:39,234 - INFO - 2023-01-04 00:00:00 OrderCompleted: BUY 9 EEM @ 38.90, Comm=0.35
+2025-03-08 08:35:46,982 - INFO - Period-end close for VOO: 436.80
+2025-03-08 08:35:46,986 - INFO - Period-end close for EFA: 75.35
+2025-03-08 08:35:46,987 - INFO - Period-end close for EEM: 40.21
+2025-03-08 08:35:46,989 - INFO - Period-end close for DBC: 22.04
+2025-03-08 08:35:46,993 - INFO - Period-end close for GLD: 191.17
+2025-03-08 08:35:46,994 - INFO - Period-end close for EDV: 81.03
+2025-03-08 08:35:46,994 - INFO - Period-end close for LTPZ: 56.68
+2025-03-08 08:35:46,996 - INFO - Period-end close for LQD: 110.66
+2025-03-08 08:35:46,998 - INFO - Period-end close for EMLC: 25.35
+2025-03-08 08:35:47,440 - INFO - [2024-01-02] Market regime disabled; using base allocation.
+2025-03-08 08:35:47,444 - INFO - === 2024-01-02 Rebalancing Start ===
+2025-03-08 08:35:47,446 - INFO - [Rebalancing Info] Date=2024-01-02, SPY Close=472.65, MA_21=467.70, MA_50=450.24, MA_150=443.35, MA_200=434.74
+2025-03-08 08:35:47,448 - INFO - Portfolio value=123649.26, cash buffer=1236.49, available=122412.77
+2025-03-08 08:35:47,451 - INFO - VOO: prev_close=436.80, current_size=40, alloc_ratio=0.12, adjust=-7
+2025-03-08 08:35:47,452 - INFO - EFA: prev_close=75.35, current_size=215, alloc_ratio=0.12, adjust=-21
+2025-03-08 08:35:47,455 - INFO - EEM: prev_close=40.21, current_size=373, alloc_ratio=0.12, adjust=-8
+2025-03-08 08:35:47,456 - INFO - DBC: prev_close=22.04, current_size=335, alloc_ratio=0.07, adjust=53
+2025-03-08 08:35:47,457 - INFO - GLD: prev_close=191.17, current_size=48, alloc_ratio=0.07, adjust=-4
+2025-03-08 08:35:47,460 - INFO - EDV: prev_close=81.03, current_size=234, alloc_ratio=0.18, adjust=37
+2025-03-08 08:35:47,461 - INFO - LTPZ: prev_close=56.68, current_size=354, alloc_ratio=0.18, adjust=34
+2025-03-08 08:35:47,463 - INFO - LQD: prev_close=110.66, current_size=78, alloc_ratio=0.07, adjust=-1
+2025-03-08 08:35:47,464 - INFO - EMLC: prev_close=25.35, current_size=340, alloc_ratio=0.07, adjust=-2
+2025-03-08 08:35:47,469 - INFO - 2024-01-02: SELL VOO, shares=7
+2025-03-08 08:35:47,476 - INFO - 2024-01-02: SELL EFA, shares=21
+2025-03-08 08:35:47,480 - INFO - 2024-01-02: SELL EEM, shares=8
+2025-03-08 08:35:47,484 - INFO - 2024-01-02: SELL GLD, shares=4
+2025-03-08 08:35:47,510 - INFO - 2024-01-02: SELL LQD, shares=1
+2025-03-08 08:35:47,520 - INFO - 2024-01-02: SELL EMLC, shares=2
+2025-03-08 08:35:47,523 - INFO - 2024-01-02: BUY EDV, shares=37
+2025-03-08 08:35:47,528 - INFO - 2024-01-02: BUY LTPZ, shares=34
+2025-03-08 08:35:47,533 - INFO - 2024-01-02: BUY DBC, shares=53
+2025-03-08 08:35:47,535 - INFO - === 2024-01-02 Rebalancing End ===
+2025-03-08 08:35:47,540 - INFO - 2024-01-03 00:00:00 OrderCompleted: SELL -7 VOO @ 432.32, Comm=3.03
+2025-03-08 08:35:47,542 - INFO - 2024-01-03 00:00:00 OrderCompleted: SELL -21 EFA @ 73.78, Comm=1.55
+2025-03-08 08:35:47,544 - INFO - 2024-01-03 00:00:00 OrderCompleted: SELL -8 EEM @ 39.33, Comm=0.31
+2025-03-08 08:35:47,547 - INFO - 2024-01-03 00:00:00 OrderCompleted: SELL -4 GLD @ 188.77, Comm=0.76
+2025-03-08 08:35:47,550 - INFO - 2024-01-03 00:00:00 OrderCompleted: SELL -1 LQD @ 109.10, Comm=0.11
+2025-03-08 08:35:47,554 - INFO - 2024-01-03 00:00:00 OrderCompleted: SELL -2 EMLC @ 25.05, Comm=0.05
+2025-03-08 08:35:47,558 - INFO - 2024-01-03 00:00:00 OrderCompleted: BUY 37 EDV @ 79.28, Comm=2.93
+2025-03-08 08:35:47,561 - INFO - 2024-01-03 00:00:00 OrderCompleted: BUY 34 LTPZ @ 56.07, Comm=1.91
+2025-03-08 08:35:47,567 - INFO - 2024-01-03 00:00:00 OrderCompleted: BUY 53 DBC @ 21.99, Comm=1.17
+2025-03-08 08:35:56,365 - INFO - Period-end close for VOO: 538.81
+2025-03-08 08:35:56,368 - INFO - Period-end close for EFA: 75.61
+2025-03-08 08:35:56,369 - INFO - Period-end close for EEM: 41.82
+2025-03-08 08:35:56,371 - INFO - Period-end close for DBC: 21.38
+2025-03-08 08:35:56,374 - INFO - Period-end close for GLD: 242.13
+2025-03-08 08:35:56,376 - INFO - Period-end close for EDV: 67.72
+2025-03-08 08:35:56,378 - INFO - Period-end close for LTPZ: 52.07
+2025-03-08 08:35:56,379 - INFO - Period-end close for LQD: 106.84
+2025-03-08 08:35:56,380 - INFO - Period-end close for EMLC: 23.11
+2025-03-08 08:35:56,527 - INFO - [2025-01-02] Market regime disabled; using base allocation.
+2025-03-08 08:35:56,529 - INFO - === 2025-01-02 Rebalancing Start ===
+2025-03-08 08:35:56,530 - INFO - [Rebalancing Info] Date=2025-01-02, SPY Close=584.64, MA_21=598.83, MA_50=592.84, MA_150=566.65, MA_200=554.08
+2025-03-08 08:35:56,530 - INFO - Portfolio value=124187.52, cash buffer=1241.88, available=122945.64
+2025-03-08 08:35:56,531 - INFO - VOO: prev_close=538.81, current_size=33, alloc_ratio=0.12, adjust=-6
+2025-03-08 08:35:56,531 - INFO - EFA: prev_close=75.61, current_size=194, alloc_ratio=0.12, adjust=1
+2025-03-08 08:35:56,532 - INFO - EEM: prev_close=41.82, current_size=365, alloc_ratio=0.12, adjust=-13
+2025-03-08 08:35:56,532 - INFO - DBC: prev_close=21.38, current_size=388, alloc_ratio=0.07, adjust=14
+2025-03-08 08:35:56,534 - INFO - GLD: prev_close=242.13, current_size=44, alloc_ratio=0.07, adjust=-9
+2025-03-08 08:35:56,534 - INFO - EDV: prev_close=67.72, current_size=271, alloc_ratio=0.18, adjust=55
+2025-03-08 08:35:56,534 - INFO - LTPZ: prev_close=52.07, current_size=388, alloc_ratio=0.18, adjust=37
+2025-03-08 08:35:56,535 - INFO - LQD: prev_close=106.84, current_size=77, alloc_ratio=0.07, adjust=3
+2025-03-08 08:35:56,535 - INFO - EMLC: prev_close=23.11, current_size=338, alloc_ratio=0.07, adjust=34
+2025-03-08 08:35:56,536 - INFO - 2025-01-02: SELL VOO, shares=6
+2025-03-08 08:35:56,537 - INFO - 2025-01-02: SELL EEM, shares=13
+2025-03-08 08:35:56,537 - INFO - 2025-01-02: SELL GLD, shares=9
+2025-03-08 08:35:56,538 - WARNING - EDV: adjusting shares 55 -> 41 due to insufficient cash
+2025-03-08 08:35:56,539 - INFO - 2025-01-02: BUY EDV, shares=41
+2025-03-08 08:35:56,541 - INFO - 2025-01-02: BUY LTPZ, shares=37
+2025-03-08 08:35:56,542 - INFO - 2025-01-02: BUY EMLC, shares=34
+2025-03-08 08:35:56,543 - INFO - 2025-01-02: BUY LQD, shares=3
+2025-03-08 08:35:56,548 - INFO - 2025-01-02: BUY DBC, shares=14
+2025-03-08 08:35:56,549 - INFO - 2025-01-02: BUY EFA, shares=1
+2025-03-08 08:35:56,550 - INFO - === 2025-01-02 Rebalancing End ===
+2025-03-08 08:35:56,554 - INFO - 2025-01-03 00:00:00 OrderCompleted: SELL -6 VOO @ 540.19, Comm=3.24
+2025-03-08 08:35:56,554 - INFO - 2025-01-03 00:00:00 OrderCompleted: SELL -13 EEM @ 42.09, Comm=0.55
+2025-03-08 08:35:56,556 - INFO - 2025-01-03 00:00:00 OrderCompleted: SELL -9 GLD @ 244.56, Comm=2.20
+2025-03-08 08:35:56,556 - INFO - 2025-01-03 00:00:00 OrderCompleted: BUY 41 EDV @ 67.89, Comm=2.78
+2025-03-08 08:35:56,557 - INFO - 2025-01-03 00:00:00 OrderCompleted: BUY 37 LTPZ @ 52.10, Comm=1.93
+2025-03-08 08:35:56,558 - INFO - 2025-01-03 00:00:00 OrderCompleted: BUY 34 EMLC @ 23.17, Comm=0.79
+2025-03-08 08:35:56,558 - INFO - 2025-01-03 00:00:00 OrderCompleted: BUY 3 LQD @ 107.00, Comm=0.32
+2025-03-08 08:35:56,558 - INFO - 2025-01-03 00:00:00 OrderCompleted: BUY 14 DBC @ 21.55, Comm=0.30
+2025-03-08 08:35:56,560 - INFO - 2025-01-03 00:00:00 OrderCompleted: BUY 1 EFA @ 75.53, Comm=0.08
+2025-03-08 08:36:01,707 - INFO - Strategy stop() called.
+2025-03-08 08:36:01,711 - INFO - Final portfolio value: 129,749.27
+2025-03-08 08:36:01,713 - INFO - Total return: 29.75%
+2025-03-08 08:36:01,715 - INFO - [Analyzer] Total Return (rtot): 26.04%
+2025-03-08 08:36:01,717 - INFO - [Analyzer] Annual Return (rnorm): 1.70%
+2025-03-08 08:36:01,718 - INFO - [Analyzer] Max Drawdown: 28.14%
+2025-03-08 08:36:01,720 - INFO - [Analyzer] Sharpe Ratio: 0.11
+2025-03-08 08:36:03,532 - INFO - Saved portfolio value chart to C:\Users\james\Projects\backtrader\results\portfolio_value_20250308_083601.png.
+2025-03-08 08:36:03,745 - INFO - Saved portfolio values to C:\Users\james\Projects\backtrader\results\portfolio_values_20250308_083601.csv.
+2025-03-08 08:36:03,805 - INFO - Saved annual stats to C:\Users\james\Projects\backtrader\results\annual_stats_20250308_083603.csv.
+2025-03-08 08:36:03,850 - INFO - Saved rebalance history to C:\Users\james\Projects\backtrader\results\rebalance_history_20250308_083603.csv.
+2025-03-08 08:36:03,853 - INFO - Backtest completed.
+2025-03-08 08:36:03,877 - INFO - Total execution time: 171.76 seconds

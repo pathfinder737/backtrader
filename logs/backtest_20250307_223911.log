@@ -1,0 +1,277 @@
+2025-03-07 22:39:11,874 - INFO - =============== Configurations ===============
+2025-03-07 22:39:11,875 - INFO - DATA_MODE: offline
+2025-03-07 22:39:11,877 - INFO - START_DATE: 2000-01-01
+2025-03-07 22:39:11,879 - INFO - END_DATE: 2025-3-31
+2025-03-07 22:39:11,880 - INFO - TICKERS: ['SPY', 'VTI', 'VEA', 'VWO', 'DBC', 'IAU', 'EDV', 'LTPZ', 'VCLT', 'EMLC']
+2025-03-07 22:39:11,881 - INFO - ASSET_ALLOCATION: {'VTI': 0.12, 'VEA': 0.12, 'VWO': 0.12, 'DBC': 0.07, 'IAU': 0.07, 'EDV': 0.18, 'LTPZ': 0.18, 'VCLT': 0.07, 'EMLC': 0.07}
+2025-03-07 22:39:11,882 - INFO - AGGRESSIVE_ALLOCATION: {'VTI': 0.12, 'VEA': 0.12, 'VWO': 0.12, 'DBC': 0.07, 'IAU': 0.07, 'EDV': 0.18, 'LTPZ': 0.18, 'VCLT': 0.07, 'EMLC': 0.07}
+2025-03-07 22:39:11,888 - INFO - MODERATE_ALLOCATION: {'VTI': 0.12, 'VEA': 0.12, 'VWO': 0.12, 'DBC': 0.07, 'IAU': 0.07, 'EDV': 0.18, 'LTPZ': 0.18, 'VCLT': 0.07, 'EMLC': 0.07}
+2025-03-07 22:39:11,889 - INFO - MID_DEFENSIVE_ALLOCATION: {'VTI': 0.12, 'VEA': 0.12, 'VWO': 0.12, 'DBC': 0.07, 'IAU': 0.07, 'EDV': 0.18, 'LTPZ': 0.18, 'VCLT': 0.07, 'EMLC': 0.07}
+2025-03-07 22:39:11,890 - INFO - DEFENSIVE_ALLOCATION: {'VTI': 0.12, 'VEA': 0.12, 'VWO': 0.12, 'DBC': 0.07, 'IAU': 0.07, 'EDV': 0.18, 'LTPZ': 0.18, 'VCLT': 0.07, 'EMLC': 0.07}
+2025-03-07 22:39:11,892 - INFO - TOUCHSTONE: SPY
+2025-03-07 22:39:11,893 - INFO - MA_PERIODS: [21, 50, 150, 200]
+2025-03-07 22:39:11,894 - INFO - WMA_PERIODS: [10, 30]
+2025-03-07 22:39:11,894 - INFO - MA_TYPE: daily
+2025-03-07 22:39:11,895 - INFO - INITIAL_CASH: 100000.0
+2025-03-07 22:39:11,896 - INFO - COMMISSION: 0.001
+2025-03-07 22:39:11,897 - INFO - CASH_BUFFER_PERCENT: 1.0
+2025-03-07 22:39:11,898 - INFO - PROCESS_SELL_FIRST: True
+2025-03-07 22:39:11,899 - INFO - RISK_FREE_RATE: 0.01
+2025-03-07 22:39:11,901 - INFO - FRACTIONAL_SHARES: False
+2025-03-07 22:39:11,903 - INFO - USE_MARKET_REGIME: False
+2025-03-07 22:39:11,903 - INFO - LOG_LEVEL: INFO
+2025-03-07 22:39:11,904 - INFO - ===============================================
+2025-03-07 22:39:11,904 - INFO - Starting backtest...
+2025-03-07 22:39:11,905 - INFO - Loading data feeds...
+2025-03-07 22:39:11,906 - INFO - Loading data for SPY...
+2025-03-07 22:39:11,908 - INFO - Downloading data for SPY from 2000-01-01 to 2025-3-31.
+2025-03-07 22:39:12,018 - WARNING - Attempt 1/3 failed for SPY: HTTPSConnectionPool(host='query2.finance.yahoo.com', port=443): Max retries exceeded with url: /v8/finance/chart/SPY?period1=946652400&period2=1743346800&interval=1d&includeAdjustedClose=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000022CFC8971F0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2025-03-07 22:39:12,051 - WARNING - Traceback (most recent call last):
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\urllib3\util\connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\james\anaconda3\envs\dnn\lib\socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\urllib3\connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\urllib3\connection.py", line 358, in connect
+    self.sock = conn = self._new_conn()
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x0000022CFC8971F0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='query2.finance.yahoo.com', port=443): Max retries exceeded with url: /v8/finance/chart/SPY?period1=946652400&period2=1743346800&interval=1d&includeAdjustedClose=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000022CFC8971F0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\james\Projects\backtrader\data_utils.py", line 110, in download_and_preprocess
+    df = fdr.DataReader(ticker, start_date, end_date)
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\FinanceDataReader\data.py", line 92, in DataReader
+    return YahooDailyReader(codes, start, end).read()
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\FinanceDataReader\yahoo\data.py", line 61, in read
+    return _yahoo_data_reader(self.symbol, self.exchange, self.start, self.end)
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\FinanceDataReader\yahoo\data.py", line 37, in _yahoo_data_reader
+    r = requests.get(url, headers={'user-agent': 'Mozilla/5.0 AppleWebKit/537.36'})
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='query2.finance.yahoo.com', port=443): Max retries exceeded with url: /v8/finance/chart/SPY?period1=946652400&period2=1743346800&interval=1d&includeAdjustedClose=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000022CFC8971F0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+2025-03-07 22:39:12,054 - INFO - Retry 1/3 for SPY after 2s.
+2025-03-07 22:39:14,100 - WARNING - Attempt 2/3 failed for SPY: HTTPSConnectionPool(host='query2.finance.yahoo.com', port=443): Max retries exceeded with url: /v8/finance/chart/SPY?period1=946652400&period2=1743346800&interval=1d&includeAdjustedClose=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000022C81877190>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2025-03-07 22:39:14,106 - WARNING - Traceback (most recent call last):
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\urllib3\util\connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\james\anaconda3\envs\dnn\lib\socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\urllib3\connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\urllib3\connection.py", line 358, in connect
+    self.sock = conn = self._new_conn()
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x0000022C81877190>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='query2.finance.yahoo.com', port=443): Max retries exceeded with url: /v8/finance/chart/SPY?period1=946652400&period2=1743346800&interval=1d&includeAdjustedClose=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000022C81877190>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\james\Projects\backtrader\data_utils.py", line 110, in download_and_preprocess
+    df = fdr.DataReader(ticker, start_date, end_date)
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\FinanceDataReader\data.py", line 92, in DataReader
+    return YahooDailyReader(codes, start, end).read()
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\FinanceDataReader\yahoo\data.py", line 61, in read
+    return _yahoo_data_reader(self.symbol, self.exchange, self.start, self.end)
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\FinanceDataReader\yahoo\data.py", line 37, in _yahoo_data_reader
+    r = requests.get(url, headers={'user-agent': 'Mozilla/5.0 AppleWebKit/537.36'})
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='query2.finance.yahoo.com', port=443): Max retries exceeded with url: /v8/finance/chart/SPY?period1=946652400&period2=1743346800&interval=1d&includeAdjustedClose=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000022C81877190>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+2025-03-07 22:39:14,108 - INFO - Retry 2/3 for SPY after 4s.
+2025-03-07 22:39:18,135 - WARNING - Attempt 3/3 failed for SPY: HTTPSConnectionPool(host='query2.finance.yahoo.com', port=443): Max retries exceeded with url: /v8/finance/chart/SPY?period1=946652400&period2=1743346800&interval=1d&includeAdjustedClose=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000022C818778E0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2025-03-07 22:39:18,147 - WARNING - Traceback (most recent call last):
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\urllib3\util\connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\james\anaconda3\envs\dnn\lib\socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\urllib3\connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\urllib3\connection.py", line 358, in connect
+    self.sock = conn = self._new_conn()
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x0000022C818778E0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='query2.finance.yahoo.com', port=443): Max retries exceeded with url: /v8/finance/chart/SPY?period1=946652400&period2=1743346800&interval=1d&includeAdjustedClose=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000022C818778E0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\james\Projects\backtrader\data_utils.py", line 110, in download_and_preprocess
+    df = fdr.DataReader(ticker, start_date, end_date)
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\FinanceDataReader\data.py", line 92, in DataReader
+    return YahooDailyReader(codes, start, end).read()
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\FinanceDataReader\yahoo\data.py", line 61, in read
+    return _yahoo_data_reader(self.symbol, self.exchange, self.start, self.end)
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\FinanceDataReader\yahoo\data.py", line 37, in _yahoo_data_reader
+    r = requests.get(url, headers={'user-agent': 'Mozilla/5.0 AppleWebKit/537.36'})
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='query2.finance.yahoo.com', port=443): Max retries exceeded with url: /v8/finance/chart/SPY?period1=946652400&period2=1743346800&interval=1d&includeAdjustedClose=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000022C818778E0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+2025-03-07 22:39:18,151 - ERROR - Max retries exceeded for SPY.
+2025-03-07 22:39:18,153 - ERROR - Error loading data: Cannot retrieve data for SPY: HTTPSConnectionPool(host='query2.finance.yahoo.com', port=443): Max retries exceeded with url: /v8/finance/chart/SPY?period1=946652400&period2=1743346800&interval=1d&includeAdjustedClose=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000022C818778E0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+2025-03-07 22:39:18,170 - ERROR - Traceback (most recent call last):
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\urllib3\connection.py", line 174, in _new_conn
+    conn = connection.create_connection(
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\urllib3\util\connection.py", line 72, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "C:\Users\james\anaconda3\envs\dnn\lib\socket.py", line 955, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\urllib3\connectionpool.py", line 386, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\urllib3\connectionpool.py", line 1042, in _validate_conn
+    conn.connect()
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\urllib3\connection.py", line 358, in connect
+    self.sock = conn = self._new_conn()
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\urllib3\connection.py", line 186, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x0000022C818778E0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    retries = retries.increment(
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\urllib3\util\retry.py", line 592, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='query2.finance.yahoo.com', port=443): Max retries exceeded with url: /v8/finance/chart/SPY?period1=946652400&period2=1743346800&interval=1d&includeAdjustedClose=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000022C818778E0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\james\Projects\backtrader\data_utils.py", line 110, in download_and_preprocess
+    df = fdr.DataReader(ticker, start_date, end_date)
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\FinanceDataReader\data.py", line 92, in DataReader
+    return YahooDailyReader(codes, start, end).read()
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\FinanceDataReader\yahoo\data.py", line 61, in read
+    return _yahoo_data_reader(self.symbol, self.exchange, self.start, self.end)
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\FinanceDataReader\yahoo\data.py", line 37, in _yahoo_data_reader
+    r = requests.get(url, headers={'user-agent': 'Mozilla/5.0 AppleWebKit/537.36'})
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\james\anaconda3\envs\dnn\lib\site-packages\requests\adapters.py", line 700, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='query2.finance.yahoo.com', port=443): Max retries exceeded with url: /v8/finance/chart/SPY?period1=946652400&period2=1743346800&interval=1d&includeAdjustedClose=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000022C818778E0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\james\Projects\backtrader\backtest.py", line 61, in run_backtest
+    data_feeds = prepare_backtrader_data(
+  File "C:\Users\james\Projects\backtrader\data_utils.py", line 240, in prepare_backtrader_data
+    df = download_and_preprocess(
+  File "C:\Users\james\Projects\backtrader\data_utils.py", line 158, in download_and_preprocess
+    raise ConnectionError(f"Cannot retrieve data for {ticker}: {e}")
+ConnectionError: Cannot retrieve data for SPY: HTTPSConnectionPool(host='query2.finance.yahoo.com', port=443): Max retries exceeded with url: /v8/finance/chart/SPY?period1=946652400&period2=1743346800&interval=1d&includeAdjustedClose=true (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x0000022C818778E0>: Failed to establish a new connection: [Errno 11001] getaddrinfo failed'))
+

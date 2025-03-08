@@ -1,0 +1,134 @@
+2025-03-07 20:37:28,265 - INFO - =============== Configurations ===============
+2025-03-07 20:37:28,265 - INFO - DATA_MODE: offline
+2025-03-07 20:37:28,265 - INFO - START_DATE: 2000-01-01
+2025-03-07 20:37:28,266 - INFO - END_DATE: 2025-3-31
+2025-03-07 20:37:28,267 - INFO - TICKERS: ['SPY', 'QQQ', 'IAU', 'LQD']
+2025-03-07 20:37:28,267 - INFO - ASSET_ALLOCATION: {'QQQ': 0.5, 'IAU': 0.3, 'LQD': 0.2}
+2025-03-07 20:37:28,267 - INFO - AGGRESSIVE_ALLOCATION: {'QQQ': 0.9, 'IAU': 0.1, 'LQD': 0}
+2025-03-07 20:37:28,268 - INFO - MODERATE_ALLOCATION: {'QQQ': 0.8, 'IAU': 0.2, 'LQD': 0}
+2025-03-07 20:37:28,270 - INFO - MID_DEFENSIVE_ALLOCATION: {'QQQ': 0.4, 'IAU': 0.3, 'LQD': 0.3}
+2025-03-07 20:37:28,270 - INFO - DEFENSIVE_ALLOCATION: {'QQQ': 0, 'IAU': 0.5, 'LQD': 0.5}
+2025-03-07 20:37:28,270 - INFO - TOUCHSTONE: SPY
+2025-03-07 20:37:28,270 - INFO - MA_PERIODS: [21, 50, 150, 200]
+2025-03-07 20:37:28,270 - INFO - WMA_PERIODS: [10, 30]
+2025-03-07 20:37:28,270 - INFO - MA_TYPE: daily
+2025-03-07 20:37:28,270 - INFO - INITIAL_CASH: 100000.0
+2025-03-07 20:37:28,270 - INFO - COMMISSION: 0.001
+2025-03-07 20:37:28,270 - INFO - CASH_BUFFER_PERCENT: 1.0
+2025-03-07 20:37:28,270 - INFO - PROCESS_SELL_FIRST: True
+2025-03-07 20:37:28,271 - INFO - RISK_FREE_RATE: 0.01
+2025-03-07 20:37:28,271 - INFO - FRACTIONAL_SHARES: False
+2025-03-07 20:37:28,271 - INFO - USE_MARKET_REGIME: True
+2025-03-07 20:37:28,271 - INFO - LOG_LEVEL: INFO
+2025-03-07 20:37:28,271 - INFO - ===============================================
+2025-03-07 20:37:28,271 - INFO - Starting backtest...
+2025-03-07 20:37:28,272 - INFO - Loading data feeds...
+2025-03-07 20:37:28,272 - INFO - Loading data for SPY...
+2025-03-07 20:37:28,272 - INFO - Downloading data for SPY from 2000-01-01 to 2025-3-31.
+2025-03-07 20:37:29,288 - INFO - Saved RAW data for SPY to C:\Users\james\Projects\backtrader\data\SPY_raw.csv (6333 rows).
+2025-03-07 20:37:29,290 - INFO - Loading data for QQQ...
+2025-03-07 20:37:29,293 - INFO - Downloading data for QQQ from 2000-01-01 to 2025-3-31.
+2025-03-07 20:37:30,206 - INFO - Saved RAW data for QQQ to C:\Users\james\Projects\backtrader\data\QQQ_raw.csv (6333 rows).
+2025-03-07 20:37:30,207 - INFO - Loading data for IAU...
+2025-03-07 20:37:30,210 - INFO - Downloading data for IAU from 2000-01-01 to 2025-3-31.
+2025-03-07 20:37:30,769 - INFO - Saved RAW data for IAU to C:\Users\james\Projects\backtrader\data\IAU_raw.csv (5058 rows).
+2025-03-07 20:37:30,770 - INFO - Loading data for LQD...
+2025-03-07 20:37:30,772 - INFO - Downloading data for LQD from 2000-01-01 to 2025-3-31.
+2025-03-07 20:37:31,459 - INFO - Saved RAW data for LQD to C:\Users\james\Projects\backtrader\data\LQD_raw.csv (5688 rows).
+2025-03-07 20:37:31,461 - INFO - Max start date among non-touchstone: 2005-01-28 00:00:00
+2025-03-07 20:37:31,736 - INFO - Saved ALIGNED data for SPY to C:\Users\james\Projects\backtrader\data\SPY.csv (5311 rows).
+2025-03-07 20:37:31,744 - INFO - Created data feed for SPY with 5311 rows after slicing.
+2025-03-07 20:37:31,872 - INFO - Saved ALIGNED data for QQQ to C:\Users\james\Projects\backtrader\data\QQQ.csv (5058 rows).
+2025-03-07 20:37:31,874 - INFO - Created data feed for QQQ with 5058 rows after slicing.
+2025-03-07 20:37:32,008 - INFO - Saved ALIGNED data for IAU to C:\Users\james\Projects\backtrader\data\IAU.csv (5058 rows).
+2025-03-07 20:37:32,010 - INFO - Created data feed for IAU with 5058 rows after slicing.
+2025-03-07 20:37:32,146 - INFO - Saved ALIGNED data for LQD to C:\Users\james\Projects\backtrader\data\LQD.csv (5058 rows).
+2025-03-07 20:37:32,150 - INFO - Created data feed for LQD with 5058 rows after slicing.
+2025-03-07 20:37:32,151 - INFO - Loaded and aligned data for 4 tickers.
+2025-03-07 20:37:32,152 - INFO - Added data for SPY.
+2025-03-07 20:37:32,154 - INFO - Added data for QQQ.
+2025-03-07 20:37:32,156 - INFO - Added data for IAU.
+2025-03-07 20:37:32,157 - INFO - Added data for LQD.
+2025-03-07 20:37:32,164 - INFO - All data feeds loaded.
+2025-03-07 20:37:32,166 - INFO - Initial portfolio value: 100,000.00
+2025-03-07 20:37:46,708 - INFO - Asset data loaded for: QQQ
+2025-03-07 20:37:46,709 - INFO - Asset data loaded for: IAU
+2025-03-07 20:37:46,710 - INFO - Asset data loaded for: LQD
+2025-03-07 20:37:46,711 - INFO - Market regime usage: Enabled
+2025-03-07 20:37:46,712 - INFO - Moving average type: daily
+2025-03-07 20:37:46,713 - INFO - Fractional shares: Not allowed
+2025-03-07 20:37:47,079 - INFO - Start date: 2005-01-28, initial portfolio=100000.00
+2025-03-07 20:37:48,163 - INFO - Month-end close for QQQ: 37.40
+2025-03-07 20:37:48,165 - INFO - Month-end close for IAU: 8.45
+2025-03-07 20:37:48,165 - INFO - Month-end close for LQD: 112.90
+2025-03-07 20:37:48,667 - INFO - [2005-02-01] Price=118.91, MA(short=118.11, mid=118.95, mid2=114.34, long=113.86) => Neutral
+2025-03-07 20:37:48,668 - INFO - === 2005-02-01 Rebalancing Start ===
+2025-03-07 20:37:48,673 - INFO - [Rebalancing Info] Date=2005-02-01, SPY Close=118.91, MA_21=118.11, MA_50=118.95, MA_150=114.34, MA_200=113.86
+2025-03-07 20:37:48,675 - INFO - Portfolio value=100000.00, cash buffer=1000.00, available=99000.00
+2025-03-07 20:37:48,678 - INFO - QQQ: prev_close=37.40, current_size=0, alloc_ratio=0.50, adjust=1323
+2025-03-07 20:37:48,680 - INFO - IAU: prev_close=8.45, current_size=0, alloc_ratio=0.30, adjust=3513
+2025-03-07 20:37:48,681 - INFO - LQD: prev_close=112.90, current_size=0, alloc_ratio=0.20, adjust=175
+2025-03-07 20:37:48,683 - INFO - 2005-02-01: BUY QQQ, shares=1323
+2025-03-07 20:37:48,688 - INFO - 2005-02-01: BUY IAU, shares=3513
+2025-03-07 20:37:48,694 - INFO - 2005-02-01: BUY LQD, shares=175
+2025-03-07 20:37:48,696 - INFO - === 2005-02-01 Rebalancing End ===
+2025-03-07 20:37:48,700 - INFO - 2005-02-02 00:00:00 OrderCompleted: BUY 1323 QQQ @ 37.64, Comm=49.80
+2025-03-07 20:37:48,701 - INFO - 2005-02-02 00:00:00 OrderCompleted: BUY 3513 IAU @ 8.45, Comm=29.67
+2025-03-07 20:37:48,705 - INFO - 2005-02-02 00:00:00 OrderCompleted: BUY 175 LQD @ 112.36, Comm=19.66
+2025-03-07 20:37:54,081 - INFO - Month-end close for QQQ: 37.22
+2025-03-07 20:37:54,082 - INFO - Month-end close for IAU: 8.72
+2025-03-07 20:37:54,084 - INFO - Month-end close for LQD: 111.42
+2025-03-07 20:37:54,527 - INFO - [2005-03-01] Price=121.23, MA(short=120.04, mid=119.40, mid2=115.48, long=114.64) => Aggressive
+2025-03-07 20:37:54,529 - INFO - === 2005-03-01 Rebalancing Start ===
+2025-03-07 20:37:54,530 - INFO - [Rebalancing Info] Date=2005-03-01, SPY Close=121.23, MA_21=120.04, MA_50=119.40, MA_150=115.48, MA_200=114.64
+2025-03-07 20:37:54,531 - INFO - Portfolio value=100382.12, cash buffer=1003.82, available=99378.30
+2025-03-07 20:37:54,532 - INFO - QQQ: prev_close=37.22, current_size=1323, alloc_ratio=0.90, adjust=1080
+2025-03-07 20:37:54,532 - INFO - IAU: prev_close=8.72, current_size=3513, alloc_ratio=0.10, adjust=-2374
+2025-03-07 20:37:54,533 - INFO - LQD: prev_close=111.42, current_size=175, alloc_ratio=0.00, adjust=-175
+2025-03-07 20:37:54,533 - INFO - 2005-03-01: SELL IAU, shares=2374
+2025-03-07 20:37:54,535 - ERROR - Rebalancing failed: name 'shares_to_sell' is not defined
+2025-03-07 20:37:54,540 - ERROR - Traceback (most recent call last):
+  File "C:\Users\james\Projects\backtrader\strategy.py", line 258, in next
+    self._rebalance_portfolio(current_date, alloc)
+  File "C:\Users\james\Projects\backtrader\strategy.py", line 368, in _rebalance_portfolio
+    'asset': asset, 'action': 'SELL', 'shares': shares_to_sell
+NameError: name 'shares_to_sell' is not defined
+
+2025-03-07 20:37:54,543 - INFO - 2005-03-02 00:00:00 OrderCompleted: SELL -2374 IAU @ 8.65, Comm=20.54
+2025-03-07 20:38:00,598 - INFO - Month-end close for QQQ: 36.57
+2025-03-07 20:38:00,599 - INFO - Month-end close for IAU: 8.58
+2025-03-07 20:38:00,600 - INFO - Month-end close for LQD: 109.59
+2025-03-07 20:38:01,027 - INFO - [2005-04-01] Price=117.43, MA(short=119.36, mid=119.37, mid2=116.96, long=115.44) => Neutral
+2025-03-07 20:38:01,031 - INFO - === 2005-04-01 Rebalancing Start ===
+2025-03-07 20:38:01,037 - INFO - [Rebalancing Info] Date=2005-04-01, SPY Close=117.43, MA_21=119.36, MA_50=119.37, MA_150=116.96, MA_200=115.44
+2025-03-07 20:38:01,039 - INFO - Portfolio value=98006.38, cash buffer=980.06, available=97026.32
+2025-03-07 20:38:01,044 - INFO - QQQ: prev_close=36.57, current_size=1323, alloc_ratio=0.50, adjust=3
+2025-03-07 20:38:01,051 - INFO - IAU: prev_close=8.58, current_size=1139, alloc_ratio=0.30, adjust=2255
+2025-03-07 20:38:01,055 - INFO - LQD: prev_close=109.59, current_size=175, alloc_ratio=0.20, adjust=2
+2025-03-07 20:38:01,057 - INFO - 2005-04-01: BUY IAU, shares=2255
+2025-03-07 20:38:01,059 - INFO - 2005-04-01: BUY LQD, shares=2
+2025-03-07 20:38:01,061 - INFO - 2005-04-01: BUY QQQ, shares=3
+2025-03-07 20:38:01,069 - INFO - === 2005-04-01 Rebalancing End ===
+2025-03-07 20:38:01,074 - INFO - 2005-04-04 00:00:00 OrderCompleted: BUY 2255 IAU @ 8.49, Comm=19.14
+2025-03-07 20:38:01,076 - INFO - 2005-04-04 00:00:00 OrderCompleted: BUY 2 LQD @ 109.11, Comm=0.22
+2025-03-07 20:38:01,078 - INFO - 2005-04-04 00:00:00 OrderCompleted: BUY 3 QQQ @ 36.25, Comm=0.11
+2025-03-07 20:38:07,032 - INFO - Month-end close for QQQ: 34.98
+2025-03-07 20:38:07,034 - INFO - Month-end close for IAU: 8.69
+2025-03-07 20:38:07,035 - INFO - Month-end close for LQD: 110.92
+2025-03-07 20:38:07,445 - INFO - [2005-05-02] Price=116.40, MA(short=116.40, mid=118.28, mid2=117.54, long=115.81) => MidDefensive
+2025-03-07 20:38:07,447 - INFO - === 2005-05-02 Rebalancing Start ===
+2025-03-07 20:38:07,448 - INFO - [Rebalancing Info] Date=2005-05-02, SPY Close=116.40, MA_21=116.40, MA_50=118.28, MA_150=117.54, MA_200=115.81
+2025-03-07 20:38:07,450 - INFO - Portfolio value=97102.52, cash buffer=971.03, available=96131.49
+2025-03-07 20:38:07,451 - INFO - QQQ: prev_close=34.98, current_size=1326, alloc_ratio=0.40, adjust=-227
+2025-03-07 20:38:07,452 - INFO - IAU: prev_close=8.69, current_size=3394, alloc_ratio=0.30, adjust=-74
+2025-03-07 20:38:07,454 - INFO - LQD: prev_close=110.92, current_size=177, alloc_ratio=0.30, adjust=83
+2025-03-07 20:38:07,454 - INFO - 2005-05-02: SELL QQQ, shares=227
+2025-03-07 20:38:07,456 - ERROR - Rebalancing failed: name 'shares_to_sell' is not defined
+2025-03-07 20:38:07,468 - ERROR - Traceback (most recent call last):
+  File "C:\Users\james\Projects\backtrader\strategy.py", line 258, in next
+    self._rebalance_portfolio(current_date, alloc)
+  File "C:\Users\james\Projects\backtrader\strategy.py", line 368, in _rebalance_portfolio
+    'asset': asset, 'action': 'SELL', 'shares': shares_to_sell
+NameError: name 'shares_to_sell' is not defined
+
+2025-03-07 20:38:07,471 - INFO - 2005-05-03 00:00:00 OrderCompleted: SELL -227 QQQ @ 35.05, Comm=7.96

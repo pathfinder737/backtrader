@@ -1,0 +1,308 @@
+2025-03-08 14:49:47,988 - INFO - =============== Configurations ===============
+2025-03-08 14:49:47,988 - INFO - DATA_MODE: offline
+2025-03-08 14:49:47,989 - INFO - START_DATE: 2000-01-01
+2025-03-08 14:49:47,990 - INFO - END_DATE: 2025-3-31
+2025-03-08 14:49:47,991 - INFO - TICKERS: ['SPY', 'VOO', 'IAU', 'LQD']
+2025-03-08 14:49:47,991 - INFO - ASSET_ALLOCATION: {'VOO': 0.5, 'IAU': 0.5, 'LQD': 0}
+2025-03-08 14:49:47,993 - INFO - AGGRESSIVE_ALLOCATION: {'VOO': 0.5, 'IAU': 0.5, 'LQD': 0}
+2025-03-08 14:49:47,993 - INFO - MODERATE_ALLOCATION: {'VOO': 0.5, 'IAU': 0.5, 'LQD': 0}
+2025-03-08 14:49:47,995 - INFO - MID_DEFENSIVE_ALLOCATION: {'VOO': 0.5, 'IAU': 0.5, 'LQD': 0}
+2025-03-08 14:49:47,995 - INFO - DEFENSIVE_ALLOCATION: {'VOO': 0.5, 'IAU': 0.5, 'LQD': 0}
+2025-03-08 14:49:47,995 - INFO - TOUCHSTONE: SPY
+2025-03-08 14:49:47,996 - INFO - MA_PERIODS: [21, 50, 150, 200]
+2025-03-08 14:49:47,996 - INFO - WMA_PERIODS: [10, 30]
+2025-03-08 14:49:47,996 - INFO - MA_TYPE: daily
+2025-03-08 14:49:47,997 - INFO - INITIAL_CASH: 100000.0
+2025-03-08 14:49:47,997 - INFO - COMMISSION: 0.0009
+2025-03-08 14:49:47,997 - INFO - CASH_BUFFER_PERCENT: 1.0
+2025-03-08 14:49:47,998 - INFO - PROCESS_SELL_FIRST: True
+2025-03-08 14:49:47,998 - INFO - RISK_FREE_RATE: 0.01
+2025-03-08 14:49:47,998 - INFO - FRACTIONAL_SHARES: False
+2025-03-08 14:49:47,998 - INFO - USE_MARKET_REGIME: False
+2025-03-08 14:49:47,998 - INFO - REBALANCING_TERM: YEAR
+2025-03-08 14:49:47,999 - INFO - LOG_LEVEL: INFO
+2025-03-08 14:49:47,999 - INFO - ===============================================
+2025-03-08 14:49:47,999 - INFO - Starting backtest...
+2025-03-08 14:49:47,999 - INFO - Loading data feeds...
+2025-03-08 14:49:48,000 - INFO - Loading data for SPY...
+2025-03-08 14:49:48,000 - INFO - Downloading data for SPY from 2000-01-01 to 2025-3-31.
+2025-03-08 14:49:48,871 - INFO - Saved RAW data for SPY to C:\Users\james\Projects\backtrader\data\SPY_raw.csv (6334 rows).
+2025-03-08 14:49:48,871 - INFO - Loading data for VOO...
+2025-03-08 14:49:48,871 - INFO - Downloading data for VOO from 2000-01-01 to 2025-3-31.
+2025-03-08 14:49:49,473 - INFO - Saved RAW data for VOO to C:\Users\james\Projects\backtrader\data\VOO_raw.csv (3646 rows).
+2025-03-08 14:49:49,474 - INFO - Loading data for IAU...
+2025-03-08 14:49:49,474 - INFO - Downloading data for IAU from 2000-01-01 to 2025-3-31.
+2025-03-08 14:49:50,099 - INFO - Saved RAW data for IAU to C:\Users\james\Projects\backtrader\data\IAU_raw.csv (5059 rows).
+2025-03-08 14:49:50,099 - INFO - Loading data for LQD...
+2025-03-08 14:49:50,100 - INFO - Downloading data for LQD from 2000-01-01 to 2025-3-31.
+2025-03-08 14:49:50,763 - INFO - Saved RAW data for LQD to C:\Users\james\Projects\backtrader\data\LQD_raw.csv (5689 rows).
+2025-03-08 14:49:50,764 - INFO - Max start date among non-touchstone: 2010-09-09 00:00:00
+2025-03-08 14:49:50,802 - INFO - Saved ALIGNED data for SPY to C:\Users\james\Projects\backtrader\data\SPY.csv (3898 rows).
+2025-03-08 14:49:50,803 - INFO - Created data feed for SPY with 3898 rows after slicing.
+2025-03-08 14:49:50,821 - INFO - Saved ALIGNED data for VOO to C:\Users\james\Projects\backtrader\data\VOO.csv (3646 rows).
+2025-03-08 14:49:50,822 - INFO - Created data feed for VOO with 3646 rows after slicing.
+2025-03-08 14:49:50,839 - INFO - Saved ALIGNED data for IAU to C:\Users\james\Projects\backtrader\data\IAU.csv (3646 rows).
+2025-03-08 14:49:50,840 - INFO - Created data feed for IAU with 3646 rows after slicing.
+2025-03-08 14:49:50,857 - INFO - Saved ALIGNED data for LQD to C:\Users\james\Projects\backtrader\data\LQD.csv (3646 rows).
+2025-03-08 14:49:50,858 - INFO - Created data feed for LQD with 3646 rows after slicing.
+2025-03-08 14:49:50,858 - INFO - Loaded and aligned data for 4 tickers.
+2025-03-08 14:49:50,858 - INFO - Added data for SPY.
+2025-03-08 14:49:50,859 - INFO - Added data for VOO.
+2025-03-08 14:49:50,860 - INFO - Added data for IAU.
+2025-03-08 14:49:50,860 - INFO - Added data for LQD.
+2025-03-08 14:49:50,860 - INFO - All data feeds loaded.
+2025-03-08 14:49:50,860 - INFO - Initial portfolio value: 100,000.00
+2025-03-08 14:49:52,243 - INFO - Asset data loaded for: VOO
+2025-03-08 14:49:52,243 - INFO - Asset data loaded for: IAU
+2025-03-08 14:49:52,244 - INFO - Asset data loaded for: LQD
+2025-03-08 14:49:52,244 - INFO - Market regime usage: Disabled
+2025-03-08 14:49:52,244 - INFO - Moving average type: daily
+2025-03-08 14:49:52,245 - INFO - Fractional shares: Not allowed
+2025-03-08 14:49:52,301 - INFO - Start date: 2010-09-09, initial portfolio=100000.00
+2025-03-08 14:49:52,916 - INFO - Period-end close for VOO: 115.14
+2025-03-08 14:49:52,916 - INFO - Period-end close for IAU: 27.80
+2025-03-08 14:49:52,916 - INFO - Period-end close for LQD: 108.44
+2025-03-08 14:49:52,940 - INFO - [2011-01-03] Market regime disabled; using base allocation.
+2025-03-08 14:49:52,940 - INFO - === 2011-01-03 Rebalancing Start ===
+2025-03-08 14:49:52,941 - INFO - [Rebalancing Info] Date=2011-01-03, SPY Close=127.05, MA_21=124.75, MA_50=121.95, MA_150=114.41, MA_200=114.89
+2025-03-08 14:49:52,941 - INFO - Portfolio value=100000.00, cash buffer=1000.00, available=99000.00
+2025-03-08 14:49:52,941 - INFO - VOO: prev_close=115.14, current_size=0, alloc_ratio=0.50, adjust=429
+2025-03-08 14:49:52,941 - INFO - IAU: prev_close=27.80, current_size=0, alloc_ratio=0.50, adjust=1780
+2025-03-08 14:49:52,941 - INFO - LQD: prev_close=108.44, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-08 14:49:52,941 - INFO - 2011-01-03: BUY IAU, shares=1780
+2025-03-08 14:49:52,942 - INFO - 2011-01-03: BUY VOO, shares=429
+2025-03-08 14:49:52,942 - INFO - === 2011-01-03 Rebalancing End ===
+2025-03-08 14:49:52,943 - INFO - 2011-01-04 00:00:00 OrderCompleted: BUY 1780 IAU @ 27.28, Comm=43.70
+2025-03-08 14:49:52,943 - INFO - 2011-01-04 00:00:00 OrderCompleted: BUY 429 VOO @ 116.56, Comm=45.00
+2025-03-08 14:49:53,906 - INFO - Period-end close for VOO: 114.90
+2025-03-08 14:49:53,906 - INFO - Period-end close for IAU: 30.46
+2025-03-08 14:49:53,907 - INFO - Period-end close for LQD: 113.76
+2025-03-08 14:49:53,930 - INFO - [2012-01-03] Market regime disabled; using base allocation.
+2025-03-08 14:49:53,931 - INFO - === 2012-01-03 Rebalancing Start ===
+2025-03-08 14:49:53,931 - INFO - [Rebalancing Info] Date=2012-01-03, SPY Close=127.50, MA_21=124.63, MA_50=124.08, MA_150=123.68, MA_200=126.05
+2025-03-08 14:49:53,931 - INFO - Portfolio value=107048.45, cash buffer=1070.48, available=105977.97
+2025-03-08 14:49:53,932 - INFO - VOO: prev_close=114.90, current_size=429, alloc_ratio=0.50, adjust=32
+2025-03-08 14:49:53,932 - INFO - IAU: prev_close=30.46, current_size=1780, alloc_ratio=0.50, adjust=-41
+2025-03-08 14:49:53,932 - INFO - LQD: prev_close=113.76, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-08 14:49:53,932 - INFO - 2012-01-03: SELL IAU, shares=41
+2025-03-08 14:49:53,933 - WARNING - VOO: adjusting shares 32 -> 11 due to insufficient cash
+2025-03-08 14:49:53,933 - INFO - 2012-01-03: BUY VOO, shares=11
+2025-03-08 14:49:53,933 - INFO - === 2012-01-03 Rebalancing End ===
+2025-03-08 14:49:53,934 - INFO - 2012-01-04 00:00:00 OrderCompleted: SELL -41 IAU @ 31.18, Comm=1.15
+2025-03-08 14:49:53,934 - INFO - 2012-01-04 00:00:00 OrderCompleted: BUY 11 VOO @ 116.44, Comm=1.15
+2025-03-08 14:49:54,853 - INFO - Period-end close for VOO: 130.38
+2025-03-08 14:49:54,853 - INFO - Period-end close for IAU: 32.56
+2025-03-08 14:49:54,854 - INFO - Period-end close for LQD: 120.99
+2025-03-08 14:49:54,877 - INFO - [2013-01-02] Market regime disabled; using base allocation.
+2025-03-08 14:49:54,878 - INFO - === 2013-01-02 Rebalancing Start ===
+2025-03-08 14:49:54,878 - INFO - [Rebalancing Info] Date=2013-01-02, SPY Close=146.06, MA_21=142.77, MA_50=141.46, MA_150=139.85, MA_200=139.28
+2025-03-08 14:49:54,878 - INFO - Portfolio value=117167.09, cash buffer=1171.67, available=115995.42
+2025-03-08 14:49:54,879 - INFO - VOO: prev_close=130.38, current_size=440, alloc_ratio=0.50, adjust=4
+2025-03-08 14:49:54,879 - INFO - IAU: prev_close=32.56, current_size=1739, alloc_ratio=0.50, adjust=42
+2025-03-08 14:49:54,879 - INFO - LQD: prev_close=120.99, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-08 14:49:54,879 - WARNING - IAU: adjusting shares 42 -> 41 due to insufficient cash
+2025-03-08 14:49:54,879 - INFO - 2013-01-02: BUY IAU, shares=41
+2025-03-08 14:49:54,879 - INFO - 2013-01-02: BUY VOO, shares=4
+2025-03-08 14:49:54,880 - INFO - === 2013-01-02 Rebalancing End ===
+2025-03-08 14:49:54,880 - ERROR - 2013-01-03 00:00:00 MarginError: IAU
+2025-03-08 14:49:54,881 - ERROR - 2013-01-03 00:00:00 MarginError: VOO
+2025-03-08 14:49:55,865 - INFO - Period-end close for VOO: 169.15
+2025-03-08 14:49:55,865 - INFO - Period-end close for IAU: 23.36
+2025-03-08 14:49:55,866 - INFO - Period-end close for LQD: 114.19
+2025-03-08 14:49:55,892 - INFO - [2014-01-02] Market regime disabled; using base allocation.
+2025-03-08 14:49:55,892 - INFO - === 2014-01-02 Rebalancing Start ===
+2025-03-08 14:49:55,893 - INFO - [Rebalancing Info] Date=2014-01-02, SPY Close=182.92, MA_21=181.13, MA_50=179.25, MA_150=170.96, MA_200=168.18
+2025-03-08 14:49:55,893 - INFO - Portfolio value=116419.73, cash buffer=1164.20, available=115255.54
+2025-03-08 14:49:55,894 - INFO - VOO: prev_close=169.15, current_size=440, alloc_ratio=0.50, adjust=-100
+2025-03-08 14:49:55,894 - INFO - IAU: prev_close=23.36, current_size=1739, alloc_ratio=0.50, adjust=727
+2025-03-08 14:49:55,894 - INFO - LQD: prev_close=114.19, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-08 14:49:55,894 - INFO - 2014-01-02: SELL VOO, shares=100
+2025-03-08 14:49:55,895 - WARNING - IAU: adjusting shares 727 -> 57 due to insufficient cash
+2025-03-08 14:49:55,895 - INFO - 2014-01-02: BUY IAU, shares=57
+2025-03-08 14:49:55,895 - INFO - === 2014-01-02 Rebalancing End ===
+2025-03-08 14:49:55,896 - INFO - 2014-01-03 00:00:00 OrderCompleted: SELL -100 VOO @ 167.88, Comm=15.11
+2025-03-08 14:49:55,896 - INFO - 2014-01-03 00:00:00 OrderCompleted: BUY 57 IAU @ 23.88, Comm=1.23
+2025-03-08 14:49:56,916 - INFO - Period-end close for VOO: 188.40
+2025-03-08 14:49:56,917 - INFO - Period-end close for IAU: 22.88
+2025-03-08 14:49:56,917 - INFO - Period-end close for LQD: 119.41
+2025-03-08 14:49:56,940 - INFO - [2015-01-02] Market regime disabled; using base allocation.
+2025-03-08 14:49:56,940 - INFO - === 2015-01-02 Rebalancing Start ===
+2025-03-08 14:49:56,941 - INFO - [Rebalancing Info] Date=2015-01-02, SPY Close=205.43, MA_21=205.53, MA_50=203.91, MA_150=198.77, MA_200=195.94
+2025-03-08 14:49:56,941 - INFO - Portfolio value=122118.39, cash buffer=1221.18, available=120897.21
+2025-03-08 14:49:56,941 - INFO - VOO: prev_close=188.40, current_size=340, alloc_ratio=0.50, adjust=-20
+2025-03-08 14:49:56,941 - INFO - IAU: prev_close=22.88, current_size=1796, alloc_ratio=0.50, adjust=845
+2025-03-08 14:49:56,942 - INFO - LQD: prev_close=119.41, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-08 14:49:56,942 - INFO - 2015-01-02: SELL VOO, shares=20
+2025-03-08 14:49:56,942 - WARNING - IAU: adjusting shares 845 -> 731 due to insufficient cash
+2025-03-08 14:49:56,943 - INFO - 2015-01-02: BUY IAU, shares=731
+2025-03-08 14:49:56,943 - INFO - === 2015-01-02 Rebalancing End ===
+2025-03-08 14:49:56,944 - INFO - 2015-01-05 00:00:00 OrderCompleted: SELL -20 VOO @ 187.26, Comm=3.37
+2025-03-08 14:49:56,944 - INFO - 2015-01-05 00:00:00 OrderCompleted: BUY 731 IAU @ 23.12, Comm=15.21
+2025-03-08 14:49:57,909 - INFO - Period-end close for VOO: 186.93
+2025-03-08 14:49:57,909 - INFO - Period-end close for IAU: 20.46
+2025-03-08 14:49:57,909 - INFO - Period-end close for LQD: 114.01
+2025-03-08 14:49:57,935 - INFO - [2016-01-04] Market regime disabled; using base allocation.
+2025-03-08 14:49:57,935 - INFO - === 2016-01-04 Rebalancing Start ===
+2025-03-08 14:49:57,935 - INFO - [Rebalancing Info] Date=2016-01-04, SPY Close=201.02, MA_21=204.99, MA_50=206.87, MA_150=204.91, MA_200=206.16
+2025-03-08 14:49:57,936 - INFO - Portfolio value=115020.01, cash buffer=1150.20, available=113869.81
+2025-03-08 14:49:57,936 - INFO - VOO: prev_close=186.93, current_size=320, alloc_ratio=0.50, adjust=-16
+2025-03-08 14:49:57,936 - INFO - IAU: prev_close=20.46, current_size=2527, alloc_ratio=0.50, adjust=255
+2025-03-08 14:49:57,936 - INFO - LQD: prev_close=114.01, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-08 14:49:57,936 - INFO - 2016-01-04: SELL VOO, shares=16
+2025-03-08 14:49:57,937 - WARNING - IAU: adjusting shares 255 -> 174 due to insufficient cash
+2025-03-08 14:49:57,937 - INFO - 2016-01-04: BUY IAU, shares=174
+2025-03-08 14:49:57,937 - INFO - === 2016-01-04 Rebalancing End ===
+2025-03-08 14:49:57,938 - INFO - 2016-01-05 00:00:00 OrderCompleted: SELL -16 VOO @ 184.57, Comm=2.66
+2025-03-08 14:49:57,939 - INFO - 2016-01-05 00:00:00 OrderCompleted: BUY 174 IAU @ 20.80, Comm=3.26
+2025-03-08 14:49:58,827 - INFO - Period-end close for VOO: 205.31
+2025-03-08 14:49:58,828 - INFO - Period-end close for IAU: 22.16
+2025-03-08 14:49:58,828 - INFO - Period-end close for LQD: 117.18
+2025-03-08 14:49:58,851 - INFO - [2017-01-03] Market regime disabled; using base allocation.
+2025-03-08 14:49:58,852 - INFO - === 2017-01-03 Rebalancing Start ===
+2025-03-08 14:49:58,852 - INFO - [Rebalancing Info] Date=2017-01-03, SPY Close=225.24, MA_21=224.90, MA_50=219.75, MA_150=216.05, MA_200=213.68
+2025-03-08 14:49:58,852 - INFO - Portfolio value=126043.58, cash buffer=1260.44, available=124783.14
+2025-03-08 14:49:58,852 - INFO - VOO: prev_close=205.31, current_size=304, alloc_ratio=0.50, adjust=-1
+2025-03-08 14:49:58,852 - INFO - IAU: prev_close=22.16, current_size=2701, alloc_ratio=0.50, adjust=114
+2025-03-08 14:49:58,852 - INFO - LQD: prev_close=117.18, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-08 14:49:58,853 - INFO - 2017-01-03: SELL VOO, shares=1
+2025-03-08 14:49:58,853 - INFO - 2017-01-03: BUY IAU, shares=114
+2025-03-08 14:49:58,853 - INFO - === 2017-01-03 Rebalancing End ===
+2025-03-08 14:49:58,854 - INFO - 2017-01-04 00:00:00 OrderCompleted: SELL -1 VOO @ 207.20, Comm=0.19
+2025-03-08 14:49:58,854 - INFO - 2017-01-04 00:00:00 OrderCompleted: BUY 114 IAU @ 22.46, Comm=2.30
+2025-03-08 14:49:59,761 - INFO - Period-end close for VOO: 245.29
+2025-03-08 14:49:59,761 - INFO - Period-end close for IAU: 25.02
+2025-03-08 14:49:59,761 - INFO - Period-end close for LQD: 121.56
+2025-03-08 14:49:59,786 - INFO - [2018-01-02] Market regime disabled; using base allocation.
+2025-03-08 14:49:59,787 - INFO - === 2018-01-02 Rebalancing Start ===
+2025-03-08 14:49:59,787 - INFO - [Rebalancing Info] Date=2018-01-02, SPY Close=268.77, MA_21=266.29, MA_50=261.78, MA_150=251.85, MA_200=248.15
+2025-03-08 14:49:59,787 - INFO - Portfolio value=146752.94, cash buffer=1467.53, available=145285.41
+2025-03-08 14:49:59,788 - INFO - VOO: prev_close=245.29, current_size=303, alloc_ratio=0.50, adjust=-7
+2025-03-08 14:49:59,788 - INFO - IAU: prev_close=25.02, current_size=2815, alloc_ratio=0.50, adjust=88
+2025-03-08 14:49:59,788 - INFO - LQD: prev_close=121.56, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-08 14:49:59,788 - INFO - 2018-01-02: SELL VOO, shares=7
+2025-03-08 14:49:59,789 - WARNING - IAU: adjusting shares 88 -> 22 due to insufficient cash
+2025-03-08 14:49:59,789 - INFO - 2018-01-02: BUY IAU, shares=22
+2025-03-08 14:49:59,790 - INFO - === 2018-01-02 Rebalancing End ===
+2025-03-08 14:49:59,790 - INFO - 2018-01-03 00:00:00 OrderCompleted: SELL -7 VOO @ 247.24, Comm=1.56
+2025-03-08 14:49:59,791 - INFO - 2018-01-03 00:00:00 OrderCompleted: BUY 22 IAU @ 25.32, Comm=0.50
+2025-03-08 14:50:00,742 - INFO - Period-end close for VOO: 229.81
+2025-03-08 14:50:00,742 - INFO - Period-end close for IAU: 24.58
+2025-03-08 14:50:00,742 - INFO - Period-end close for LQD: 112.82
+2025-03-08 14:50:00,767 - INFO - [2019-01-02] Market regime disabled; using base allocation.
+2025-03-08 14:50:00,768 - INFO - === 2019-01-02 Rebalancing Start ===
+2025-03-08 14:50:00,768 - INFO - [Rebalancing Info] Date=2019-01-02, SPY Close=250.18, MA_21=257.34, MA_50=265.45, MA_150=276.67, MA_200=274.22
+2025-03-08 14:50:00,768 - INFO - Portfolio value=139591.39, cash buffer=1395.91, available=138195.48
+2025-03-08 14:50:00,768 - INFO - VOO: prev_close=229.81, current_size=296, alloc_ratio=0.50, adjust=4
+2025-03-08 14:50:00,769 - INFO - IAU: prev_close=24.58, current_size=2837, alloc_ratio=0.50, adjust=-26
+2025-03-08 14:50:00,769 - INFO - LQD: prev_close=112.82, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-08 14:50:00,769 - INFO - 2019-01-02: SELL IAU, shares=26
+2025-03-08 14:50:00,769 - INFO - 2019-01-02: BUY VOO, shares=4
+2025-03-08 14:50:00,770 - INFO - === 2019-01-02 Rebalancing End ===
+2025-03-08 14:50:00,770 - INFO - 2019-01-03 00:00:00 OrderCompleted: SELL -26 IAU @ 24.70, Comm=0.58
+2025-03-08 14:50:00,770 - INFO - 2019-01-03 00:00:00 OrderCompleted: BUY 4 VOO @ 228.10, Comm=0.82
+2025-03-08 14:50:01,722 - INFO - Period-end close for VOO: 295.80
+2025-03-08 14:50:01,723 - INFO - Period-end close for IAU: 29.00
+2025-03-08 14:50:01,723 - INFO - Period-end close for LQD: 127.96
+2025-03-08 14:50:01,747 - INFO - [2020-01-02] Market regime disabled; using base allocation.
+2025-03-08 14:50:01,747 - INFO - === 2020-01-02 Rebalancing Start ===
+2025-03-08 14:50:01,747 - INFO - [Rebalancing Info] Date=2020-01-02, SPY Close=324.87, MA_21=318.12, MA_50=312.25, MA_150=299.98, MA_200=296.66
+2025-03-08 14:50:01,747 - INFO - Portfolio value=173115.97, cash buffer=1731.16, available=171384.81
+2025-03-08 14:50:01,748 - INFO - VOO: prev_close=295.80, current_size=300, alloc_ratio=0.50, adjust=-11
+2025-03-08 14:50:01,748 - INFO - IAU: prev_close=29.00, current_size=2811, alloc_ratio=0.50, adjust=143
+2025-03-08 14:50:01,748 - INFO - LQD: prev_close=127.96, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-08 14:50:01,748 - INFO - 2020-01-02: SELL VOO, shares=11
+2025-03-08 14:50:01,749 - WARNING - IAU: adjusting shares 143 -> 50 due to insufficient cash
+2025-03-08 14:50:01,749 - INFO - 2020-01-02: BUY IAU, shares=50
+2025-03-08 14:50:01,750 - INFO - === 2020-01-02 Rebalancing End ===
+2025-03-08 14:50:01,751 - INFO - 2020-01-03 00:00:00 OrderCompleted: SELL -11 VOO @ 295.22, Comm=2.92
+2025-03-08 14:50:01,751 - INFO - 2020-01-03 00:00:00 OrderCompleted: BUY 50 IAU @ 29.60, Comm=1.33
+2025-03-08 14:50:02,739 - INFO - Period-end close for VOO: 343.69
+2025-03-08 14:50:02,739 - INFO - Period-end close for IAU: 36.26
+2025-03-08 14:50:02,740 - INFO - Period-end close for LQD: 138.13
+2025-03-08 14:50:02,765 - INFO - [2021-01-04] Market regime disabled; using base allocation.
+2025-03-08 14:50:02,766 - INFO - === 2021-01-04 Rebalancing Start ===
+2025-03-08 14:50:02,766 - INFO - [Rebalancing Info] Date=2021-01-04, SPY Close=368.79, MA_21=369.12, MA_50=358.48, MA_150=338.68, MA_200=323.50
+2025-03-08 14:50:02,766 - INFO - Portfolio value=207338.48, cash buffer=2073.38, available=205265.10
+2025-03-08 14:50:02,766 - INFO - VOO: prev_close=343.69, current_size=289, alloc_ratio=0.50, adjust=9
+2025-03-08 14:50:02,767 - INFO - IAU: prev_close=36.26, current_size=2861, alloc_ratio=0.50, adjust=-31
+2025-03-08 14:50:02,767 - INFO - LQD: prev_close=138.13, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-08 14:50:02,767 - INFO - 2021-01-04: SELL IAU, shares=31
+2025-03-08 14:50:02,767 - INFO - 2021-01-04: BUY VOO, shares=9
+2025-03-08 14:50:02,768 - INFO - === 2021-01-04 Rebalancing End ===
+2025-03-08 14:50:02,768 - INFO - 2021-01-05 00:00:00 OrderCompleted: SELL -31 IAU @ 37.18, Comm=1.04
+2025-03-08 14:50:02,769 - INFO - 2021-01-05 00:00:00 OrderCompleted: BUY 9 VOO @ 338.40, Comm=2.74
+2025-03-08 14:50:03,709 - INFO - Period-end close for VOO: 436.57
+2025-03-08 14:50:03,709 - INFO - Period-end close for IAU: 34.81
+2025-03-08 14:50:03,709 - INFO - Period-end close for LQD: 132.52
+2025-03-08 14:50:03,735 - INFO - [2022-01-03] Market regime disabled; using base allocation.
+2025-03-08 14:50:03,736 - INFO - === 2022-01-03 Rebalancing Start ===
+2025-03-08 14:50:03,736 - INFO - [Rebalancing Info] Date=2022-01-03, SPY Close=477.71, MA_21=468.13, MA_50=465.11, MA_150=446.51, MA_200=437.64
+2025-03-08 14:50:03,736 - INFO - Portfolio value=229171.21, cash buffer=2291.71, available=226879.50
+2025-03-08 14:50:03,736 - INFO - VOO: prev_close=436.57, current_size=298, alloc_ratio=0.50, adjust=-39
+2025-03-08 14:50:03,737 - INFO - IAU: prev_close=34.81, current_size=2830, alloc_ratio=0.50, adjust=428
+2025-03-08 14:50:03,737 - INFO - LQD: prev_close=132.52, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-08 14:50:03,737 - INFO - 2022-01-03: SELL VOO, shares=39
+2025-03-08 14:50:03,737 - WARNING - IAU: adjusting shares 428 -> 37 due to insufficient cash
+2025-03-08 14:50:03,737 - INFO - 2022-01-03: BUY IAU, shares=37
+2025-03-08 14:50:03,738 - INFO - === 2022-01-03 Rebalancing End ===
+2025-03-08 14:50:03,738 - INFO - 2022-01-04 00:00:00 OrderCompleted: SELL -39 VOO @ 440.58, Comm=15.46
+2025-03-08 14:50:03,739 - INFO - 2022-01-04 00:00:00 OrderCompleted: BUY 37 IAU @ 34.38, Comm=1.14
+2025-03-08 14:50:04,669 - INFO - Period-end close for VOO: 351.34
+2025-03-08 14:50:04,669 - INFO - Period-end close for IAU: 34.59
+2025-03-08 14:50:04,669 - INFO - Period-end close for LQD: 105.43
+2025-03-08 14:50:04,693 - INFO - [2023-01-03] Market regime disabled; using base allocation.
+2025-03-08 14:50:04,694 - INFO - === 2023-01-03 Rebalancing Start ===
+2025-03-08 14:50:04,694 - INFO - [Rebalancing Info] Date=2023-01-03, SPY Close=380.82, MA_21=389.11, MA_50=389.35, MA_150=390.64, MA_200=399.62
+2025-03-08 14:50:04,695 - INFO - Portfolio value=207861.24, cash buffer=2078.61, available=205782.63
+2025-03-08 14:50:04,695 - INFO - VOO: prev_close=351.34, current_size=259, alloc_ratio=0.50, adjust=33
+2025-03-08 14:50:04,695 - INFO - IAU: prev_close=34.59, current_size=2867, alloc_ratio=0.50, adjust=107
+2025-03-08 14:50:04,696 - INFO - LQD: prev_close=105.43, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-08 14:50:04,696 - INFO - 2023-01-03: BUY VOO, shares=33
+2025-03-08 14:50:04,696 - INFO - 2023-01-03: BUY IAU, shares=107
+2025-03-08 14:50:04,697 - INFO - === 2023-01-03 Rebalancing End ===
+2025-03-08 14:50:04,698 - INFO - 2023-01-04 00:00:00 OrderCompleted: BUY 33 VOO @ 352.10, Comm=10.46
+2025-03-08 14:50:04,698 - INFO - 2023-01-04 00:00:00 OrderCompleted: BUY 107 IAU @ 35.26, Comm=3.40
+2025-03-08 14:50:05,602 - INFO - Period-end close for VOO: 436.80
+2025-03-08 14:50:05,603 - INFO - Period-end close for IAU: 39.03
+2025-03-08 14:50:05,603 - INFO - Period-end close for LQD: 110.66
+2025-03-08 14:50:05,626 - INFO - [2024-01-02] Market regime disabled; using base allocation.
+2025-03-08 14:50:05,627 - INFO - === 2024-01-02 Rebalancing Start ===
+2025-03-08 14:50:05,628 - INFO - [Rebalancing Info] Date=2024-01-02, SPY Close=472.65, MA_21=467.70, MA_50=450.24, MA_150=443.35, MA_200=434.74
+2025-03-08 14:50:05,628 - INFO - Portfolio value=244345.37, cash buffer=2443.45, available=241901.92
+2025-03-08 14:50:05,628 - INFO - VOO: prev_close=436.80, current_size=292, alloc_ratio=0.50, adjust=-16
+2025-03-08 14:50:05,629 - INFO - IAU: prev_close=39.03, current_size=2974, alloc_ratio=0.50, adjust=124
+2025-03-08 14:50:05,629 - INFO - LQD: prev_close=110.66, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-08 14:50:05,629 - INFO - 2024-01-02: SELL VOO, shares=16
+2025-03-08 14:50:05,629 - WARNING - IAU: adjusting shares 124 -> 46 due to insufficient cash
+2025-03-08 14:50:05,630 - INFO - 2024-01-02: BUY IAU, shares=46
+2025-03-08 14:50:05,630 - INFO - === 2024-01-02 Rebalancing End ===
+2025-03-08 14:50:05,631 - INFO - 2024-01-03 00:00:00 OrderCompleted: SELL -16 VOO @ 432.32, Comm=6.23
+2025-03-08 14:50:05,631 - INFO - 2024-01-03 00:00:00 OrderCompleted: BUY 46 IAU @ 38.54, Comm=1.60
+2025-03-08 14:50:06,612 - INFO - Period-end close for VOO: 538.81
+2025-03-08 14:50:06,613 - INFO - Period-end close for IAU: 49.51
+2025-03-08 14:50:06,613 - INFO - Period-end close for LQD: 106.84
+2025-03-08 14:50:06,638 - INFO - [2025-01-02] Market regime disabled; using base allocation.
+2025-03-08 14:50:06,638 - INFO - === 2025-01-02 Rebalancing Start ===
+2025-03-08 14:50:06,640 - INFO - [Rebalancing Info] Date=2025-01-02, SPY Close=584.64, MA_21=598.83, MA_50=592.84, MA_150=566.65, MA_200=554.08
+2025-03-08 14:50:06,640 - INFO - Portfolio value=306856.12, cash buffer=3068.56, available=303787.55
+2025-03-08 14:50:06,640 - INFO - VOO: prev_close=538.81, current_size=276, alloc_ratio=0.50, adjust=5
+2025-03-08 14:50:06,640 - INFO - IAU: prev_close=49.51, current_size=3020, alloc_ratio=0.50, adjust=47
+2025-03-08 14:50:06,640 - INFO - LQD: prev_close=106.84, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-08 14:50:06,640 - INFO - 2025-01-02: BUY VOO, shares=5
+2025-03-08 14:50:06,641 - INFO - 2025-01-02: BUY IAU, shares=47
+2025-03-08 14:50:06,641 - INFO - === 2025-01-02 Rebalancing End ===
+2025-03-08 14:50:06,641 - INFO - 2025-01-03 00:00:00 OrderCompleted: BUY 5 VOO @ 540.19, Comm=2.43
+2025-03-08 14:50:06,642 - INFO - 2025-01-03 00:00:00 OrderCompleted: BUY 47 IAU @ 50.02, Comm=2.12
+2025-03-08 14:50:07,087 - INFO - Strategy stop() called.
+2025-03-08 14:50:07,090 - INFO - Final portfolio value: 319,088.20
+2025-03-08 14:50:07,090 - INFO - Total return: 219.09%
+2025-03-08 14:50:07,090 - INFO - [Analyzer] Total Return (rtot): 116.03%
+2025-03-08 14:50:07,091 - INFO - [Analyzer] Annual Return (rnorm): 7.79%
+2025-03-08 14:50:07,091 - INFO - [Analyzer] Max Drawdown: 19.89%
+2025-03-08 14:50:07,091 - INFO - [Analyzer] Sharpe Ratio: 0.66
+2025-03-08 14:50:07,341 - INFO - Saved portfolio value chart to C:\Users\james\Projects\backtrader\results\portfolio_value_20250308_145007.png.
+2025-03-08 14:50:07,354 - INFO - Saved portfolio values to C:\Users\james\Projects\backtrader\results\portfolio_values_20250308_145007.csv.
+2025-03-08 14:50:07,365 - INFO - Saved annual stats to C:\Users\james\Projects\backtrader\results\annual_stats_20250308_145007.csv.
+2025-03-08 14:50:07,368 - INFO - Saved rebalance history to C:\Users\james\Projects\backtrader\results\rebalance_history_20250308_145007.csv.
+2025-03-08 14:50:07,368 - INFO - Backtest completed.
+2025-03-08 14:50:07,369 - INFO - Total execution time: 19.39 seconds

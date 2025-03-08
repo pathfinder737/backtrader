@@ -1,0 +1,740 @@
+2025-03-07 23:24:19,197 - INFO - =============== Configurations ===============
+2025-03-07 23:24:19,198 - INFO - DATA_MODE: offline
+2025-03-07 23:24:19,198 - INFO - START_DATE: 2000-01-01
+2025-03-07 23:24:19,199 - INFO - END_DATE: 2025-3-31
+2025-03-07 23:24:19,199 - INFO - TICKERS: ['SPY', 'VTI', 'VEA', 'VWO', 'DBC', 'IAU', 'EDV', 'LTPZ', 'VCLT', 'EMLC']
+2025-03-07 23:24:19,199 - INFO - ASSET_ALLOCATION: {'VTI': 0.12, 'VEA': 0.12, 'VWO': 0.12, 'DBC': 0.07, 'IAU': 0.07, 'EDV': 0.18, 'LTPZ': 0.18, 'VCLT': 0.07, 'EMLC': 0.07}
+2025-03-07 23:24:19,199 - INFO - AGGRESSIVE_ALLOCATION: {'VTI': 0.12, 'VEA': 0.12, 'VWO': 0.12, 'DBC': 0.07, 'IAU': 0.07, 'EDV': 0.18, 'LTPZ': 0.18, 'VCLT': 0.07, 'EMLC': 0.07}
+2025-03-07 23:24:19,200 - INFO - MODERATE_ALLOCATION: {'VTI': 0.12, 'VEA': 0.12, 'VWO': 0.12, 'DBC': 0.07, 'IAU': 0.07, 'EDV': 0.18, 'LTPZ': 0.18, 'VCLT': 0.07, 'EMLC': 0.07}
+2025-03-07 23:24:19,200 - INFO - MID_DEFENSIVE_ALLOCATION: {'VTI': 0.12, 'VEA': 0.12, 'VWO': 0.12, 'DBC': 0.07, 'IAU': 0.07, 'EDV': 0.18, 'LTPZ': 0.18, 'VCLT': 0.07, 'EMLC': 0.07}
+2025-03-07 23:24:19,200 - INFO - DEFENSIVE_ALLOCATION: {'VTI': 0.12, 'VEA': 0.12, 'VWO': 0.12, 'DBC': 0.07, 'IAU': 0.07, 'EDV': 0.18, 'LTPZ': 0.18, 'VCLT': 0.07, 'EMLC': 0.07}
+2025-03-07 23:24:19,200 - INFO - TOUCHSTONE: SPY
+2025-03-07 23:24:19,200 - INFO - MA_PERIODS: [21, 50, 150, 200]
+2025-03-07 23:24:19,200 - INFO - WMA_PERIODS: [10, 30]
+2025-03-07 23:24:19,200 - INFO - MA_TYPE: daily
+2025-03-07 23:24:19,202 - INFO - INITIAL_CASH: 100000.0
+2025-03-07 23:24:19,202 - INFO - COMMISSION: 0.001
+2025-03-07 23:24:19,202 - INFO - CASH_BUFFER_PERCENT: 1.0
+2025-03-07 23:24:19,202 - INFO - PROCESS_SELL_FIRST: True
+2025-03-07 23:24:19,202 - INFO - RISK_FREE_RATE: 0.01
+2025-03-07 23:24:19,202 - INFO - FRACTIONAL_SHARES: False
+2025-03-07 23:24:19,203 - INFO - USE_MARKET_REGIME: False
+2025-03-07 23:24:19,203 - INFO - REBALANCING_TERM: YEAR
+2025-03-07 23:24:19,203 - INFO - LOG_LEVEL: INFO
+2025-03-07 23:24:19,203 - INFO - ===============================================
+2025-03-07 23:24:19,203 - INFO - Starting backtest...
+2025-03-07 23:24:19,203 - INFO - Loading data feeds...
+2025-03-07 23:24:19,205 - INFO - Loading data for SPY...
+2025-03-07 23:24:19,205 - INFO - Downloading data for SPY from 2000-01-01 to 2025-3-31.
+2025-03-07 23:24:20,224 - INFO - Saved RAW data for SPY to C:\Users\james\Projects\backtrader\data\SPY_raw.csv (6333 rows).
+2025-03-07 23:24:20,228 - INFO - Loading data for VTI...
+2025-03-07 23:24:20,230 - INFO - Downloading data for VTI from 2000-01-01 to 2025-3-31.
+2025-03-07 23:24:21,017 - INFO - Saved RAW data for VTI to C:\Users\james\Projects\backtrader\data\VTI_raw.csv (5966 rows).
+2025-03-07 23:24:21,019 - INFO - Loading data for VEA...
+2025-03-07 23:24:21,021 - INFO - Downloading data for VEA from 2000-01-01 to 2025-3-31.
+2025-03-07 23:24:21,642 - INFO - Saved RAW data for VEA to C:\Users\james\Projects\backtrader\data\VEA_raw.csv (4432 rows).
+2025-03-07 23:24:21,644 - INFO - Loading data for VWO...
+2025-03-07 23:24:21,647 - INFO - Downloading data for VWO from 2000-01-01 to 2025-3-31.
+2025-03-07 23:24:22,333 - INFO - Saved RAW data for VWO to C:\Users\james\Projects\backtrader\data\VWO_raw.csv (5030 rows).
+2025-03-07 23:24:22,337 - INFO - Loading data for DBC...
+2025-03-07 23:24:22,340 - INFO - Downloading data for DBC from 2000-01-01 to 2025-3-31.
+2025-03-07 23:24:22,961 - INFO - Saved RAW data for DBC to C:\Users\james\Projects\backtrader\data\DBC_raw.csv (4801 rows).
+2025-03-07 23:24:22,963 - INFO - Loading data for IAU...
+2025-03-07 23:24:22,966 - INFO - Downloading data for IAU from 2000-01-01 to 2025-3-31.
+2025-03-07 23:24:23,561 - INFO - Saved RAW data for IAU to C:\Users\james\Projects\backtrader\data\IAU_raw.csv (5058 rows).
+2025-03-07 23:24:23,563 - INFO - Loading data for EDV...
+2025-03-07 23:24:23,565 - INFO - Downloading data for EDV from 2000-01-01 to 2025-3-31.
+2025-03-07 23:24:24,123 - INFO - Saved RAW data for EDV to C:\Users\james\Projects\backtrader\data\EDV_raw.csv (4304 rows).
+2025-03-07 23:24:24,125 - INFO - Loading data for LTPZ...
+2025-03-07 23:24:24,125 - INFO - Downloading data for LTPZ from 2000-01-01 to 2025-3-31.
+2025-03-07 23:24:24,704 - INFO - Saved RAW data for LTPZ to C:\Users\james\Projects\backtrader\data\LTPZ_raw.csv (3898 rows).
+2025-03-07 23:24:24,705 - INFO - Loading data for VCLT...
+2025-03-07 23:24:24,707 - INFO - Downloading data for VCLT from 2000-01-01 to 2025-3-31.
+2025-03-07 23:24:25,221 - INFO - Saved RAW data for VCLT to C:\Users\james\Projects\backtrader\data\VCLT_raw.csv (3844 rows).
+2025-03-07 23:24:25,222 - INFO - Loading data for EMLC...
+2025-03-07 23:24:25,225 - INFO - Downloading data for EMLC from 2000-01-01 to 2025-3-31.
+2025-03-07 23:24:25,870 - INFO - Saved RAW data for EMLC to C:\Users\james\Projects\backtrader\data\EMLC_raw.csv (3678 rows).
+2025-03-07 23:24:25,870 - INFO - Max start date among non-touchstone: 2010-07-23 00:00:00
+2025-03-07 23:24:26,078 - INFO - Saved ALIGNED data for SPY to C:\Users\james\Projects\backtrader\data\SPY.csv (3930 rows).
+2025-03-07 23:24:26,081 - INFO - Created data feed for SPY with 3930 rows after slicing.
+2025-03-07 23:24:26,187 - INFO - Saved ALIGNED data for VTI to C:\Users\james\Projects\backtrader\data\VTI.csv (3678 rows).
+2025-03-07 23:24:26,189 - INFO - Created data feed for VTI with 3678 rows after slicing.
+2025-03-07 23:24:26,299 - INFO - Saved ALIGNED data for VEA to C:\Users\james\Projects\backtrader\data\VEA.csv (3678 rows).
+2025-03-07 23:24:26,302 - INFO - Created data feed for VEA with 3678 rows after slicing.
+2025-03-07 23:24:26,398 - INFO - Saved ALIGNED data for VWO to C:\Users\james\Projects\backtrader\data\VWO.csv (3678 rows).
+2025-03-07 23:24:26,402 - INFO - Created data feed for VWO with 3678 rows after slicing.
+2025-03-07 23:24:26,500 - INFO - Saved ALIGNED data for DBC to C:\Users\james\Projects\backtrader\data\DBC.csv (3678 rows).
+2025-03-07 23:24:26,502 - INFO - Created data feed for DBC with 3678 rows after slicing.
+2025-03-07 23:24:26,592 - INFO - Saved ALIGNED data for IAU to C:\Users\james\Projects\backtrader\data\IAU.csv (3678 rows).
+2025-03-07 23:24:26,595 - INFO - Created data feed for IAU with 3678 rows after slicing.
+2025-03-07 23:24:26,679 - INFO - Saved ALIGNED data for EDV to C:\Users\james\Projects\backtrader\data\EDV.csv (3678 rows).
+2025-03-07 23:24:26,682 - INFO - Created data feed for EDV with 3678 rows after slicing.
+2025-03-07 23:24:26,772 - INFO - Saved ALIGNED data for LTPZ to C:\Users\james\Projects\backtrader\data\LTPZ.csv (3678 rows).
+2025-03-07 23:24:26,775 - INFO - Created data feed for LTPZ with 3678 rows after slicing.
+2025-03-07 23:24:26,861 - INFO - Saved ALIGNED data for VCLT to C:\Users\james\Projects\backtrader\data\VCLT.csv (3678 rows).
+2025-03-07 23:24:26,863 - INFO - Created data feed for VCLT with 3678 rows after slicing.
+2025-03-07 23:24:26,968 - INFO - Saved ALIGNED data for EMLC to C:\Users\james\Projects\backtrader\data\EMLC.csv (3678 rows).
+2025-03-07 23:24:26,970 - INFO - Created data feed for EMLC with 3678 rows after slicing.
+2025-03-07 23:24:26,973 - INFO - Loaded and aligned data for 10 tickers.
+2025-03-07 23:24:26,979 - INFO - Added data for SPY.
+2025-03-07 23:24:26,982 - INFO - Added data for VTI.
+2025-03-07 23:24:26,986 - INFO - Added data for VEA.
+2025-03-07 23:24:26,991 - INFO - Added data for VWO.
+2025-03-07 23:24:26,996 - INFO - Added data for DBC.
+2025-03-07 23:24:26,998 - INFO - Added data for IAU.
+2025-03-07 23:24:27,001 - INFO - Added data for EDV.
+2025-03-07 23:24:27,004 - INFO - Added data for LTPZ.
+2025-03-07 23:24:27,006 - INFO - Added data for VCLT.
+2025-03-07 23:24:27,010 - INFO - Added data for EMLC.
+2025-03-07 23:24:27,012 - INFO - All data feeds loaded.
+2025-03-07 23:24:27,013 - INFO - Initial portfolio value: 100,000.00
+2025-03-07 23:24:54,132 - INFO - Asset data loaded for: VTI
+2025-03-07 23:24:54,134 - INFO - Asset data loaded for: VEA
+2025-03-07 23:24:54,136 - INFO - Asset data loaded for: VWO
+2025-03-07 23:24:54,137 - INFO - Asset data loaded for: DBC
+2025-03-07 23:24:54,139 - INFO - Asset data loaded for: IAU
+2025-03-07 23:24:54,140 - INFO - Asset data loaded for: EDV
+2025-03-07 23:24:54,141 - INFO - Asset data loaded for: LTPZ
+2025-03-07 23:24:54,143 - INFO - Asset data loaded for: VCLT
+2025-03-07 23:24:54,144 - INFO - Asset data loaded for: EMLC
+2025-03-07 23:24:54,146 - INFO - Market regime usage: Disabled
+2025-03-07 23:24:54,147 - INFO - Moving average type: daily
+2025-03-07 23:24:54,149 - INFO - Fractional shares: Not allowed
+2025-03-07 23:24:54,822 - INFO - Start date: 2010-07-23, initial portfolio=100000.00
+2025-03-07 23:24:59,187 - INFO - Period-end close for VTI: 64.93
+2025-03-07 23:24:59,192 - INFO - Period-end close for VEA: 36.15
+2025-03-07 23:24:59,194 - INFO - Period-end close for VWO: 48.15
+2025-03-07 23:24:59,194 - INFO - Period-end close for DBC: 27.55
+2025-03-07 23:24:59,195 - INFO - Period-end close for IAU: 27.80
+2025-03-07 23:24:59,196 - INFO - Period-end close for EDV: 82.80
+2025-03-07 23:24:59,197 - INFO - Period-end close for LTPZ: 54.35
+2025-03-07 23:24:59,198 - INFO - Period-end close for VCLT: 77.52
+2025-03-07 23:24:59,199 - INFO - Period-end close for EMLC: 53.32
+2025-03-07 23:24:59,376 - INFO - [2011-01-03] Market regime disabled; using base allocation.
+2025-03-07 23:24:59,377 - INFO - === 2011-01-03 Rebalancing Start ===
+2025-03-07 23:24:59,378 - INFO - [Rebalancing Info] Date=2011-01-03, SPY Close=127.05, MA_21=124.75, MA_50=121.95, MA_150=114.41, MA_200=114.89
+2025-03-07 23:24:59,379 - INFO - Portfolio value=100000.00, cash buffer=1000.00, available=99000.00
+2025-03-07 23:24:59,380 - INFO - VTI: prev_close=64.93, current_size=0, alloc_ratio=0.12, adjust=182
+2025-03-07 23:24:59,382 - INFO - VEA: prev_close=36.15, current_size=0, alloc_ratio=0.12, adjust=328
+2025-03-07 23:24:59,383 - INFO - VWO: prev_close=48.15, current_size=0, alloc_ratio=0.12, adjust=246
+2025-03-07 23:24:59,384 - INFO - DBC: prev_close=27.55, current_size=0, alloc_ratio=0.07, adjust=251
+2025-03-07 23:24:59,385 - INFO - IAU: prev_close=27.80, current_size=0, alloc_ratio=0.07, adjust=249
+2025-03-07 23:24:59,386 - INFO - EDV: prev_close=82.80, current_size=0, alloc_ratio=0.18, adjust=215
+2025-03-07 23:24:59,387 - INFO - LTPZ: prev_close=54.35, current_size=0, alloc_ratio=0.18, adjust=327
+2025-03-07 23:24:59,388 - INFO - VCLT: prev_close=77.52, current_size=0, alloc_ratio=0.07, adjust=89
+2025-03-07 23:24:59,388 - INFO - EMLC: prev_close=53.32, current_size=0, alloc_ratio=0.07, adjust=129
+2025-03-07 23:24:59,389 - INFO - 2011-01-03: BUY EDV, shares=215
+2025-03-07 23:24:59,391 - INFO - 2011-01-03: BUY LTPZ, shares=327
+2025-03-07 23:24:59,392 - INFO - 2011-01-03: BUY VEA, shares=328
+2025-03-07 23:24:59,393 - INFO - 2011-01-03: BUY VWO, shares=246
+2025-03-07 23:24:59,394 - INFO - 2011-01-03: BUY VTI, shares=182
+2025-03-07 23:24:59,395 - INFO - 2011-01-03: BUY IAU, shares=249
+2025-03-07 23:24:59,396 - INFO - 2011-01-03: BUY DBC, shares=251
+2025-03-07 23:24:59,397 - INFO - 2011-01-03: BUY VCLT, shares=89
+2025-03-07 23:24:59,398 - INFO - 2011-01-03: BUY EMLC, shares=129
+2025-03-07 23:24:59,398 - INFO - === 2011-01-03 Rebalancing End ===
+2025-03-07 23:24:59,401 - INFO - 2011-01-04 00:00:00 OrderCompleted: BUY 215 EDV @ 80.96, Comm=17.41
+2025-03-07 23:24:59,402 - INFO - 2011-01-04 00:00:00 OrderCompleted: BUY 327 LTPZ @ 54.00, Comm=17.66
+2025-03-07 23:24:59,402 - INFO - 2011-01-04 00:00:00 OrderCompleted: BUY 328 VEA @ 36.62, Comm=12.01
+2025-03-07 23:24:59,403 - INFO - 2011-01-04 00:00:00 OrderCompleted: BUY 246 VWO @ 48.80, Comm=12.00
+2025-03-07 23:24:59,403 - INFO - 2011-01-04 00:00:00 OrderCompleted: BUY 182 VTI @ 65.82, Comm=11.98
+2025-03-07 23:24:59,403 - INFO - 2011-01-04 00:00:00 OrderCompleted: BUY 249 IAU @ 27.28, Comm=6.79
+2025-03-07 23:24:59,404 - INFO - 2011-01-04 00:00:00 OrderCompleted: BUY 251 DBC @ 27.69, Comm=6.95
+2025-03-07 23:24:59,404 - INFO - 2011-01-04 00:00:00 OrderCompleted: BUY 89 VCLT @ 77.75, Comm=6.92
+2025-03-07 23:24:59,404 - INFO - 2011-01-04 00:00:00 OrderCompleted: BUY 129 EMLC @ 53.40, Comm=6.89
+2025-03-07 23:25:06,801 - INFO - Period-end close for VTI: 64.30
+2025-03-07 23:25:06,803 - INFO - Period-end close for VEA: 30.63
+2025-03-07 23:25:06,804 - INFO - Period-end close for VWO: 38.21
+2025-03-07 23:25:06,806 - INFO - Period-end close for DBC: 26.84
+2025-03-07 23:25:06,807 - INFO - Period-end close for IAU: 30.46
+2025-03-07 23:25:06,809 - INFO - Period-end close for EDV: 121.94
+2025-03-07 23:25:06,810 - INFO - Period-end close for LTPZ: 65.25
+2025-03-07 23:25:06,811 - INFO - Period-end close for VCLT: 86.70
+2025-03-07 23:25:06,812 - INFO - Period-end close for EMLC: 49.02
+2025-03-07 23:25:06,978 - INFO - [2012-01-03] Market regime disabled; using base allocation.
+2025-03-07 23:25:06,980 - INFO - === 2012-01-03 Rebalancing Start ===
+2025-03-07 23:25:06,981 - INFO - [Rebalancing Info] Date=2012-01-03, SPY Close=127.50, MA_21=124.63, MA_50=124.08, MA_150=123.68, MA_200=126.05
+2025-03-07 23:25:06,984 - INFO - Portfolio value=108920.12, cash buffer=1089.20, available=107830.92
+2025-03-07 23:25:06,986 - INFO - VTI: prev_close=64.30, current_size=182, alloc_ratio=0.12, adjust=19
+2025-03-07 23:25:06,987 - INFO - VEA: prev_close=30.63, current_size=328, alloc_ratio=0.12, adjust=94
+2025-03-07 23:25:06,989 - INFO - VWO: prev_close=38.21, current_size=246, alloc_ratio=0.12, adjust=92
+2025-03-07 23:25:06,991 - INFO - DBC: prev_close=26.84, current_size=251, alloc_ratio=0.07, adjust=30
+2025-03-07 23:25:06,993 - INFO - IAU: prev_close=30.46, current_size=249, alloc_ratio=0.07, adjust=-2
+2025-03-07 23:25:06,997 - INFO - EDV: prev_close=121.94, current_size=215, alloc_ratio=0.18, adjust=-56
+2025-03-07 23:25:07,000 - INFO - LTPZ: prev_close=65.25, current_size=327, alloc_ratio=0.18, adjust=-30
+2025-03-07 23:25:07,002 - INFO - VCLT: prev_close=86.70, current_size=89, alloc_ratio=0.07, adjust=-2
+2025-03-07 23:25:07,006 - INFO - EMLC: prev_close=49.02, current_size=129, alloc_ratio=0.07, adjust=24
+2025-03-07 23:25:07,007 - INFO - 2012-01-03: SELL IAU, shares=2
+2025-03-07 23:25:07,008 - INFO - 2012-01-03: SELL EDV, shares=56
+2025-03-07 23:25:07,011 - INFO - 2012-01-03: SELL LTPZ, shares=30
+2025-03-07 23:25:07,014 - INFO - 2012-01-03: SELL VCLT, shares=2
+2025-03-07 23:25:07,015 - WARNING - VWO: adjusting shares 92 -> 33 due to insufficient cash
+2025-03-07 23:25:07,017 - INFO - 2012-01-03: BUY VWO, shares=33
+2025-03-07 23:25:07,019 - WARNING - VEA: adjusting shares 94 -> 42 due to insufficient cash
+2025-03-07 23:25:07,020 - INFO - 2012-01-03: BUY VEA, shares=42
+2025-03-07 23:25:07,020 - INFO - 2012-01-03: BUY VTI, shares=19
+2025-03-07 23:25:07,022 - INFO - 2012-01-03: BUY EMLC, shares=24
+2025-03-07 23:25:07,024 - INFO - 2012-01-03: BUY DBC, shares=30
+2025-03-07 23:25:07,025 - INFO - === 2012-01-03 Rebalancing End ===
+2025-03-07 23:25:07,033 - INFO - 2012-01-04 00:00:00 OrderCompleted: SELL -2 IAU @ 31.18, Comm=0.06
+2025-03-07 23:25:07,034 - INFO - 2012-01-04 00:00:00 OrderCompleted: SELL -56 EDV @ 119.23, Comm=6.68
+2025-03-07 23:25:07,036 - INFO - 2012-01-04 00:00:00 OrderCompleted: SELL -30 LTPZ @ 65.27, Comm=1.96
+2025-03-07 23:25:07,037 - INFO - 2012-01-04 00:00:00 OrderCompleted: SELL -2 VCLT @ 86.54, Comm=0.17
+2025-03-07 23:25:07,038 - INFO - 2012-01-04 00:00:00 OrderCompleted: BUY 33 VWO @ 38.97, Comm=1.29
+2025-03-07 23:25:07,039 - INFO - 2012-01-04 00:00:00 OrderCompleted: BUY 42 VEA @ 31.29, Comm=1.31
+2025-03-07 23:25:07,039 - INFO - 2012-01-04 00:00:00 OrderCompleted: BUY 19 VTI @ 65.15, Comm=1.24
+2025-03-07 23:25:07,040 - INFO - 2012-01-04 00:00:00 OrderCompleted: BUY 24 EMLC @ 49.18, Comm=1.18
+2025-03-07 23:25:07,042 - INFO - 2012-01-04 00:00:00 OrderCompleted: BUY 30 DBC @ 27.61, Comm=0.83
+2025-03-07 23:25:14,315 - INFO - Period-end close for VTI: 73.28
+2025-03-07 23:25:14,317 - INFO - Period-end close for VEA: 35.23
+2025-03-07 23:25:14,317 - INFO - Period-end close for VWO: 44.53
+2025-03-07 23:25:14,317 - INFO - Period-end close for DBC: 27.78
+2025-03-07 23:25:14,318 - INFO - Period-end close for IAU: 32.56
+2025-03-07 23:25:14,318 - INFO - Period-end close for EDV: 116.00
+2025-03-07 23:25:14,318 - INFO - Period-end close for LTPZ: 71.65
+2025-03-07 23:25:14,318 - INFO - Period-end close for VCLT: 91.71
+2025-03-07 23:25:14,319 - INFO - Period-end close for EMLC: 54.90
+2025-03-07 23:25:14,472 - INFO - [2013-01-02] Market regime disabled; using base allocation.
+2025-03-07 23:25:14,474 - INFO - === 2013-01-02 Rebalancing Start ===
+2025-03-07 23:25:14,475 - INFO - [Rebalancing Info] Date=2013-01-02, SPY Close=146.06, MA_21=142.77, MA_50=141.46, MA_150=139.85, MA_200=139.28
+2025-03-07 23:25:14,476 - INFO - Portfolio value=116787.21, cash buffer=1167.87, available=115619.34
+2025-03-07 23:25:14,477 - INFO - VTI: prev_close=73.28, current_size=201, alloc_ratio=0.12, adjust=-12
+2025-03-07 23:25:14,478 - INFO - VEA: prev_close=35.23, current_size=370, alloc_ratio=0.12, adjust=23
+2025-03-07 23:25:14,479 - INFO - VWO: prev_close=44.53, current_size=279, alloc_ratio=0.12, adjust=32
+2025-03-07 23:25:14,479 - INFO - DBC: prev_close=27.78, current_size=281, alloc_ratio=0.07, adjust=10
+2025-03-07 23:25:14,480 - INFO - IAU: prev_close=32.56, current_size=247, alloc_ratio=0.07, adjust=1
+2025-03-07 23:25:14,483 - INFO - EDV: prev_close=116.00, current_size=159, alloc_ratio=0.18, adjust=20
+2025-03-07 23:25:14,484 - INFO - LTPZ: prev_close=71.65, current_size=297, alloc_ratio=0.18, adjust=-7
+2025-03-07 23:25:14,485 - INFO - VCLT: prev_close=91.71, current_size=87, alloc_ratio=0.07, adjust=1
+2025-03-07 23:25:14,487 - INFO - EMLC: prev_close=54.90, current_size=153, alloc_ratio=0.07, adjust=-6
+2025-03-07 23:25:14,487 - INFO - 2013-01-02: SELL VTI, shares=12
+2025-03-07 23:25:14,489 - INFO - 2013-01-02: SELL LTPZ, shares=7
+2025-03-07 23:25:14,490 - INFO - 2013-01-02: SELL EMLC, shares=6
+2025-03-07 23:25:14,492 - INFO - 2013-01-02: BUY EDV, shares=20
+2025-03-07 23:25:14,493 - INFO - 2013-01-02: BUY VWO, shares=32
+2025-03-07 23:25:14,494 - INFO - 2013-01-02: BUY VEA, shares=23
+2025-03-07 23:25:14,495 - INFO - 2013-01-02: BUY DBC, shares=10
+2025-03-07 23:25:14,496 - INFO - 2013-01-02: BUY VCLT, shares=1
+2025-03-07 23:25:14,499 - INFO - 2013-01-02: BUY IAU, shares=1
+2025-03-07 23:25:14,501 - INFO - === 2013-01-02 Rebalancing End ===
+2025-03-07 23:25:14,505 - INFO - 2013-01-03 00:00:00 OrderCompleted: SELL -12 VTI @ 75.12, Comm=0.90
+2025-03-07 23:25:14,506 - INFO - 2013-01-03 00:00:00 OrderCompleted: SELL -7 LTPZ @ 70.96, Comm=0.50
+2025-03-07 23:25:14,507 - INFO - 2013-01-03 00:00:00 OrderCompleted: SELL -6 EMLC @ 54.80, Comm=0.33
+2025-03-07 23:25:14,508 - INFO - 2013-01-03 00:00:00 OrderCompleted: BUY 20 EDV @ 113.00, Comm=2.26
+2025-03-07 23:25:14,509 - INFO - 2013-01-03 00:00:00 OrderCompleted: BUY 32 VWO @ 45.16, Comm=1.45
+2025-03-07 23:25:14,509 - INFO - 2013-01-03 00:00:00 OrderCompleted: BUY 23 VEA @ 35.57, Comm=0.82
+2025-03-07 23:25:14,510 - INFO - 2013-01-03 00:00:00 OrderCompleted: BUY 10 DBC @ 27.75, Comm=0.28
+2025-03-07 23:25:14,511 - INFO - 2013-01-03 00:00:00 OrderCompleted: BUY 1 VCLT @ 91.22, Comm=0.09
+2025-03-07 23:25:14,511 - INFO - 2013-01-03 00:00:00 OrderCompleted: BUY 1 IAU @ 32.66, Comm=0.03
+2025-03-07 23:25:21,806 - INFO - Period-end close for VTI: 95.92
+2025-03-07 23:25:21,807 - INFO - Period-end close for VEA: 41.68
+2025-03-07 23:25:21,808 - INFO - Period-end close for VWO: 41.14
+2025-03-07 23:25:21,810 - INFO - Period-end close for DBC: 25.66
+2025-03-07 23:25:21,811 - INFO - Period-end close for IAU: 23.36
+2025-03-07 23:25:21,812 - INFO - Period-end close for EDV: 88.77
+2025-03-07 23:25:21,812 - INFO - Period-end close for LTPZ: 57.19
+2025-03-07 23:25:21,812 - INFO - Period-end close for VCLT: 82.99
+2025-03-07 23:25:21,812 - INFO - Period-end close for EMLC: 47.10
+2025-03-07 23:25:21,946 - INFO - [2014-01-02] Market regime disabled; using base allocation.
+2025-03-07 23:25:21,948 - INFO - === 2014-01-02 Rebalancing Start ===
+2025-03-07 23:25:21,949 - INFO - [Rebalancing Info] Date=2014-01-02, SPY Close=182.92, MA_21=181.13, MA_50=179.25, MA_150=170.96, MA_200=168.18
+2025-03-07 23:25:21,951 - INFO - Portfolio value=107663.52, cash buffer=1076.64, available=106586.89
+2025-03-07 23:25:21,951 - INFO - VTI: prev_close=95.92, current_size=189, alloc_ratio=0.12, adjust=-56
+2025-03-07 23:25:21,952 - INFO - VEA: prev_close=41.68, current_size=393, alloc_ratio=0.12, adjust=-87
+2025-03-07 23:25:21,953 - INFO - VWO: prev_close=41.14, current_size=311, alloc_ratio=0.12, adjust=-1
+2025-03-07 23:25:21,953 - INFO - DBC: prev_close=25.66, current_size=291, alloc_ratio=0.07, adjust=-1
+2025-03-07 23:25:21,953 - INFO - IAU: prev_close=23.36, current_size=248, alloc_ratio=0.07, adjust=71
+2025-03-07 23:25:21,955 - INFO - EDV: prev_close=88.77, current_size=179, alloc_ratio=0.18, adjust=37
+2025-03-07 23:25:21,956 - INFO - LTPZ: prev_close=57.19, current_size=290, alloc_ratio=0.18, adjust=45
+2025-03-07 23:25:21,956 - INFO - VCLT: prev_close=82.99, current_size=88, alloc_ratio=0.07, adjust=1
+2025-03-07 23:25:21,957 - INFO - EMLC: prev_close=47.10, current_size=147, alloc_ratio=0.07, adjust=11
+2025-03-07 23:25:21,958 - INFO - 2014-01-02: SELL VTI, shares=56
+2025-03-07 23:25:21,959 - INFO - 2014-01-02: SELL VEA, shares=87
+2025-03-07 23:25:21,960 - INFO - 2014-01-02: SELL VWO, shares=1
+2025-03-07 23:25:21,961 - INFO - 2014-01-02: SELL DBC, shares=1
+2025-03-07 23:25:21,962 - WARNING - EDV: adjusting shares 37 -> 12 due to insufficient cash
+2025-03-07 23:25:21,962 - INFO - 2014-01-02: BUY EDV, shares=12
+2025-03-07 23:25:21,964 - WARNING - LTPZ: adjusting shares 45 -> 19 due to insufficient cash
+2025-03-07 23:25:21,964 - INFO - 2014-01-02: BUY LTPZ, shares=19
+2025-03-07 23:25:21,965 - WARNING - IAU: adjusting shares 71 -> 46 due to insufficient cash
+2025-03-07 23:25:21,966 - INFO - 2014-01-02: BUY IAU, shares=46
+2025-03-07 23:25:21,967 - INFO - 2014-01-02: BUY EMLC, shares=11
+2025-03-07 23:25:21,968 - INFO - 2014-01-02: BUY VCLT, shares=1
+2025-03-07 23:25:21,969 - INFO - === 2014-01-02 Rebalancing End ===
+2025-03-07 23:25:21,972 - INFO - 2014-01-03 00:00:00 OrderCompleted: SELL -56 VTI @ 95.29, Comm=5.34
+2025-03-07 23:25:21,974 - INFO - 2014-01-03 00:00:00 OrderCompleted: SELL -87 VEA @ 41.07, Comm=3.57
+2025-03-07 23:25:21,974 - INFO - 2014-01-03 00:00:00 OrderCompleted: SELL -1 VWO @ 39.91, Comm=0.04
+2025-03-07 23:25:21,975 - INFO - 2014-01-03 00:00:00 OrderCompleted: SELL -1 DBC @ 25.25, Comm=0.03
+2025-03-07 23:25:21,976 - INFO - 2014-01-03 00:00:00 OrderCompleted: BUY 12 EDV @ 88.86, Comm=1.07
+2025-03-07 23:25:21,977 - INFO - 2014-01-03 00:00:00 OrderCompleted: BUY 19 LTPZ @ 57.55, Comm=1.09
+2025-03-07 23:25:21,978 - INFO - 2014-01-03 00:00:00 OrderCompleted: BUY 46 IAU @ 23.88, Comm=1.10
+2025-03-07 23:25:21,978 - INFO - 2014-01-03 00:00:00 OrderCompleted: BUY 11 EMLC @ 46.90, Comm=0.52
+2025-03-07 23:25:21,979 - INFO - 2014-01-03 00:00:00 OrderCompleted: BUY 1 VCLT @ 83.21, Comm=0.08
+2025-03-07 23:25:29,753 - INFO - Period-end close for VTI: 106.00
+2025-03-07 23:25:29,765 - INFO - Period-end close for VEA: 37.88
+2025-03-07 23:25:29,771 - INFO - Period-end close for VWO: 40.02
+2025-03-07 23:25:29,773 - INFO - Period-end close for DBC: 18.45
+2025-03-07 23:25:29,783 - INFO - Period-end close for IAU: 22.88
+2025-03-07 23:25:29,783 - INFO - Period-end close for EDV: 123.94
+2025-03-07 23:25:29,788 - INFO - Period-end close for LTPZ: 67.21
+2025-03-07 23:25:29,798 - INFO - Period-end close for VCLT: 92.42
+2025-03-07 23:25:29,804 - INFO - Period-end close for EMLC: 42.34
+2025-03-07 23:25:29,980 - INFO - [2015-01-02] Market regime disabled; using base allocation.
+2025-03-07 23:25:29,982 - INFO - === 2015-01-02 Rebalancing Start ===
+2025-03-07 23:25:29,984 - INFO - [Rebalancing Info] Date=2015-01-02, SPY Close=205.43, MA_21=205.53, MA_50=203.91, MA_150=198.77, MA_200=195.94
+2025-03-07 23:25:29,987 - INFO - Portfolio value=116253.57, cash buffer=1162.54, available=115091.03
+2025-03-07 23:25:29,989 - INFO - VTI: prev_close=106.00, current_size=133, alloc_ratio=0.12, adjust=-3
+2025-03-07 23:25:29,990 - INFO - VEA: prev_close=37.88, current_size=306, alloc_ratio=0.12, adjust=58
+2025-03-07 23:25:29,993 - INFO - VWO: prev_close=40.02, current_size=310, alloc_ratio=0.12, adjust=35
+2025-03-07 23:25:29,996 - INFO - DBC: prev_close=18.45, current_size=290, alloc_ratio=0.07, adjust=146
+2025-03-07 23:25:30,000 - INFO - IAU: prev_close=22.88, current_size=294, alloc_ratio=0.07, adjust=58
+2025-03-07 23:25:30,002 - INFO - EDV: prev_close=123.94, current_size=191, alloc_ratio=0.18, adjust=-24
+2025-03-07 23:25:30,004 - INFO - LTPZ: prev_close=67.21, current_size=309, alloc_ratio=0.18, adjust=-1
+2025-03-07 23:25:30,008 - INFO - VCLT: prev_close=92.42, current_size=89, alloc_ratio=0.07, adjust=-2
+2025-03-07 23:25:30,014 - INFO - EMLC: prev_close=42.34, current_size=158, alloc_ratio=0.07, adjust=32
+2025-03-07 23:25:30,017 - INFO - 2015-01-02: SELL VTI, shares=3
+2025-03-07 23:25:30,026 - INFO - 2015-01-02: SELL EDV, shares=24
+2025-03-07 23:25:30,027 - INFO - 2015-01-02: SELL LTPZ, shares=1
+2025-03-07 23:25:30,029 - INFO - 2015-01-02: SELL VCLT, shares=2
+2025-03-07 23:25:30,031 - INFO - 2015-01-02: BUY DBC, shares=146
+2025-03-07 23:25:30,033 - INFO - 2015-01-02: BUY VEA, shares=58
+2025-03-07 23:25:30,035 - INFO - 2015-01-02: BUY VWO, shares=35
+2025-03-07 23:25:30,037 - INFO - 2015-01-02: BUY EMLC, shares=32
+2025-03-07 23:25:30,040 - INFO - 2015-01-02: BUY IAU, shares=58
+2025-03-07 23:25:30,043 - INFO - === 2015-01-02 Rebalancing End ===
+2025-03-07 23:25:30,051 - INFO - 2015-01-05 00:00:00 OrderCompleted: SELL -3 VTI @ 105.35, Comm=0.32
+2025-03-07 23:25:30,053 - INFO - 2015-01-05 00:00:00 OrderCompleted: SELL -24 EDV @ 127.44, Comm=3.06
+2025-03-07 23:25:30,055 - INFO - 2015-01-05 00:00:00 OrderCompleted: SELL -1 LTPZ @ 68.50, Comm=0.07
+2025-03-07 23:25:30,056 - INFO - 2015-01-05 00:00:00 OrderCompleted: SELL -2 VCLT @ 93.28, Comm=0.19
+2025-03-07 23:25:30,057 - INFO - 2015-01-05 00:00:00 OrderCompleted: BUY 146 DBC @ 18.15, Comm=2.65
+2025-03-07 23:25:30,059 - INFO - 2015-01-05 00:00:00 OrderCompleted: BUY 58 VEA @ 37.25, Comm=2.16
+2025-03-07 23:25:30,061 - INFO - 2015-01-05 00:00:00 OrderCompleted: BUY 35 VWO @ 39.42, Comm=1.38
+2025-03-07 23:25:30,063 - INFO - 2015-01-05 00:00:00 OrderCompleted: BUY 32 EMLC @ 41.98, Comm=1.34
+2025-03-07 23:25:30,064 - INFO - 2015-01-05 00:00:00 OrderCompleted: BUY 58 IAU @ 23.12, Comm=1.34
+2025-03-07 23:25:37,447 - INFO - Period-end close for VTI: 104.30
+2025-03-07 23:25:37,454 - INFO - Period-end close for VEA: 36.72
+2025-03-07 23:25:37,457 - INFO - Period-end close for VWO: 32.71
+2025-03-07 23:25:37,459 - INFO - Period-end close for DBC: 13.36
+2025-03-07 23:25:37,462 - INFO - Period-end close for IAU: 20.46
+2025-03-07 23:25:37,464 - INFO - Period-end close for EDV: 113.20
+2025-03-07 23:25:37,468 - INFO - Period-end close for LTPZ: 60.86
+2025-03-07 23:25:37,468 - INFO - Period-end close for VCLT: 84.18
+2025-03-07 23:25:37,469 - INFO - Period-end close for EMLC: 34.00
+2025-03-07 23:25:37,680 - INFO - [2016-01-04] Market regime disabled; using base allocation.
+2025-03-07 23:25:37,681 - INFO - === 2016-01-04 Rebalancing Start ===
+2025-03-07 23:25:37,682 - INFO - [Rebalancing Info] Date=2016-01-04, SPY Close=201.02, MA_21=204.99, MA_50=206.87, MA_150=204.91, MA_200=206.16
+2025-03-07 23:25:37,684 - INFO - Portfolio value=103283.47, cash buffer=1032.83, available=102250.64
+2025-03-07 23:25:37,685 - INFO - VTI: prev_close=104.30, current_size=130, alloc_ratio=0.12, adjust=-13
+2025-03-07 23:25:37,688 - INFO - VEA: prev_close=36.72, current_size=364, alloc_ratio=0.12, adjust=-30
+2025-03-07 23:25:37,689 - INFO - VWO: prev_close=32.71, current_size=345, alloc_ratio=0.12, adjust=30
+2025-03-07 23:25:37,690 - INFO - DBC: prev_close=13.36, current_size=436, alloc_ratio=0.07, adjust=99
+2025-03-07 23:25:37,692 - INFO - IAU: prev_close=20.46, current_size=352, alloc_ratio=0.07, adjust=-3
+2025-03-07 23:25:37,694 - INFO - EDV: prev_close=113.20, current_size=167, alloc_ratio=0.18, adjust=-5
+2025-03-07 23:25:37,697 - INFO - LTPZ: prev_close=60.86, current_size=308, alloc_ratio=0.18, adjust=-6
+2025-03-07 23:25:37,699 - INFO - VCLT: prev_close=84.18, current_size=87, alloc_ratio=0.07, adjust=-2
+2025-03-07 23:25:37,700 - INFO - EMLC: prev_close=34.00, current_size=190, alloc_ratio=0.07, adjust=20
+2025-03-07 23:25:37,702 - INFO - 2016-01-04: SELL VTI, shares=13
+2025-03-07 23:25:37,704 - INFO - 2016-01-04: SELL VEA, shares=30
+2025-03-07 23:25:37,714 - INFO - 2016-01-04: SELL IAU, shares=3
+2025-03-07 23:25:37,717 - INFO - 2016-01-04: SELL EDV, shares=5
+2025-03-07 23:25:37,720 - INFO - 2016-01-04: SELL LTPZ, shares=6
+2025-03-07 23:25:37,724 - INFO - 2016-01-04: SELL VCLT, shares=2
+2025-03-07 23:25:37,727 - WARNING - DBC: adjusting shares 99 -> 70 due to insufficient cash
+2025-03-07 23:25:37,729 - INFO - 2016-01-04: BUY DBC, shares=70
+2025-03-07 23:25:37,734 - WARNING - VWO: adjusting shares 30 -> 28 due to insufficient cash
+2025-03-07 23:25:37,739 - INFO - 2016-01-04: BUY VWO, shares=28
+2025-03-07 23:25:37,741 - INFO - 2016-01-04: BUY EMLC, shares=20
+2025-03-07 23:25:37,746 - INFO - === 2016-01-04 Rebalancing End ===
+2025-03-07 23:25:37,767 - INFO - 2016-01-05 00:00:00 OrderCompleted: SELL -13 VTI @ 102.90, Comm=1.34
+2025-03-07 23:25:37,775 - INFO - 2016-01-05 00:00:00 OrderCompleted: SELL -30 VEA @ 36.08, Comm=1.08
+2025-03-07 23:25:37,777 - INFO - 2016-01-05 00:00:00 OrderCompleted: SELL -3 IAU @ 20.80, Comm=0.06
+2025-03-07 23:25:37,778 - INFO - 2016-01-05 00:00:00 OrderCompleted: SELL -5 EDV @ 114.32, Comm=0.57
+2025-03-07 23:25:37,784 - INFO - 2016-01-05 00:00:00 OrderCompleted: SELL -6 LTPZ @ 60.88, Comm=0.37
+2025-03-07 23:25:37,788 - INFO - 2016-01-05 00:00:00 OrderCompleted: SELL -2 VCLT @ 84.11, Comm=0.17
+2025-03-07 23:25:37,796 - INFO - 2016-01-05 00:00:00 OrderCompleted: BUY 70 DBC @ 13.22, Comm=0.93
+2025-03-07 23:25:37,802 - INFO - 2016-01-05 00:00:00 OrderCompleted: BUY 28 VWO @ 31.90, Comm=0.89
+2025-03-07 23:25:37,805 - INFO - 2016-01-05 00:00:00 OrderCompleted: BUY 20 EMLC @ 33.62, Comm=0.67
+2025-03-07 23:25:44,129 - INFO - Period-end close for VTI: 115.32
+2025-03-07 23:25:44,131 - INFO - Period-end close for VEA: 36.54
+2025-03-07 23:25:44,132 - INFO - Period-end close for VWO: 35.78
+2025-03-07 23:25:44,134 - INFO - Period-end close for DBC: 15.84
+2025-03-07 23:25:44,135 - INFO - Period-end close for IAU: 22.16
+2025-03-07 23:25:44,137 - INFO - Period-end close for EDV: 109.42
+2025-03-07 23:25:44,138 - INFO - Period-end close for LTPZ: 64.97
+2025-03-07 23:25:44,140 - INFO - Period-end close for VCLT: 89.35
+2025-03-07 23:25:44,141 - INFO - Period-end close for EMLC: 35.20
+2025-03-07 23:25:44,286 - INFO - [2017-01-03] Market regime disabled; using base allocation.
+2025-03-07 23:25:44,287 - INFO - === 2017-01-03 Rebalancing Start ===
+2025-03-07 23:25:44,288 - INFO - [Rebalancing Info] Date=2017-01-03, SPY Close=225.24, MA_21=224.90, MA_50=219.75, MA_150=216.05, MA_200=213.68
+2025-03-07 23:25:44,290 - INFO - Portfolio value=109684.24, cash buffer=1096.84, available=108587.39
+2025-03-07 23:25:44,291 - INFO - VTI: prev_close=115.32, current_size=117, alloc_ratio=0.12, adjust=-5
+2025-03-07 23:25:44,293 - INFO - VEA: prev_close=36.54, current_size=334, alloc_ratio=0.12, adjust=22
+2025-03-07 23:25:44,294 - INFO - VWO: prev_close=35.78, current_size=373, alloc_ratio=0.12, adjust=-9
+2025-03-07 23:25:44,295 - INFO - DBC: prev_close=15.84, current_size=506, alloc_ratio=0.07, adjust=-27
+2025-03-07 23:25:44,296 - INFO - IAU: prev_close=22.16, current_size=349, alloc_ratio=0.07, adjust=-6
+2025-03-07 23:25:44,297 - INFO - EDV: prev_close=109.42, current_size=162, alloc_ratio=0.18, adjust=16
+2025-03-07 23:25:44,299 - INFO - LTPZ: prev_close=64.97, current_size=302, alloc_ratio=0.18, adjust=-2
+2025-03-07 23:25:44,300 - INFO - VCLT: prev_close=89.35, current_size=85, alloc_ratio=0.07, adjust=0
+2025-03-07 23:25:44,302 - INFO - EMLC: prev_close=35.20, current_size=210, alloc_ratio=0.07, adjust=5
+2025-03-07 23:25:44,304 - INFO - 2017-01-03: SELL VTI, shares=5
+2025-03-07 23:25:44,305 - INFO - 2017-01-03: SELL VWO, shares=9
+2025-03-07 23:25:44,306 - INFO - 2017-01-03: SELL DBC, shares=27
+2025-03-07 23:25:44,307 - INFO - 2017-01-03: SELL IAU, shares=6
+2025-03-07 23:25:44,308 - INFO - 2017-01-03: SELL LTPZ, shares=2
+2025-03-07 23:25:44,308 - INFO - 2017-01-03: BUY EDV, shares=16
+2025-03-07 23:25:44,309 - INFO - 2017-01-03: BUY VEA, shares=22
+2025-03-07 23:25:44,310 - INFO - 2017-01-03: BUY EMLC, shares=5
+2025-03-07 23:25:44,310 - INFO - === 2017-01-03 Rebalancing End ===
+2025-03-07 23:25:44,314 - INFO - 2017-01-04 00:00:00 OrderCompleted: SELL -5 VTI @ 116.47, Comm=0.58
+2025-03-07 23:25:44,316 - INFO - 2017-01-04 00:00:00 OrderCompleted: SELL -9 VWO @ 36.39, Comm=0.33
+2025-03-07 23:25:44,318 - INFO - 2017-01-04 00:00:00 OrderCompleted: SELL -27 DBC @ 15.66, Comm=0.42
+2025-03-07 23:25:44,319 - INFO - 2017-01-04 00:00:00 OrderCompleted: SELL -6 IAU @ 22.46, Comm=0.13
+2025-03-07 23:25:44,320 - INFO - 2017-01-04 00:00:00 OrderCompleted: SELL -2 LTPZ @ 65.55, Comm=0.13
+2025-03-07 23:25:44,324 - INFO - 2017-01-04 00:00:00 OrderCompleted: BUY 16 EDV @ 110.14, Comm=1.76
+2025-03-07 23:25:44,325 - INFO - 2017-01-04 00:00:00 OrderCompleted: BUY 22 VEA @ 36.96, Comm=0.81
+2025-03-07 23:25:44,327 - INFO - 2017-01-04 00:00:00 OrderCompleted: BUY 5 EMLC @ 35.00, Comm=0.18
+2025-03-07 23:25:51,390 - INFO - Period-end close for VTI: 137.25
+2025-03-07 23:25:51,391 - INFO - Period-end close for VEA: 44.86
+2025-03-07 23:25:51,393 - INFO - Period-end close for VWO: 45.91
+2025-03-07 23:25:51,394 - INFO - Period-end close for DBC: 16.61
+2025-03-07 23:25:51,396 - INFO - Period-end close for IAU: 25.02
+2025-03-07 23:25:51,397 - INFO - Period-end close for EDV: 120.99
+2025-03-07 23:25:51,398 - INFO - Period-end close for LTPZ: 69.23
+2025-03-07 23:25:51,399 - INFO - Period-end close for VCLT: 95.75
+2025-03-07 23:25:51,401 - INFO - Period-end close for EMLC: 37.96
+2025-03-07 23:25:51,554 - INFO - [2018-01-02] Market regime disabled; using base allocation.
+2025-03-07 23:25:51,555 - INFO - === 2018-01-02 Rebalancing Start ===
+2025-03-07 23:25:51,557 - INFO - [Rebalancing Info] Date=2018-01-02, SPY Close=268.77, MA_21=266.29, MA_50=261.78, MA_150=251.85, MA_200=248.15
+2025-03-07 23:25:51,560 - INFO - Portfolio value=124286.22, cash buffer=1242.86, available=123043.36
+2025-03-07 23:25:51,561 - INFO - VTI: prev_close=137.25, current_size=112, alloc_ratio=0.12, adjust=-5
+2025-03-07 23:25:51,562 - INFO - VEA: prev_close=44.86, current_size=356, alloc_ratio=0.12, adjust=-27
+2025-03-07 23:25:51,563 - INFO - VWO: prev_close=45.91, current_size=364, alloc_ratio=0.12, adjust=-43
+2025-03-07 23:25:51,564 - INFO - DBC: prev_close=16.61, current_size=479, alloc_ratio=0.07, adjust=39
+2025-03-07 23:25:51,565 - INFO - IAU: prev_close=25.02, current_size=343, alloc_ratio=0.07, adjust=1
+2025-03-07 23:25:51,567 - INFO - EDV: prev_close=120.99, current_size=178, alloc_ratio=0.18, adjust=5
+2025-03-07 23:25:51,568 - INFO - LTPZ: prev_close=69.23, current_size=300, alloc_ratio=0.18, adjust=19
+2025-03-07 23:25:51,570 - INFO - VCLT: prev_close=95.75, current_size=85, alloc_ratio=0.07, adjust=4
+2025-03-07 23:25:51,571 - INFO - EMLC: prev_close=37.96, current_size=215, alloc_ratio=0.07, adjust=11
+2025-03-07 23:25:51,572 - INFO - 2018-01-02: SELL VTI, shares=5
+2025-03-07 23:25:51,575 - INFO - 2018-01-02: SELL VEA, shares=27
+2025-03-07 23:25:51,576 - INFO - 2018-01-02: SELL VWO, shares=43
+2025-03-07 23:25:51,577 - WARNING - LTPZ: adjusting shares 19 -> 12 due to insufficient cash
+2025-03-07 23:25:51,579 - INFO - 2018-01-02: BUY LTPZ, shares=12
+2025-03-07 23:25:51,581 - INFO - 2018-01-02: BUY DBC, shares=39
+2025-03-07 23:25:51,583 - INFO - 2018-01-02: BUY EDV, shares=5
+2025-03-07 23:25:51,584 - INFO - 2018-01-02: BUY EMLC, shares=11
+2025-03-07 23:25:51,587 - INFO - 2018-01-02: BUY VCLT, shares=4
+2025-03-07 23:25:51,588 - INFO - 2018-01-02: BUY IAU, shares=1
+2025-03-07 23:25:51,590 - INFO - === 2018-01-02 Rebalancing End ===
+2025-03-07 23:25:51,599 - INFO - 2018-01-03 00:00:00 OrderCompleted: SELL -5 VTI @ 138.39, Comm=0.69
+2025-03-07 23:25:51,600 - INFO - 2018-01-03 00:00:00 OrderCompleted: SELL -27 VEA @ 45.31, Comm=1.22
+2025-03-07 23:25:51,601 - INFO - 2018-01-03 00:00:00 OrderCompleted: SELL -43 VWO @ 46.96, Comm=2.02
+2025-03-07 23:25:51,602 - INFO - 2018-01-03 00:00:00 OrderCompleted: BUY 12 LTPZ @ 68.84, Comm=0.83
+2025-03-07 23:25:51,604 - INFO - 2018-01-03 00:00:00 OrderCompleted: BUY 39 DBC @ 16.74, Comm=0.65
+2025-03-07 23:25:51,606 - INFO - 2018-01-03 00:00:00 OrderCompleted: BUY 5 EDV @ 119.65, Comm=0.60
+2025-03-07 23:25:51,607 - INFO - 2018-01-03 00:00:00 OrderCompleted: BUY 11 EMLC @ 38.42, Comm=0.42
+2025-03-07 23:25:51,609 - INFO - 2018-01-03 00:00:00 OrderCompleted: BUY 4 VCLT @ 95.07, Comm=0.38
+2025-03-07 23:25:51,610 - INFO - 2018-01-03 00:00:00 OrderCompleted: BUY 1 IAU @ 25.32, Comm=0.03
+2025-03-07 23:25:58,586 - INFO - Period-end close for VTI: 127.63
+2025-03-07 23:25:58,588 - INFO - Period-end close for VEA: 37.10
+2025-03-07 23:25:58,591 - INFO - Period-end close for VWO: 38.10
+2025-03-07 23:25:58,593 - INFO - Period-end close for DBC: 14.49
+2025-03-07 23:25:58,595 - INFO - Period-end close for IAU: 24.58
+2025-03-07 23:25:58,599 - INFO - Period-end close for EDV: 113.46
+2025-03-07 23:25:58,602 - INFO - Period-end close for LTPZ: 62.39
+2025-03-07 23:25:58,606 - INFO - Period-end close for VCLT: 85.18
+2025-03-07 23:25:58,609 - INFO - Period-end close for EMLC: 33.00
+2025-03-07 23:25:58,798 - INFO - [2019-01-02] Market regime disabled; using base allocation.
+2025-03-07 23:25:58,800 - INFO - === 2019-01-02 Rebalancing Start ===
+2025-03-07 23:25:58,801 - INFO - [Rebalancing Info] Date=2019-01-02, SPY Close=250.18, MA_21=257.34, MA_50=265.45, MA_150=276.67, MA_200=274.22
+2025-03-07 23:25:58,802 - INFO - Portfolio value=111594.54, cash buffer=1115.95, available=110478.59
+2025-03-07 23:25:58,803 - INFO - VTI: prev_close=127.63, current_size=107, alloc_ratio=0.12, adjust=-4
+2025-03-07 23:25:58,804 - INFO - VEA: prev_close=37.10, current_size=329, alloc_ratio=0.12, adjust=28
+2025-03-07 23:25:58,806 - INFO - VWO: prev_close=38.10, current_size=321, alloc_ratio=0.12, adjust=26
+2025-03-07 23:25:58,807 - INFO - DBC: prev_close=14.49, current_size=518, alloc_ratio=0.07, adjust=15
+2025-03-07 23:25:58,808 - INFO - IAU: prev_close=24.58, current_size=344, alloc_ratio=0.07, adjust=-30
+2025-03-07 23:25:58,810 - INFO - EDV: prev_close=113.46, current_size=183, alloc_ratio=0.18, adjust=-8
+2025-03-07 23:25:58,812 - INFO - LTPZ: prev_close=62.39, current_size=312, alloc_ratio=0.18, adjust=6
+2025-03-07 23:25:58,813 - INFO - VCLT: prev_close=85.18, current_size=89, alloc_ratio=0.07, adjust=1
+2025-03-07 23:25:58,814 - INFO - EMLC: prev_close=33.00, current_size=226, alloc_ratio=0.07, adjust=8
+2025-03-07 23:25:58,816 - INFO - 2019-01-02: SELL VTI, shares=4
+2025-03-07 23:25:58,819 - INFO - 2019-01-02: SELL IAU, shares=30
+2025-03-07 23:25:58,821 - INFO - 2019-01-02: SELL EDV, shares=8
+2025-03-07 23:25:58,824 - INFO - 2019-01-02: BUY VEA, shares=28
+2025-03-07 23:25:58,826 - INFO - 2019-01-02: BUY VWO, shares=26
+2025-03-07 23:25:58,828 - INFO - 2019-01-02: BUY LTPZ, shares=6
+2025-03-07 23:25:58,829 - INFO - 2019-01-02: BUY EMLC, shares=8
+2025-03-07 23:25:58,831 - INFO - 2019-01-02: BUY DBC, shares=15
+2025-03-07 23:25:58,833 - INFO - 2019-01-02: BUY VCLT, shares=1
+2025-03-07 23:25:58,834 - INFO - === 2019-01-02 Rebalancing End ===
+2025-03-07 23:25:58,846 - INFO - 2019-01-03 00:00:00 OrderCompleted: SELL -4 VTI @ 126.91, Comm=0.51
+2025-03-07 23:25:58,847 - INFO - 2019-01-03 00:00:00 OrderCompleted: SELL -30 IAU @ 24.70, Comm=0.74
+2025-03-07 23:25:58,848 - INFO - 2019-01-03 00:00:00 OrderCompleted: SELL -8 EDV @ 114.46, Comm=0.92
+2025-03-07 23:25:58,849 - INFO - 2019-01-03 00:00:00 OrderCompleted: BUY 28 VEA @ 36.93, Comm=1.03
+2025-03-07 23:25:58,851 - INFO - 2019-01-03 00:00:00 OrderCompleted: BUY 26 VWO @ 37.90, Comm=0.99
+2025-03-07 23:25:58,853 - INFO - 2019-01-03 00:00:00 OrderCompleted: BUY 6 LTPZ @ 62.89, Comm=0.38
+2025-03-07 23:25:58,854 - INFO - 2019-01-03 00:00:00 OrderCompleted: BUY 8 EMLC @ 33.12, Comm=0.26
+2025-03-07 23:25:58,855 - INFO - 2019-01-03 00:00:00 OrderCompleted: BUY 15 DBC @ 14.64, Comm=0.22
+2025-03-07 23:25:58,855 - INFO - 2019-01-03 00:00:00 OrderCompleted: BUY 1 VCLT @ 85.51, Comm=0.09
+2025-03-07 23:26:06,635 - INFO - Period-end close for VTI: 163.62
+2025-03-07 23:26:06,637 - INFO - Period-end close for VEA: 44.06
+2025-03-07 23:26:06,637 - INFO - Period-end close for VWO: 44.47
+2025-03-07 23:26:06,639 - INFO - Period-end close for DBC: 15.95
+2025-03-07 23:26:06,639 - INFO - Period-end close for IAU: 29.00
+2025-03-07 23:26:06,640 - INFO - Period-end close for EDV: 129.98
+2025-03-07 23:26:06,641 - INFO - Period-end close for LTPZ: 72.03
+2025-03-07 23:26:06,642 - INFO - Period-end close for VCLT: 101.36
+2025-03-07 23:26:06,642 - INFO - Period-end close for EMLC: 34.01
+2025-03-07 23:26:06,787 - INFO - [2020-01-02] Market regime disabled; using base allocation.
+2025-03-07 23:26:06,788 - INFO - === 2020-01-02 Rebalancing Start ===
+2025-03-07 23:26:06,789 - INFO - [Rebalancing Info] Date=2020-01-02, SPY Close=324.87, MA_21=318.12, MA_50=312.25, MA_150=299.98, MA_200=296.66
+2025-03-07 23:26:06,790 - INFO - Portfolio value=130854.81, cash buffer=1308.55, available=129546.27
+2025-03-07 23:26:06,791 - INFO - VTI: prev_close=163.62, current_size=103, alloc_ratio=0.12, adjust=-8
+2025-03-07 23:26:06,792 - INFO - VEA: prev_close=44.06, current_size=357, alloc_ratio=0.12, adjust=-5
+2025-03-07 23:26:06,792 - INFO - VWO: prev_close=44.47, current_size=347, alloc_ratio=0.12, adjust=2
+2025-03-07 23:26:06,793 - INFO - DBC: prev_close=15.95, current_size=533, alloc_ratio=0.07, adjust=35
+2025-03-07 23:26:06,794 - INFO - IAU: prev_close=29.00, current_size=314, alloc_ratio=0.07, adjust=-2
+2025-03-07 23:26:06,794 - INFO - EDV: prev_close=129.98, current_size=175, alloc_ratio=0.18, adjust=4
+2025-03-07 23:26:06,794 - INFO - LTPZ: prev_close=72.03, current_size=318, alloc_ratio=0.18, adjust=5
+2025-03-07 23:26:06,799 - INFO - VCLT: prev_close=101.36, current_size=90, alloc_ratio=0.07, adjust=-1
+2025-03-07 23:26:06,801 - INFO - EMLC: prev_close=34.01, current_size=234, alloc_ratio=0.07, adjust=32
+2025-03-07 23:26:06,801 - INFO - 2020-01-02: SELL VTI, shares=8
+2025-03-07 23:26:06,802 - INFO - 2020-01-02: SELL VEA, shares=5
+2025-03-07 23:26:06,802 - INFO - 2020-01-02: SELL IAU, shares=2
+2025-03-07 23:26:06,803 - INFO - 2020-01-02: SELL VCLT, shares=1
+2025-03-07 23:26:06,804 - INFO - 2020-01-02: BUY EMLC, shares=32
+2025-03-07 23:26:06,805 - INFO - 2020-01-02: BUY DBC, shares=35
+2025-03-07 23:26:06,806 - INFO - 2020-01-02: BUY EDV, shares=4
+2025-03-07 23:26:06,807 - INFO - 2020-01-02: BUY LTPZ, shares=5
+2025-03-07 23:26:06,807 - INFO - 2020-01-02: BUY VWO, shares=2
+2025-03-07 23:26:06,808 - INFO - === 2020-01-02 Rebalancing End ===
+2025-03-07 23:26:06,814 - INFO - 2020-01-03 00:00:00 OrderCompleted: SELL -8 VTI @ 163.29, Comm=1.31
+2025-03-07 23:26:06,815 - INFO - 2020-01-03 00:00:00 OrderCompleted: SELL -5 VEA @ 43.88, Comm=0.22
+2025-03-07 23:26:06,815 - INFO - 2020-01-03 00:00:00 OrderCompleted: SELL -2 IAU @ 29.60, Comm=0.06
+2025-03-07 23:26:06,815 - INFO - 2020-01-03 00:00:00 OrderCompleted: SELL -1 VCLT @ 102.05, Comm=0.10
+2025-03-07 23:26:06,816 - INFO - 2020-01-03 00:00:00 OrderCompleted: BUY 32 EMLC @ 33.89, Comm=1.08
+2025-03-07 23:26:06,816 - INFO - 2020-01-03 00:00:00 OrderCompleted: BUY 35 DBC @ 16.23, Comm=0.57
+2025-03-07 23:26:06,817 - INFO - 2020-01-03 00:00:00 OrderCompleted: BUY 4 EDV @ 133.28, Comm=0.53
+2025-03-07 23:26:06,817 - INFO - 2020-01-03 00:00:00 OrderCompleted: BUY 5 LTPZ @ 73.91, Comm=0.37
+2025-03-07 23:26:06,817 - INFO - 2020-01-03 00:00:00 OrderCompleted: BUY 2 VWO @ 44.83, Comm=0.09
+2025-03-07 23:26:14,815 - INFO - Period-end close for VTI: 194.64
+2025-03-07 23:26:14,817 - INFO - Period-end close for VEA: 47.21
+2025-03-07 23:26:14,818 - INFO - Period-end close for VWO: 50.11
+2025-03-07 23:26:14,818 - INFO - Period-end close for DBC: 14.70
+2025-03-07 23:26:14,819 - INFO - Period-end close for IAU: 36.26
+2025-03-07 23:26:14,820 - INFO - Period-end close for EDV: 152.30
+2025-03-07 23:26:14,820 - INFO - Period-end close for LTPZ: 88.62
+2025-03-07 23:26:14,822 - INFO - Period-end close for VCLT: 111.07
+2025-03-07 23:26:14,822 - INFO - Period-end close for EMLC: 33.27
+2025-03-07 23:26:15,015 - INFO - [2021-01-04] Market regime disabled; using base allocation.
+2025-03-07 23:26:15,018 - INFO - === 2021-01-04 Rebalancing Start ===
+2025-03-07 23:26:15,020 - INFO - [Rebalancing Info] Date=2021-01-04, SPY Close=368.79, MA_21=369.12, MA_50=358.48, MA_150=338.68, MA_200=323.50
+2025-03-07 23:26:15,020 - INFO - Portfolio value=147262.97, cash buffer=1472.63, available=145790.34
+2025-03-07 23:26:15,021 - INFO - VTI: prev_close=194.64, current_size=95, alloc_ratio=0.12, adjust=-6
+2025-03-07 23:26:15,022 - INFO - VEA: prev_close=47.21, current_size=352, alloc_ratio=0.12, adjust=18
+2025-03-07 23:26:15,023 - INFO - VWO: prev_close=50.11, current_size=349, alloc_ratio=0.12, adjust=0
+2025-03-07 23:26:15,023 - INFO - DBC: prev_close=14.70, current_size=568, alloc_ratio=0.07, adjust=126
+2025-03-07 23:26:15,025 - INFO - IAU: prev_close=36.26, current_size=312, alloc_ratio=0.07, adjust=-31
+2025-03-07 23:26:15,026 - INFO - EDV: prev_close=152.30, current_size=179, alloc_ratio=0.18, adjust=-7
+2025-03-07 23:26:15,029 - INFO - LTPZ: prev_close=88.62, current_size=323, alloc_ratio=0.18, adjust=-27
+2025-03-07 23:26:15,031 - INFO - VCLT: prev_close=111.07, current_size=89, alloc_ratio=0.07, adjust=2
+2025-03-07 23:26:15,032 - INFO - EMLC: prev_close=33.27, current_size=266, alloc_ratio=0.07, adjust=40
+2025-03-07 23:26:15,033 - INFO - 2021-01-04: SELL VTI, shares=6
+2025-03-07 23:26:15,035 - INFO - 2021-01-04: SELL IAU, shares=31
+2025-03-07 23:26:15,036 - INFO - 2021-01-04: SELL EDV, shares=7
+2025-03-07 23:26:15,037 - INFO - 2021-01-04: SELL LTPZ, shares=27
+2025-03-07 23:26:15,037 - WARNING - DBC: adjusting shares 126 -> 8 due to insufficient cash
+2025-03-07 23:26:15,039 - INFO - 2021-01-04: BUY DBC, shares=8
+2025-03-07 23:26:15,039 - WARNING - EMLC: adjusting shares 40 -> 3 due to insufficient cash
+2025-03-07 23:26:15,039 - INFO - 2021-01-04: BUY EMLC, shares=3
+2025-03-07 23:26:15,040 - WARNING - VEA: adjusting shares 18 -> 2 due to insufficient cash
+2025-03-07 23:26:15,041 - INFO - 2021-01-04: BUY VEA, shares=2
+2025-03-07 23:26:15,041 - WARNING - VCLT: adjusting shares 2 -> 1 due to insufficient cash
+2025-03-07 23:26:15,042 - INFO - 2021-01-04: BUY VCLT, shares=1
+2025-03-07 23:26:15,042 - INFO - === 2021-01-04 Rebalancing End ===
+2025-03-07 23:26:15,045 - INFO - 2021-01-05 00:00:00 OrderCompleted: SELL -6 VTI @ 191.49, Comm=1.15
+2025-03-07 23:26:15,046 - INFO - 2021-01-05 00:00:00 OrderCompleted: SELL -31 IAU @ 37.18, Comm=1.15
+2025-03-07 23:26:15,046 - INFO - 2021-01-05 00:00:00 OrderCompleted: SELL -7 EDV @ 151.55, Comm=1.06
+2025-03-07 23:26:15,046 - INFO - 2021-01-05 00:00:00 OrderCompleted: SELL -27 LTPZ @ 88.62, Comm=2.39
+2025-03-07 23:26:15,046 - INFO - 2021-01-05 00:00:00 OrderCompleted: BUY 8 DBC @ 14.89, Comm=0.12
+2025-03-07 23:26:15,047 - INFO - 2021-01-05 00:00:00 OrderCompleted: BUY 3 EMLC @ 33.22, Comm=0.10
+2025-03-07 23:26:15,047 - INFO - 2021-01-05 00:00:00 OrderCompleted: BUY 2 VEA @ 47.66, Comm=0.10
+2025-03-07 23:26:15,049 - INFO - 2021-01-05 00:00:00 OrderCompleted: BUY 1 VCLT @ 109.75, Comm=0.11
+2025-03-07 23:26:22,340 - INFO - Period-end close for VTI: 241.44
+2025-03-07 23:26:22,342 - INFO - Period-end close for VEA: 51.06
+2025-03-07 23:26:22,343 - INFO - Period-end close for VWO: 49.46
+2025-03-07 23:26:22,344 - INFO - Period-end close for DBC: 20.78
+2025-03-07 23:26:22,344 - INFO - Period-end close for IAU: 34.81
+2025-03-07 23:26:22,345 - INFO - Period-end close for EDV: 140.00
+2025-03-07 23:26:22,345 - INFO - Period-end close for LTPZ: 91.35
+2025-03-07 23:26:22,345 - INFO - Period-end close for VCLT: 105.84
+2025-03-07 23:26:22,346 - INFO - Period-end close for EMLC: 28.60
+2025-03-07 23:26:22,487 - INFO - [2022-01-03] Market regime disabled; using base allocation.
+2025-03-07 23:26:22,489 - INFO - === 2022-01-03 Rebalancing Start ===
+2025-03-07 23:26:22,490 - INFO - [Rebalancing Info] Date=2022-01-03, SPY Close=477.71, MA_21=468.13, MA_50=465.11, MA_150=446.51, MA_200=437.64
+2025-03-07 23:26:22,492 - INFO - Portfolio value=151099.05, cash buffer=1510.99, available=149588.06
+2025-03-07 23:26:22,492 - INFO - VTI: prev_close=241.44, current_size=89, alloc_ratio=0.12, adjust=-15
+2025-03-07 23:26:22,492 - INFO - VEA: prev_close=51.06, current_size=354, alloc_ratio=0.12, adjust=-3
+2025-03-07 23:26:22,493 - INFO - VWO: prev_close=49.46, current_size=349, alloc_ratio=0.12, adjust=13
+2025-03-07 23:26:22,495 - INFO - DBC: prev_close=20.78, current_size=576, alloc_ratio=0.07, adjust=-73
+2025-03-07 23:26:22,496 - INFO - IAU: prev_close=34.81, current_size=281, alloc_ratio=0.07, adjust=19
+2025-03-07 23:26:22,497 - INFO - EDV: prev_close=140.00, current_size=172, alloc_ratio=0.18, adjust=20
+2025-03-07 23:26:22,498 - INFO - LTPZ: prev_close=91.35, current_size=296, alloc_ratio=0.18, adjust=-2
+2025-03-07 23:26:22,498 - INFO - VCLT: prev_close=105.84, current_size=90, alloc_ratio=0.07, adjust=8
+2025-03-07 23:26:22,499 - INFO - EMLC: prev_close=28.60, current_size=269, alloc_ratio=0.07, adjust=97
+2025-03-07 23:26:22,500 - INFO - 2022-01-03: SELL VTI, shares=15
+2025-03-07 23:26:22,501 - INFO - 2022-01-03: SELL VEA, shares=3
+2025-03-07 23:26:22,502 - INFO - 2022-01-03: SELL DBC, shares=73
+2025-03-07 23:26:22,503 - INFO - 2022-01-03: SELL LTPZ, shares=2
+2025-03-07 23:26:22,504 - INFO - 2022-01-03: BUY EDV, shares=20
+2025-03-07 23:26:22,507 - INFO - 2022-01-03: BUY EMLC, shares=97
+2025-03-07 23:26:22,509 - INFO - 2022-01-03: BUY VCLT, shares=8
+2025-03-07 23:26:22,510 - INFO - 2022-01-03: BUY IAU, shares=19
+2025-03-07 23:26:22,511 - INFO - 2022-01-03: BUY VWO, shares=13
+2025-03-07 23:26:22,512 - INFO - === 2022-01-03 Rebalancing End ===
+2025-03-07 23:26:22,515 - INFO - 2022-01-04 00:00:00 OrderCompleted: SELL -15 VTI @ 243.73, Comm=3.66
+2025-03-07 23:26:22,516 - INFO - 2022-01-04 00:00:00 OrderCompleted: SELL -3 VEA @ 51.64, Comm=0.15
+2025-03-07 23:26:22,516 - INFO - 2022-01-04 00:00:00 OrderCompleted: SELL -73 DBC @ 21.00, Comm=1.53
+2025-03-07 23:26:22,517 - INFO - 2022-01-04 00:00:00 OrderCompleted: SELL -2 LTPZ @ 88.86, Comm=0.18
+2025-03-07 23:26:22,518 - INFO - 2022-01-04 00:00:00 OrderCompleted: BUY 20 EDV @ 134.76, Comm=2.70
+2025-03-07 23:26:22,519 - INFO - 2022-01-04 00:00:00 OrderCompleted: BUY 97 EMLC @ 28.37, Comm=2.75
+2025-03-07 23:26:22,519 - INFO - 2022-01-04 00:00:00 OrderCompleted: BUY 8 VCLT @ 103.98, Comm=0.83
+2025-03-07 23:26:22,519 - INFO - 2022-01-04 00:00:00 OrderCompleted: BUY 19 IAU @ 34.38, Comm=0.65
+2025-03-07 23:26:22,520 - INFO - 2022-01-04 00:00:00 OrderCompleted: BUY 13 VWO @ 49.84, Comm=0.65
+2025-03-07 23:26:30,033 - INFO - Period-end close for VTI: 191.19
+2025-03-07 23:26:30,034 - INFO - Period-end close for VEA: 41.97
+2025-03-07 23:26:30,036 - INFO - Period-end close for VWO: 38.98
+2025-03-07 23:26:30,040 - INFO - Period-end close for DBC: 24.65
+2025-03-07 23:26:30,040 - INFO - Period-end close for IAU: 34.59
+2025-03-07 23:26:30,040 - INFO - Period-end close for EDV: 82.83
+2025-03-07 23:26:30,042 - INFO - Period-end close for LTPZ: 58.24
+2025-03-07 23:26:30,043 - INFO - Period-end close for VCLT: 75.71
+2025-03-07 23:26:30,044 - INFO - Period-end close for EMLC: 24.23
+2025-03-07 23:26:30,184 - INFO - [2023-01-03] Market regime disabled; using base allocation.
+2025-03-07 23:26:30,185 - INFO - === 2023-01-03 Rebalancing Start ===
+2025-03-07 23:26:30,186 - INFO - [Rebalancing Info] Date=2023-01-03, SPY Close=380.82, MA_21=389.11, MA_50=389.35, MA_150=390.64, MA_200=399.62
+2025-03-07 23:26:30,186 - INFO - Portfolio value=119086.57, cash buffer=1190.87, available=117895.71
+2025-03-07 23:26:30,187 - INFO - VTI: prev_close=191.19, current_size=74, alloc_ratio=0.12, adjust=-1
+2025-03-07 23:26:30,188 - INFO - VEA: prev_close=41.97, current_size=351, alloc_ratio=0.12, adjust=-14
+2025-03-07 23:26:30,189 - INFO - VWO: prev_close=38.98, current_size=362, alloc_ratio=0.12, adjust=0
+2025-03-07 23:26:30,189 - INFO - DBC: prev_close=24.65, current_size=503, alloc_ratio=0.07, adjust=-169
+2025-03-07 23:26:30,190 - INFO - IAU: prev_close=34.59, current_size=300, alloc_ratio=0.07, adjust=-62
+2025-03-07 23:26:30,190 - INFO - EDV: prev_close=82.83, current_size=192, alloc_ratio=0.18, adjust=64
+2025-03-07 23:26:30,191 - INFO - LTPZ: prev_close=58.24, current_size=294, alloc_ratio=0.18, adjust=70
+2025-03-07 23:26:30,191 - INFO - VCLT: prev_close=75.71, current_size=98, alloc_ratio=0.07, adjust=11
+2025-03-07 23:26:30,192 - INFO - EMLC: prev_close=24.23, current_size=366, alloc_ratio=0.07, adjust=-26
+2025-03-07 23:26:30,193 - INFO - 2023-01-03: SELL VTI, shares=1
+2025-03-07 23:26:30,194 - INFO - 2023-01-03: SELL VEA, shares=14
+2025-03-07 23:26:30,195 - INFO - 2023-01-03: SELL DBC, shares=169
+2025-03-07 23:26:30,196 - INFO - 2023-01-03: SELL IAU, shares=62
+2025-03-07 23:26:30,197 - INFO - 2023-01-03: SELL EMLC, shares=26
+2025-03-07 23:26:30,198 - WARNING - EDV: adjusting shares 64 -> 40 due to insufficient cash
+2025-03-07 23:26:30,199 - INFO - 2023-01-03: BUY EDV, shares=40
+2025-03-07 23:26:30,199 - WARNING - LTPZ: adjusting shares 70 -> 58 due to insufficient cash
+2025-03-07 23:26:30,200 - INFO - 2023-01-03: BUY LTPZ, shares=58
+2025-03-07 23:26:30,201 - INFO - 2023-01-03: BUY VCLT, shares=11
+2025-03-07 23:26:30,201 - INFO - === 2023-01-03 Rebalancing End ===
+2025-03-07 23:26:30,207 - INFO - 2023-01-04 00:00:00 OrderCompleted: SELL -1 VTI @ 191.51, Comm=0.19
+2025-03-07 23:26:30,208 - INFO - 2023-01-04 00:00:00 OrderCompleted: SELL -14 VEA @ 42.85, Comm=0.60
+2025-03-07 23:26:30,208 - INFO - 2023-01-04 00:00:00 OrderCompleted: SELL -169 DBC @ 23.75, Comm=4.01
+2025-03-07 23:26:30,210 - INFO - 2023-01-04 00:00:00 OrderCompleted: SELL -62 IAU @ 35.26, Comm=2.19
+2025-03-07 23:26:30,210 - INFO - 2023-01-04 00:00:00 OrderCompleted: SELL -26 EMLC @ 24.31, Comm=0.63
+2025-03-07 23:26:30,210 - INFO - 2023-01-04 00:00:00 OrderCompleted: BUY 40 EDV @ 86.84, Comm=3.47
+2025-03-07 23:26:30,212 - INFO - 2023-01-04 00:00:00 OrderCompleted: BUY 58 LTPZ @ 59.81, Comm=3.47
+2025-03-07 23:26:30,212 - INFO - 2023-01-04 00:00:00 OrderCompleted: BUY 11 VCLT @ 77.67, Comm=0.85
+2025-03-07 23:26:37,356 - INFO - Period-end close for VTI: 237.22
+2025-03-07 23:26:37,360 - INFO - Period-end close for VEA: 47.90
+2025-03-07 23:26:37,364 - INFO - Period-end close for VWO: 41.10
+2025-03-07 23:26:37,367 - INFO - Period-end close for DBC: 22.04
+2025-03-07 23:26:37,370 - INFO - Period-end close for IAU: 39.03
+2025-03-07 23:26:37,373 - INFO - Period-end close for EDV: 81.03
+2025-03-07 23:26:37,375 - INFO - Period-end close for LTPZ: 56.68
+2025-03-07 23:26:37,376 - INFO - Period-end close for VCLT: 80.15
+2025-03-07 23:26:37,378 - INFO - Period-end close for EMLC: 25.35
+2025-03-07 23:26:37,549 - INFO - [2024-01-02] Market regime disabled; using base allocation.
+2025-03-07 23:26:37,552 - INFO - === 2024-01-02 Rebalancing Start ===
+2025-03-07 23:26:37,555 - INFO - [Rebalancing Info] Date=2024-01-02, SPY Close=472.65, MA_21=467.70, MA_50=450.24, MA_150=443.35, MA_200=434.74
+2025-03-07 23:26:37,556 - INFO - Portfolio value=123379.62, cash buffer=1233.80, available=122145.83
+2025-03-07 23:26:37,557 - INFO - VTI: prev_close=237.22, current_size=73, alloc_ratio=0.12, adjust=-12
+2025-03-07 23:26:37,558 - INFO - VEA: prev_close=47.90, current_size=337, alloc_ratio=0.12, adjust=-31
+2025-03-07 23:26:37,559 - INFO - VWO: prev_close=41.10, current_size=362, alloc_ratio=0.12, adjust=-6
+2025-03-07 23:26:37,560 - INFO - DBC: prev_close=22.04, current_size=334, alloc_ratio=0.07, adjust=53
+2025-03-07 23:26:37,561 - INFO - IAU: prev_close=39.03, current_size=238, alloc_ratio=0.07, adjust=-19
+2025-03-07 23:26:37,563 - INFO - EDV: prev_close=81.03, current_size=232, alloc_ratio=0.18, adjust=39
+2025-03-07 23:26:37,564 - INFO - LTPZ: prev_close=56.68, current_size=352, alloc_ratio=0.18, adjust=35
+2025-03-07 23:26:37,565 - INFO - VCLT: prev_close=80.15, current_size=109, alloc_ratio=0.07, adjust=-3
+2025-03-07 23:26:37,566 - INFO - EMLC: prev_close=25.35, current_size=340, alloc_ratio=0.07, adjust=-3
+2025-03-07 23:26:37,567 - INFO - 2024-01-02: SELL VTI, shares=12
+2025-03-07 23:26:37,569 - INFO - 2024-01-02: SELL VEA, shares=31
+2025-03-07 23:26:37,570 - INFO - 2024-01-02: SELL VWO, shares=6
+2025-03-07 23:26:37,572 - INFO - 2024-01-02: SELL IAU, shares=19
+2025-03-07 23:26:37,573 - INFO - 2024-01-02: SELL VCLT, shares=3
+2025-03-07 23:26:37,574 - INFO - 2024-01-02: SELL EMLC, shares=3
+2025-03-07 23:26:37,576 - INFO - 2024-01-02: BUY EDV, shares=39
+2025-03-07 23:26:37,578 - INFO - 2024-01-02: BUY LTPZ, shares=35
+2025-03-07 23:26:37,579 - INFO - 2024-01-02: BUY DBC, shares=53
+2025-03-07 23:26:37,582 - INFO - === 2024-01-02 Rebalancing End ===
+2025-03-07 23:26:37,596 - INFO - 2024-01-03 00:00:00 OrderCompleted: SELL -12 VTI @ 234.53, Comm=2.81
+2025-03-07 23:26:37,597 - INFO - 2024-01-03 00:00:00 OrderCompleted: SELL -31 VEA @ 46.90, Comm=1.45
+2025-03-07 23:26:37,599 - INFO - 2024-01-03 00:00:00 OrderCompleted: SELL -6 VWO @ 40.36, Comm=0.24
+2025-03-07 23:26:37,602 - INFO - 2024-01-03 00:00:00 OrderCompleted: SELL -19 IAU @ 38.54, Comm=0.73
+2025-03-07 23:26:37,604 - INFO - 2024-01-03 00:00:00 OrderCompleted: SELL -3 VCLT @ 78.56, Comm=0.24
+2025-03-07 23:26:37,607 - INFO - 2024-01-03 00:00:00 OrderCompleted: SELL -3 EMLC @ 25.05, Comm=0.08
+2025-03-07 23:26:37,608 - INFO - 2024-01-03 00:00:00 OrderCompleted: BUY 39 EDV @ 79.28, Comm=3.09
+2025-03-07 23:26:37,609 - INFO - 2024-01-03 00:00:00 OrderCompleted: BUY 35 LTPZ @ 56.07, Comm=1.96
+2025-03-07 23:26:37,610 - INFO - 2024-01-03 00:00:00 OrderCompleted: BUY 53 DBC @ 21.99, Comm=1.17
+2025-03-07 23:26:45,641 - INFO - Period-end close for VTI: 289.81
+2025-03-07 23:26:45,643 - INFO - Period-end close for VEA: 47.82
+2025-03-07 23:26:45,643 - INFO - Period-end close for VWO: 44.04
+2025-03-07 23:26:45,645 - INFO - Period-end close for DBC: 21.38
+2025-03-07 23:26:45,645 - INFO - Period-end close for IAU: 49.51
+2025-03-07 23:26:45,646 - INFO - Period-end close for EDV: 67.72
+2025-03-07 23:26:45,646 - INFO - Period-end close for LTPZ: 52.07
+2025-03-07 23:26:45,647 - INFO - Period-end close for VCLT: 74.78
+2025-03-07 23:26:45,647 - INFO - Period-end close for EMLC: 23.11
+2025-03-07 23:26:45,800 - INFO - [2025-01-02] Market regime disabled; using base allocation.
+2025-03-07 23:26:45,801 - INFO - === 2025-01-02 Rebalancing Start ===
+2025-03-07 23:26:45,803 - INFO - [Rebalancing Info] Date=2025-01-02, SPY Close=584.64, MA_21=598.83, MA_50=592.84, MA_150=566.65, MA_200=554.08
+2025-03-07 23:26:45,803 - INFO - Portfolio value=123972.02, cash buffer=1239.72, available=122732.30
+2025-03-07 23:26:45,805 - INFO - VTI: prev_close=289.81, current_size=61, alloc_ratio=0.12, adjust=-11
+2025-03-07 23:26:45,805 - INFO - VEA: prev_close=47.82, current_size=306, alloc_ratio=0.12, adjust=1
+2025-03-07 23:26:45,808 - INFO - VWO: prev_close=44.04, current_size=356, alloc_ratio=0.12, adjust=-22
+2025-03-07 23:26:45,810 - INFO - DBC: prev_close=21.38, current_size=387, alloc_ratio=0.07, adjust=14
+2025-03-07 23:26:45,811 - INFO - IAU: prev_close=49.51, current_size=219, alloc_ratio=0.07, adjust=-46
+2025-03-07 23:26:45,811 - INFO - EDV: prev_close=67.72, current_size=271, alloc_ratio=0.18, adjust=55
+2025-03-07 23:26:45,812 - INFO - LTPZ: prev_close=52.07, current_size=387, alloc_ratio=0.18, adjust=37
+2025-03-07 23:26:45,812 - INFO - VCLT: prev_close=74.78, current_size=106, alloc_ratio=0.07, adjust=8
+2025-03-07 23:26:45,812 - INFO - EMLC: prev_close=23.11, current_size=337, alloc_ratio=0.07, adjust=34
+2025-03-07 23:26:45,814 - INFO - 2025-01-02: SELL VTI, shares=11
+2025-03-07 23:26:45,814 - INFO - 2025-01-02: SELL VWO, shares=22
+2025-03-07 23:26:45,815 - INFO - 2025-01-02: SELL IAU, shares=46
+2025-03-07 23:26:45,816 - WARNING - EDV: adjusting shares 55 -> 37 due to insufficient cash
+2025-03-07 23:26:45,816 - INFO - 2025-01-02: BUY EDV, shares=37
+2025-03-07 23:26:45,817 - INFO - 2025-01-02: BUY LTPZ, shares=37
+2025-03-07 23:26:45,818 - INFO - 2025-01-02: BUY EMLC, shares=34
+2025-03-07 23:26:45,818 - INFO - 2025-01-02: BUY VCLT, shares=8
+2025-03-07 23:26:45,819 - INFO - 2025-01-02: BUY DBC, shares=14
+2025-03-07 23:26:45,824 - INFO - 2025-01-02: BUY VEA, shares=1
+2025-03-07 23:26:45,827 - INFO - === 2025-01-02 Rebalancing End ===
+2025-03-07 23:26:45,830 - INFO - 2025-01-03 00:00:00 OrderCompleted: SELL -11 VTI @ 290.66, Comm=3.20
+2025-03-07 23:26:45,831 - INFO - 2025-01-03 00:00:00 OrderCompleted: SELL -22 VWO @ 44.05, Comm=0.97
+2025-03-07 23:26:45,831 - INFO - 2025-01-03 00:00:00 OrderCompleted: SELL -46 IAU @ 50.02, Comm=2.30
+2025-03-07 23:26:45,831 - INFO - 2025-01-03 00:00:00 OrderCompleted: BUY 37 EDV @ 67.89, Comm=2.51
+2025-03-07 23:26:45,833 - INFO - 2025-01-03 00:00:00 OrderCompleted: BUY 37 LTPZ @ 52.10, Comm=1.93
+2025-03-07 23:26:45,833 - INFO - 2025-01-03 00:00:00 OrderCompleted: BUY 34 EMLC @ 23.17, Comm=0.79
+2025-03-07 23:26:45,833 - INFO - 2025-01-03 00:00:00 OrderCompleted: BUY 8 VCLT @ 74.96, Comm=0.60
+2025-03-07 23:26:45,833 - INFO - 2025-01-03 00:00:00 OrderCompleted: BUY 14 DBC @ 21.55, Comm=0.30
+2025-03-07 23:26:45,834 - INFO - 2025-01-03 00:00:00 OrderCompleted: BUY 1 VEA @ 47.94, Comm=0.05
+2025-03-07 23:26:49,383 - INFO - Strategy stop() called.
+2025-03-07 23:26:49,387 - INFO - Final portfolio value: 128,820.33
+2025-03-07 23:26:49,388 - INFO - Total return: 28.82%
+2025-03-07 23:26:49,389 - INFO - [Analyzer] Total Return (rtot): 25.32%
+2025-03-07 23:26:49,390 - INFO - [Analyzer] Annual Return (rnorm): 1.64%
+2025-03-07 23:26:49,391 - INFO - [Analyzer] Max Drawdown: 28.85%
+2025-03-07 23:26:49,392 - INFO - [Analyzer] Sharpe Ratio: 0.10
+2025-03-07 23:26:50,791 - INFO - Saved portfolio value chart to C:\Users\james\Projects\backtrader\results\portfolio_value_20250307_232649.png.
+2025-03-07 23:26:50,998 - INFO - Saved portfolio values to C:\Users\james\Projects\backtrader\results\portfolio_values_20250307_232649.csv.
+2025-03-07 23:26:51,049 - INFO - Saved annual stats to C:\Users\james\Projects\backtrader\results\annual_stats_20250307_232651.csv.
+2025-03-07 23:26:51,059 - INFO - Saved rebalance history to C:\Users\james\Projects\backtrader\results\rebalance_history_20250307_232651.csv.
+2025-03-07 23:26:51,063 - INFO - Backtest completed.
+2025-03-07 23:26:51,068 - INFO - Total execution time: 151.89 seconds

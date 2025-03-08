@@ -1,0 +1,66 @@
+2025-03-08 18:02:40,701 - INFO - =============== Configurations ===============
+2025-03-08 18:02:40,702 - INFO - DATA_MODE: offline
+2025-03-08 18:02:40,702 - INFO - START_DATE: 2000-01-01
+2025-03-08 18:02:40,703 - INFO - END_DATE: 2025-3-31
+2025-03-08 18:02:40,703 - INFO - TICKERS: ['SPY', 'QQQ', 'GLD']
+2025-03-08 18:02:40,704 - INFO - ASSET_ALLOCATION: {'QQQ': 0.5, 'GLD': 0.5}
+2025-03-08 18:02:40,704 - INFO - AGGRESSIVE_ALLOCATION: {'QQQ': 0.7, 'GLD': 0.3}
+2025-03-08 18:02:40,704 - INFO - MODERATE_ALLOCATION: {'QQQ': 0.6, 'GLD': 0.4}
+2025-03-08 18:02:40,705 - INFO - MID_DEFENSIVE_ALLOCATION: {'QQQ': 0.5, 'GLD': 0.5}
+2025-03-08 18:02:40,707 - INFO - DEFENSIVE_ALLOCATION: {'QQQ': 0.5, 'GLD': 0.5}
+2025-03-08 18:02:40,708 - INFO - TOUCHSTONE: SPY
+2025-03-08 18:02:40,708 - INFO - MA_PERIODS: [21, 50, 150, 200]
+2025-03-08 18:02:40,709 - INFO - WMA_PERIODS: [10, 30]
+2025-03-08 18:02:40,711 - INFO - MA_TYPE: weekly
+2025-03-08 18:02:40,711 - INFO - INITIAL_CASH: 100000.0
+2025-03-08 18:02:40,712 - INFO - COMMISSION: 0.001
+2025-03-08 18:02:40,712 - INFO - CASH_BUFFER_PERCENT: 1.0
+2025-03-08 18:02:40,713 - INFO - PROCESS_SELL_FIRST: True
+2025-03-08 18:02:40,713 - INFO - RISK_FREE_RATE: 0.01
+2025-03-08 18:02:40,713 - INFO - FRACTIONAL_SHARES: False
+2025-03-08 18:02:40,714 - INFO - USE_MARKET_REGIME: True
+2025-03-08 18:02:40,714 - INFO - REBALANCING_TERM: month
+2025-03-08 18:02:40,714 - INFO - LOG_LEVEL: INFO
+2025-03-08 18:02:40,715 - INFO - ===============================================
+2025-03-08 18:02:40,715 - INFO - Starting backtest...
+2025-03-08 18:02:40,716 - INFO - Loading data feeds...
+2025-03-08 18:02:40,716 - INFO - Loading data for SPY...
+2025-03-08 18:02:40,717 - INFO - Downloading data for SPY from 2000-01-01 to 2025-3-31.
+2025-03-08 18:02:41,830 - INFO - Saved RAW data for SPY to C:\Users\james\Projects\backtrader\data\SPY_raw.csv (6334 rows).
+2025-03-08 18:02:41,832 - INFO - Loading data for QQQ...
+2025-03-08 18:02:41,834 - INFO - Downloading data for QQQ from 2000-01-01 to 2025-3-31.
+2025-03-08 18:02:42,583 - INFO - Saved RAW data for QQQ to C:\Users\james\Projects\backtrader\data\QQQ_raw.csv (6334 rows).
+2025-03-08 18:02:42,587 - INFO - Loading data for GLD...
+2025-03-08 18:02:42,589 - INFO - Downloading data for GLD from 2000-01-01 to 2025-3-31.
+2025-03-08 18:02:43,140 - INFO - Saved RAW data for GLD to C:\Users\james\Projects\backtrader\data\GLD_raw.csv (5107 rows).
+2025-03-08 18:02:43,142 - INFO - Max start date among non-touchstone: 2004-11-18 00:00:00
+2025-03-08 18:02:43,404 - INFO - Saved ALIGNED data for SPY to C:\Users\james\Projects\backtrader\data\SPY.csv (5359 rows).
+2025-03-08 18:02:43,407 - INFO - Created data feed for SPY with 5359 rows after slicing.
+2025-03-08 18:02:43,534 - INFO - Saved ALIGNED data for QQQ to C:\Users\james\Projects\backtrader\data\QQQ.csv (5107 rows).
+2025-03-08 18:02:43,538 - INFO - Created data feed for QQQ with 5107 rows after slicing.
+2025-03-08 18:02:43,682 - INFO - Saved ALIGNED data for GLD to C:\Users\james\Projects\backtrader\data\GLD.csv (5107 rows).
+2025-03-08 18:02:43,685 - INFO - Created data feed for GLD with 5107 rows after slicing.
+2025-03-08 18:02:43,686 - INFO - Loaded and aligned data for 3 tickers.
+2025-03-08 18:02:43,687 - INFO - Added data for SPY.
+2025-03-08 18:02:43,690 - INFO - Added data for QQQ.
+2025-03-08 18:02:43,693 - INFO - Added data for GLD.
+2025-03-08 18:02:43,694 - INFO - All data feeds loaded.
+2025-03-08 18:02:43,694 - INFO - Initial portfolio value: 100,000.00
+2025-03-08 18:02:54,664 - INFO - Asset data loaded for: QQQ
+2025-03-08 18:02:54,666 - INFO - Asset data loaded for: GLD
+2025-03-08 18:02:54,667 - INFO - Market regime usage: Enabled
+2025-03-08 18:02:54,668 - INFO - Moving average type: weekly
+2025-03-08 18:02:54,670 - INFO - Fractional shares: Not allowed
+2025-03-08 18:02:55,027 - INFO - Start date: 2004-11-18, initial portfolio=100000.00
+2025-03-08 18:02:59,581 - INFO - Strategy stop() called.
+2025-03-08 18:02:59,583 - INFO - Final portfolio value: 100,000.00
+2025-03-08 18:02:59,585 - INFO - Total return: 0.00%
+2025-03-08 18:02:59,586 - INFO - [Analyzer] Total Return (rtot): 0.00%
+2025-03-08 18:02:59,586 - INFO - [Analyzer] Annual Return (rnorm): 0.00%
+2025-03-08 18:02:59,587 - INFO - [Analyzer] Max Drawdown: 0.00%
+2025-03-08 18:02:59,588 - ERROR - Error during backtesting: unsupported format string passed to NoneType.__format__
+2025-03-08 18:02:59,593 - ERROR - Traceback (most recent call last):
+  File "C:\Users\james\Projects\backtrader\backtest.py", line 124, in run_backtest
+    log.info(f"[Analyzer] Sharpe Ratio: {sr:.2f}")
+TypeError: unsupported format string passed to NoneType.__format__
+

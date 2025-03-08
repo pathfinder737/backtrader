@@ -1,0 +1,403 @@
+2025-03-08 14:35:31,117 - INFO - =============== Configurations ===============
+2025-03-08 14:35:31,118 - INFO - DATA_MODE: offline
+2025-03-08 14:35:31,119 - INFO - START_DATE: 2000-01-01
+2025-03-08 14:35:31,119 - INFO - END_DATE: 2025-3-31
+2025-03-08 14:35:31,120 - INFO - TICKERS: ['SPY', 'QQQ', 'GLD', 'LQD']
+2025-03-08 14:35:31,120 - INFO - ASSET_ALLOCATION: {'QQQ': 0.7, 'GLD': 0.3, 'LQD': 0}
+2025-03-08 14:35:31,121 - INFO - AGGRESSIVE_ALLOCATION: {'QQQ': 0.6, 'GLD': 0.4, 'LQD': 0}
+2025-03-08 14:35:31,123 - INFO - MODERATE_ALLOCATION: {'QQQ': 0.6, 'GLD': 0.4, 'LQD': 0}
+2025-03-08 14:35:31,127 - INFO - MID_DEFENSIVE_ALLOCATION: {'QQQ': 0.6, 'GLD': 0.4, 'LQD': 0}
+2025-03-08 14:35:31,129 - INFO - DEFENSIVE_ALLOCATION: {'QQQ': 0.6, 'GLD': 0.4, 'LQD': 0}
+2025-03-08 14:35:31,137 - INFO - TOUCHSTONE: SPY
+2025-03-08 14:35:31,138 - INFO - MA_PERIODS: [21, 50, 150, 200]
+2025-03-08 14:35:31,139 - INFO - WMA_PERIODS: [10, 30]
+2025-03-08 14:35:31,139 - INFO - MA_TYPE: daily
+2025-03-08 14:35:31,140 - INFO - INITIAL_CASH: 100000.0
+2025-03-08 14:35:31,140 - INFO - COMMISSION: 0.0009
+2025-03-08 14:35:31,140 - INFO - CASH_BUFFER_PERCENT: 1.0
+2025-03-08 14:35:31,140 - INFO - PROCESS_SELL_FIRST: True
+2025-03-08 14:35:31,140 - INFO - RISK_FREE_RATE: 0.01
+2025-03-08 14:35:31,141 - INFO - FRACTIONAL_SHARES: False
+2025-03-08 14:35:31,141 - INFO - USE_MARKET_REGIME: False
+2025-03-08 14:35:31,141 - INFO - REBALANCING_TERM: YEAR
+2025-03-08 14:35:31,142 - INFO - LOG_LEVEL: INFO
+2025-03-08 14:35:31,142 - INFO - ===============================================
+2025-03-08 14:35:31,143 - INFO - Starting backtest...
+2025-03-08 14:35:31,143 - INFO - Loading data feeds...
+2025-03-08 14:35:31,144 - INFO - Loading data for SPY...
+2025-03-08 14:35:31,145 - INFO - Downloading data for SPY from 2000-01-01 to 2025-3-31.
+2025-03-08 14:35:32,190 - INFO - Saved RAW data for SPY to C:\Users\james\Projects\backtrader\data\SPY_raw.csv (6334 rows).
+2025-03-08 14:35:32,192 - INFO - Loading data for QQQ...
+2025-03-08 14:35:32,194 - INFO - Downloading data for QQQ from 2000-01-01 to 2025-3-31.
+2025-03-08 14:35:33,048 - INFO - Saved RAW data for QQQ to C:\Users\james\Projects\backtrader\data\QQQ_raw.csv (6334 rows).
+2025-03-08 14:35:33,049 - INFO - Loading data for GLD...
+2025-03-08 14:35:33,052 - INFO - Downloading data for GLD from 2000-01-01 to 2025-3-31.
+2025-03-08 14:35:33,676 - INFO - Saved RAW data for GLD to C:\Users\james\Projects\backtrader\data\GLD_raw.csv (5107 rows).
+2025-03-08 14:35:33,677 - INFO - Loading data for LQD...
+2025-03-08 14:35:33,679 - INFO - Downloading data for LQD from 2000-01-01 to 2025-3-31.
+2025-03-08 14:35:34,412 - INFO - Saved RAW data for LQD to C:\Users\james\Projects\backtrader\data\LQD_raw.csv (5689 rows).
+2025-03-08 14:35:34,415 - INFO - Max start date among non-touchstone: 2004-11-18 00:00:00
+2025-03-08 14:35:34,686 - INFO - Saved ALIGNED data for SPY to C:\Users\james\Projects\backtrader\data\SPY.csv (5359 rows).
+2025-03-08 14:35:34,688 - INFO - Created data feed for SPY with 5359 rows after slicing.
+2025-03-08 14:35:34,831 - INFO - Saved ALIGNED data for QQQ to C:\Users\james\Projects\backtrader\data\QQQ.csv (5107 rows).
+2025-03-08 14:35:34,833 - INFO - Created data feed for QQQ with 5107 rows after slicing.
+2025-03-08 14:35:34,958 - INFO - Saved ALIGNED data for GLD to C:\Users\james\Projects\backtrader\data\GLD.csv (5107 rows).
+2025-03-08 14:35:34,961 - INFO - Created data feed for GLD with 5107 rows after slicing.
+2025-03-08 14:35:35,072 - INFO - Saved ALIGNED data for LQD to C:\Users\james\Projects\backtrader\data\LQD.csv (5107 rows).
+2025-03-08 14:35:35,073 - INFO - Created data feed for LQD with 5107 rows after slicing.
+2025-03-08 14:35:35,073 - INFO - Loaded and aligned data for 4 tickers.
+2025-03-08 14:35:35,076 - INFO - Added data for SPY.
+2025-03-08 14:35:35,077 - INFO - Added data for QQQ.
+2025-03-08 14:35:35,078 - INFO - Added data for GLD.
+2025-03-08 14:35:35,080 - INFO - Added data for LQD.
+2025-03-08 14:35:35,080 - INFO - All data feeds loaded.
+2025-03-08 14:35:35,081 - INFO - Initial portfolio value: 100,000.00
+2025-03-08 14:35:50,731 - INFO - Asset data loaded for: QQQ
+2025-03-08 14:35:50,734 - INFO - Asset data loaded for: GLD
+2025-03-08 14:35:50,735 - INFO - Asset data loaded for: LQD
+2025-03-08 14:35:50,735 - INFO - Market regime usage: Disabled
+2025-03-08 14:35:50,736 - INFO - Moving average type: daily
+2025-03-08 14:35:50,736 - INFO - Fractional shares: Not allowed
+2025-03-08 14:35:51,085 - INFO - Start date: 2004-11-18, initial portfolio=100000.00
+2025-03-08 14:35:54,986 - INFO - Period-end close for QQQ: 39.92
+2025-03-08 14:35:54,987 - INFO - Period-end close for GLD: 43.80
+2025-03-08 14:35:54,990 - INFO - Period-end close for LQD: 111.53
+2025-03-08 14:35:55,135 - INFO - [2005-01-03] Market regime disabled; using base allocation.
+2025-03-08 14:35:55,136 - INFO - === 2005-01-03 Rebalancing Start ===
+2025-03-08 14:35:55,138 - INFO - [Rebalancing Info] Date=2005-01-03, SPY Close=120.30, MA_21=120.14, MA_50=117.91, MA_150=113.77, MA_200=113.34
+2025-03-08 14:35:55,138 - INFO - Portfolio value=100000.00, cash buffer=1000.00, available=99000.00
+2025-03-08 14:35:55,138 - INFO - QQQ: prev_close=39.92, current_size=0, alloc_ratio=0.70, adjust=1735
+2025-03-08 14:35:55,139 - INFO - GLD: prev_close=43.80, current_size=0, alloc_ratio=0.30, adjust=678
+2025-03-08 14:35:55,139 - INFO - LQD: prev_close=111.53, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-08 14:35:55,139 - INFO - 2005-01-03: BUY QQQ, shares=1735
+2025-03-08 14:35:55,140 - INFO - 2005-01-03: BUY GLD, shares=678
+2025-03-08 14:35:55,140 - INFO - === 2005-01-03 Rebalancing End ===
+2025-03-08 14:35:55,142 - INFO - 2005-01-04 00:00:00 OrderCompleted: BUY 1735 QQQ @ 39.67, Comm=61.94
+2025-03-08 14:35:55,143 - INFO - 2005-01-04 00:00:00 OrderCompleted: BUY 678 GLD @ 42.80, Comm=26.12
+2025-03-08 14:36:01,605 - INFO - Period-end close for QQQ: 40.41
+2025-03-08 14:36:01,607 - INFO - Period-end close for GLD: 51.58
+2025-03-08 14:36:01,608 - INFO - Period-end close for LQD: 107.69
+2025-03-08 14:36:01,745 - INFO - [2006-01-03] Market regime disabled; using base allocation.
+2025-03-08 14:36:01,746 - INFO - === 2006-01-03 Rebalancing Start ===
+2025-03-08 14:36:01,747 - INFO - [Rebalancing Info] Date=2006-01-03, SPY Close=126.70, MA_21=126.32, MA_50=124.39, MA_150=122.55, MA_200=121.23
+2025-03-08 14:36:01,748 - INFO - Portfolio value=109754.30, cash buffer=1097.54, available=108656.76
+2025-03-08 14:36:01,749 - INFO - QQQ: prev_close=40.41, current_size=1735, alloc_ratio=0.70, adjust=147
+2025-03-08 14:36:01,750 - INFO - GLD: prev_close=51.58, current_size=678, alloc_ratio=0.30, adjust=-47
+2025-03-08 14:36:01,751 - INFO - LQD: prev_close=107.69, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-08 14:36:01,752 - INFO - 2006-01-03: SELL GLD, shares=47
+2025-03-08 14:36:01,754 - WARNING - QQQ: adjusting shares 147 -> 51 due to insufficient cash
+2025-03-08 14:36:01,755 - INFO - 2006-01-03: BUY QQQ, shares=51
+2025-03-08 14:36:01,756 - INFO - === 2006-01-03 Rebalancing End ===
+2025-03-08 14:36:01,758 - INFO - 2006-01-04 00:00:00 OrderCompleted: SELL -47 GLD @ 52.87, Comm=2.24
+2025-03-08 14:36:01,759 - INFO - 2006-01-04 00:00:00 OrderCompleted: BUY 51 QQQ @ 41.41, Comm=1.90
+2025-03-08 14:36:09,989 - INFO - Period-end close for QQQ: 43.16
+2025-03-08 14:36:09,990 - INFO - Period-end close for GLD: 63.21
+2025-03-08 14:36:09,991 - INFO - Period-end close for LQD: 106.68
+2025-03-08 14:36:10,202 - INFO - [2007-01-03] Market regime disabled; using base allocation.
+2025-03-08 14:36:10,204 - INFO - === 2007-01-03 Rebalancing Start ===
+2025-03-08 14:36:10,205 - INFO - [Rebalancing Info] Date=2007-01-03, SPY Close=141.37, MA_21=141.74, MA_50=140.03, MA_150=132.74, MA_200=131.99
+2025-03-08 14:36:10,207 - INFO - Portfolio value=118960.26, cash buffer=1189.60, available=117770.65
+2025-03-08 14:36:10,208 - INFO - QQQ: prev_close=43.16, current_size=1786, alloc_ratio=0.70, adjust=124
+2025-03-08 14:36:10,210 - INFO - GLD: prev_close=63.21, current_size=631, alloc_ratio=0.30, adjust=-73
+2025-03-08 14:36:10,211 - INFO - LQD: prev_close=106.68, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-08 14:36:10,213 - INFO - 2007-01-03: SELL GLD, shares=73
+2025-03-08 14:36:10,214 - WARNING - QQQ: adjusting shares 124 -> 56 due to insufficient cash
+2025-03-08 14:36:10,214 - INFO - 2007-01-03: BUY QQQ, shares=56
+2025-03-08 14:36:10,215 - INFO - === 2007-01-03 Rebalancing End ===
+2025-03-08 14:36:10,220 - INFO - 2007-01-04 00:00:00 OrderCompleted: SELL -73 GLD @ 62.07, Comm=4.08
+2025-03-08 14:36:10,222 - INFO - 2007-01-04 00:00:00 OrderCompleted: BUY 56 QQQ @ 43.30, Comm=2.18
+2025-03-08 14:36:18,010 - INFO - Period-end close for QQQ: 51.22
+2025-03-08 14:36:18,013 - INFO - Period-end close for GLD: 82.46
+2025-03-08 14:36:18,015 - INFO - Period-end close for LQD: 104.84
+2025-03-08 14:36:18,157 - INFO - [2008-01-02] Market regime disabled; using base allocation.
+2025-03-08 14:36:18,158 - INFO - === 2008-01-02 Rebalancing Start ===
+2025-03-08 14:36:18,158 - INFO - [Rebalancing Info] Date=2008-01-02, SPY Close=144.93, MA_21=147.95, MA_50=148.08, MA_150=149.64, MA_200=149.16
+2025-03-08 14:36:18,158 - INFO - Portfolio value=144742.09, cash buffer=1447.42, available=143294.66
+2025-03-08 14:36:18,158 - INFO - QQQ: prev_close=51.22, current_size=1842, alloc_ratio=0.70, adjust=116
+2025-03-08 14:36:18,159 - INFO - GLD: prev_close=82.46, current_size=558, alloc_ratio=0.30, adjust=-37
+2025-03-08 14:36:18,159 - INFO - LQD: prev_close=104.84, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-08 14:36:18,159 - INFO - 2008-01-02: SELL GLD, shares=37
+2025-03-08 14:36:18,160 - WARNING - QQQ: adjusting shares 116 -> 88 due to insufficient cash
+2025-03-08 14:36:18,160 - INFO - 2008-01-02: BUY QQQ, shares=88
+2025-03-08 14:36:18,161 - INFO - === 2008-01-02 Rebalancing End ===
+2025-03-08 14:36:18,163 - INFO - 2008-01-03 00:00:00 OrderCompleted: SELL -37 GLD @ 84.87, Comm=2.83
+2025-03-08 14:36:18,164 - INFO - 2008-01-03 00:00:00 OrderCompleted: BUY 88 QQQ @ 50.41, Comm=3.99
+2025-03-08 14:36:25,269 - INFO - Period-end close for QQQ: 29.74
+2025-03-08 14:36:25,270 - INFO - Period-end close for GLD: 86.52
+2025-03-08 14:36:25,272 - INFO - Period-end close for LQD: 101.65
+2025-03-08 14:36:25,428 - INFO - [2009-01-02] Market regime disabled; using base allocation.
+2025-03-08 14:36:25,430 - INFO - === 2009-01-02 Rebalancing Start ===
+2025-03-08 14:36:25,431 - INFO - [Rebalancing Info] Date=2009-01-02, SPY Close=92.96, MA_21=88.68, MA_50=88.92, MA_150=111.86, MA_200=118.37
+2025-03-08 14:36:25,432 - INFO - Portfolio value=108046.01, cash buffer=1080.46, available=106965.55
+2025-03-08 14:36:25,432 - INFO - QQQ: prev_close=29.74, current_size=1930, alloc_ratio=0.70, adjust=587
+2025-03-08 14:36:25,433 - INFO - GLD: prev_close=86.52, current_size=521, alloc_ratio=0.30, adjust=-151
+2025-03-08 14:36:25,434 - INFO - LQD: prev_close=101.65, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-08 14:36:25,434 - INFO - 2009-01-02: SELL GLD, shares=151
+2025-03-08 14:36:25,435 - WARNING - QQQ: adjusting shares 587 -> 108 due to insufficient cash
+2025-03-08 14:36:25,437 - INFO - 2009-01-02: BUY QQQ, shares=108
+2025-03-08 14:36:25,438 - INFO - === 2009-01-02 Rebalancing End ===
+2025-03-08 14:36:25,443 - INFO - 2009-01-05 00:00:00 OrderCompleted: SELL -151 GLD @ 83.62, Comm=11.36
+2025-03-08 14:36:25,444 - INFO - 2009-01-05 00:00:00 OrderCompleted: BUY 108 QQQ @ 30.83, Comm=3.00
+2025-03-08 14:36:31,904 - INFO - Period-end close for QQQ: 45.75
+2025-03-08 14:36:31,905 - INFO - Period-end close for GLD: 107.31
+2025-03-08 14:36:31,906 - INFO - Period-end close for LQD: 104.15
+2025-03-08 14:36:32,049 - INFO - [2010-01-04] Market regime disabled; using base allocation.
+2025-03-08 14:36:32,051 - INFO - === 2010-01-04 Rebalancing Start ===
+2025-03-08 14:36:32,052 - INFO - [Rebalancing Info] Date=2010-01-04, SPY Close=113.33, MA_21=111.37, MA_50=109.77, MA_150=102.83, MA_200=98.78
+2025-03-08 14:36:32,053 - INFO - Portfolio value=147744.85, cash buffer=1477.45, available=146267.41
+2025-03-08 14:36:32,055 - INFO - QQQ: prev_close=45.75, current_size=2038, alloc_ratio=0.70, adjust=199
+2025-03-08 14:36:32,056 - INFO - GLD: prev_close=107.31, current_size=370, alloc_ratio=0.30, adjust=38
+2025-03-08 14:36:32,058 - INFO - LQD: prev_close=104.15, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-08 14:36:32,059 - INFO - 2010-01-04: BUY QQQ, shares=199
+2025-03-08 14:36:32,061 - INFO - 2010-01-04: BUY GLD, shares=38
+2025-03-08 14:36:32,063 - INFO - === 2010-01-04 Rebalancing End ===
+2025-03-08 14:36:32,067 - ERROR - 2010-01-05 00:00:00 MarginError: GLD
+2025-03-08 14:36:32,073 - INFO - 2010-01-05 00:00:00 OrderCompleted: BUY 199 QQQ @ 46.39, Comm=8.31
+2025-03-08 14:36:38,445 - INFO - Period-end close for QQQ: 54.46
+2025-03-08 14:36:38,447 - INFO - Period-end close for GLD: 138.72
+2025-03-08 14:36:38,448 - INFO - Period-end close for LQD: 108.44
+2025-03-08 14:36:38,597 - INFO - [2011-01-03] Market regime disabled; using base allocation.
+2025-03-08 14:36:38,598 - INFO - === 2011-01-03 Rebalancing Start ===
+2025-03-08 14:36:38,600 - INFO - [Rebalancing Info] Date=2011-01-03, SPY Close=127.05, MA_21=124.75, MA_50=121.95, MA_150=114.41, MA_200=114.89
+2025-03-08 14:36:38,601 - INFO - Portfolio value=178063.45, cash buffer=1780.63, available=176282.82
+2025-03-08 14:36:38,603 - INFO - QQQ: prev_close=54.46, current_size=2237, alloc_ratio=0.70, adjust=28
+2025-03-08 14:36:38,604 - INFO - GLD: prev_close=138.72, current_size=370, alloc_ratio=0.30, adjust=11
+2025-03-08 14:36:38,605 - INFO - LQD: prev_close=108.44, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-08 14:36:38,606 - INFO - 2011-01-03: BUY GLD, shares=11
+2025-03-08 14:36:38,607 - INFO - 2011-01-03: BUY QQQ, shares=28
+2025-03-08 14:36:38,609 - INFO - === 2011-01-03 Rebalancing End ===
+2025-03-08 14:36:38,613 - INFO - 2011-01-04 00:00:00 OrderCompleted: BUY 11 GLD @ 136.24, Comm=1.35
+2025-03-08 14:36:38,614 - INFO - 2011-01-04 00:00:00 OrderCompleted: BUY 28 QQQ @ 55.51, Comm=1.40
+2025-03-08 14:36:44,592 - INFO - Period-end close for QQQ: 55.83
+2025-03-08 14:36:44,593 - INFO - Period-end close for GLD: 151.99
+2025-03-08 14:36:44,594 - INFO - Period-end close for LQD: 113.76
+2025-03-08 14:36:44,754 - INFO - [2012-01-03] Market regime disabled; using base allocation.
+2025-03-08 14:36:44,755 - INFO - === 2012-01-03 Rebalancing Start ===
+2025-03-08 14:36:44,759 - INFO - [Rebalancing Info] Date=2012-01-03, SPY Close=127.50, MA_21=124.63, MA_50=124.08, MA_150=123.68, MA_200=126.05
+2025-03-08 14:36:44,761 - INFO - Portfolio value=188503.33, cash buffer=1885.03, available=186618.30
+2025-03-08 14:36:44,763 - INFO - QQQ: prev_close=55.83, current_size=2265, alloc_ratio=0.70, adjust=74
+2025-03-08 14:36:44,763 - INFO - GLD: prev_close=151.99, current_size=381, alloc_ratio=0.30, adjust=-13
+2025-03-08 14:36:44,764 - INFO - LQD: prev_close=113.76, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-08 14:36:44,765 - INFO - 2012-01-03: SELL GLD, shares=13
+2025-03-08 14:36:44,767 - WARNING - QQQ: adjusting shares 74 -> 3 due to insufficient cash
+2025-03-08 14:36:44,768 - INFO - 2012-01-03: BUY QQQ, shares=3
+2025-03-08 14:36:44,770 - INFO - === 2012-01-03 Rebalancing End ===
+2025-03-08 14:36:44,774 - INFO - 2012-01-04 00:00:00 OrderCompleted: SELL -13 GLD @ 155.43, Comm=1.82
+2025-03-08 14:36:44,775 - INFO - 2012-01-04 00:00:00 OrderCompleted: BUY 3 QQQ @ 56.81, Comm=0.15
+2025-03-08 14:36:51,317 - INFO - Period-end close for QQQ: 65.13
+2025-03-08 14:36:51,318 - INFO - Period-end close for GLD: 162.02
+2025-03-08 14:36:51,319 - INFO - Period-end close for LQD: 120.99
+2025-03-08 14:36:51,465 - INFO - [2013-01-02] Market regime disabled; using base allocation.
+2025-03-08 14:36:51,467 - INFO - === 2013-01-02 Rebalancing Start ===
+2025-03-08 14:36:51,469 - INFO - [Rebalancing Info] Date=2013-01-02, SPY Close=146.06, MA_21=142.77, MA_50=141.46, MA_150=139.85, MA_200=139.28
+2025-03-08 14:36:51,470 - INFO - Portfolio value=214523.65, cash buffer=2145.24, available=212378.41
+2025-03-08 14:36:51,470 - INFO - QQQ: prev_close=65.13, current_size=2268, alloc_ratio=0.70, adjust=14
+2025-03-08 14:36:51,471 - INFO - GLD: prev_close=162.02, current_size=368, alloc_ratio=0.30, adjust=25
+2025-03-08 14:36:51,472 - INFO - LQD: prev_close=120.99, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-08 14:36:51,473 - WARNING - GLD: adjusting shares 25 -> 12 due to insufficient cash
+2025-03-08 14:36:51,473 - INFO - 2013-01-02: BUY GLD, shares=12
+2025-03-08 14:36:51,474 - INFO - 2013-01-02: BUY QQQ, shares=14
+2025-03-08 14:36:51,476 - INFO - === 2013-01-02 Rebalancing End ===
+2025-03-08 14:36:51,480 - ERROR - 2013-01-03 00:00:00 MarginError: QQQ
+2025-03-08 14:36:51,484 - INFO - 2013-01-03 00:00:00 OrderCompleted: BUY 12 GLD @ 162.48, Comm=1.75
+2025-03-08 14:36:58,485 - INFO - Period-end close for QQQ: 87.96
+2025-03-08 14:36:58,490 - INFO - Period-end close for GLD: 116.12
+2025-03-08 14:36:58,491 - INFO - Period-end close for LQD: 114.19
+2025-03-08 14:36:58,640 - INFO - [2014-01-02] Market regime disabled; using base allocation.
+2025-03-08 14:36:58,641 - INFO - === 2014-01-02 Rebalancing Start ===
+2025-03-08 14:36:58,641 - INFO - [Rebalancing Info] Date=2014-01-02, SPY Close=182.92, MA_21=181.13, MA_50=179.25, MA_150=170.96, MA_200=168.18
+2025-03-08 14:36:58,643 - INFO - Portfolio value=242884.34, cash buffer=2428.84, available=240455.49
+2025-03-08 14:36:58,644 - INFO - QQQ: prev_close=87.96, current_size=2268, alloc_ratio=0.70, adjust=-355
+2025-03-08 14:36:58,645 - INFO - GLD: prev_close=116.12, current_size=380, alloc_ratio=0.30, adjust=241
+2025-03-08 14:36:58,646 - INFO - LQD: prev_close=114.19, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-08 14:36:58,647 - INFO - 2014-01-02: SELL QQQ, shares=355
+2025-03-08 14:36:58,648 - ERROR - No cash left to buy GLD.
+2025-03-08 14:36:58,650 - INFO - === 2014-01-02 Rebalancing End ===
+2025-03-08 14:36:58,653 - INFO - 2014-01-03 00:00:00 OrderCompleted: SELL -355 QQQ @ 87.27, Comm=27.88
+2025-03-08 14:37:05,228 - INFO - Period-end close for QQQ: 103.25
+2025-03-08 14:37:05,230 - INFO - Period-end close for GLD: 113.58
+2025-03-08 14:37:05,231 - INFO - Period-end close for LQD: 119.41
+2025-03-08 14:37:05,387 - INFO - [2015-01-02] Market regime disabled; using base allocation.
+2025-03-08 14:37:05,392 - INFO - === 2015-01-02 Rebalancing Start ===
+2025-03-08 14:37:05,393 - INFO - [Rebalancing Info] Date=2015-01-02, SPY Close=205.43, MA_21=205.53, MA_50=203.91, MA_150=198.77, MA_200=195.94
+2025-03-08 14:37:05,394 - INFO - Portfolio value=271343.57, cash buffer=2713.44, available=268630.14
+2025-03-08 14:37:05,395 - INFO - QQQ: prev_close=103.25, current_size=1913, alloc_ratio=0.70, adjust=-92
+2025-03-08 14:37:05,397 - INFO - GLD: prev_close=113.58, current_size=380, alloc_ratio=0.30, adjust=329
+2025-03-08 14:37:05,399 - INFO - LQD: prev_close=119.41, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-08 14:37:05,401 - INFO - 2015-01-02: SELL QQQ, shares=92
+2025-03-08 14:37:05,404 - WARNING - GLD: adjusting shares 329 -> 273 due to insufficient cash
+2025-03-08 14:37:05,405 - INFO - 2015-01-02: BUY GLD, shares=273
+2025-03-08 14:37:05,407 - INFO - === 2015-01-02 Rebalancing End ===
+2025-03-08 14:37:05,419 - INFO - 2015-01-05 00:00:00 OrderCompleted: SELL -92 QQQ @ 102.49, Comm=8.49
+2025-03-08 14:37:05,420 - INFO - 2015-01-05 00:00:00 OrderCompleted: BUY 273 GLD @ 114.78, Comm=28.20
+2025-03-08 14:37:12,444 - INFO - Period-end close for QQQ: 111.86
+2025-03-08 14:37:12,445 - INFO - Period-end close for GLD: 101.46
+2025-03-08 14:37:12,446 - INFO - Period-end close for LQD: 114.01
+2025-03-08 14:37:12,563 - INFO - [2016-01-04] Market regime disabled; using base allocation.
+2025-03-08 14:37:12,564 - INFO - === 2016-01-04 Rebalancing Start ===
+2025-03-08 14:37:12,566 - INFO - [Rebalancing Info] Date=2016-01-04, SPY Close=201.02, MA_21=204.99, MA_50=206.87, MA_150=204.91, MA_200=206.16
+2025-03-08 14:37:12,567 - INFO - Portfolio value=275713.07, cash buffer=2757.13, available=272955.94
+2025-03-08 14:37:12,568 - INFO - QQQ: prev_close=111.86, current_size=1821, alloc_ratio=0.70, adjust=-113
+2025-03-08 14:37:12,569 - INFO - GLD: prev_close=101.46, current_size=653, alloc_ratio=0.30, adjust=154
+2025-03-08 14:37:12,569 - INFO - LQD: prev_close=114.01, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-08 14:37:12,570 - INFO - 2016-01-04: SELL QQQ, shares=113
+2025-03-08 14:37:12,571 - WARNING - GLD: adjusting shares 154 -> 89 due to insufficient cash
+2025-03-08 14:37:12,571 - INFO - 2016-01-04: BUY GLD, shares=89
+2025-03-08 14:37:12,571 - INFO - === 2016-01-04 Rebalancing End ===
+2025-03-08 14:37:12,574 - INFO - 2016-01-05 00:00:00 OrderCompleted: SELL -113 QQQ @ 110.04, Comm=11.19
+2025-03-08 14:37:12,575 - INFO - 2016-01-05 00:00:00 OrderCompleted: BUY 89 GLD @ 103.13, Comm=8.26
+2025-03-08 14:37:18,803 - INFO - Period-end close for QQQ: 118.48
+2025-03-08 14:37:18,805 - INFO - Period-end close for GLD: 109.61
+2025-03-08 14:37:18,806 - INFO - Period-end close for LQD: 117.18
+2025-03-08 14:37:18,940 - INFO - [2017-01-03] Market regime disabled; using base allocation.
+2025-03-08 14:37:18,941 - INFO - === 2017-01-03 Rebalancing Start ===
+2025-03-08 14:37:18,942 - INFO - [Rebalancing Info] Date=2017-01-03, SPY Close=225.24, MA_21=224.90, MA_50=219.75, MA_150=216.05, MA_200=213.68
+2025-03-08 14:37:18,943 - INFO - Portfolio value=298505.96, cash buffer=2985.06, available=295520.90
+2025-03-08 14:37:18,943 - INFO - QQQ: prev_close=118.48, current_size=1708, alloc_ratio=0.70, adjust=37
+2025-03-08 14:37:18,945 - INFO - GLD: prev_close=109.61, current_size=742, alloc_ratio=0.30, adjust=66
+2025-03-08 14:37:18,945 - INFO - LQD: prev_close=117.18, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-08 14:37:18,946 - INFO - 2017-01-03: BUY GLD, shares=66
+2025-03-08 14:37:18,946 - INFO - 2017-01-03: BUY QQQ, shares=37
+2025-03-08 14:37:18,949 - INFO - === 2017-01-03 Rebalancing End ===
+2025-03-08 14:37:18,952 - INFO - 2017-01-04 00:00:00 OrderCompleted: BUY 66 GLD @ 111.06, Comm=6.60
+2025-03-08 14:37:18,953 - INFO - 2017-01-04 00:00:00 OrderCompleted: BUY 37 QQQ @ 119.67, Comm=3.99
+2025-03-08 14:37:25,484 - INFO - Period-end close for QQQ: 155.76
+2025-03-08 14:37:25,486 - INFO - Period-end close for GLD: 123.65
+2025-03-08 14:37:25,488 - INFO - Period-end close for LQD: 121.56
+2025-03-08 14:37:25,628 - INFO - [2018-01-02] Market regime disabled; using base allocation.
+2025-03-08 14:37:25,631 - INFO - === 2018-01-02 Rebalancing Start ===
+2025-03-08 14:37:25,636 - INFO - [Rebalancing Info] Date=2018-01-02, SPY Close=268.77, MA_21=266.29, MA_50=261.78, MA_150=251.85, MA_200=248.15
+2025-03-08 14:37:25,638 - INFO - Portfolio value=378280.83, cash buffer=3782.81, available=374498.02
+2025-03-08 14:37:25,639 - INFO - QQQ: prev_close=155.76, current_size=1745, alloc_ratio=0.70, adjust=-62
+2025-03-08 14:37:25,640 - INFO - GLD: prev_close=123.65, current_size=808, alloc_ratio=0.30, adjust=100
+2025-03-08 14:37:25,641 - INFO - LQD: prev_close=121.56, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-08 14:37:25,643 - INFO - 2018-01-02: SELL QQQ, shares=62
+2025-03-08 14:37:25,644 - WARNING - GLD: adjusting shares 100 -> 4 due to insufficient cash
+2025-03-08 14:37:25,646 - INFO - 2018-01-02: BUY GLD, shares=4
+2025-03-08 14:37:25,648 - INFO - === 2018-01-02 Rebalancing End ===
+2025-03-08 14:37:25,653 - INFO - 2018-01-03 00:00:00 OrderCompleted: SELL -62 QQQ @ 158.64, Comm=8.85
+2025-03-08 14:37:25,656 - INFO - 2018-01-03 00:00:00 OrderCompleted: BUY 4 GLD @ 125.05, Comm=0.45
+2025-03-08 14:37:31,872 - INFO - Period-end close for QQQ: 154.26
+2025-03-08 14:37:31,873 - INFO - Period-end close for GLD: 121.25
+2025-03-08 14:37:31,874 - INFO - Period-end close for LQD: 112.82
+2025-03-08 14:37:32,018 - INFO - [2019-01-02] Market regime disabled; using base allocation.
+2025-03-08 14:37:32,019 - INFO - === 2019-01-02 Rebalancing Start ===
+2025-03-08 14:37:32,022 - INFO - [Rebalancing Info] Date=2019-01-02, SPY Close=250.18, MA_21=257.34, MA_50=265.45, MA_150=276.67, MA_200=274.22
+2025-03-08 14:37:32,024 - INFO - Portfolio value=369103.76, cash buffer=3691.04, available=365412.72
+2025-03-08 14:37:32,024 - INFO - QQQ: prev_close=154.26, current_size=1683, alloc_ratio=0.70, adjust=-25
+2025-03-08 14:37:32,024 - INFO - GLD: prev_close=121.25, current_size=812, alloc_ratio=0.30, adjust=92
+2025-03-08 14:37:32,026 - INFO - LQD: prev_close=112.82, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-08 14:37:32,027 - INFO - 2019-01-02: SELL QQQ, shares=25
+2025-03-08 14:37:32,029 - WARNING - GLD: adjusting shares 92 -> 81 due to insufficient cash
+2025-03-08 14:37:32,030 - INFO - 2019-01-02: BUY GLD, shares=81
+2025-03-08 14:37:32,032 - INFO - === 2019-01-02 Rebalancing End ===
+2025-03-08 14:37:32,034 - INFO - 2019-01-03 00:00:00 OrderCompleted: SELL -25 QQQ @ 152.60, Comm=3.43
+2025-03-08 14:37:32,035 - INFO - 2019-01-03 00:00:00 OrderCompleted: BUY 81 GLD @ 121.78, Comm=8.88
+2025-03-08 14:37:39,068 - INFO - Period-end close for QQQ: 212.61
+2025-03-08 14:37:39,070 - INFO - Period-end close for GLD: 142.90
+2025-03-08 14:37:39,072 - INFO - Period-end close for LQD: 127.96
+2025-03-08 14:37:39,230 - INFO - [2020-01-02] Market regime disabled; using base allocation.
+2025-03-08 14:37:39,231 - INFO - === 2020-01-02 Rebalancing Start ===
+2025-03-08 14:37:39,232 - INFO - [Rebalancing Info] Date=2020-01-02, SPY Close=324.87, MA_21=318.12, MA_50=312.25, MA_150=299.98, MA_200=296.66
+2025-03-08 14:37:39,233 - INFO - Portfolio value=490799.89, cash buffer=4908.00, available=485891.89
+2025-03-08 14:37:39,235 - INFO - QQQ: prev_close=212.61, current_size=1658, alloc_ratio=0.70, adjust=-59
+2025-03-08 14:37:39,236 - INFO - GLD: prev_close=142.90, current_size=893, alloc_ratio=0.30, adjust=127
+2025-03-08 14:37:39,237 - INFO - LQD: prev_close=127.96, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-08 14:37:39,238 - INFO - 2020-01-02: SELL QQQ, shares=59
+2025-03-08 14:37:39,240 - WARNING - GLD: adjusting shares 127 -> 26 due to insufficient cash
+2025-03-08 14:37:39,242 - INFO - 2020-01-02: BUY GLD, shares=26
+2025-03-08 14:37:39,243 - INFO - === 2020-01-02 Rebalancing End ===
+2025-03-08 14:37:39,248 - INFO - 2020-01-03 00:00:00 OrderCompleted: SELL -59 QQQ @ 213.30, Comm=11.33
+2025-03-08 14:37:39,250 - INFO - 2020-01-03 00:00:00 OrderCompleted: BUY 26 GLD @ 145.75, Comm=3.41
+2025-03-08 14:37:46,192 - INFO - Period-end close for QQQ: 313.74
+2025-03-08 14:37:46,195 - INFO - Period-end close for GLD: 178.36
+2025-03-08 14:37:46,196 - INFO - Period-end close for LQD: 138.13
+2025-03-08 14:37:46,394 - INFO - [2021-01-04] Market regime disabled; using base allocation.
+2025-03-08 14:37:46,395 - INFO - === 2021-01-04 Rebalancing Start ===
+2025-03-08 14:37:46,396 - INFO - [Rebalancing Info] Date=2021-01-04, SPY Close=368.79, MA_21=369.12, MA_50=358.48, MA_150=338.68, MA_200=323.50
+2025-03-08 14:37:46,396 - INFO - Portfolio value=674787.68, cash buffer=6747.88, available=668039.80
+2025-03-08 14:37:46,397 - INFO - QQQ: prev_close=313.74, current_size=1599, alloc_ratio=0.70, adjust=-109
+2025-03-08 14:37:46,397 - INFO - GLD: prev_close=178.36, current_size=919, alloc_ratio=0.30, adjust=204
+2025-03-08 14:37:46,398 - INFO - LQD: prev_close=138.13, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-08 14:37:46,399 - INFO - 2021-01-04: SELL QQQ, shares=109
+2025-03-08 14:37:46,400 - WARNING - GLD: adjusting shares 204 -> 70 due to insufficient cash
+2025-03-08 14:37:46,400 - INFO - 2021-01-04: BUY GLD, shares=70
+2025-03-08 14:37:46,400 - INFO - === 2021-01-04 Rebalancing End ===
+2025-03-08 14:37:46,401 - INFO - 2021-01-05 00:00:00 OrderCompleted: SELL -109 QQQ @ 308.29, Comm=30.24
+2025-03-08 14:37:46,402 - INFO - 2021-01-05 00:00:00 OrderCompleted: BUY 70 GLD @ 182.87, Comm=11.52
+2025-03-08 14:37:53,775 - INFO - Period-end close for QQQ: 397.85
+2025-03-08 14:37:53,777 - INFO - Period-end close for GLD: 170.96
+2025-03-08 14:37:53,778 - INFO - Period-end close for LQD: 132.52
+2025-03-08 14:37:53,935 - INFO - [2022-01-03] Market regime disabled; using base allocation.
+2025-03-08 14:37:53,940 - INFO - === 2022-01-03 Rebalancing Start ===
+2025-03-08 14:37:53,945 - INFO - [Rebalancing Info] Date=2022-01-03, SPY Close=477.71, MA_21=468.13, MA_50=465.11, MA_150=446.51, MA_200=437.64
+2025-03-08 14:37:53,947 - INFO - Portfolio value=798382.23, cash buffer=7983.82, available=790398.40
+2025-03-08 14:37:53,949 - INFO - QQQ: prev_close=397.85, current_size=1490, alloc_ratio=0.70, adjust=-100
+2025-03-08 14:37:53,953 - INFO - GLD: prev_close=170.96, current_size=989, alloc_ratio=0.30, adjust=397
+2025-03-08 14:37:53,956 - INFO - LQD: prev_close=132.52, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-08 14:37:53,961 - INFO - 2022-01-03: SELL QQQ, shares=100
+2025-03-08 14:37:53,964 - WARNING - GLD: adjusting shares 397 -> 195 due to insufficient cash
+2025-03-08 14:37:53,965 - INFO - 2022-01-03: BUY GLD, shares=195
+2025-03-08 14:37:53,967 - INFO - === 2022-01-03 Rebalancing End ===
+2025-03-08 14:37:53,974 - INFO - 2022-01-04 00:00:00 OrderCompleted: SELL -100 QQQ @ 402.24, Comm=36.20
+2025-03-08 14:37:53,975 - INFO - 2022-01-04 00:00:00 OrderCompleted: BUY 195 GLD @ 168.90, Comm=29.64
+2025-03-08 14:38:00,710 - INFO - Period-end close for QQQ: 266.28
+2025-03-08 14:38:00,715 - INFO - Period-end close for GLD: 169.64
+2025-03-08 14:38:00,717 - INFO - Period-end close for LQD: 105.43
+2025-03-08 14:38:00,892 - INFO - [2023-01-03] Market regime disabled; using base allocation.
+2025-03-08 14:38:00,893 - INFO - === 2023-01-03 Rebalancing Start ===
+2025-03-08 14:38:00,894 - INFO - [Rebalancing Info] Date=2023-01-03, SPY Close=380.82, MA_21=389.11, MA_50=389.35, MA_150=390.64, MA_200=399.62
+2025-03-08 14:38:00,895 - INFO - Portfolio value=610785.58, cash buffer=6107.86, available=604677.72
+2025-03-08 14:38:00,896 - INFO - QQQ: prev_close=266.28, current_size=1390, alloc_ratio=0.70, adjust=199
+2025-03-08 14:38:00,897 - INFO - GLD: prev_close=169.64, current_size=1184, alloc_ratio=0.30, adjust=-115
+2025-03-08 14:38:00,898 - INFO - LQD: prev_close=105.43, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-08 14:38:00,900 - INFO - 2023-01-03: SELL GLD, shares=115
+2025-03-08 14:38:00,901 - WARNING - QQQ: adjusting shares 199 -> 152 due to insufficient cash
+2025-03-08 14:38:00,902 - INFO - 2023-01-03: BUY QQQ, shares=152
+2025-03-08 14:38:00,903 - INFO - === 2023-01-03 Rebalancing End ===
+2025-03-08 14:38:00,906 - INFO - 2023-01-04 00:00:00 OrderCompleted: SELL -115 GLD @ 172.86, Comm=17.89
+2025-03-08 14:38:00,907 - INFO - 2023-01-04 00:00:00 OrderCompleted: BUY 152 QQQ @ 266.64, Comm=36.48
+2025-03-08 14:38:07,577 - INFO - Period-end close for QQQ: 409.52
+2025-03-08 14:38:07,580 - INFO - Period-end close for GLD: 191.17
+2025-03-08 14:38:07,582 - INFO - Period-end close for LQD: 110.66
+2025-03-08 14:38:07,736 - INFO - [2024-01-02] Market regime disabled; using base allocation.
+2025-03-08 14:38:07,742 - INFO - === 2024-01-02 Rebalancing Start ===
+2025-03-08 14:38:07,744 - INFO - [Rebalancing Info] Date=2024-01-02, SPY Close=472.65, MA_21=467.70, MA_50=450.24, MA_150=443.35, MA_200=434.74
+2025-03-08 14:38:07,747 - INFO - Portfolio value=844592.03, cash buffer=8445.92, available=836146.11
+2025-03-08 14:38:07,747 - INFO - QQQ: prev_close=409.52, current_size=1542, alloc_ratio=0.70, adjust=-113
+2025-03-08 14:38:07,748 - INFO - GLD: prev_close=191.17, current_size=1069, alloc_ratio=0.30, adjust=243
+2025-03-08 14:38:07,749 - INFO - LQD: prev_close=110.66, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-08 14:38:07,751 - INFO - 2024-01-02: SELL QQQ, shares=113
+2025-03-08 14:38:07,753 - WARNING - GLD: adjusting shares 243 -> 104 due to insufficient cash
+2025-03-08 14:38:07,753 - INFO - 2024-01-02: BUY GLD, shares=104
+2025-03-08 14:38:07,755 - INFO - === 2024-01-02 Rebalancing End ===
+2025-03-08 14:38:07,763 - INFO - 2024-01-03 00:00:00 OrderCompleted: SELL -113 QQQ @ 399.93, Comm=40.67
+2025-03-08 14:38:07,764 - INFO - 2024-01-03 00:00:00 OrderCompleted: BUY 104 GLD @ 188.77, Comm=17.67
+2025-03-08 14:38:14,955 - INFO - Period-end close for QQQ: 511.23
+2025-03-08 14:38:14,957 - INFO - Period-end close for GLD: 242.13
+2025-03-08 14:38:14,960 - INFO - Period-end close for LQD: 106.84
+2025-03-08 14:38:15,116 - INFO - [2025-01-02] Market regime disabled; using base allocation.
+2025-03-08 14:38:15,118 - INFO - === 2025-01-02 Rebalancing Start ===
+2025-03-08 14:38:15,119 - INFO - [Rebalancing Info] Date=2025-01-02, SPY Close=584.64, MA_21=598.83, MA_50=592.84, MA_150=566.65, MA_200=554.08
+2025-03-08 14:38:15,120 - INFO - Portfolio value=1062416.58, cash buffer=10624.17, available=1051792.42
+2025-03-08 14:38:15,121 - INFO - QQQ: prev_close=511.23, current_size=1429, alloc_ratio=0.70, adjust=11
+2025-03-08 14:38:15,121 - INFO - GLD: prev_close=242.13, current_size=1173, alloc_ratio=0.30, adjust=130
+2025-03-08 14:38:15,123 - INFO - LQD: prev_close=106.84, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-08 14:38:15,123 - INFO - 2025-01-02: BUY GLD, shares=130
+2025-03-08 14:38:15,124 - INFO - 2025-01-02: BUY QQQ, shares=11
+2025-03-08 14:38:15,127 - INFO - === 2025-01-02 Rebalancing End ===
+2025-03-08 14:38:15,129 - INFO - 2025-01-03 00:00:00 OrderCompleted: BUY 130 GLD @ 244.56, Comm=28.61
+2025-03-08 14:38:15,131 - INFO - 2025-01-03 00:00:00 OrderCompleted: BUY 11 QQQ @ 513.35, Comm=5.08
+2025-03-08 14:38:18,170 - INFO - Strategy stop() called.
+2025-03-08 14:38:18,175 - INFO - Final portfolio value: 1,065,836.70
+2025-03-08 14:38:18,176 - INFO - Total return: 965.84%
+2025-03-08 14:38:18,176 - INFO - [Analyzer] Total Return (rtot): 236.63%
+2025-03-08 14:38:18,178 - INFO - [Analyzer] Annual Return (rnorm): 11.77%
+2025-03-08 14:38:18,179 - INFO - [Analyzer] Max Drawdown: 39.72%
+2025-03-08 14:38:18,180 - INFO - [Analyzer] Sharpe Ratio: 0.66
+2025-03-08 14:38:19,434 - INFO - Saved portfolio value chart to C:\Users\james\Projects\backtrader\results\portfolio_value_20250308_143818.png.
+2025-03-08 14:38:19,510 - INFO - Saved portfolio values to C:\Users\james\Projects\backtrader\results\portfolio_values_20250308_143818.csv.
+2025-03-08 14:38:19,564 - INFO - Saved annual stats to C:\Users\james\Projects\backtrader\results\annual_stats_20250308_143819.csv.
+2025-03-08 14:38:19,576 - INFO - Saved rebalance history to C:\Users\james\Projects\backtrader\results\rebalance_history_20250308_143819.csv.
+2025-03-08 14:38:19,577 - INFO - Backtest completed.
+2025-03-08 14:38:19,582 - INFO - Total execution time: 168.48 seconds

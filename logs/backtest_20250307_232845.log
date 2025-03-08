@@ -1,0 +1,768 @@
+2025-03-07 23:28:45,864 - INFO - =============== Configurations ===============
+2025-03-07 23:28:45,866 - INFO - DATA_MODE: offline
+2025-03-07 23:28:45,867 - INFO - START_DATE: 2000-01-01
+2025-03-07 23:28:45,867 - INFO - END_DATE: 2025-3-31
+2025-03-07 23:28:45,870 - INFO - TICKERS: ['SPY', 'QQQ', 'IAU', 'LQD']
+2025-03-07 23:28:45,871 - INFO - ASSET_ALLOCATION: {'QQQ': 0.5, 'IAU': 0.3, 'LQD': 0.2}
+2025-03-07 23:28:45,871 - INFO - AGGRESSIVE_ALLOCATION: {'QQQ': 0.9, 'IAU': 0.1, 'LQD': 0}
+2025-03-07 23:28:45,872 - INFO - MODERATE_ALLOCATION: {'QQQ': 0.8, 'IAU': 0.2, 'LQD': 0}
+2025-03-07 23:28:45,876 - INFO - MID_DEFENSIVE_ALLOCATION: {'QQQ': 0.4, 'IAU': 0.3, 'LQD': 0.3}
+2025-03-07 23:28:45,877 - INFO - DEFENSIVE_ALLOCATION: {'QQQ': 0, 'IAU': 0.5, 'LQD': 0.5}
+2025-03-07 23:28:45,877 - INFO - TOUCHSTONE: SPY
+2025-03-07 23:28:45,878 - INFO - MA_PERIODS: [21, 50, 150, 200]
+2025-03-07 23:28:45,878 - INFO - WMA_PERIODS: [10, 30]
+2025-03-07 23:28:45,878 - INFO - MA_TYPE: daily
+2025-03-07 23:28:45,878 - INFO - INITIAL_CASH: 100000.0
+2025-03-07 23:28:45,878 - INFO - COMMISSION: 0.001
+2025-03-07 23:28:45,878 - INFO - CASH_BUFFER_PERCENT: 1.0
+2025-03-07 23:28:45,879 - INFO - PROCESS_SELL_FIRST: True
+2025-03-07 23:28:45,879 - INFO - RISK_FREE_RATE: 0.01
+2025-03-07 23:28:45,879 - INFO - FRACTIONAL_SHARES: False
+2025-03-07 23:28:45,879 - INFO - USE_MARKET_REGIME: True
+2025-03-07 23:28:45,879 - INFO - REBALANCING_TERM: MONTH
+2025-03-07 23:28:45,880 - INFO - LOG_LEVEL: INFO
+2025-03-07 23:28:45,880 - INFO - ===============================================
+2025-03-07 23:28:45,880 - INFO - Starting backtest...
+2025-03-07 23:28:45,881 - INFO - Loading data feeds...
+2025-03-07 23:28:45,881 - INFO - Loading data for SPY...
+2025-03-07 23:28:45,882 - INFO - Downloading data for SPY from 2000-01-01 to 2025-3-31.
+2025-03-07 23:28:46,888 - INFO - Saved RAW data for SPY to C:\Users\james\Projects\backtrader\data\SPY_raw.csv (6333 rows).
+2025-03-07 23:28:46,889 - INFO - Loading data for QQQ...
+2025-03-07 23:28:46,891 - INFO - Downloading data for QQQ from 2000-01-01 to 2025-3-31.
+2025-03-07 23:28:47,540 - INFO - Saved RAW data for QQQ to C:\Users\james\Projects\backtrader\data\QQQ_raw.csv (6333 rows).
+2025-03-07 23:28:47,542 - INFO - Loading data for IAU...
+2025-03-07 23:28:47,544 - INFO - Downloading data for IAU from 2000-01-01 to 2025-3-31.
+2025-03-07 23:28:48,121 - INFO - Saved RAW data for IAU to C:\Users\james\Projects\backtrader\data\IAU_raw.csv (5058 rows).
+2025-03-07 23:28:48,122 - INFO - Loading data for LQD...
+2025-03-07 23:28:48,124 - INFO - Downloading data for LQD from 2000-01-01 to 2025-3-31.
+2025-03-07 23:28:48,806 - INFO - Saved RAW data for LQD to C:\Users\james\Projects\backtrader\data\LQD_raw.csv (5688 rows).
+2025-03-07 23:28:48,808 - INFO - Max start date among non-touchstone: 2005-01-28 00:00:00
+2025-03-07 23:28:49,077 - INFO - Saved ALIGNED data for SPY to C:\Users\james\Projects\backtrader\data\SPY.csv (5311 rows).
+2025-03-07 23:28:49,082 - INFO - Created data feed for SPY with 5311 rows after slicing.
+2025-03-07 23:28:49,225 - INFO - Saved ALIGNED data for QQQ to C:\Users\james\Projects\backtrader\data\QQQ.csv (5058 rows).
+2025-03-07 23:28:49,229 - INFO - Created data feed for QQQ with 5058 rows after slicing.
+2025-03-07 23:28:49,357 - INFO - Saved ALIGNED data for IAU to C:\Users\james\Projects\backtrader\data\IAU.csv (5058 rows).
+2025-03-07 23:28:49,360 - INFO - Created data feed for IAU with 5058 rows after slicing.
+2025-03-07 23:28:49,491 - INFO - Saved ALIGNED data for LQD to C:\Users\james\Projects\backtrader\data\LQD.csv (5058 rows).
+2025-03-07 23:28:49,493 - INFO - Created data feed for LQD with 5058 rows after slicing.
+2025-03-07 23:28:49,494 - INFO - Loaded and aligned data for 4 tickers.
+2025-03-07 23:28:49,496 - INFO - Added data for SPY.
+2025-03-07 23:28:49,497 - INFO - Added data for QQQ.
+2025-03-07 23:28:49,498 - INFO - Added data for IAU.
+2025-03-07 23:28:49,499 - INFO - Added data for LQD.
+2025-03-07 23:28:49,499 - INFO - All data feeds loaded.
+2025-03-07 23:28:49,499 - INFO - Initial portfolio value: 100,000.00
+2025-03-07 23:29:05,342 - INFO - Asset data loaded for: QQQ
+2025-03-07 23:29:05,343 - INFO - Asset data loaded for: IAU
+2025-03-07 23:29:05,345 - INFO - Asset data loaded for: LQD
+2025-03-07 23:29:05,347 - INFO - Market regime usage: Enabled
+2025-03-07 23:29:05,348 - INFO - Moving average type: daily
+2025-03-07 23:29:05,349 - INFO - Fractional shares: Not allowed
+2025-03-07 23:29:05,808 - INFO - Start date: 2005-01-28, initial portfolio=100000.00
+2025-03-07 23:29:06,967 - INFO - Period-end close for QQQ: 37.40
+2025-03-07 23:29:06,969 - INFO - Period-end close for IAU: 8.45
+2025-03-07 23:29:06,970 - INFO - Period-end close for LQD: 112.90
+2025-03-07 23:29:07,386 - INFO - [2005-02-01] Price=118.91, MA(short=118.11, mid=118.95, mid2=114.34, long=113.86) => Neutral
+2025-03-07 23:29:07,387 - INFO - === 2005-02-01 Rebalancing Start ===
+2025-03-07 23:29:07,388 - INFO - [Rebalancing Info] Date=2005-02-01, SPY Close=118.91, MA_21=118.11, MA_50=118.95, MA_150=114.34, MA_200=113.86
+2025-03-07 23:29:07,389 - INFO - Portfolio value=100000.00, cash buffer=1000.00, available=99000.00
+2025-03-07 23:29:07,391 - INFO - QQQ: prev_close=37.40, current_size=0, alloc_ratio=0.50, adjust=1323
+2025-03-07 23:29:07,392 - INFO - IAU: prev_close=8.45, current_size=0, alloc_ratio=0.30, adjust=3513
+2025-03-07 23:29:07,393 - INFO - LQD: prev_close=112.90, current_size=0, alloc_ratio=0.20, adjust=175
+2025-03-07 23:29:07,394 - INFO - 2005-02-01: BUY QQQ, shares=1323
+2025-03-07 23:29:07,395 - INFO - 2005-02-01: BUY IAU, shares=3513
+2025-03-07 23:29:07,396 - INFO - 2005-02-01: BUY LQD, shares=175
+2025-03-07 23:29:07,396 - INFO - === 2005-02-01 Rebalancing End ===
+2025-03-07 23:29:07,400 - INFO - 2005-02-02 00:00:00 OrderCompleted: BUY 1323 QQQ @ 37.64, Comm=49.80
+2025-03-07 23:29:07,401 - INFO - 2005-02-02 00:00:00 OrderCompleted: BUY 3513 IAU @ 8.45, Comm=29.67
+2025-03-07 23:29:07,402 - INFO - 2005-02-02 00:00:00 OrderCompleted: BUY 175 LQD @ 112.36, Comm=19.66
+2025-03-07 23:29:12,805 - INFO - Period-end close for QQQ: 37.22
+2025-03-07 23:29:12,807 - INFO - Period-end close for IAU: 8.72
+2025-03-07 23:29:12,808 - INFO - Period-end close for LQD: 111.42
+2025-03-07 23:29:13,415 - INFO - [2005-03-01] Price=121.23, MA(short=120.04, mid=119.40, mid2=115.48, long=114.64) => Aggressive
+2025-03-07 23:29:13,416 - INFO - === 2005-03-01 Rebalancing Start ===
+2025-03-07 23:29:13,418 - INFO - [Rebalancing Info] Date=2005-03-01, SPY Close=121.23, MA_21=120.04, MA_50=119.40, MA_150=115.48, MA_200=114.64
+2025-03-07 23:29:13,419 - INFO - Portfolio value=100382.12, cash buffer=1003.82, available=99378.30
+2025-03-07 23:29:13,420 - INFO - QQQ: prev_close=37.22, current_size=1323, alloc_ratio=0.90, adjust=1080
+2025-03-07 23:29:13,421 - INFO - IAU: prev_close=8.72, current_size=3513, alloc_ratio=0.10, adjust=-2374
+2025-03-07 23:29:13,422 - INFO - LQD: prev_close=111.42, current_size=175, alloc_ratio=0.00, adjust=-175
+2025-03-07 23:29:13,423 - INFO - 2005-03-01: SELL IAU, shares=2374
+2025-03-07 23:29:13,425 - INFO - 2005-03-01: SELL LQD, shares=175
+2025-03-07 23:29:13,426 - WARNING - QQQ: adjusting shares 1080 -> 20 due to insufficient cash
+2025-03-07 23:29:13,427 - INFO - 2005-03-01: BUY QQQ, shares=20
+2025-03-07 23:29:13,429 - INFO - === 2005-03-01 Rebalancing End ===
+2025-03-07 23:29:13,433 - INFO - 2005-03-02 00:00:00 OrderCompleted: SELL -2374 IAU @ 8.65, Comm=20.54
+2025-03-07 23:29:13,434 - INFO - 2005-03-02 00:00:00 OrderCompleted: SELL -175 LQD @ 110.96, Comm=19.42
+2025-03-07 23:29:13,435 - INFO - 2005-03-02 00:00:00 OrderCompleted: BUY 20 QQQ @ 37.41, Comm=0.75
+2025-03-07 23:29:13,436 - INFO - 2005-03-02 00:00:00 TradeClosed: LQD, PnL=-245.00, NetPnL=-284.08
+2025-03-07 23:29:20,099 - INFO - Period-end close for QQQ: 36.57
+2025-03-07 23:29:20,104 - INFO - Period-end close for IAU: 8.58
+2025-03-07 23:29:20,105 - INFO - Period-end close for LQD: 109.59
+2025-03-07 23:29:20,590 - INFO - [2005-04-01] Price=117.43, MA(short=119.36, mid=119.37, mid2=116.96, long=115.44) => Neutral
+2025-03-07 23:29:20,592 - INFO - === 2005-04-01 Rebalancing Start ===
+2025-03-07 23:29:20,593 - INFO - [Rebalancing Info] Date=2005-04-01, SPY Close=117.43, MA_21=119.36, MA_50=119.37, MA_150=116.96, MA_200=115.44
+2025-03-07 23:29:20,594 - INFO - Portfolio value=98261.26, cash buffer=982.61, available=97278.65
+2025-03-07 23:29:20,595 - INFO - QQQ: prev_close=36.57, current_size=1343, alloc_ratio=0.50, adjust=-13
+2025-03-07 23:29:20,596 - INFO - IAU: prev_close=8.58, current_size=1139, alloc_ratio=0.30, adjust=2263
+2025-03-07 23:29:20,597 - INFO - LQD: prev_close=109.59, current_size=0, alloc_ratio=0.20, adjust=177
+2025-03-07 23:29:20,598 - INFO - 2005-04-01: SELL QQQ, shares=13
+2025-03-07 23:29:20,599 - INFO - 2005-04-01: BUY IAU, shares=2263
+2025-03-07 23:29:20,601 - INFO - 2005-04-01: BUY LQD, shares=177
+2025-03-07 23:29:20,602 - INFO - === 2005-04-01 Rebalancing End ===
+2025-03-07 23:29:20,607 - INFO - 2005-04-04 00:00:00 OrderCompleted: SELL -13 QQQ @ 36.25, Comm=0.47
+2025-03-07 23:29:20,609 - INFO - 2005-04-04 00:00:00 OrderCompleted: BUY 2263 IAU @ 8.49, Comm=19.20
+2025-03-07 23:29:20,610 - INFO - 2005-04-04 00:00:00 OrderCompleted: BUY 177 LQD @ 109.11, Comm=19.31
+2025-03-07 23:29:26,495 - INFO - Period-end close for QQQ: 34.98
+2025-03-07 23:29:26,500 - INFO - Period-end close for IAU: 8.69
+2025-03-07 23:29:26,502 - INFO - Period-end close for LQD: 110.92
+2025-03-07 23:29:26,943 - INFO - [2005-05-02] Price=116.40, MA(short=116.40, mid=118.28, mid2=117.54, long=115.81) => MidDefensive
+2025-03-07 23:29:26,945 - INFO - === 2005-05-02 Rebalancing Start ===
+2025-03-07 23:29:26,946 - INFO - [Rebalancing Info] Date=2005-05-02, SPY Close=116.40, MA_21=116.40, MA_50=118.28, MA_150=117.54, MA_200=115.81
+2025-03-07 23:29:26,947 - INFO - Portfolio value=97359.72, cash buffer=973.60, available=96386.12
+2025-03-07 23:29:26,949 - INFO - QQQ: prev_close=34.98, current_size=1330, alloc_ratio=0.40, adjust=-228
+2025-03-07 23:29:26,949 - INFO - IAU: prev_close=8.69, current_size=3402, alloc_ratio=0.30, adjust=-73
+2025-03-07 23:29:26,951 - INFO - LQD: prev_close=110.92, current_size=177, alloc_ratio=0.30, adjust=83
+2025-03-07 23:29:26,952 - INFO - 2005-05-02: SELL QQQ, shares=228
+2025-03-07 23:29:26,953 - INFO - 2005-05-02: SELL IAU, shares=73
+2025-03-07 23:29:26,954 - WARNING - LQD: adjusting shares 83 -> 16 due to insufficient cash
+2025-03-07 23:29:26,955 - INFO - 2005-05-02: BUY LQD, shares=16
+2025-03-07 23:29:26,957 - INFO - === 2005-05-02 Rebalancing End ===
+2025-03-07 23:29:26,959 - INFO - 2005-05-03 00:00:00 OrderCompleted: SELL -228 QQQ @ 35.05, Comm=7.99
+2025-03-07 23:29:26,960 - INFO - 2005-05-03 00:00:00 OrderCompleted: SELL -73 IAU @ 8.57, Comm=0.63
+2025-03-07 23:29:26,962 - INFO - 2005-05-03 00:00:00 OrderCompleted: BUY 16 LQD @ 110.51, Comm=1.77
+2025-03-07 23:29:33,165 - INFO - Period-end close for QQQ: 38.08
+2025-03-07 23:29:33,165 - INFO - Period-end close for IAU: 8.34
+2025-03-07 23:29:33,167 - INFO - Period-end close for LQD: 111.18
+2025-03-07 23:29:33,682 - INFO - [2005-06-01] Price=120.50, MA(short=118.22, mid=117.31, mid2=118.42, long=116.76) => Aggressive
+2025-03-07 23:29:33,683 - INFO - === 2005-06-01 Rebalancing Start ===
+2025-03-07 23:29:33,684 - INFO - [Rebalancing Info] Date=2005-06-01, SPY Close=120.50, MA_21=118.22, MA_50=117.31, MA_150=118.42, MA_200=116.76
+2025-03-07 23:29:33,685 - INFO - Portfolio value=100185.99, cash buffer=1001.86, available=99184.13
+2025-03-07 23:29:33,685 - INFO - QQQ: prev_close=38.08, current_size=1102, alloc_ratio=0.90, adjust=1242
+2025-03-07 23:29:33,686 - INFO - IAU: prev_close=8.34, current_size=3329, alloc_ratio=0.10, adjust=-2140
+2025-03-07 23:29:33,687 - INFO - LQD: prev_close=111.18, current_size=193, alloc_ratio=0.00, adjust=-193
+2025-03-07 23:29:33,687 - INFO - 2005-06-01: SELL IAU, shares=2140
+2025-03-07 23:29:33,689 - INFO - 2005-06-01: SELL LQD, shares=193
+2025-03-07 23:29:33,690 - WARNING - QQQ: adjusting shares 1242 -> 227 due to insufficient cash
+2025-03-07 23:29:33,690 - INFO - 2005-06-01: BUY QQQ, shares=227
+2025-03-07 23:29:33,691 - INFO - === 2005-06-01 Rebalancing End ===
+2025-03-07 23:29:33,695 - INFO - 2005-06-02 00:00:00 OrderCompleted: SELL -2140 IAU @ 8.41, Comm=17.99
+2025-03-07 23:29:33,696 - INFO - 2005-06-02 00:00:00 OrderCompleted: SELL -193 LQD @ 111.41, Comm=21.50
+2025-03-07 23:29:33,697 - INFO - 2005-06-02 00:00:00 OrderCompleted: BUY 227 QQQ @ 38.33, Comm=8.70
+2025-03-07 23:29:33,697 - INFO - 2005-06-02 00:00:00 TradeClosed: LQD, PnL=421.50, NetPnL=378.92
+2025-03-07 23:29:40,165 - INFO - Period-end close for QQQ: 36.78
+2025-03-07 23:29:40,166 - INFO - Period-end close for IAU: 8.69
+2025-03-07 23:29:40,168 - INFO - Period-end close for LQD: 112.10
+2025-03-07 23:29:40,599 - INFO - [2005-07-01] Price=119.53, MA(short=120.35, mid=118.79, mid2=118.96, long=117.73) => Moderate
+2025-03-07 23:29:40,605 - INFO - === 2005-07-01 Rebalancing Start ===
+2025-03-07 23:29:40,607 - INFO - [Rebalancing Info] Date=2005-07-01, SPY Close=119.53, MA_21=120.35, MA_50=118.79, MA_150=118.96, MA_200=117.73
+2025-03-07 23:29:40,609 - INFO - Portfolio value=98407.74, cash buffer=984.08, available=97423.67
+2025-03-07 23:29:40,613 - INFO - QQQ: prev_close=36.78, current_size=1329, alloc_ratio=0.80, adjust=790
+2025-03-07 23:29:40,615 - INFO - IAU: prev_close=8.69, current_size=1189, alloc_ratio=0.20, adjust=1052
+2025-03-07 23:29:40,620 - INFO - LQD: prev_close=112.10, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-07 23:29:40,621 - INFO - 2005-07-01: BUY QQQ, shares=790
+2025-03-07 23:29:40,623 - INFO - 2005-07-01: BUY IAU, shares=1052
+2025-03-07 23:29:40,624 - INFO - === 2005-07-01 Rebalancing End ===
+2025-03-07 23:29:40,627 - INFO - 2005-07-05 00:00:00 OrderCompleted: BUY 790 QQQ @ 36.60, Comm=28.91
+2025-03-07 23:29:40,628 - INFO - 2005-07-05 00:00:00 OrderCompleted: BUY 1052 IAU @ 8.47, Comm=8.91
+2025-03-07 23:29:46,392 - INFO - Period-end close for QQQ: 39.58
+2025-03-07 23:29:46,393 - INFO - Period-end close for IAU: 8.58
+2025-03-07 23:29:46,396 - INFO - Period-end close for LQD: 110.75
+2025-03-07 23:29:46,847 - INFO - [2005-08-01] Price=123.65, MA(short=122.40, mid=121.14, mid2=119.35, long=118.74) => Aggressive
+2025-03-07 23:29:46,848 - INFO - === 2005-08-01 Rebalancing Start ===
+2025-03-07 23:29:46,849 - INFO - [Rebalancing Info] Date=2005-08-01, SPY Close=123.65, MA_21=122.40, MA_50=121.14, MA_150=119.35, MA_200=118.74
+2025-03-07 23:29:46,849 - INFO - Portfolio value=104935.15, cash buffer=1049.35, available=103885.80
+2025-03-07 23:29:46,850 - INFO - QQQ: prev_close=39.58, current_size=2119, alloc_ratio=0.90, adjust=243
+2025-03-07 23:29:46,850 - INFO - IAU: prev_close=8.58, current_size=2241, alloc_ratio=0.10, adjust=-1030
+2025-03-07 23:29:46,850 - INFO - LQD: prev_close=110.75, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-07 23:29:46,851 - INFO - 2005-08-01: SELL IAU, shares=1030
+2025-03-07 23:29:46,853 - WARNING - QQQ: adjusting shares 243 -> 39 due to insufficient cash
+2025-03-07 23:29:46,854 - INFO - 2005-08-01: BUY QQQ, shares=39
+2025-03-07 23:29:46,855 - INFO - === 2005-08-01 Rebalancing End ===
+2025-03-07 23:29:46,857 - INFO - 2005-08-02 00:00:00 OrderCompleted: SELL -1030 IAU @ 8.63, Comm=8.89
+2025-03-07 23:29:46,857 - INFO - 2005-08-02 00:00:00 OrderCompleted: BUY 39 QQQ @ 39.70, Comm=1.55
+2025-03-07 23:29:53,147 - INFO - Period-end close for QQQ: 38.98
+2025-03-07 23:29:53,149 - INFO - Period-end close for IAU: 8.69
+2025-03-07 23:29:53,151 - INFO - Period-end close for LQD: 111.96
+2025-03-07 23:29:53,566 - INFO - [2005-09-01] Price=122.49, MA(short=122.46, mid=122.17, mid2=119.97, long=119.72) => Aggressive
+2025-03-07 23:29:53,567 - INFO - === 2005-09-01 Rebalancing Start ===
+2025-03-07 23:29:53,568 - INFO - [Rebalancing Info] Date=2005-09-01, SPY Close=122.49, MA_21=122.46, MA_50=122.17, MA_150=119.97, MA_200=119.72
+2025-03-07 23:29:53,569 - INFO - Portfolio value=103595.92, cash buffer=1035.96, available=102559.96
+2025-03-07 23:29:53,570 - INFO - QQQ: prev_close=38.98, current_size=2158, alloc_ratio=0.90, adjust=209
+2025-03-07 23:29:53,570 - INFO - IAU: prev_close=8.69, current_size=1211, alloc_ratio=0.10, adjust=-31
+2025-03-07 23:29:53,571 - INFO - LQD: prev_close=111.96, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-07 23:29:53,572 - INFO - 2005-09-01: SELL IAU, shares=31
+2025-03-07 23:29:53,573 - INFO - 2005-09-01: BUY QQQ, shares=209
+2025-03-07 23:29:53,574 - INFO - === 2005-09-01 Rebalancing End ===
+2025-03-07 23:29:53,576 - INFO - 2005-09-02 00:00:00 OrderCompleted: SELL -31 IAU @ 8.85, Comm=0.27
+2025-03-07 23:29:53,581 - INFO - 2005-09-02 00:00:00 OrderCompleted: BUY 209 QQQ @ 39.00, Comm=8.15
+2025-03-07 23:29:59,978 - INFO - Period-end close for QQQ: 39.46
+2025-03-07 23:29:59,979 - INFO - Period-end close for IAU: 9.36
+2025-03-07 23:29:59,981 - INFO - Period-end close for LQD: 109.43
+2025-03-07 23:30:00,383 - INFO - [2005-10-03] Price=122.60, MA(short=122.75, mid=122.82, mid2=120.35, long=120.11) => Neutral
+2025-03-07 23:30:00,387 - INFO - === 2005-10-03 Rebalancing Start ===
+2025-03-07 23:30:00,388 - INFO - [Rebalancing Info] Date=2005-10-03, SPY Close=122.60, MA_21=122.75, MA_50=122.82, MA_150=120.35, MA_200=120.11
+2025-03-07 23:30:00,389 - INFO - Portfolio value=105621.32, cash buffer=1056.21, available=104565.10
+2025-03-07 23:30:00,393 - INFO - QQQ: prev_close=39.46, current_size=2367, alloc_ratio=0.50, adjust=-1043
+2025-03-07 23:30:00,395 - INFO - IAU: prev_close=9.36, current_size=1180, alloc_ratio=0.30, adjust=2171
+2025-03-07 23:30:00,396 - INFO - LQD: prev_close=109.43, current_size=0, alloc_ratio=0.20, adjust=191
+2025-03-07 23:30:00,399 - INFO - 2005-10-03: SELL QQQ, shares=1043
+2025-03-07 23:30:00,404 - WARNING - LQD: adjusting shares 191 -> 9 due to insufficient cash
+2025-03-07 23:30:00,406 - INFO - 2005-10-03: BUY LQD, shares=9
+2025-03-07 23:30:00,411 - WARNING - IAU: adjusting shares 2171 -> 107 due to insufficient cash
+2025-03-07 23:30:00,414 - INFO - 2005-10-03: BUY IAU, shares=107
+2025-03-07 23:30:00,418 - INFO - === 2005-10-03 Rebalancing End ===
+2025-03-07 23:30:00,421 - INFO - 2005-10-04 00:00:00 OrderCompleted: SELL -1043 QQQ @ 39.62, Comm=41.32
+2025-03-07 23:30:00,422 - INFO - 2005-10-04 00:00:00 OrderCompleted: BUY 9 LQD @ 108.91, Comm=0.98
+2025-03-07 23:30:00,423 - INFO - 2005-10-04 00:00:00 OrderCompleted: BUY 107 IAU @ 9.35, Comm=1.00
+2025-03-07 23:30:06,513 - INFO - Period-end close for QQQ: 38.87
+2025-03-07 23:30:06,515 - INFO - Period-end close for IAU: 9.29
+2025-03-07 23:30:06,516 - INFO - Period-end close for LQD: 107.27
+2025-03-07 23:30:07,011 - INFO - [2005-11-01] Price=120.49, MA(short=119.07, mid=121.03, mid2=120.28, long=120.06) => Neutral
+2025-03-07 23:30:07,017 - INFO - === 2005-11-01 Rebalancing Start ===
+2025-03-07 23:30:07,020 - INFO - [Rebalancing Info] Date=2005-11-01, SPY Close=120.49, MA_21=119.07, MA_50=121.03, MA_150=120.28, MA_200=120.06
+2025-03-07 23:30:07,022 - INFO - Portfolio value=104468.17, cash buffer=1044.68, available=103423.48
+2025-03-07 23:30:07,025 - INFO - QQQ: prev_close=38.87, current_size=1324, alloc_ratio=0.50, adjust=6
+2025-03-07 23:30:07,026 - INFO - IAU: prev_close=9.29, current_size=1287, alloc_ratio=0.30, adjust=2051
+2025-03-07 23:30:07,027 - INFO - LQD: prev_close=107.27, current_size=9, alloc_ratio=0.20, adjust=183
+2025-03-07 23:30:07,029 - INFO - 2005-11-01: BUY LQD, shares=183
+2025-03-07 23:30:07,033 - INFO - 2005-11-01: BUY IAU, shares=2051
+2025-03-07 23:30:07,043 - INFO - 2005-11-01: BUY QQQ, shares=6
+2025-03-07 23:30:07,044 - INFO - === 2005-11-01 Rebalancing End ===
+2025-03-07 23:30:07,051 - INFO - 2005-11-02 00:00:00 OrderCompleted: BUY 183 LQD @ 106.82, Comm=19.55
+2025-03-07 23:30:07,053 - INFO - 2005-11-02 00:00:00 OrderCompleted: BUY 2051 IAU @ 9.21, Comm=18.89
+2025-03-07 23:30:07,056 - INFO - 2005-11-02 00:00:00 OrderCompleted: BUY 6 QQQ @ 38.73, Comm=0.23
+2025-03-07 23:30:13,121 - INFO - Period-end close for QQQ: 41.24
+2025-03-07 23:30:13,125 - INFO - Period-end close for IAU: 9.83
+2025-03-07 23:30:13,126 - INFO - Period-end close for LQD: 107.56
+2025-03-07 23:30:13,576 - INFO - [2005-12-01] Price=126.69, MA(short=124.33, mid=121.74, mid2=121.39, long=120.63) => Aggressive
+2025-03-07 23:30:13,581 - INFO - === 2005-12-01 Rebalancing Start ===
+2025-03-07 23:30:13,583 - INFO - [Rebalancing Info] Date=2005-12-01, SPY Close=126.69, MA_21=124.33, MA_50=121.74, MA_150=121.39, MA_200=120.63
+2025-03-07 23:30:13,586 - INFO - Portfolio value=111498.95, cash buffer=1114.99, available=110383.96
+2025-03-07 23:30:13,587 - INFO - QQQ: prev_close=41.24, current_size=1330, alloc_ratio=0.90, adjust=1078
+2025-03-07 23:30:13,588 - INFO - IAU: prev_close=9.83, current_size=3338, alloc_ratio=0.10, adjust=-2215
+2025-03-07 23:30:13,590 - INFO - LQD: prev_close=107.56, current_size=192, alloc_ratio=0.00, adjust=-192
+2025-03-07 23:30:13,591 - INFO - 2005-12-01: SELL IAU, shares=2215
+2025-03-07 23:30:13,593 - INFO - 2005-12-01: SELL LQD, shares=192
+2025-03-07 23:30:13,594 - WARNING - QQQ: adjusting shares 1078 -> 38 due to insufficient cash
+2025-03-07 23:30:13,596 - INFO - 2005-12-01: BUY QQQ, shares=38
+2025-03-07 23:30:13,598 - INFO - === 2005-12-01 Rebalancing End ===
+2025-03-07 23:30:13,603 - INFO - 2005-12-02 00:00:00 OrderCompleted: SELL -2215 IAU @ 10.00, Comm=22.14
+2025-03-07 23:30:13,604 - INFO - 2005-12-02 00:00:00 OrderCompleted: SELL -192 LQD @ 106.77, Comm=20.50
+2025-03-07 23:30:13,605 - INFO - 2005-12-02 00:00:00 OrderCompleted: BUY 38 QQQ @ 41.94, Comm=1.59
+2025-03-07 23:30:13,607 - INFO - 2005-12-02 00:00:00 TradeClosed: LQD, PnL=-28.41, NetPnL=-69.44
+2025-03-07 23:30:19,904 - INFO - Period-end close for QQQ: 40.41
+2025-03-07 23:30:19,906 - INFO - Period-end close for IAU: 10.35
+2025-03-07 23:30:19,907 - INFO - Period-end close for LQD: 107.69
+2025-03-07 23:30:20,325 - INFO - [2006-01-03] Price=126.70, MA(short=126.32, mid=124.39, mid2=122.55, long=121.23) => Aggressive
+2025-03-07 23:30:20,327 - INFO - === 2006-01-03 Rebalancing Start ===
+2025-03-07 23:30:20,328 - INFO - [Rebalancing Info] Date=2006-01-03, SPY Close=126.70, MA_21=126.32, MA_50=124.39, MA_150=122.55, MA_200=121.23
+2025-03-07 23:30:20,329 - INFO - Portfolio value=111063.83, cash buffer=1110.64, available=109953.19
+2025-03-07 23:30:20,329 - INFO - QQQ: prev_close=40.41, current_size=1368, alloc_ratio=0.90, adjust=1080
+2025-03-07 23:30:20,329 - INFO - IAU: prev_close=10.35, current_size=1123, alloc_ratio=0.10, adjust=-61
+2025-03-07 23:30:20,329 - INFO - LQD: prev_close=107.69, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-07 23:30:20,330 - INFO - 2006-01-03: SELL IAU, shares=61
+2025-03-07 23:30:20,330 - WARNING - QQQ: adjusting shares 1080 -> 1053 due to insufficient cash
+2025-03-07 23:30:20,331 - INFO - 2006-01-03: BUY QQQ, shares=1053
+2025-03-07 23:30:20,331 - INFO - === 2006-01-03 Rebalancing End ===
+2025-03-07 23:30:20,333 - ERROR - 2006-01-04 00:00:00 MarginError: QQQ
+2025-03-07 23:30:20,333 - INFO - 2006-01-04 00:00:00 OrderCompleted: SELL -61 IAU @ 10.59, Comm=0.65
+2025-03-07 23:30:26,229 - INFO - Period-end close for QQQ: 42.00
+2025-03-07 23:30:26,233 - INFO - Period-end close for IAU: 11.36
+2025-03-07 23:30:26,233 - INFO - Period-end close for LQD: 107.22
+2025-03-07 23:30:26,787 - INFO - [2006-02-01] Price=128.39, MA(short=127.84, mid=126.93, mid2=123.53, long=122.28) => Aggressive
+2025-03-07 23:30:26,791 - INFO - === 2006-02-01 Rebalancing Start ===
+2025-03-07 23:30:26,796 - INFO - [Rebalancing Info] Date=2006-02-01, SPY Close=128.39, MA_21=127.84, MA_50=126.93, MA_150=123.53, MA_200=122.28
+2025-03-07 23:30:26,797 - INFO - Portfolio value=112978.02, cash buffer=1129.78, available=111848.24
+2025-03-07 23:30:26,800 - INFO - QQQ: prev_close=42.00, current_size=1368, alloc_ratio=0.90, adjust=1028
+2025-03-07 23:30:26,801 - INFO - IAU: prev_close=11.36, current_size=1062, alloc_ratio=0.10, adjust=-78
+2025-03-07 23:30:26,802 - INFO - LQD: prev_close=107.22, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-07 23:30:26,803 - INFO - 2006-02-01: SELL IAU, shares=78
+2025-03-07 23:30:26,806 - INFO - 2006-02-01: BUY QQQ, shares=1028
+2025-03-07 23:30:26,808 - INFO - === 2006-02-01 Rebalancing End ===
+2025-03-07 23:30:26,809 - INFO - 2006-02-02 00:00:00 OrderCompleted: SELL -78 IAU @ 11.41, Comm=0.89
+2025-03-07 23:30:26,810 - INFO - 2006-02-02 00:00:00 OrderCompleted: BUY 1028 QQQ @ 42.01, Comm=43.19
+2025-03-07 23:30:32,577 - INFO - Period-end close for QQQ: 41.10
+2025-03-07 23:30:32,579 - INFO - Period-end close for IAU: 11.21
+2025-03-07 23:30:32,580 - INFO - Period-end close for LQD: 107.54
+2025-03-07 23:30:32,987 - INFO - [2006-03-01] Price=129.37, MA(short=127.83, mid=127.43, mid2=124.30, long=123.39) => Aggressive
+2025-03-07 23:30:32,989 - INFO - === 2006-03-01 Rebalancing Start ===
+2025-03-07 23:30:32,989 - INFO - [Rebalancing Info] Date=2006-03-01, SPY Close=129.37, MA_21=127.83, MA_50=127.43, MA_150=124.30, MA_200=123.39
+2025-03-07 23:30:32,990 - INFO - Portfolio value=111775.40, cash buffer=1117.75, available=110657.64
+2025-03-07 23:30:32,990 - INFO - QQQ: prev_close=41.10, current_size=2396, alloc_ratio=0.90, adjust=27
+2025-03-07 23:30:32,990 - INFO - IAU: prev_close=11.21, current_size=984, alloc_ratio=0.10, adjust=3
+2025-03-07 23:30:32,991 - INFO - LQD: prev_close=107.54, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-07 23:30:32,991 - WARNING - QQQ: adjusting shares 27 -> 22 due to insufficient cash
+2025-03-07 23:30:32,992 - INFO - 2006-03-01: BUY QQQ, shares=22
+2025-03-07 23:30:32,992 - INFO - 2006-03-01: BUY IAU, shares=3
+2025-03-07 23:30:32,997 - INFO - === 2006-03-01 Rebalancing End ===
+2025-03-07 23:30:32,999 - ERROR - 2006-03-02 00:00:00 MarginError: QQQ
+2025-03-07 23:30:33,000 - ERROR - 2006-03-02 00:00:00 MarginError: IAU
+2025-03-07 23:30:39,660 - INFO - Period-end close for QQQ: 41.93
+2025-03-07 23:30:39,661 - INFO - Period-end close for IAU: 11.65
+2025-03-07 23:30:39,662 - INFO - Period-end close for LQD: 105.30
+2025-03-07 23:30:40,276 - INFO - [2006-04-03] Price=129.73, MA(short=129.58, mid=128.55, mid2=125.30, long=124.51) => Aggressive
+2025-03-07 23:30:40,277 - INFO - === 2006-04-03 Rebalancing Start ===
+2025-03-07 23:30:40,283 - INFO - [Rebalancing Info] Date=2006-04-03, SPY Close=129.73, MA_21=129.58, MA_50=128.55, MA_150=125.30, MA_200=124.51
+2025-03-07 23:30:40,285 - INFO - Portfolio value=113014.44, cash buffer=1130.14, available=111884.29
+2025-03-07 23:30:40,285 - INFO - QQQ: prev_close=41.93, current_size=2396, alloc_ratio=0.90, adjust=5
+2025-03-07 23:30:40,285 - INFO - IAU: prev_close=11.65, current_size=984, alloc_ratio=0.10, adjust=-24
+2025-03-07 23:30:40,293 - INFO - LQD: prev_close=105.30, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-07 23:30:40,294 - INFO - 2006-04-03: SELL IAU, shares=24
+2025-03-07 23:30:40,294 - INFO - 2006-04-03: BUY QQQ, shares=5
+2025-03-07 23:30:40,294 - INFO - === 2006-04-03 Rebalancing End ===
+2025-03-07 23:30:40,304 - INFO - 2006-04-04 00:00:00 OrderCompleted: SELL -24 IAU @ 11.71, Comm=0.28
+2025-03-07 23:30:40,305 - INFO - 2006-04-04 00:00:00 OrderCompleted: BUY 5 QQQ @ 42.05, Comm=0.21
+2025-03-07 23:30:45,791 - INFO - Period-end close for QQQ: 41.85
+2025-03-07 23:30:45,792 - INFO - Period-end close for IAU: 13.04
+2025-03-07 23:30:45,795 - INFO - Period-end close for LQD: 104.65
+2025-03-07 23:30:46,221 - INFO - [2006-05-01] Price=130.40, MA(short=130.22, mid=129.73, mid2=126.25, long=125.42) => Aggressive
+2025-03-07 23:30:46,225 - INFO - === 2006-05-01 Rebalancing Start ===
+2025-03-07 23:30:46,230 - INFO - [Rebalancing Info] Date=2006-05-01, SPY Close=130.40, MA_21=130.22, MA_50=129.73, MA_150=126.25, MA_200=125.42
+2025-03-07 23:30:46,232 - INFO - Portfolio value=112995.77, cash buffer=1129.96, available=111865.82
+2025-03-07 23:30:46,234 - INFO - QQQ: prev_close=41.85, current_size=2401, alloc_ratio=0.90, adjust=4
+2025-03-07 23:30:46,235 - INFO - IAU: prev_close=13.04, current_size=960, alloc_ratio=0.10, adjust=-102
+2025-03-07 23:30:46,236 - INFO - LQD: prev_close=104.65, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-07 23:30:46,238 - INFO - 2006-05-01: SELL IAU, shares=102
+2025-03-07 23:30:46,240 - INFO - 2006-05-01: BUY QQQ, shares=4
+2025-03-07 23:30:46,243 - INFO - === 2006-05-01 Rebalancing End ===
+2025-03-07 23:30:46,250 - INFO - 2006-05-02 00:00:00 OrderCompleted: SELL -102 IAU @ 13.16, Comm=1.34
+2025-03-07 23:30:46,252 - INFO - 2006-05-02 00:00:00 OrderCompleted: BUY 4 QQQ @ 41.62, Comm=0.17
+2025-03-07 23:30:52,890 - INFO - Period-end close for QQQ: 38.82
+2025-03-07 23:30:52,894 - INFO - Period-end close for IAU: 12.84
+2025-03-07 23:30:52,896 - INFO - Period-end close for LQD: 103.99
+2025-03-07 23:30:53,324 - INFO - [2006-06-01] Price=128.73, MA(short=128.92, mid=129.66, mid2=127.61, long=126.03) => Neutral
+2025-03-07 23:30:53,326 - INFO - === 2006-06-01 Rebalancing Start ===
+2025-03-07 23:30:53,327 - INFO - [Rebalancing Info] Date=2006-06-01, SPY Close=128.73, MA_21=128.92, MA_50=129.66, MA_150=127.61, MA_200=126.03
+2025-03-07 23:30:53,328 - INFO - Portfolio value=108484.45, cash buffer=1084.84, available=107399.61
+2025-03-07 23:30:53,329 - INFO - QQQ: prev_close=38.82, current_size=2405, alloc_ratio=0.50, adjust=-1022
+2025-03-07 23:30:53,332 - INFO - IAU: prev_close=12.84, current_size=858, alloc_ratio=0.30, adjust=1651
+2025-03-07 23:30:53,333 - INFO - LQD: prev_close=103.99, current_size=0, alloc_ratio=0.20, adjust=206
+2025-03-07 23:30:53,335 - INFO - 2006-06-01: SELL QQQ, shares=1022
+2025-03-07 23:30:53,337 - WARNING - LQD: adjusting shares 206 -> 20 due to insufficient cash
+2025-03-07 23:30:53,338 - INFO - 2006-06-01: BUY LQD, shares=20
+2025-03-07 23:30:53,338 - WARNING - IAU: adjusting shares 1651 -> 167 due to insufficient cash
+2025-03-07 23:30:53,339 - INFO - 2006-06-01: BUY IAU, shares=167
+2025-03-07 23:30:53,340 - INFO - === 2006-06-01 Rebalancing End ===
+2025-03-07 23:30:53,342 - INFO - 2006-06-02 00:00:00 OrderCompleted: SELL -1022 QQQ @ 39.96, Comm=40.84
+2025-03-07 23:30:53,343 - INFO - 2006-06-02 00:00:00 OrderCompleted: BUY 20 LQD @ 104.10, Comm=2.08
+2025-03-07 23:30:53,344 - INFO - 2006-06-02 00:00:00 OrderCompleted: BUY 167 IAU @ 12.60, Comm=2.10
+2025-03-07 23:31:00,226 - INFO - Period-end close for QQQ: 38.77
+2025-03-07 23:31:00,228 - INFO - Period-end close for IAU: 12.25
+2025-03-07 23:31:00,229 - INFO - Period-end close for LQD: 103.47
+2025-03-07 23:31:00,803 - INFO - [2006-07-03] Price=127.80, MA(short=125.21, mid=127.63, mid2=127.97, long=126.34) => Moderate
+2025-03-07 23:31:00,804 - INFO - === 2006-07-03 Rebalancing Start ===
+2025-03-07 23:31:00,806 - INFO - [Rebalancing Info] Date=2006-07-03, SPY Close=127.80, MA_21=125.21, MA_50=127.63, MA_150=127.97, MA_200=126.34
+2025-03-07 23:31:00,807 - INFO - Portfolio value=107548.89, cash buffer=1075.49, available=106473.40
+2025-03-07 23:31:00,808 - INFO - QQQ: prev_close=38.77, current_size=1383, alloc_ratio=0.80, adjust=814
+2025-03-07 23:31:00,810 - INFO - IAU: prev_close=12.25, current_size=1025, alloc_ratio=0.20, adjust=713
+2025-03-07 23:31:00,811 - INFO - LQD: prev_close=103.47, current_size=20, alloc_ratio=0.00, adjust=-20
+2025-03-07 23:31:00,811 - INFO - 2006-07-03: SELL LQD, shares=20
+2025-03-07 23:31:00,813 - INFO - 2006-07-03: BUY QQQ, shares=814
+2025-03-07 23:31:00,814 - INFO - 2006-07-03: BUY IAU, shares=713
+2025-03-07 23:31:00,815 - INFO - === 2006-07-03 Rebalancing End ===
+2025-03-07 23:31:00,819 - INFO - 2006-07-05 00:00:00 OrderCompleted: SELL -20 LQD @ 102.65, Comm=2.05
+2025-03-07 23:31:00,820 - INFO - 2006-07-05 00:00:00 OrderCompleted: BUY 814 QQQ @ 38.64, Comm=31.45
+2025-03-07 23:31:00,821 - INFO - 2006-07-05 00:00:00 OrderCompleted: BUY 713 IAU @ 12.51, Comm=8.92
+2025-03-07 23:31:00,822 - INFO - 2006-07-05 00:00:00 TradeClosed: LQD, PnL=-29.00, NetPnL=-33.13
+2025-03-07 23:31:07,228 - INFO - Period-end close for QQQ: 37.10
+2025-03-07 23:31:07,230 - INFO - Period-end close for IAU: 12.65
+2025-03-07 23:31:07,231 - INFO - Period-end close for LQD: 104.52
+2025-03-07 23:31:07,683 - INFO - [2006-08-01] Price=127.22, MA(short=126.09, mid=125.89, mid2=127.90, long=126.85) => MidDefensive
+2025-03-07 23:31:07,685 - INFO - === 2006-08-01 Rebalancing Start ===
+2025-03-07 23:31:07,685 - INFO - [Rebalancing Info] Date=2006-08-01, SPY Close=127.22, MA_21=126.09, MA_50=125.89, MA_150=127.90, MA_200=126.85
+2025-03-07 23:31:07,686 - INFO - Portfolio value=102939.02, cash buffer=1029.39, available=101909.63
+2025-03-07 23:31:07,688 - INFO - QQQ: prev_close=37.10, current_size=2197, alloc_ratio=0.40, adjust=-1099
+2025-03-07 23:31:07,689 - INFO - IAU: prev_close=12.65, current_size=1738, alloc_ratio=0.30, adjust=678
+2025-03-07 23:31:07,690 - INFO - LQD: prev_close=104.52, current_size=0, alloc_ratio=0.30, adjust=292
+2025-03-07 23:31:07,691 - INFO - 2006-08-01: SELL QQQ, shares=1099
+2025-03-07 23:31:07,693 - WARNING - LQD: adjusting shares 292 -> 3 due to insufficient cash
+2025-03-07 23:31:07,694 - INFO - 2006-08-01: BUY LQD, shares=3
+2025-03-07 23:31:07,695 - WARNING - IAU: adjusting shares 678 -> 31 due to insufficient cash
+2025-03-07 23:31:07,696 - INFO - 2006-08-01: BUY IAU, shares=31
+2025-03-07 23:31:07,698 - INFO - === 2006-08-01 Rebalancing End ===
+2025-03-07 23:31:07,703 - INFO - 2006-08-02 00:00:00 OrderCompleted: SELL -1099 QQQ @ 36.61, Comm=40.23
+2025-03-07 23:31:07,704 - INFO - 2006-08-02 00:00:00 OrderCompleted: BUY 3 LQD @ 104.11, Comm=0.31
+2025-03-07 23:31:07,705 - INFO - 2006-08-02 00:00:00 OrderCompleted: BUY 31 IAU @ 13.05, Comm=0.40
+2025-03-07 23:31:14,168 - INFO - Period-end close for QQQ: 38.87
+2025-03-07 23:31:14,172 - INFO - Period-end close for IAU: 12.46
+2025-03-07 23:31:14,180 - INFO - Period-end close for LQD: 106.38
+2025-03-07 23:31:14,610 - INFO - [2006-09-01] Price=131.42, MA(short=129.25, mid=127.43, mid2=128.18, long=127.83) => Neutral
+2025-03-07 23:31:14,612 - INFO - === 2006-09-01 Rebalancing Start ===
+2025-03-07 23:31:14,612 - INFO - [Rebalancing Info] Date=2006-09-01, SPY Close=131.42, MA_21=129.25, MA_50=127.43, MA_150=128.18, MA_200=127.83
+2025-03-07 23:31:14,613 - INFO - Portfolio value=105131.52, cash buffer=1051.32, available=104080.21
+2025-03-07 23:31:14,613 - INFO - QQQ: prev_close=38.87, current_size=1098, alloc_ratio=0.50, adjust=240
+2025-03-07 23:31:14,614 - INFO - IAU: prev_close=12.46, current_size=1769, alloc_ratio=0.30, adjust=736
+2025-03-07 23:31:14,615 - INFO - LQD: prev_close=106.38, current_size=3, alloc_ratio=0.20, adjust=192
+2025-03-07 23:31:14,615 - INFO - 2006-09-01: BUY LQD, shares=192
+2025-03-07 23:31:14,616 - INFO - 2006-09-01: BUY QQQ, shares=240
+2025-03-07 23:31:14,617 - INFO - 2006-09-01: BUY IAU, shares=736
+2025-03-07 23:31:14,618 - INFO - === 2006-09-01 Rebalancing End ===
+2025-03-07 23:31:14,621 - INFO - 2006-09-05 00:00:00 OrderCompleted: BUY 192 LQD @ 105.77, Comm=20.31
+2025-03-07 23:31:14,622 - INFO - 2006-09-05 00:00:00 OrderCompleted: BUY 240 QQQ @ 39.10, Comm=9.38
+2025-03-07 23:31:14,626 - INFO - 2006-09-05 00:00:00 OrderCompleted: BUY 736 IAU @ 12.65, Comm=9.31
+2025-03-07 23:31:20,263 - INFO - Period-end close for QQQ: 40.65
+2025-03-07 23:31:20,266 - INFO - Period-end close for IAU: 11.90
+2025-03-07 23:31:20,266 - INFO - Period-end close for LQD: 106.83
+2025-03-07 23:31:20,724 - INFO - [2006-10-02] Price=133.08, MA(short=132.01, mid=130.02, mid2=128.75, long=128.41) => Aggressive
+2025-03-07 23:31:20,725 - INFO - === 2006-10-02 Rebalancing Start ===
+2025-03-07 23:31:20,726 - INFO - [Rebalancing Info] Date=2006-10-02, SPY Close=133.08, MA_21=132.01, MA_50=130.02, MA_150=128.75, MA_200=128.41
+2025-03-07 23:31:20,726 - INFO - Portfolio value=104918.20, cash buffer=1049.18, available=103869.02
+2025-03-07 23:31:20,727 - INFO - QQQ: prev_close=40.65, current_size=1338, alloc_ratio=0.90, adjust=961
+2025-03-07 23:31:20,729 - INFO - IAU: prev_close=11.90, current_size=2505, alloc_ratio=0.10, adjust=-1633
+2025-03-07 23:31:20,730 - INFO - LQD: prev_close=106.83, current_size=195, alloc_ratio=0.00, adjust=-195
+2025-03-07 23:31:20,731 - INFO - 2006-10-02: SELL IAU, shares=1633
+2025-03-07 23:31:20,733 - INFO - 2006-10-02: SELL LQD, shares=195
+2025-03-07 23:31:20,735 - WARNING - QQQ: adjusting shares 961 -> 20 due to insufficient cash
+2025-03-07 23:31:20,736 - INFO - 2006-10-02: BUY QQQ, shares=20
+2025-03-07 23:31:20,737 - INFO - === 2006-10-02 Rebalancing End ===
+2025-03-07 23:31:20,739 - INFO - 2006-10-03 00:00:00 OrderCompleted: SELL -1633 IAU @ 11.60, Comm=18.94
+2025-03-07 23:31:20,741 - INFO - 2006-10-03 00:00:00 OrderCompleted: SELL -195 LQD @ 106.69, Comm=20.80
+2025-03-07 23:31:20,741 - INFO - 2006-10-03 00:00:00 OrderCompleted: BUY 20 QQQ @ 40.02, Comm=0.80
+2025-03-07 23:31:20,742 - INFO - 2006-10-03 00:00:00 TradeClosed: LQD, PnL=184.38, NetPnL=142.96
+2025-03-07 23:31:27,679 - INFO - Period-end close for QQQ: 42.58
+2025-03-07 23:31:27,681 - INFO - Period-end close for IAU: 12.03
+2025-03-07 23:31:27,682 - INFO - Period-end close for LQD: 107.42
+2025-03-07 23:31:28,123 - INFO - [2006-11-01] Price=136.86, MA(short=136.66, mid=133.74, mid2=129.78, long=129.45) => Aggressive
+2025-03-07 23:31:28,124 - INFO - === 2006-11-01 Rebalancing Start ===
+2025-03-07 23:31:28,126 - INFO - [Rebalancing Info] Date=2006-11-01, SPY Close=136.86, MA_21=136.66, MA_50=133.74, MA_150=129.78, MA_200=129.45
+2025-03-07 23:31:28,127 - INFO - Portfolio value=107494.70, cash buffer=1074.95, available=106419.75
+2025-03-07 23:31:28,127 - INFO - QQQ: prev_close=42.58, current_size=1358, alloc_ratio=0.90, adjust=891
+2025-03-07 23:31:28,128 - INFO - IAU: prev_close=12.03, current_size=872, alloc_ratio=0.10, adjust=12
+2025-03-07 23:31:28,129 - INFO - LQD: prev_close=107.42, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-07 23:31:28,129 - INFO - 2006-11-01: BUY QQQ, shares=891
+2025-03-07 23:31:28,130 - INFO - 2006-11-01: BUY IAU, shares=12
+2025-03-07 23:31:28,131 - INFO - === 2006-11-01 Rebalancing End ===
+2025-03-07 23:31:28,133 - INFO - 2006-11-02 00:00:00 OrderCompleted: BUY 891 QQQ @ 41.81, Comm=37.25
+2025-03-07 23:31:28,135 - INFO - 2006-11-02 00:00:00 OrderCompleted: BUY 12 IAU @ 12.32, Comm=0.15
+2025-03-07 23:31:34,353 - INFO - Period-end close for QQQ: 44.04
+2025-03-07 23:31:34,355 - INFO - Period-end close for IAU: 12.88
+2025-03-07 23:31:34,356 - INFO - Period-end close for LQD: 108.52
+2025-03-07 23:31:34,791 - INFO - [2006-12-01] Price=140.22, MA(short=139.31, mid=137.20, mid2=131.05, long=130.72) => Aggressive
+2025-03-07 23:31:34,792 - INFO - === 2006-12-01 Rebalancing Start ===
+2025-03-07 23:31:34,794 - INFO - [Rebalancing Info] Date=2006-12-01, SPY Close=140.22, MA_21=139.31, MA_50=137.20, MA_150=131.05, MA_200=130.72
+2025-03-07 23:31:34,795 - INFO - Portfolio value=111829.92, cash buffer=1118.30, available=110711.62
+2025-03-07 23:31:34,797 - INFO - QQQ: prev_close=44.04, current_size=2249, alloc_ratio=0.90, adjust=13
+2025-03-07 23:31:34,798 - INFO - IAU: prev_close=12.88, current_size=884, alloc_ratio=0.10, adjust=-25
+2025-03-07 23:31:34,799 - INFO - LQD: prev_close=108.52, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-07 23:31:34,800 - INFO - 2006-12-01: SELL IAU, shares=25
+2025-03-07 23:31:34,802 - INFO - 2006-12-01: BUY QQQ, shares=13
+2025-03-07 23:31:34,805 - INFO - === 2006-12-01 Rebalancing End ===
+2025-03-07 23:31:34,809 - INFO - 2006-12-04 00:00:00 OrderCompleted: SELL -25 IAU @ 12.80, Comm=0.32
+2025-03-07 23:31:34,810 - INFO - 2006-12-04 00:00:00 OrderCompleted: BUY 13 QQQ @ 43.79, Comm=0.57
+2025-03-07 23:31:40,724 - INFO - Period-end close for QQQ: 43.16
+2025-03-07 23:31:40,725 - INFO - Period-end close for IAU: 12.65
+2025-03-07 23:31:40,727 - INFO - Period-end close for LQD: 106.68
+2025-03-07 23:31:41,109 - INFO - [2007-01-03] Price=141.37, MA(short=141.74, mid=140.03, mid2=132.74, long=131.99) => Moderate
+2025-03-07 23:31:41,111 - INFO - === 2007-01-03 Rebalancing Start ===
+2025-03-07 23:31:41,112 - INFO - [Rebalancing Info] Date=2007-01-03, SPY Close=141.37, MA_21=141.74, MA_50=140.03, MA_150=132.74, MA_200=131.99
+2025-03-07 23:31:41,112 - INFO - Portfolio value=110558.78, cash buffer=1105.59, available=109453.19
+2025-03-07 23:31:41,114 - INFO - QQQ: prev_close=43.16, current_size=2262, alloc_ratio=0.80, adjust=-234
+2025-03-07 23:31:41,114 - INFO - IAU: prev_close=12.65, current_size=859, alloc_ratio=0.20, adjust=871
+2025-03-07 23:31:41,115 - INFO - LQD: prev_close=106.68, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-07 23:31:41,116 - INFO - 2007-01-03: SELL QQQ, shares=234
+2025-03-07 23:31:41,117 - WARNING - IAU: adjusting shares 871 -> 161 due to insufficient cash
+2025-03-07 23:31:41,118 - INFO - 2007-01-03: BUY IAU, shares=161
+2025-03-07 23:31:41,119 - INFO - === 2007-01-03 Rebalancing End ===
+2025-03-07 23:31:41,121 - INFO - 2007-01-04 00:00:00 OrderCompleted: SELL -234 QQQ @ 43.30, Comm=10.13
+2025-03-07 23:31:41,122 - INFO - 2007-01-04 00:00:00 OrderCompleted: BUY 161 IAU @ 12.42, Comm=2.00
+2025-03-07 23:31:46,477 - INFO - Period-end close for QQQ: 44.07
+2025-03-07 23:31:46,479 - INFO - Period-end close for IAU: 12.97
+2025-03-07 23:31:46,480 - INFO - Period-end close for LQD: 106.78
+2025-03-07 23:31:46,895 - INFO - [2007-02-01] Price=144.61, MA(short=142.42, mid=141.75, mid2=135.02, long=133.26) => Aggressive
+2025-03-07 23:31:46,897 - INFO - === 2007-02-01 Rebalancing Start ===
+2025-03-07 23:31:46,898 - INFO - [Rebalancing Info] Date=2007-02-01, SPY Close=144.61, MA_21=142.42, MA_50=141.75, MA_150=135.02, MA_200=133.26
+2025-03-07 23:31:46,899 - INFO - Portfolio value=112716.32, cash buffer=1127.16, available=111589.16
+2025-03-07 23:31:46,900 - INFO - QQQ: prev_close=44.07, current_size=2028, alloc_ratio=0.90, adjust=250
+2025-03-07 23:31:46,900 - INFO - IAU: prev_close=12.97, current_size=1020, alloc_ratio=0.10, adjust=-160
+2025-03-07 23:31:46,901 - INFO - LQD: prev_close=106.78, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-07 23:31:46,901 - INFO - 2007-02-01: SELL IAU, shares=160
+2025-03-07 23:31:46,903 - WARNING - QQQ: adjusting shares 250 -> 230 due to insufficient cash
+2025-03-07 23:31:46,904 - INFO - 2007-02-01: BUY QQQ, shares=230
+2025-03-07 23:31:46,905 - INFO - === 2007-02-01 Rebalancing End ===
+2025-03-07 23:31:46,907 - INFO - 2007-02-02 00:00:00 OrderCompleted: SELL -160 IAU @ 12.96, Comm=2.07
+2025-03-07 23:31:46,908 - INFO - 2007-02-02 00:00:00 OrderCompleted: BUY 230 QQQ @ 44.12, Comm=10.15
+2025-03-07 23:31:52,068 - INFO - Period-end close for QQQ: 43.33
+2025-03-07 23:31:52,070 - INFO - Period-end close for IAU: 13.30
+2025-03-07 23:31:52,076 - INFO - Period-end close for LQD: 108.45
+2025-03-07 23:31:52,632 - INFO - [2007-03-01] Price=140.51, MA(short=144.36, mid=143.06, mid2=137.37, long=134.51) => Neutral
+2025-03-07 23:31:52,637 - INFO - === 2007-03-01 Rebalancing Start ===
+2025-03-07 23:31:52,638 - INFO - [Rebalancing Info] Date=2007-03-01, SPY Close=140.51, MA_21=144.36, MA_50=143.06, MA_150=137.37, MA_200=134.51
+2025-03-07 23:31:52,638 - INFO - Portfolio value=110797.52, cash buffer=1107.98, available=109689.55
+2025-03-07 23:31:52,640 - INFO - QQQ: prev_close=43.33, current_size=2258, alloc_ratio=0.50, adjust=-993
+2025-03-07 23:31:52,642 - INFO - IAU: prev_close=13.30, current_size=860, alloc_ratio=0.30, adjust=1614
+2025-03-07 23:31:52,642 - INFO - LQD: prev_close=108.45, current_size=0, alloc_ratio=0.20, adjust=202
+2025-03-07 23:31:52,644 - INFO - 2007-03-01: SELL QQQ, shares=993
+2025-03-07 23:31:52,647 - WARNING - LQD: adjusting shares 202 -> 19 due to insufficient cash
+2025-03-07 23:31:52,652 - INFO - 2007-03-01: BUY LQD, shares=19
+2025-03-07 23:31:52,654 - WARNING - IAU: adjusting shares 1614 -> 156 due to insufficient cash
+2025-03-07 23:31:52,656 - INFO - 2007-03-01: BUY IAU, shares=156
+2025-03-07 23:31:52,658 - INFO - === 2007-03-01 Rebalancing End ===
+2025-03-07 23:31:52,660 - INFO - 2007-03-02 00:00:00 OrderCompleted: SELL -993 QQQ @ 42.78, Comm=42.48
+2025-03-07 23:31:52,660 - INFO - 2007-03-02 00:00:00 OrderCompleted: BUY 19 LQD @ 108.24, Comm=2.06
+2025-03-07 23:31:52,661 - INFO - 2007-03-02 00:00:00 OrderCompleted: BUY 156 IAU @ 12.94, Comm=2.02
+2025-03-07 23:31:59,407 - INFO - Period-end close for QQQ: 43.53
+2025-03-07 23:31:59,409 - INFO - Period-end close for IAU: 13.17
+2025-03-07 23:31:59,410 - INFO - Period-end close for LQD: 107.27
+2025-03-07 23:31:59,825 - INFO - [2007-04-02] Price=142.16, MA(short=140.94, mid=142.57, mid2=139.20, long=136.08) => Neutral
+2025-03-07 23:31:59,827 - INFO - === 2007-04-02 Rebalancing Start ===
+2025-03-07 23:31:59,828 - INFO - [Rebalancing Info] Date=2007-04-02, SPY Close=142.16, MA_21=140.94, MA_50=142.57, MA_150=139.20, MA_200=136.08
+2025-03-07 23:31:59,835 - INFO - Portfolio value=111003.66, cash buffer=1110.04, available=109893.62
+2025-03-07 23:31:59,836 - INFO - QQQ: prev_close=43.53, current_size=1265, alloc_ratio=0.50, adjust=-3
+2025-03-07 23:31:59,838 - INFO - IAU: prev_close=13.17, current_size=1016, alloc_ratio=0.30, adjust=1488
+2025-03-07 23:31:59,839 - INFO - LQD: prev_close=107.27, current_size=19, alloc_ratio=0.20, adjust=185
+2025-03-07 23:31:59,842 - INFO - 2007-04-02: SELL QQQ, shares=3
+2025-03-07 23:31:59,842 - INFO - 2007-04-02: BUY LQD, shares=185
+2025-03-07 23:31:59,844 - INFO - 2007-04-02: BUY IAU, shares=1488
+2025-03-07 23:31:59,846 - INFO - === 2007-04-02 Rebalancing End ===
+2025-03-07 23:31:59,851 - INFO - 2007-04-03 00:00:00 OrderCompleted: SELL -3 QQQ @ 43.82, Comm=0.13
+2025-03-07 23:31:59,854 - INFO - 2007-04-03 00:00:00 OrderCompleted: BUY 185 LQD @ 106.79, Comm=19.76
+2025-03-07 23:31:59,856 - INFO - 2007-04-03 00:00:00 OrderCompleted: BUY 1488 IAU @ 13.18, Comm=19.61
+2025-03-07 23:32:05,338 - INFO - Period-end close for QQQ: 45.96
+2025-03-07 23:32:05,340 - INFO - Period-end close for IAU: 13.44
+2025-03-07 23:32:05,341 - INFO - Period-end close for LQD: 107.73
+2025-03-07 23:32:05,869 - INFO - [2007-05-01] Price=148.67, MA(short=146.46, mid=143.62, mid2=141.27, long=138.18) => Aggressive
+2025-03-07 23:32:05,869 - INFO - === 2007-05-01 Rebalancing Start ===
+2025-03-07 23:32:05,870 - INFO - [Rebalancing Info] Date=2007-05-01, SPY Close=148.67, MA_21=146.46, MA_50=143.62, MA_150=141.27, MA_200=138.18
+2025-03-07 23:32:05,871 - INFO - Portfolio value=114431.67, cash buffer=1144.32, available=113287.35
+2025-03-07 23:32:05,874 - INFO - QQQ: prev_close=45.96, current_size=1262, alloc_ratio=0.90, adjust=956
+2025-03-07 23:32:05,875 - INFO - IAU: prev_close=13.44, current_size=2504, alloc_ratio=0.10, adjust=-1662
+2025-03-07 23:32:05,878 - INFO - LQD: prev_close=107.73, current_size=204, alloc_ratio=0.00, adjust=-204
+2025-03-07 23:32:05,879 - INFO - 2007-05-01: SELL IAU, shares=1662
+2025-03-07 23:32:05,881 - INFO - 2007-05-01: SELL LQD, shares=204
+2025-03-07 23:32:05,884 - WARNING - QQQ: adjusting shares 956 -> 25 due to insufficient cash
+2025-03-07 23:32:05,884 - INFO - 2007-05-01: BUY QQQ, shares=25
+2025-03-07 23:32:05,886 - INFO - === 2007-05-01 Rebalancing End ===
+2025-03-07 23:32:05,891 - INFO - 2007-05-02 00:00:00 OrderCompleted: SELL -1662 IAU @ 13.26, Comm=22.03
+2025-03-07 23:32:05,893 - INFO - 2007-05-02 00:00:00 OrderCompleted: SELL -204 LQD @ 107.24, Comm=21.88
+2025-03-07 23:32:05,896 - INFO - 2007-05-02 00:00:00 OrderCompleted: BUY 25 QQQ @ 46.09, Comm=1.15
+2025-03-07 23:32:05,897 - INFO - 2007-05-02 00:00:00 TradeClosed: LQD, PnL=64.25, NetPnL=20.56
+2025-03-07 23:32:12,636 - INFO - Period-end close for QQQ: 47.41
+2025-03-07 23:32:12,639 - INFO - Period-end close for IAU: 13.12
+2025-03-07 23:32:12,640 - INFO - Period-end close for LQD: 105.93
+2025-03-07 23:32:13,031 - INFO - [2007-06-01] Price=154.08, MA(short=151.64, mid=148.16, mid2=143.65, long=140.93) => Aggressive
+2025-03-07 23:32:13,033 - INFO - === 2007-06-01 Rebalancing Start ===
+2025-03-07 23:32:13,033 - INFO - [Rebalancing Info] Date=2007-06-01, SPY Close=154.08, MA_21=151.64, MA_50=148.16, MA_150=143.65, MA_200=140.93
+2025-03-07 23:32:13,034 - INFO - Portfolio value=116135.53, cash buffer=1161.36, available=114974.18
+2025-03-07 23:32:13,035 - INFO - QQQ: prev_close=47.41, current_size=1287, alloc_ratio=0.90, adjust=895
+2025-03-07 23:32:13,035 - INFO - IAU: prev_close=13.12, current_size=842, alloc_ratio=0.10, adjust=34
+2025-03-07 23:32:13,036 - INFO - LQD: prev_close=105.93, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-07 23:32:13,036 - INFO - 2007-06-01: BUY QQQ, shares=895
+2025-03-07 23:32:13,037 - INFO - 2007-06-01: BUY IAU, shares=34
+2025-03-07 23:32:13,039 - INFO - === 2007-06-01 Rebalancing End ===
+2025-03-07 23:32:13,041 - INFO - 2007-06-04 00:00:00 OrderCompleted: BUY 895 QQQ @ 47.27, Comm=42.31
+2025-03-07 23:32:13,042 - INFO - 2007-06-04 00:00:00 OrderCompleted: BUY 34 IAU @ 13.30, Comm=0.45
+2025-03-07 23:32:19,246 - INFO - Period-end close for QQQ: 47.60
+2025-03-07 23:32:19,248 - INFO - Period-end close for IAU: 12.88
+2025-03-07 23:32:19,249 - INFO - Period-end close for LQD: 104.58
+2025-03-07 23:32:19,772 - INFO - [2007-07-02] Price=151.79, MA(short=151.39, mid=151.10, mid2=145.42, long=143.14) => Aggressive
+2025-03-07 23:32:19,774 - INFO - === 2007-07-02 Rebalancing Start ===
+2025-03-07 23:32:19,775 - INFO - [Rebalancing Info] Date=2007-07-02, SPY Close=151.79, MA_21=151.39, MA_50=151.10, MA_150=145.42, MA_200=143.14
+2025-03-07 23:32:19,778 - INFO - Portfolio value=117276.85, cash buffer=1172.77, available=116104.08
+2025-03-07 23:32:19,779 - INFO - QQQ: prev_close=47.60, current_size=2182, alloc_ratio=0.90, adjust=13
+2025-03-07 23:32:19,780 - INFO - IAU: prev_close=12.88, current_size=876, alloc_ratio=0.10, adjust=25
+2025-03-07 23:32:19,785 - INFO - LQD: prev_close=104.58, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-07 23:32:19,787 - INFO - 2007-07-02: BUY QQQ, shares=13
+2025-03-07 23:32:19,788 - INFO - 2007-07-02: BUY IAU, shares=25
+2025-03-07 23:32:19,788 - INFO - === 2007-07-02 Rebalancing End ===
+2025-03-07 23:32:19,790 - INFO - 2007-07-03 00:00:00 OrderCompleted: BUY 13 QQQ @ 48.09, Comm=0.63
+2025-03-07 23:32:19,792 - INFO - 2007-07-03 00:00:00 OrderCompleted: BUY 25 IAU @ 13.00, Comm=0.33
+2025-03-07 23:32:25,919 - INFO - Period-end close for QQQ: 47.53
+2025-03-07 23:32:25,921 - INFO - Period-end close for IAU: 13.18
+2025-03-07 23:32:25,922 - INFO - Period-end close for LQD: 103.25
+2025-03-07 23:32:26,364 - INFO - [2007-08-01] Price=146.43, MA(short=151.66, mid=151.70, mid2=146.88, long=145.04) => MidDefensive
+2025-03-07 23:32:26,365 - INFO - === 2007-08-01 Rebalancing Start ===
+2025-03-07 23:32:26,367 - INFO - [Rebalancing Info] Date=2007-08-01, SPY Close=146.43, MA_21=151.66, MA_50=151.70, MA_150=146.88, MA_200=145.04
+2025-03-07 23:32:26,368 - INFO - Portfolio value=117147.05, cash buffer=1171.47, available=115975.58
+2025-03-07 23:32:26,369 - INFO - QQQ: prev_close=47.53, current_size=2195, alloc_ratio=0.40, adjust=-1219
+2025-03-07 23:32:26,370 - INFO - IAU: prev_close=13.18, current_size=901, alloc_ratio=0.30, adjust=1738
+2025-03-07 23:32:26,371 - INFO - LQD: prev_close=103.25, current_size=0, alloc_ratio=0.30, adjust=336
+2025-03-07 23:32:26,372 - INFO - 2007-08-01: SELL QQQ, shares=1219
+2025-03-07 23:32:26,373 - WARNING - LQD: adjusting shares 336 -> 1 due to insufficient cash
+2025-03-07 23:32:26,374 - INFO - 2007-08-01: BUY LQD, shares=1
+2025-03-07 23:32:26,376 - WARNING - IAU: adjusting shares 1738 -> 8 due to insufficient cash
+2025-03-07 23:32:26,377 - INFO - 2007-08-01: BUY IAU, shares=8
+2025-03-07 23:32:26,379 - INFO - === 2007-08-01 Rebalancing End ===
+2025-03-07 23:32:26,384 - INFO - 2007-08-02 00:00:00 OrderCompleted: SELL -1219 QQQ @ 47.93, Comm=58.43
+2025-03-07 23:32:26,385 - INFO - 2007-08-02 00:00:00 OrderCompleted: BUY 1 LQD @ 103.22, Comm=0.10
+2025-03-07 23:32:26,386 - INFO - 2007-08-02 00:00:00 OrderCompleted: BUY 8 IAU @ 13.18, Comm=0.11
+2025-03-07 23:32:32,991 - INFO - Period-end close for QQQ: 48.87
+2025-03-07 23:32:32,992 - INFO - Period-end close for IAU: 13.33
+2025-03-07 23:32:32,994 - INFO - Period-end close for LQD: 105.21
+2025-03-07 23:32:33,579 - INFO - [2007-09-04] Price=149.08, MA(short=145.77, mid=148.77, mid2=147.43, long=145.97) => Moderate
+2025-03-07 23:32:33,580 - INFO - === 2007-09-04 Rebalancing Start ===
+2025-03-07 23:32:33,582 - INFO - [Rebalancing Info] Date=2007-09-04, SPY Close=149.08, MA_21=145.77, MA_50=148.77, MA_150=147.43, MA_200=145.97
+2025-03-07 23:32:33,584 - INFO - Portfolio value=119149.05, cash buffer=1191.49, available=117957.56
+2025-03-07 23:32:33,584 - INFO - QQQ: prev_close=48.87, current_size=976, alloc_ratio=0.80, adjust=954
+2025-03-07 23:32:33,587 - INFO - IAU: prev_close=13.33, current_size=909, alloc_ratio=0.20, adjust=861
+2025-03-07 23:32:33,589 - INFO - LQD: prev_close=105.21, current_size=1, alloc_ratio=0.00, adjust=-1
+2025-03-07 23:32:33,590 - INFO - 2007-09-04: SELL LQD, shares=1
+2025-03-07 23:32:33,593 - INFO - 2007-09-04: BUY QQQ, shares=954
+2025-03-07 23:32:33,594 - INFO - 2007-09-04: BUY IAU, shares=861
+2025-03-07 23:32:33,596 - INFO - === 2007-09-04 Rebalancing End ===
+2025-03-07 23:32:33,599 - ERROR - 2007-09-05 00:00:00 MarginError: IAU
+2025-03-07 23:32:33,600 - INFO - 2007-09-05 00:00:00 OrderCompleted: SELL -1 LQD @ 104.55, Comm=0.10
+2025-03-07 23:32:33,601 - INFO - 2007-09-05 00:00:00 OrderCompleted: BUY 954 QQQ @ 49.56, Comm=47.28
+2025-03-07 23:32:33,603 - INFO - 2007-09-05 00:00:00 TradeClosed: LQD, PnL=1.33, NetPnL=1.12
+2025-03-07 23:32:39,288 - INFO - Period-end close for QQQ: 51.41
+2025-03-07 23:32:39,289 - INFO - Period-end close for IAU: 14.73
+2025-03-07 23:32:39,290 - INFO - Period-end close for LQD: 105.49
+2025-03-07 23:32:39,714 - INFO - [2007-10-01] Price=154.30, MA(short=150.05, mid=147.93, mid2=148.12, long=146.88) => Aggressive
+2025-03-07 23:32:39,716 - INFO - === 2007-10-01 Rebalancing Start ===
+2025-03-07 23:32:39,719 - INFO - [Rebalancing Info] Date=2007-10-01, SPY Close=154.30, MA_21=150.05, MA_50=147.93, MA_150=148.12, MA_200=146.88
+2025-03-07 23:32:39,720 - INFO - Portfolio value=124875.51, cash buffer=1248.76, available=123626.75
+2025-03-07 23:32:39,721 - INFO - QQQ: prev_close=51.41, current_size=1930, alloc_ratio=0.90, adjust=234
+2025-03-07 23:32:39,721 - INFO - IAU: prev_close=14.73, current_size=909, alloc_ratio=0.10, adjust=-70
+2025-03-07 23:32:39,722 - INFO - LQD: prev_close=105.49, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-07 23:32:39,723 - INFO - 2007-10-01: SELL IAU, shares=70
+2025-03-07 23:32:39,724 - WARNING - QQQ: adjusting shares 234 -> 214 due to insufficient cash
+2025-03-07 23:32:39,724 - INFO - 2007-10-01: BUY QQQ, shares=214
+2025-03-07 23:32:39,725 - INFO - === 2007-10-01 Rebalancing End ===
+2025-03-07 23:32:39,726 - INFO - 2007-10-02 00:00:00 OrderCompleted: SELL -70 IAU @ 14.53, Comm=1.02
+2025-03-07 23:32:39,727 - INFO - 2007-10-02 00:00:00 OrderCompleted: BUY 214 QQQ @ 52.04, Comm=11.14
+2025-03-07 23:32:46,228 - INFO - Period-end close for QQQ: 55.03
+2025-03-07 23:32:46,229 - INFO - Period-end close for IAU: 15.72
+2025-03-07 23:32:46,231 - INFO - Period-end close for LQD: 106.02
+2025-03-07 23:32:46,773 - INFO - [2007-11-01] Price=151.03, MA(short=153.71, mid=151.30, mid2=150.11, long=148.23) => Neutral
+2025-03-07 23:32:46,774 - INFO - === 2007-11-01 Rebalancing Start ===
+2025-03-07 23:32:46,776 - INFO - [Rebalancing Info] Date=2007-11-01, SPY Close=151.03, MA_21=153.71, MA_50=151.30, MA_150=150.11, MA_200=148.23
+2025-03-07 23:32:46,776 - INFO - Portfolio value=129808.10, cash buffer=1298.08, available=128510.01
+2025-03-07 23:32:46,777 - INFO - QQQ: prev_close=55.03, current_size=2144, alloc_ratio=0.50, adjust=-977
+2025-03-07 23:32:46,777 - INFO - IAU: prev_close=15.72, current_size=839, alloc_ratio=0.30, adjust=1613
+2025-03-07 23:32:46,778 - INFO - LQD: prev_close=106.02, current_size=0, alloc_ratio=0.20, adjust=242
+2025-03-07 23:32:46,778 - INFO - 2007-11-01: SELL QQQ, shares=977
+2025-03-07 23:32:46,780 - WARNING - LQD: adjusting shares 242 -> 8 due to insufficient cash
+2025-03-07 23:32:46,781 - INFO - 2007-11-01: BUY LQD, shares=8
+2025-03-07 23:32:46,784 - WARNING - IAU: adjusting shares 1613 -> 58 due to insufficient cash
+2025-03-07 23:32:46,786 - INFO - 2007-11-01: BUY IAU, shares=58
+2025-03-07 23:32:46,787 - INFO - === 2007-11-01 Rebalancing End ===
+2025-03-07 23:32:46,788 - INFO - 2007-11-02 00:00:00 OrderCompleted: SELL -977 QQQ @ 54.42, Comm=53.17
+2025-03-07 23:32:46,789 - INFO - 2007-11-02 00:00:00 OrderCompleted: BUY 8 LQD @ 105.90, Comm=0.85
+2025-03-07 23:32:46,789 - INFO - 2007-11-02 00:00:00 OrderCompleted: BUY 58 IAU @ 15.73, Comm=0.91
+2025-03-07 23:32:53,261 - INFO - Period-end close for QQQ: 51.31
+2025-03-07 23:32:53,263 - INFO - Period-end close for IAU: 15.50
+2025-03-07 23:32:53,263 - INFO - Period-end close for LQD: 106.62
+2025-03-07 23:32:53,656 - INFO - [2007-12-03] Price=147.68, MA(short=146.32, mid=150.47, mid2=150.09, long=148.47) => Defensive
+2025-03-07 23:32:53,658 - INFO - === 2007-12-03 Rebalancing Start ===
+2025-03-07 23:32:53,659 - INFO - [Rebalancing Info] Date=2007-12-03, SPY Close=147.68, MA_21=146.32, MA_50=150.47, MA_150=150.09, MA_200=148.47
+2025-03-07 23:32:53,660 - INFO - Portfolio value=126556.51, cash buffer=1265.57, available=125290.94
+2025-03-07 23:32:53,661 - INFO - QQQ: prev_close=51.31, current_size=1167, alloc_ratio=0.00, adjust=-1167
+2025-03-07 23:32:53,661 - INFO - IAU: prev_close=15.50, current_size=897, alloc_ratio=0.50, adjust=3145
+2025-03-07 23:32:53,662 - INFO - LQD: prev_close=106.62, current_size=8, alloc_ratio=0.50, adjust=579
+2025-03-07 23:32:53,663 - INFO - 2007-12-03: SELL QQQ, shares=1167
+2025-03-07 23:32:53,664 - WARNING - LQD: adjusting shares 579 -> 489 due to insufficient cash
+2025-03-07 23:32:53,664 - INFO - 2007-12-03: BUY LQD, shares=489
+2025-03-07 23:32:53,666 - INFO - 2007-12-03: BUY IAU, shares=3145
+2025-03-07 23:32:53,671 - INFO - === 2007-12-03 Rebalancing End ===
+2025-03-07 23:32:53,673 - INFO - 2007-12-04 00:00:00 OrderCompleted: SELL -1167 QQQ @ 50.49, Comm=58.92
+2025-03-07 23:32:53,675 - INFO - 2007-12-04 00:00:00 OrderCompleted: BUY 489 LQD @ 106.12, Comm=51.89
+2025-03-07 23:32:53,675 - INFO - 2007-12-04 00:00:00 OrderCompleted: BUY 3145 IAU @ 15.81, Comm=49.72
+2025-03-07 23:32:53,676 - INFO - 2007-12-04 00:00:00 TradeClosed: QQQ, PnL=18763.81, NetPnL=18074.33
+2025-03-07 23:32:59,875 - INFO - Period-end close for QQQ: 51.22
+2025-03-07 23:32:59,876 - INFO - Period-end close for IAU: 16.49
+2025-03-07 23:32:59,877 - INFO - Period-end close for LQD: 104.84
+2025-03-07 23:33:00,276 - INFO - [2008-01-02] Price=144.93, MA(short=147.95, mid=148.08, mid2=149.64, long=149.16) => Defensive
+2025-03-07 23:33:00,277 - INFO - === 2008-01-02 Rebalancing Start ===
+2025-03-07 23:33:00,278 - INFO - [Rebalancing Info] Date=2008-01-02, SPY Close=144.93, MA_21=147.95, MA_50=148.08, MA_150=149.64, MA_200=149.16
+2025-03-07 23:33:00,278 - INFO - Portfolio value=130776.85, cash buffer=1307.77, available=129469.08
+2025-03-07 23:33:00,280 - INFO - QQQ: prev_close=51.22, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-07 23:33:00,281 - INFO - IAU: prev_close=16.49, current_size=4042, alloc_ratio=0.50, adjust=-117
+2025-03-07 23:33:00,281 - INFO - LQD: prev_close=104.84, current_size=497, alloc_ratio=0.50, adjust=120
+2025-03-07 23:33:00,281 - INFO - 2008-01-02: SELL IAU, shares=117
+2025-03-07 23:33:00,282 - WARNING - LQD: adjusting shares 120 -> 89 due to insufficient cash
+2025-03-07 23:33:00,282 - INFO - 2008-01-02: BUY LQD, shares=89
+2025-03-07 23:33:00,283 - INFO - === 2008-01-02 Rebalancing End ===
+2025-03-07 23:33:00,285 - INFO - 2008-01-03 00:00:00 OrderCompleted: SELL -117 IAU @ 17.01, Comm=1.99
+2025-03-07 23:33:00,286 - INFO - 2008-01-03 00:00:00 OrderCompleted: BUY 89 LQD @ 105.36, Comm=9.38
+2025-03-07 23:33:06,318 - INFO - Period-end close for QQQ: 45.13
+2025-03-07 23:33:06,320 - INFO - Period-end close for IAU: 18.30
+2025-03-07 23:33:06,321 - INFO - Period-end close for LQD: 107.53
+2025-03-07 23:33:06,762 - INFO - [2008-02-01] Price=139.58, MA(short=137.41, mid=142.99, mid2=147.65, long=148.48) => Defensive
+2025-03-07 23:33:06,764 - INFO - === 2008-02-01 Rebalancing Start ===
+2025-03-07 23:33:06,768 - INFO - [Rebalancing Info] Date=2008-02-01, SPY Close=139.58, MA_21=137.41, MA_50=142.99, MA_150=147.65, MA_200=148.48
+2025-03-07 23:33:06,769 - INFO - Portfolio value=135121.88, cash buffer=1351.22, available=133770.66
+2025-03-07 23:33:06,771 - INFO - QQQ: prev_close=45.13, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-07 23:33:06,773 - INFO - IAU: prev_close=18.30, current_size=3925, alloc_ratio=0.50, adjust=-271
+2025-03-07 23:33:06,774 - INFO - LQD: prev_close=107.53, current_size=586, alloc_ratio=0.50, adjust=36
+2025-03-07 23:33:06,776 - INFO - 2008-02-01: SELL IAU, shares=271
+2025-03-07 23:33:06,780 - WARNING - LQD: adjusting shares 36 -> 18 due to insufficient cash
+2025-03-07 23:33:06,785 - INFO - 2008-02-01: BUY LQD, shares=18
+2025-03-07 23:33:06,786 - INFO - === 2008-02-01 Rebalancing End ===
+2025-03-07 23:33:06,792 - INFO - 2008-02-04 00:00:00 OrderCompleted: SELL -271 IAU @ 17.67, Comm=4.79
+2025-03-07 23:33:06,794 - INFO - 2008-02-04 00:00:00 OrderCompleted: BUY 18 LQD @ 107.14, Comm=1.93
+2025-03-07 23:33:12,393 - INFO - Period-end close for QQQ: 42.95
+2025-03-07 23:33:12,395 - INFO - Period-end close for IAU: 19.27
+2025-03-07 23:33:12,397 - INFO - Period-end close for LQD: 106.28
+2025-03-07 23:33:12,892 - INFO - [2008-03-03] Price=133.50, MA(short=135.57, mid=138.37, mid2=145.38, long=147.04) => Defensive
+2025-03-07 23:33:12,893 - INFO - === 2008-03-03 Rebalancing Start ===
+2025-03-07 23:33:12,895 - INFO - [Rebalancing Info] Date=2008-03-03, SPY Close=133.50, MA_21=135.57, MA_50=138.37, MA_150=145.38, MA_200=147.04
+2025-03-07 23:33:12,899 - INFO - Portfolio value=139987.35, cash buffer=1399.87, available=138587.48
+2025-03-07 23:33:12,902 - INFO - QQQ: prev_close=42.95, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-07 23:33:12,903 - INFO - IAU: prev_close=19.27, current_size=3654, alloc_ratio=0.50, adjust=-59
+2025-03-07 23:33:12,905 - INFO - LQD: prev_close=106.28, current_size=604, alloc_ratio=0.50, adjust=47
+2025-03-07 23:33:12,908 - INFO - 2008-03-03: SELL IAU, shares=59
+2025-03-07 23:33:12,912 - WARNING - LQD: adjusting shares 47 -> 45 due to insufficient cash
+2025-03-07 23:33:12,914 - INFO - 2008-03-03: BUY LQD, shares=45
+2025-03-07 23:33:12,917 - INFO - === 2008-03-03 Rebalancing End ===
+2025-03-07 23:33:12,921 - INFO - 2008-03-04 00:00:00 OrderCompleted: SELL -59 IAU @ 19.48, Comm=1.15
+2025-03-07 23:33:12,924 - INFO - 2008-03-04 00:00:00 OrderCompleted: BUY 45 LQD @ 105.83, Comm=4.76
+2025-03-07 23:33:18,298 - INFO - Period-end close for QQQ: 43.72
+2025-03-07 23:33:18,300 - INFO - Period-end close for IAU: 18.13
+2025-03-07 23:33:18,302 - INFO - Period-end close for LQD: 105.20
+2025-03-07 23:33:18,728 - INFO - [2008-04-01] Price=136.61, MA(short=132.11, mid=133.92, mid2=143.57, long=145.04) => Defensive
+2025-03-07 23:33:18,732 - INFO - === 2008-04-01 Rebalancing Start ===
+2025-03-07 23:33:18,735 - INFO - [Rebalancing Info] Date=2008-04-01, SPY Close=136.61, MA_21=132.11, MA_50=133.92, MA_150=143.57, MA_200=145.04
+2025-03-07 23:33:18,736 - INFO - Portfolio value=131689.36, cash buffer=1316.89, available=130372.47
+2025-03-07 23:33:18,740 - INFO - QQQ: prev_close=43.72, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-07 23:33:18,741 - INFO - IAU: prev_close=18.13, current_size=3595, alloc_ratio=0.50, adjust=-1
+2025-03-07 23:33:18,743 - INFO - LQD: prev_close=105.20, current_size=649, alloc_ratio=0.50, adjust=-30
+2025-03-07 23:33:18,744 - INFO - 2008-04-01: SELL IAU, shares=1
+2025-03-07 23:33:18,748 - INFO - 2008-04-01: SELL LQD, shares=30
+2025-03-07 23:33:18,750 - INFO - === 2008-04-01 Rebalancing End ===
+2025-03-07 23:33:18,751 - INFO - 2008-04-02 00:00:00 OrderCompleted: SELL -1 IAU @ 17.45, Comm=0.02
+2025-03-07 23:33:18,751 - INFO - 2008-04-02 00:00:00 OrderCompleted: SELL -30 LQD @ 105.12, Comm=3.15
+2025-03-07 23:33:25,427 - INFO - Period-end close for QQQ: 47.21
+2025-03-07 23:33:25,431 - INFO - Period-end close for IAU: 17.30
+2025-03-07 23:33:25,434 - INFO - Period-end close for LQD: 105.99
+2025-03-07 23:33:25,937 - INFO - [2008-05-01] Price=141.12, MA(short=137.22, mid=134.95, mid2=141.87, long=143.40) => Defensive
+2025-03-07 23:33:25,938 - INFO - === 2008-05-01 Rebalancing Start ===
+2025-03-07 23:33:25,939 - INFO - [Rebalancing Info] Date=2008-05-01, SPY Close=141.12, MA_21=137.22, MA_50=134.95, MA_150=141.87, MA_200=143.40
+2025-03-07 23:33:25,939 - INFO - Portfolio value=130405.85, cash buffer=1304.06, available=129101.80
+2025-03-07 23:33:25,939 - INFO - QQQ: prev_close=47.21, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-07 23:33:25,940 - INFO - IAU: prev_close=17.30, current_size=3594, alloc_ratio=0.50, adjust=137
+2025-03-07 23:33:25,942 - INFO - LQD: prev_close=105.99, current_size=619, alloc_ratio=0.50, adjust=-10
+2025-03-07 23:33:25,943 - INFO - 2008-05-01: SELL LQD, shares=10
+2025-03-07 23:33:25,945 - INFO - 2008-05-01: BUY IAU, shares=137
+2025-03-07 23:33:25,946 - INFO - === 2008-05-01 Rebalancing End ===
+2025-03-07 23:33:25,947 - INFO - 2008-05-02 00:00:00 OrderCompleted: SELL -10 LQD @ 105.00, Comm=1.05
+2025-03-07 23:33:25,949 - INFO - 2008-05-02 00:00:00 OrderCompleted: BUY 137 IAU @ 16.80, Comm=2.30
+2025-03-07 23:33:31,873 - INFO - Period-end close for QQQ: 50.01
+2025-03-07 23:33:31,875 - INFO - Period-end close for IAU: 17.49
+2025-03-07 23:33:31,875 - INFO - Period-end close for LQD: 103.20
+2025-03-07 23:33:32,293 - INFO - [2008-06-02] Price=138.90, MA(short=140.36, mid=138.03, mid2=139.99, long=142.60) => Defensive
+2025-03-07 23:33:32,294 - INFO - === 2008-06-02 Rebalancing Start ===
+2025-03-07 23:33:32,297 - INFO - [Rebalancing Info] Date=2008-06-02, SPY Close=138.90, MA_21=140.36, MA_50=138.03, MA_150=139.99, MA_200=142.60
+2025-03-07 23:33:32,298 - INFO - Portfolio value=131598.79, cash buffer=1315.99, available=130282.81
+2025-03-07 23:33:32,299 - INFO - QQQ: prev_close=50.01, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-07 23:33:32,299 - INFO - IAU: prev_close=17.49, current_size=3731, alloc_ratio=0.50, adjust=-8
+2025-03-07 23:33:32,300 - INFO - LQD: prev_close=103.20, current_size=609, alloc_ratio=0.50, adjust=22
+2025-03-07 23:33:32,301 - INFO - 2008-06-02: SELL IAU, shares=8
+2025-03-07 23:33:32,302 - INFO - 2008-06-02: BUY LQD, shares=22
+2025-03-07 23:33:32,304 - INFO - === 2008-06-02 Rebalancing End ===
+2025-03-07 23:33:32,306 - INFO - 2008-06-03 00:00:00 OrderCompleted: SELL -8 IAU @ 17.34, Comm=0.14
+2025-03-07 23:33:32,307 - INFO - 2008-06-03 00:00:00 OrderCompleted: BUY 22 LQD @ 103.44, Comm=2.28
+2025-03-07 23:33:38,267 - INFO - Period-end close for QQQ: 45.17
+2025-03-07 23:33:38,269 - INFO - Period-end close for IAU: 18.25
+2025-03-07 23:33:38,270 - INFO - Period-end close for LQD: 101.40
+2025-03-07 23:33:38,697 - INFO - [2008-07-01] Price=128.38, MA(short=133.76, mid=137.36, mid2=138.01, long=141.25) => Defensive
+2025-03-07 23:33:38,698 - INFO - === 2008-07-01 Rebalancing Start ===
+2025-03-07 23:33:38,699 - INFO - [Rebalancing Info] Date=2008-07-01, SPY Close=128.38, MA_21=133.76, MA_50=137.36, MA_150=138.01, MA_200=141.25
+2025-03-07 23:33:38,701 - INFO - Portfolio value=133626.27, cash buffer=1336.26, available=132290.01
+2025-03-07 23:33:38,703 - INFO - QQQ: prev_close=45.17, current_size=0, alloc_ratio=0.00, adjust=0
+2025-03-07 23:33:38,703 - INFO - IAU: prev_close=18.25, current_size=3723, alloc_ratio=0.50, adjust=-98
+2025-03-07 23:33:38,704 - INFO - LQD: prev_close=101.40, current_size=631, alloc_ratio=0.50, adjust=21
+2025-03-07 23:33:38,704 - INFO - 2008-07-01: SELL IAU, shares=98
+2025-03-07 23:33:38,705 - WARNING - LQD: adjusting shares 21 -> 10 due to insufficient cash
+2025-03-07 23:33:38,706 - INFO - 2008-07-01: BUY LQD, shares=10
+2025-03-07 23:33:38,707 - INFO - === 2008-07-01 Rebalancing End ===
+2025-03-07 23:33:38,709 - INFO - 2008-07-02 00:00:00 OrderCompleted: SELL -98 IAU @ 18.48, Comm=1.81
+2025-03-07 23:33:38,709 - INFO - 2008-07-02 00:00:00 OrderCompleted: BUY 10 LQD @ 101.15, Comm=1.01
